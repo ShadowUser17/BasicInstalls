@@ -1,0 +1,10 @@
+{
+    "iptables":false,
+    "default-address-pools": [
+        { "base":"172.31.1.0/24", "size":24 }
+    ],
+    "log-driver": "syslog",
+    "log-opts": {
+        "syslog-address": "udp://127.0.0.1:5200"
+    }
+}
