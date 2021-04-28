@@ -1,0 +1,5 @@
+1) mkdir -p /etc/zabbix/scripts && cd /etc/zabbix/scripts
+2) curl -O https://raw.githubusercontent.com/ShadowUser17/LinuxTools/master/tempmon.py
+3) ./tempmon.py -d
+4) echo 'UserParameter=sys_hwmon[*],/etc/zabbix/scripts/tempmon.py -s "hwmon2" -k "$1"' >> ../zabbix_agentd.conf
+5) systemctl restart zabbix-agent.service
