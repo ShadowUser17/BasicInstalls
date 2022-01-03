@@ -1,0 +1,17 @@
+[Unit]
+Description=Alertmanager
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=alertmanager
+Group=alertmanager
+Type=simple
+Restart=on-failure
+WorkingDirectory=/var/lib/alertmanager
+ExecStart=/usr/local/bin/alertmanager \
+--config.file /etc/alertmanager/alertmanager.yml \
+--storage.path /var/lib/alertmanager
+
+[Install]
+WantedBy=multi-user.target

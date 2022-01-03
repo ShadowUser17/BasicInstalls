@@ -14,7 +14,6 @@ PROM_BIN="/usr/local/bin"
 PROM_DIR="${PROM_BASE}/${PROM_USER}"
 
 
-
 function create_user {
     useradd --system -s '/sbin/nologin' -b "${PROM_BASE}" -m "${PROM_USER}"
     mkdir -p "${PROM_CONF}"
