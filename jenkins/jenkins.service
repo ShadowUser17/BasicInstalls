@@ -1,0 +1,19 @@
+[Unit]
+Description=Jenkins
+Wants=network-online.target
+After=network.target
+
+[Service]
+User=jenkins
+Group=jenkins
+Type=simple
+Restart=on-failure
+WorkingDirectory=/var/lib/jenkins
+ExecStart=/usr/bin/java -Xmx256m -jar \
+/var/lib/jenkins/jenkins.war  \
+--webroot=/var/lib/jenkins/war \
+--httpListenAddress=0.0.0.0     \
+--httpPort=8080
+
+[Install]
+WantedBy=multi-user.target
