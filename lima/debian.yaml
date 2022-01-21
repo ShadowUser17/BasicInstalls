@@ -1,12 +1,29 @@
 images:
-- location: "https://cloud.debian.org/images/cloud/bullseye/daily/20220121-894/debian-11-generic-amd64-daily-20220121-894.qcow2"
+- location: "https://cloud.debian.org/images/cloud/bullseye/20220121-894/debian-11-generic-amd64-20220121-894.qcow2"
   arch: "x86_64"
-- location: "https://cloud.debian.org/images/cloud/bullseye/daily/20220121-894/debian-11-generic-arm64-daily-20220121-894.qcow2"
+- location: "https://cloud.debian.org/images/cloud/bullseye/20220121-894/debian-11-generic-arm64-20220121-894.qcow2"
   arch: "aarch64"
-mounts:
-- location: "~"
-- location: "/tmp/lima"
-  writable: true
+
+cpus: 4
+memory: "4G"
+disk: "32G"
+
 containerd:
   system: false
   user: false
+
+mounts:
+- location: "~"
+  writable: false
+- location: "/tmp/lima"
+  writable: true
+
+#portForwards:
+#- guestPort: 80
+#  hostPort: 8080
+
+#provision:
+#- mode: system
+#  script:
+#- mode: user
+#  script:
