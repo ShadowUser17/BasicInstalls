@@ -1,0 +1,29 @@
+images:
+- location: "https://cloud-images.ubuntu.com/impish/current/impish-server-cloudimg-amd64.img"
+  arch: "x86_64"
+- location: "https://cloud-images.ubuntu.com/impish/current/impish-server-cloudimg-arm64.img"
+  arch: "aarch64"
+
+cpus: 4
+memory: "4G"
+disk: "32G"
+
+containerd:
+  system: false
+  user: false
+
+mounts:
+- location: "~"
+  writable: false
+- location: "/tmp/lima"
+  writable: true
+
+#portForwards:
+#- guestPort: 80
+#  hostPort: 8080
+
+#provision:
+#- mode: system
+#  script:
+#- mode: user
+#  script:
