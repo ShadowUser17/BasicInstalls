@@ -1,0 +1,15 @@
+{
+    "ignition": { "version": "3.0.0" },
+    "passwd": {
+        "users": [
+            {
+                "name": "sysadmin",
+                "groups": [
+                    "wheel"
+                ],
+                "passwordHash": "$6$83U7eaiDTW625KbL$xgDwqLZuIRVJTE.jEHv4agkRwlxLYQwZDCT.YPiDEnI9D.N2lZN9xjioLQX7p96BuJnGu52t6BueSyQPzrL2R1",
+                "sshAuthorizedKeys": []
+            }
+        ]
+    }
+}
