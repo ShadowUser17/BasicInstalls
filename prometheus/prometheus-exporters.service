@@ -1,0 +1,14 @@
+[Unit]
+Description=PrometheusExporters
+Requires=docker.service
+After=docker.service
+
+[Service]
+Type=simple
+Restart=always
+WorkingDirectory=/opt/prom-exporters
+ExecStart=/usr/local/bin/docker-compose -f docker-compose.yml up   -d
+ExecStop=/usr/local/bin/docker-compose  -f docker-compose.yml down -v
+
+[Install]
+WantedBy=multi-user.target
