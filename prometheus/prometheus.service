@@ -9,8 +9,9 @@ Group=prometheus
 Type=simple
 Restart=on-failure
 WorkingDirectory=/var/lib/prometheus
-ExecStart=/usr/local/bin/prometheus          \
---web.enable-lifecycle                        \
+ExecStart=/usr/local/bin/prometheus         \
+--web.enable-lifecycle                       \
+--web.enable-remote-write-receiver            \
 --config.file=/etc/prometheus/prometheus.yml   \
 --storage.tsdb.path=/var/lib/prometheus/data    \
 --web.console.templates=/etc/prometheus/consoles \
