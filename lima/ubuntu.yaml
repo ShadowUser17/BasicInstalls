@@ -8,15 +8,11 @@ cpus: 4
 memory: "4G"
 disk: "32G"
 
-containerd:
-  system: false
-  user: false
-
-mounts:
-- location: "~"
-  writable: false
-- location: "/tmp/lima"
-  writable: true
+#mounts:
+#- location: "~"
+#  writable: false
+#- location: "/tmp/lima"
+#  writable: true
 
 #portForwards:
 #- guestPort: 80
