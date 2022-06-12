@@ -5,11 +5,11 @@
 }
 
 PROM_USER="prometheus"
-PROM_VERSION="2.36.1"
-PROM_URL="https://github.com/prometheus/prometheus/releases/download/v${PROM_VERSION}"
-PROM_FILE="prometheus-${PROM_VERSION}.linux-amd64.tar.gz"
+PROM_VERSION="0.21.0"
+PROM_URL="https://github.com/prometheus/blackbox_exporter/releases/download/v${PROM_VERSION}"
+PROM_FILE="blackbox_exporter-${PROM_VERSION}.linux-amd64.tar.gz"
 PROM_BASE="/var/lib"
-PROM_CONF="/etc/prometheus"
+PROM_CONF="/etc/blackbox_exporter"
 PROM_BIN="/usr/local/bin"
 PROM_DIR="${PROM_BASE}/${PROM_USER}"
 
@@ -26,13 +26,10 @@ function download_file {
 
 function setup_files {
     cd $(basename "${PROM_FILE}" '.tar.gz')
-    cp './prometheus' "${PROM_BIN}/"
-    cp './promtool' "${PROM_BIN}/"
+    cp './blackbox_exporter' "${PROM_BIN}/"
 
     mkdir -p "${PROM_CONF}"
-    cp './prometheus.yml' "${PROM_CONF}/"
-    cp -R './consoles' "${PROM_CONF}/"
-    cp -R './console_libraries' "${PROM_CONF}/"
+    cp './blackbox.yml' "${PROM_CONF}/"
     chown -R "${PROM_USER}":"${PROM_USER}" "${PROM_CONF}"
 }
 

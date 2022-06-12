@@ -15,8 +15,8 @@ ALTR_DIR="${ALTR_BASE}/${ALTR_USER}"
 
 
 function create_user {
+    getent passwd "${ALTR_USER}" > /dev/null || \
     useradd --system -s '/sbin/nologin' -b "${ALTR_BASE}" -m "${ALTR_USER}"
-    mkdir -p "${ALTR_CONF}"
 }
 
 function download_file {
@@ -26,11 +26,11 @@ function download_file {
 
 function setup_files {
     cd $(basename "${ALTR_FILE}" '.tar.gz')
-
     cp './alertmanager' "${ALTR_BIN}/"
     cp './amtool' "${ALTR_BIN}/"
-    cp './alertmanager.yml' "${ALTR_CONF}/"
 
+    mkdir -p "${ALTR_CONF}"
+    cp './alertmanager.yml' "${ALTR_CONF}/"
     chown -R "${ALTR_USER}":"${ALTR_USER}" "${ALTR_CONF}"
 }
 
