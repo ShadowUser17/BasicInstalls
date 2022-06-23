@@ -11,8 +11,7 @@ Restart=on-failure
 WorkingDirectory=/var/lib/jenkins
 ExecStart=/usr/bin/java -Xmx256m -jar \
 /var/lib/jenkins/jenkins.war  \
---webroot=/var/lib/jenkins/war \
---httpListenAddress=0.0.0.0     \
+--httpListenAddress=0.0.0.0    \
 --httpPort=8080
 
 [Install]
