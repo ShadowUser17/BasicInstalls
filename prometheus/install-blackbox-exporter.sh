@@ -5,7 +5,7 @@
 }
 
 PROM_USER="prometheus"
-PROM_VERSION="0.21.0"
+PROM_VERSION="0.21.1"
 PROM_URL="https://github.com/prometheus/blackbox_exporter/releases/download/v${PROM_VERSION}"
 PROM_FILE="blackbox_exporter-${PROM_VERSION}.linux-amd64.tar.gz"
 PROM_BASE="/var/lib"

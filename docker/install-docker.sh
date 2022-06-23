@@ -3,7 +3,7 @@
     echo -e "You must be root!"; exit 1
 }
 
-GPG_KEY="/usr/share/keyrings/docker-archive-keyring.gpg"
+GPG_KEY="/etc/apt/keyrings/docker.gpg"
 APT_REPO="/etc/apt/sources.list.d/docker.list"
 
 OS_NAME=`awk -F= '$1~/^ID$/{print $2}' /etc/os-release`
@@ -18,6 +18,7 @@ ca-certificates gnupg curl lsb-release \
 
 
 [[ ! -f "${GPG_KEY}" ]] && \
+mkdir -p "/etc/apt/keyrings" && \
 curl -fsSL "https://download.docker.com/linux/debian/gpg" | gpg --dearmor -o "${GPG_KEY}"
 
 
@@ -28,7 +29,7 @@ https://download.docker.com/linux/debian ${OS_RELEASE} stable" > "${APT_REPO}"
 [[ $? -eq 0 ]] && \
 apt-get update && \
 apt-get install -y \
-docker-ce docker-ce-cli containerd.io \
+docker-ce docker-ce-cli containerd.io docker-compose-plugin \
 || exit $?
 
 apt-get clean
