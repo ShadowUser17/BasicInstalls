@@ -1,0 +1,4 @@
+# /etc/exports - exports(5) - directories exported to NFS clients
+# Use `exportfs -arv` to reload.
+
+/var/nfs 192.168.56.0/24(rw,sync,hide,no_subtree_check,root_squash,anonuid=1000,anongid=1000)
