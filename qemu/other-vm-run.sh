@@ -1,21 +1,21 @@
 #!/bin/bash
-VMID="vros1"
+VMID="110"
 VMSADDR="127.0.0.1"
-VMSPORT="1102"
-VMMPORT="1202"
+VMSPORT="10${VMID}"
+VMMPORT="20${VMID}"
 VMPATH="/virtio"
 VMISO=""
-VMHDD="${VMPATH}/images/${VMID}-disk001.qcow2"
+VMHDD="${VMPATH}/images/vm-${VMID}-001.qcow2"
 VMMON="telnet:${VMSADDR}:${VMMPORT},server,nowait"
 VMPID="${VMPATH}/qemu/${VMID}.pid"
-VMBR0="virbr1"
-VMBR1="virbr2"
+VMBR0="virbr0"
+VMBR1="virbr1"
 VMMAC0="02:13:BC:00:00:02"
 VMMAC1="02:13:BC:00:00:A2"
 
-echo -e "Name: ${VMID} (${VMMAC0}, ${VMMAC1})"
-echo -e "Access: ${VMSADDR}:${VMSPORT}"
-echo -e "Monitor: ${VMSADDR}:${VMMPORT}"
+echo -e "${VMID} (${VMMAC})"
+echo -e "remmina -c spice://${VMSADDR}:${VMSPORT}"
+echo -e "ncat -t ${VMSADDR} ${VMMPORT}"
 
 qemu-system-x86_64 -nodefaults \
 -boot "order=c,menu=on" -monitor "${VMMON}" \

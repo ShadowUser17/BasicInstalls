@@ -27,4 +27,3 @@ qemu-system-x86_64 -nodefaults \
 -drive "if=virtio,index=0,media=disk,file=${VMHDD}" \
 -device "virtio-net,netdev=eth0,mac=${VMMAC}" \
 -netdev "bridge,id=eth0,br=${VMBRID}"
-
