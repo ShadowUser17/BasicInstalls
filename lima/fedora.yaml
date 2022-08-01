@@ -6,20 +6,4 @@ images:
 
 cpus: 4
 memory: "4G"
-disk: "32G"
-
-#mounts:
-#- location: "~"
-#  writable: false
-#- location: "/tmp/lima"
-#  writable: true
-
-#portForwards:
-#- guestPort: 80
-#  hostPort: 8080
-
-#provision:
-#- mode: system
-#  script:
-#- mode: user
-#  script:
+disk: "35G"
