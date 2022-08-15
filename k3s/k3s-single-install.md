@@ -18,10 +18,10 @@ curl -L "https://raw.githubusercontent.com/ShadowUser17/BasicInstalls/master/k3s
 -o "/etc/nerdctl/nerdctl.toml"
 ```
 ```bash
-curl -O -L "https://github.com/containerd/nerdctl/releases/download/v0.22.0/nerdctl-0.22.0-linux-amd64.tar.gz"
+curl -O -L "https://github.com/containerd/nerdctl/releases/download/v0.22.2/nerdctl-0.22.2-linux-amd64.tar.gz"
 ```
 ```bash
-tar -xzf nerdctl-0.22.0-linux-amd64.tar.gz
+tar -xzf nerdctl-0.22.2-linux-amd64.tar.gz
 ```
 ```bash
 mv ./nerdctl /usr/local/bin/

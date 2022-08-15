@@ -1,4 +1,10 @@
 #### URLs:
 - [vector](https://github.com/vectordotdev/vector/releases)
 - [node_exporter](https://github.com/prometheus/node_exporter/releases)
+- [snmp_exporter](https://github.com/prometheus/snmp_exporter/releases)
+- [redis_exporter](https://github.com/oliver006/redis_exporter/releases)
 - [blackbox_exporter](https://github.com/prometheus/blackbox_exporter/releases)
+- [cloudwatch_exporter](https://github.com/prometheus/cloudwatch_exporter/releases)
+- [rq_exporter](https://github.com/mdawar/rq-exporter/releases)
+- [kafka_exporter](https://github.com/danielqsj/kafka_exporter/releases)
+- [celery_exporter](https://github.com/danihodovic/celery-exporter/releases)
