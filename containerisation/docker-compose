@@ -1,0 +1,4 @@
+#!/bin/sh
+# Provide support deprecated format
+docker compose $@
+
