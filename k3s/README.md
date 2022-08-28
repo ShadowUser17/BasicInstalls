@@ -1,4 +1,11 @@
-### Install k3s first server
+### Single install:
+```bash
+curl -sfL 'https://get.k3s.io' | INSTALL_K3S_CHANNEL=latest sh -
+```
+
+### Cluster install:
+
+#### Install first server
 ```bash
 curl -sfL 'https://get.k3s.io' | INSTALL_K3S_CHANNEL=latest sh -s - server \
 --token=<secret> \
@@ -6,7 +13,7 @@ curl -sfL 'https://get.k3s.io' | INSTALL_K3S_CHANNEL=latest sh -s - server \
 --cluster-init
 ```
 
-### Install k3s second server
+#### Install second server
 ```bash
 curl -sfL 'https://get.k3s.io' | INSTALL_K3S_CHANNEL=latest sh -s - server \
 --token=<secret> \
@@ -14,7 +21,7 @@ curl -sfL 'https://get.k3s.io' | INSTALL_K3S_CHANNEL=latest sh -s - server \
 --server "https://<master>:6443"
 ```
 
-### Install k3s agent
+#### Install agent
 ```bash
 curl -sfL 'https://get.k3s.io' | INSTALL_K3S_CHANNEL=latest sh -s - agent \
 --token=<secret> \

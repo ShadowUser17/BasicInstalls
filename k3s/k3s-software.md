@@ -1,8 +1,3 @@
-### Install k3s
-```bash
-curl -sfL 'https://get.k3s.io' | INSTALL_K3S_CHANNEL=latest sh -
-```
-
 ### Install helm
 ```bash
 curl -sfL 'https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3' | sh -
