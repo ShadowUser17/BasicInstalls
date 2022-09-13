@@ -16,13 +16,7 @@ curl -L "https://raw.githubusercontent.com/ShadowUser17/BasicInstalls/master/k3s
 curl -L "https://github.com/containerd/nerdctl/releases/download/v0.23.0/nerdctl-0.23.0-linux-amd64.tar.gz" -o nerdctl-linux-amd64.tar.gz
 ```
 ```bash
-tar -xzf nerdctl-linux-amd64.tar.gz
-```
-```bash
-mv ./nerdctl /usr/local/bin/
-```
-```bash
-mv ./containerd-* /usr/local/bin/
+tar -xzf nerdctl-linux-amd64.tar.gz nerdctl && mv ./nerdctl /usr/local/bin/
 ```
 
 ### Install datree
