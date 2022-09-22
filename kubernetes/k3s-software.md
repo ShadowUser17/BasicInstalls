@@ -6,6 +6,11 @@ curl -sfL 'https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3' 
 echo 'export KUBECONFIG="/etc/rancher/k3s/k3s.yaml"' >> ~/.bashrc
 ```
 
+### Install datree
+```bash
+curl -sfL 'https://get.datree.io' | sh -
+```
+
 ### Install nerdctl
 ```bash
 mkdir /etc/nerdctl && \
@@ -19,7 +24,10 @@ curl -L "https://github.com/containerd/nerdctl/releases/download/v0.23.0/nerdctl
 tar -xzf nerdctl-linux-amd64.tar.gz nerdctl && mv ./nerdctl /usr/local/bin/
 ```
 
-### Install datree
+### Install kubectl
 ```bash
-curl -sfL 'https://get.datree.io' | sh -
+curl -L 'https://storage.googleapis.com/kubernetes-release/release/v1.23.12/bin/linux/amd64/kubectl' -o kubectl
+```
+```bash
+chmod +x ./kubectl && mv ./kubectl /usr/local/bin/
 ```
