@@ -13,3 +13,13 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.
 ```bash
 apt-get update && apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
+
+### Install for Fedora
+```bash
+dnf install -y dnf-plugins-core && \
+dnf config-manager --add-repo "https://download.docker.com/linux/fedora/docker-ce.repo"
+```
+```bash
+dnf install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin && \
+systemctl enable --now docker.service
+```

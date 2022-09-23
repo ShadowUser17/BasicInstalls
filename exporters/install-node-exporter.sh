@@ -5,7 +5,7 @@
 }
 
 PROM_USER="prometheus"
-PROM_VERSION="1.3.1"
+PROM_VERSION="1.4.0"
 PROM_URL="https://github.com/prometheus/node_exporter/releases/download/v${PROM_VERSION}"
 PROM_FILE="node_exporter-${PROM_VERSION}.linux-amd64.tar.gz"
 PROM_BASE="/var/lib"
