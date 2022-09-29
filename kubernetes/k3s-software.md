@@ -14,7 +14,7 @@ curl -sfL 'https://get.datree.io' | sh -
 ### Install nerdctl
 ```bash
 mkdir /etc/nerdctl && \
-curl -L "https://raw.githubusercontent.com/ShadowUser17/BasicInstalls/master/k3s/k3s-nerdctl.toml" \
+curl -L "https://raw.githubusercontent.com/ShadowUser17/BasicInstalls/master/kubernetes/k3s-nerdctl.toml" \
 -o "/etc/nerdctl/nerdctl.toml"
 ```
 ```bash
