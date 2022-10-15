@@ -13,5 +13,5 @@ curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="latest" sh -
 
 #### Configure kubectl:
 ```bash
-mkdir ~/.kube && scp k3s-master:/etc/rancher/k3s/k3s.yaml ~/.kube/config
+mkdir ~/.kube && scp vm-k3s-master:/etc/rancher/k3s/k3s.yaml ~/.kube/config
 ```
