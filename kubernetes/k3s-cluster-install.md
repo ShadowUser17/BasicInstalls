@@ -19,7 +19,9 @@ sed 's/127\.0\.0\.1/192\.168\.56\.13/g' ~/.kube/k3s.yaml > ~/.kube/config
 #### Cluster install:
 ```bash
 curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.23.12+k3s1" sh -s - server \
---cluster-init --etcd-expose-metrics --token="4Eja4ahRagJEhozmiRHKg3"
+--cluster-init --etcd-expose-metrics --token="4Eja4ahRagJEhozmiRHKg3" \
+--node-taint "node-role.kubernetes.io/master:NoSchedule" \
+--node-taint "node-role.kubernetes.io/control-plane:NoSchedule"
 ```
 
 #### Install second server:
