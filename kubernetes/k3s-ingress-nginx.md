@@ -1,6 +1,6 @@
 #### Cluster install:
 ```bash
-curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.23.12+k3s1" sh -s - server \
+curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.23.13+k3s1" sh -s - server \
 --cluster-init --disable "traefik" \
 --disable-helm-controller --etcd-expose-metrics \
 --write-kubeconfig-mode "0600" --token="4Eja4ahRagJEhozmiRHKg3" \
