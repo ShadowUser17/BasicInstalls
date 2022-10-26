@@ -1,19 +1,19 @@
 ### Install helm
 ```bash
-curl -sfL 'https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3' | sh -
-```
-```bash
-echo 'export KUBECONFIG="/etc/rancher/k3s/k3s.yaml"' >> ~/.bashrc
+curl -L "https://get.helm.sh/helm-v3.10.1-linux-amd64.tar.gz" -o helm-linux-amd64.tar.gz && \
+tar -xzf helm-linux-amd64.tar.gz linux-amd64/helm && \
+mv ./linux-amd64/helm /usr/local/bin/ && rmdir ./linux-amd64
 ```
 
 ### Install datree
 ```bash
-curl -sfL 'https://get.datree.io' | sh -
+curl -L "https://github.com/datreeio/datree/releases/download/1.6.46/datree-cli_1.6.46_Linux_x86_64.zip" -o datree-cli.zip && \
+unzip datree-cli.zip datree && mv ./datree /usr/local/bin/
 ```
 
-### Install kubescape:
+### Install kubescape
 ```bash
-curl -L "https://github.com/kubescape/kubescape/releases/download/v2.0.173/kubescape-ubuntu-latest" -o kubescape && \
+curl -L "https://github.com/kubescape/kubescape/releases/download/v2.0.174/kubescape-ubuntu-latest" -o kubescape && \
 chmod 755 ./kubescape && mv /usr/local/bin/
 ```
 
@@ -33,7 +33,7 @@ curl -O -L 'https://storage.googleapis.com/kubernetes-release/release/v1.23.13/b
 chmod +x ./kubectl && mv ./kubectl /usr/local/bin/
 ```
 
-### Install krew:
+### Install krew
 ```bash
 curl -L -O "https://github.com/kubernetes-sigs/krew/releases/download/v0.4.3/krew-linux_amd64.tar.gz" && \
 tar -xzf ./krew-linux_amd64.tar.gz ./krew-linux_amd64 && mv ./krew-linux_amd64 /usr/local/bin/krew && \
