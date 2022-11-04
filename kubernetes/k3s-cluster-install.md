@@ -23,7 +23,7 @@ curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.23.13+k3s1" sh -s - age
 
 #### Configure kubectl:
 ```bash
-mkdir ~/.kube && scp vm-k3s-server:/etc/rancher/k3s/k3s.yaml ~/.kube/ && \
+mkdir ~/.kube && scp k3s-server:/etc/rancher/k3s/k3s.yaml ~/.kube/ && \
 sed 's/127\.0\.0\.1/192\.168\.56\.13/g' ~/.kube/k3s.yaml > ~/.kube/config && \
 chmod 600 ~/.kube/config && rm -f ~/.kube/k3s.yaml
 ```
@@ -35,7 +35,9 @@ chmod 600 ~/.kube/config && rm -f ~/.kube/k3s.yaml
 ```
 
 #### Optional parameters:
-- Enable etcd `--cluster-init` and metrics `--etcd-expose-metrics`
+- Append random suffix to a node name: `--with-node-id`
+- Enable etcd: `--cluster-init` and metrics: `--etcd-expose-metrics`
+- Set node IP: `--node-ip` and disable security: `--flannel-backend=host-gw`
 - Disable helm controller: `--disable-helm-controller`
 - Disable default ingress controller: `--disable traefik`
 - Disable default dns: `--disable coredns`
