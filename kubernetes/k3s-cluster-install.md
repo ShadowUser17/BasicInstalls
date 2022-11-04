@@ -1,24 +1,19 @@
-#### Single install:
-```bash
-curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.23.13+k3s1" sh -
-```
-
 #### Install first server:
 ```bash
 curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.23.13+k3s1" sh -s - server \
---token="4Eja4ahRagJEhozmiRHKg3"
+--token "4Eja4ahRagJEhozmiRHKg3"
 ```
 
 #### Install second server:
 ```bash
 curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.23.13+k3s1" sh -s - server \
---server "https://192.168.56.13:6443" --token="4Eja4ahRagJEhozmiRHKg3"
+--server "https://192.168.56.13:6443" --token "4Eja4ahRagJEhozmiRHKg3"
 ```
 
 #### Install agent:
 ```bash
 curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.23.13+k3s1" sh -s - agent \
---server "https://192.168.56.13:6443" --token="4Eja4ahRagJEhozmiRHKg3"
+--server "https://192.168.56.13:6443" --token "4Eja4ahRagJEhozmiRHKg3"
 ```
 
 #### Configure kubectl:
@@ -26,6 +21,29 @@ curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.23.13+k3s1" sh -s - age
 mkdir ~/.kube && scp k3s-server:/etc/rancher/k3s/k3s.yaml ~/.kube/ && \
 sed 's/127\.0\.0\.1/192\.168\.56\.13/g' ~/.kube/k3s.yaml > ~/.kube/config && \
 chmod 600 ~/.kube/config && rm -f ~/.kube/k3s.yaml
+```
+
+#### Install server on VirtualBox:
+```bash
+curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.23.13+k3s1" sh -s - server \
+--token "4Eja4ahRagJEhozmiRHKg3" \
+--with-node-id \
+--node-ip "192.168.56.13" \
+--flannel-iface "eth1" \
+--flannel-backend host-gw \
+--write-kubeconfig-mode 0644 \
+--disable-helm-controller \
+--disable traefik
+```
+
+#### Install agent on VirtualBox:
+```bash
+curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.23.13+k3s1" sh -s - agent \
+--server "https://192.168.56.13:6443" \
+--token "4Eja4ahRagJEhozmiRHKg3" \
+--with-node-id \
+--node-ip "192.168.56.14" \
+--flannel-iface "eth1"
 ```
 
 #### Recommended for master node:
@@ -36,8 +54,10 @@ chmod 600 ~/.kube/config && rm -f ~/.kube/k3s.yaml
 
 #### Optional parameters:
 - Append random suffix to a node name: `--with-node-id`
+- Write kubeconfig with this mode: `--write-kubeconfig-mode 0644`
 - Enable etcd: `--cluster-init` and metrics: `--etcd-expose-metrics`
-- Set node IP: `--node-ip` and disable security: `--flannel-backend=host-gw`
+- Set node IP: `--node-ip` and disable security: `--flannel-backend host-gw`
+- Set network interface: `--flannel-iface eth1` (Multiple interfaces!)
 - Disable helm controller: `--disable-helm-controller`
 - Disable default ingress controller: `--disable traefik`
 - Disable default dns: `--disable coredns`

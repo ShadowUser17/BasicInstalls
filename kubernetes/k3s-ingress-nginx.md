@@ -1,5 +1,5 @@
 #### Cluster install:
-Add `--disable "traefik"` to installation script.
+Add `--disable traefik` to installation script.
 
 #### Install Nginx:
 ```bash

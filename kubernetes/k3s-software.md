@@ -7,13 +7,13 @@ mv ./linux-amd64/helm /usr/local/bin/ && rmdir ./linux-amd64
 
 ### Install datree
 ```bash
-curl -L "https://github.com/datreeio/datree/releases/download/1.6.48/datree-cli_1.6.48_Linux_x86_64.zip" -o datree-cli.zip && \
+curl -L "https://github.com/datreeio/datree/releases/download/1.7.1/datree-cli_1.7.1_Linux_x86_64.zip" -o datree-cli.zip && \
 unzip datree-cli.zip datree && mv ./datree /usr/local/bin/
 ```
 
 ### Install kubescape
 ```bash
-curl -L "https://github.com/kubescape/kubescape/releases/download/v2.0.174/kubescape-ubuntu-latest" -o kubescape && \
+curl -L "https://github.com/kubescape/kubescape/releases/download/v2.0.175/kubescape-ubuntu-latest" -o kubescape && \
 chmod 755 ./kubescape && mv ./kubescape /usr/local/bin/
 ```
 
