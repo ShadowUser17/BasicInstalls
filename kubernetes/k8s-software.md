@@ -1,13 +1,13 @@
 ### Install helm
 ```bash
-curl -L "https://get.helm.sh/helm-v3.10.1-linux-amd64.tar.gz" -o helm-linux-amd64.tar.gz && \
+curl -L "https://get.helm.sh/helm-v3.10.2-linux-amd64.tar.gz" -o helm-linux-amd64.tar.gz && \
 tar -xzf helm-linux-amd64.tar.gz linux-amd64/helm && \
 mv ./linux-amd64/helm /usr/local/bin/ && rmdir ./linux-amd64
 ```
 
 ### Install datree
 ```bash
-curl -L "https://github.com/datreeio/datree/releases/download/1.7.1/datree-cli_1.7.1_Linux_x86_64.zip" -o datree-cli.zip && \
+curl -L "https://github.com/datreeio/datree/releases/download/1.8.0/datree-cli_1.8.0_Linux_x86_64.zip" -o datree-cli.zip && \
 unzip datree-cli.zip datree && mv ./datree /usr/local/bin/
 ```
 
@@ -29,7 +29,7 @@ tar -xzf nerdctl-linux-amd64.tar.gz nerdctl && mv ./nerdctl /usr/local/bin/
 
 ### Install kubectl
 ```bash
-curl -O -L 'https://storage.googleapis.com/kubernetes-release/release/v1.23.13/bin/linux/amd64/kubectl' && \
+curl -O -L 'https://storage.googleapis.com/kubernetes-release/release/v1.23.14/bin/linux/amd64/kubectl' && \
 chmod +x ./kubectl && mv ./kubectl /usr/local/bin/
 ```
 
