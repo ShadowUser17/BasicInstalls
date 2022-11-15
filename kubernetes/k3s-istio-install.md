@@ -1,8 +1,8 @@
 #### Install:
 ```bash
-curl -L "https://github.com/istio/istio/releases/download/1.15.3/istio-1.15.3-linux-amd64.tar.gz" -o istio-linux-amd64.tar.gz && \
+curl -L "https://github.com/istio/istio/releases/download/1.16.0/istio-1.16.0-linux-amd64.tar.gz" -o istio-linux-amd64.tar.gz && \
 tar -xzf istio-linux-amd64.tar.gz && rm -f istio-linux-amd64.tar.gz && \
-./istio-1.15.3/bin/istioctl install --verify --set profile=minimal -y
+./istio-1.16.0/bin/istioctl install --verify --set profile=minimal -y
 ```
 
 #### Uninstall:
