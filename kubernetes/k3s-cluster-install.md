@@ -1,18 +1,18 @@
 #### Install first server:
 ```bash
-curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.23.13+k3s1" sh -s - server \
+curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.23.14+k3s1" sh -s - server \
 --token "4Eja4ahRagJEhozmiRHKg3"
 ```
 
 #### Install second server:
 ```bash
-curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.23.13+k3s1" sh -s - server \
+curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.23.14+k3s1" sh -s - server \
 --server "https://192.168.56.13:6443" --token "4Eja4ahRagJEhozmiRHKg3"
 ```
 
 #### Install agent:
 ```bash
-curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.23.13+k3s1" sh -s - agent \
+curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.23.14+k3s1" sh -s - agent \
 --server "https://192.168.56.13:6443" --token "4Eja4ahRagJEhozmiRHKg3"
 ```
 
@@ -25,7 +25,7 @@ chmod 600 ~/.kube/config && rm -f ~/.kube/k3s.yaml
 
 #### Install server on VirtualBox:
 ```bash
-curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.23.13+k3s1" sh -s - server \
+curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.23.14+k3s1" sh -s - server \
 --token "4Eja4ahRagJEhozmiRHKg3" \
 --with-node-id \
 --node-ip "192.168.56.13" \
@@ -38,7 +38,7 @@ curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.23.13+k3s1" sh -s - ser
 
 #### Install agent on VirtualBox:
 ```bash
-curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.23.13+k3s1" sh -s - agent \
+curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.23.14+k3s1" sh -s - agent \
 --server "https://192.168.56.13:6443" \
 --token "4Eja4ahRagJEhozmiRHKg3" \
 --with-node-id \
