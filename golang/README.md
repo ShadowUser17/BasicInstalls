@@ -4,4 +4,5 @@
 - [Awesome](https://github.com/avelino/awesome-go/blob/main/README.md)
 
 #### Tools:
-- [gobrew](https://github.com/kevincobain2000/gobrew)
+- [delve](https://github.com/go-delve/delve/releases)
+- [gobrew](https://github.com/kevincobain2000/gobrew/releases)

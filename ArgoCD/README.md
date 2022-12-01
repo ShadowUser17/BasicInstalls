@@ -2,7 +2,7 @@
 - [Overview](https://argo-cd.readthedocs.io/en/stable/)
 - [Example](https://github.com/argoproj/argocd-example-apps)
 
-#### Basic install:
+#### Install:
 ```bash
 kubectl create namespace argocd && \
 kubectl apply -n argocd -f 'https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml'
@@ -12,6 +12,11 @@ kubectl apply -n argocd -f 'https://raw.githubusercontent.com/argoproj/argo-cd/s
 ```bash
 curl -L 'https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64' -o argocd && \
 chmod 755 ./argocd && mv argocd /usr/local/bin/
+```
+
+#### Remove:
+```bash
+kubectl delete namespace argocd --force
 ```
 
 #### Get initial password:
