@@ -1,8 +1,4 @@
-#### URLs:
-- [Overview](https://argo-cd.readthedocs.io/en/stable/)
-- [Example](https://github.com/argoproj/argocd-example-apps)
-
-#### Install:
+#### Deploy to cluster:
 ```bash
 kubectl create namespace argocd && \
 kubectl apply -n argocd -f 'https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml'
@@ -14,14 +10,27 @@ curl -L 'https://github.com/argoproj/argo-cd/releases/latest/download/argocd-lin
 chmod 755 ./argocd && mv argocd /usr/local/bin/
 ```
 
-#### Remove:
-```bash
-kubectl delete namespace argocd --force
-```
-
 #### Get initial password:
 ```bash
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
+```
+
+### Login with CLI:
+```bash
+kubectl get svc/argocd-server -n argocd
+```
+```bash
+argocd login <ip/host>
+```
+
+#### Access:
+```bash
+kubectl port-forward svc/argocd-server -n argocd 8080:443
+```
+
+#### Remove:
+```bash
+kubectl delete namespace argocd --force
 ```
 
 #### Disable redirect:

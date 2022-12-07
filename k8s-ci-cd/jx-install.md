@@ -1,7 +1,3 @@
-#### URLs:
-- [About](https://jenkins-x.io/v3/about/)
-- [Releases](https://github.com/jenkins-x/jx/releases)
-
 #### Install Operator:
 ```bash
 jx admin operator --username <user> --token <key>
