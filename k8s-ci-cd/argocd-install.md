@@ -22,6 +22,9 @@ kubectl get svc/argocd-server -n argocd
 ```bash
 argocd login <ip/host>
 ```
+```bash
+argocd account update-password
+```
 
 #### Access:
 ```bash
@@ -43,4 +46,13 @@ data:
 ```
 ```bash
 kubectl rollout restart deploy argocd-server -n argocd
+```
+
+#### Set WebHook Secret:
+```bash
+kubectl edit secret argocd-secret -n argocd
+```
+```yaml
+stringData:
+  webhook.github.secret: argocd-testing
 ```

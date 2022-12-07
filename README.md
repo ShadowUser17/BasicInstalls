@@ -1,1 +1,1 @@
-### Configs/Scripts/Tutorials for installation
+### Configs/Scripts/Tutorials
