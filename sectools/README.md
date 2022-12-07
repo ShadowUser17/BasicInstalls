@@ -12,6 +12,8 @@
 #### Other tools:
 - [amass](https://github.com/OWASP/Amass/releases)
 - [nettacker](https://github.com/OWASP/Nettacker/releases)
+- [PEASS-ng](https://github.com/carlospolop/PEASS-ng/releases)
 - [gitleaks](https://github.com/zricethezav/gitleaks/releases)
+- [pip-audit](https://github.com/pypa/pip-audit/releases)
 - [trivy](https://github.com/aquasecurity/trivy/releases)
 - [dockle](https://github.com/goodwithtech/dockle/releases)
