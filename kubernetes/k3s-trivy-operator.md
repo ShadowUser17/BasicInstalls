@@ -1,6 +1,6 @@
 #### Install:
 ```bash
-kubectl apply -f "https://raw.githubusercontent.com/aquasecurity/trivy-operator/v0.8.0/deploy/static/trivy-operator.yaml"
+kubectl apply -f "https://raw.githubusercontent.com/aquasecurity/trivy-operator/v0.9.0/deploy/static/trivy-operator.yaml"
 ```
 
 #### Enable metrics:
