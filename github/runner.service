@@ -1,0 +1,15 @@
+[Unit]
+Description=github-runner
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=runner
+Group=runner
+Type=simple
+Restart=on-failure
+WorkingDirectory=/var/lib/runner
+ExecStart=/var/lib/runner/run.sh
+
+[Install]
+WantedBy=multi-user.target

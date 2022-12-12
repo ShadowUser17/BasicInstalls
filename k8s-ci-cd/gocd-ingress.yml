@@ -1,0 +1,44 @@
+apiVersion: "cert-manager.io/v1"
+kind: "Issuer"
+metadata:
+  name: "gocd-issuer"
+  namespace: "gocd"
+spec:
+  selfSigned: {}
+
+---
+apiVersion: "cert-manager.io/v1"
+kind: "Certificate"
+metadata:
+  name: "gocd-server"
+  namespace: "gocd"
+spec:
+  dnsNames:
+    - "gocd.k3s"
+  secretName: "gocd-secret"
+  issuerRef:
+    name: "gocd-issuer"
+
+---
+apiVersion: "networking.k8s.io/v1"
+kind: "Ingress"
+metadata:
+  namespace: "gocd"
+  name: "gocd-server"
+spec:
+  ingressClassName: "nginx"
+  tls:
+    - secretName: "gocd-secret"
+      hosts:
+        - "gocd.k3s"
+  rules:
+    - host: "gocd.k3s"
+      http:
+        paths:
+          - path: "/"
+            pathType: "Prefix"
+            backend:
+              service:
+                name: "gocd-server"
+                port:
+                  number: 8153

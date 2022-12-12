@@ -6,7 +6,7 @@ helm repo add gocd "https://gocd.github.io/helm-chart" && helm repo update
 helm install gocd gocd/gocd -n gocd --create-namespace
 ```
 
-#### Access:
+#### Fix for default ingress:
 ```bash
 kubectl edit ingress gocd-server -n gocd
 ```
