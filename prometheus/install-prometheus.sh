@@ -5,7 +5,7 @@
 }
 
 PROM_USER="prometheus"
-PROM_VERSION="2.40.6"
+PROM_VERSION="2.40.7"
 PROM_URL="https://github.com/prometheus/prometheus/releases/download/v${PROM_VERSION}"
 PROM_FILE="prometheus-${PROM_VERSION}.linux-amd64.tar.gz"
 PROM_BASE="/var/lib"

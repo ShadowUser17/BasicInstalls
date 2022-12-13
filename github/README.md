@@ -1,12 +1,13 @@
 #### URLs:
 - [Actions](https://docs.github.com/en/actions)
+- [Releases](https://github.com/actions/runner/releases)
 
 #### Install:
 ```bash
 useradd --system -s /sbin/nologin -b /var/lib -m runner
 ```
 ```bash
-curl -L "https://github.com/actions/runner/releases/download/v2.299.1/actions-runner-linux-x64-2.299.1.tar.gz" -o /var/lib/runner/actions-runner.tgz && \
+curl -L "https://github.com/actions/runner/releases/download/v2.300.0/actions-runner-linux-x64-2.300.0.tar.gz" -o /var/lib/runner/actions-runner.tgz && \
 tar -xzf /var/lib/runner/actions-runner.tgz -C /var/lib/runner/ && rm -f /var/lib/runner/actions-runner.tgz
 ```
 ```bash

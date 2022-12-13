@@ -1,0 +1,9 @@
+apiVersion: "actions.summerwind.dev/v1alpha1"
+kind: "RunnerDeployment"
+metadata:
+  name: "ci-cd-runner"
+spec:
+  replicas: 1
+  template:
+    spec:
+      repository: "ShadowUser17/ci-cd-testing"

@@ -5,7 +5,7 @@ tar -xzf flux_0.37.0_linux_amd64.tar.gz flux && rm -f flux_0.37.0_linux_amd64.ta
 mv ./flux /usr/local/bin/ && flux install
 ```
 
-#### Deploy app:
+#### App deploy:
 ```bash
 flux create source git docker-templates \
 --url="https://github.com/ShadowUser17/DockerTemplates.git" \
@@ -21,12 +21,14 @@ flux create kustomization whoami \
 --target-namespace=default
 ```
 
-#### Show source/kustomize:
+#### Show Sources/Sustomizes:
 ```bash
-flux get sources git
+flux get sources git && flux get kustomizations
 ```
+
+#### Validate:
 ```bash
-flux get kustomizations
+flux check
 ```
 
 #### Remove:
