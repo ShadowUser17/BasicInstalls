@@ -3,7 +3,24 @@ kind: "RunnerDeployment"
 metadata:
   name: "ci-cd-runner"
 spec:
-  replicas: 1
   template:
     spec:
       repository: "ShadowUser17/ci-cd-testing"
+
+---
+apiVersion: "actions.summerwind.dev/v1alpha1"
+kind: "HorizontalRunnerAutoscaler"
+metadata:
+  name: "ci-cd-runner-autoscaler"
+spec:
+  scaleTargetRef:
+    name: "ci-cd-runner"
+    kind: "RunnerDeployment"
+  minReplicas: 1
+  maxReplicas: 3
+  metrics:
+    - type: "PercentageRunnersBusy"
+      scaleUpThreshold: "0.50"
+      scaleDownThreshold: "0.5"
+      scaleUpFactor: "1"
+      scaleDownFactor: "1"

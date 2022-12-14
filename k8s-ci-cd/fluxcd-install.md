@@ -7,18 +7,18 @@ mv ./flux /usr/local/bin/ && flux install
 
 #### App deploy:
 ```bash
-flux create source git docker-templates \
---url="https://github.com/ShadowUser17/DockerTemplates.git" \
---branch=master \
+flux create source git templates \
+--url="ssh://git@github.com/ShadowUser17/ci-cd-testing" \
+--private-key-file="./github_ssh_key" \
+--branch=fluxcd \
 --interval=1m
 ```
 ```bash
 flux create kustomization whoami \
---source=docker-templates \
+--source=templates \
 --path="./K8S/whoami" \
 --prune=true \
---interval=5m \
---target-namespace=default
+--interval=5m
 ```
 
 #### Show Sources/Sustomizes:
