@@ -1,11 +1,13 @@
 apiVersion: "actions.summerwind.dev/v1alpha1"
 kind: "RunnerDeployment"
 metadata:
-  name: "ci-cd-runner"
+  name: "ci-cd-runner-deploy"
 spec:
   template:
     spec:
       repository: "ShadowUser17/ci-cd-testing"
+      labels:
+        - "testing"
 
 ---
 apiVersion: "actions.summerwind.dev/v1alpha1"
@@ -20,7 +22,7 @@ spec:
   maxReplicas: 3
   metrics:
     - type: "PercentageRunnersBusy"
-      scaleUpThreshold: "0.50"
-      scaleDownThreshold: "0.5"
+      scaleUpThreshold: "800m"
+      scaleDownThreshold: "90m"
       scaleUpFactor: "1"
       scaleDownFactor: "1"
