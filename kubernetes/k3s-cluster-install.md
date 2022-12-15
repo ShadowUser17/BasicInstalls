@@ -1,39 +1,26 @@
-#### Install first server:
+#### Install server on Lima:
 ```bash
 curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.23.14+k3s1" sh -s - server \
---token "4Eja4ahRagJEhozmiRHKg3"
-```
-
-#### Install second server:
-```bash
-curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.23.14+k3s1" sh -s - server \
---server "https://192.168.56.13:6443" --token "4Eja4ahRagJEhozmiRHKg3"
-```
-
-#### Install agent:
-```bash
-curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.23.14+k3s1" sh -s - agent \
---server "https://192.168.56.13:6443" --token "4Eja4ahRagJEhozmiRHKg3"
-```
-
-#### Configure kubectl:
-```bash
-mkdir ~/.kube && scp k3s-server:/etc/rancher/k3s/k3s.yaml ~/.kube/ && \
-sed 's/127\.0\.0\.1/192\.168\.56\.13/g' ~/.kube/k3s.yaml > ~/.kube/config && \
-chmod 600 ~/.kube/config && rm -f ~/.kube/k3s.yaml
+--token "AoNwhviL4xukEwTFntvmVpKK" \
+--node-name "k3s" \
+--with-node-id \
+--write-kubeconfig-mode "0644" \
+--disable-helm-controller \
+--disable "traefik"
 ```
 
 #### Install server on VirtualBox:
 ```bash
 curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.23.14+k3s1" sh -s - server \
 --token "4Eja4ahRagJEhozmiRHKg3" \
+--node-name "k3s" \
 --with-node-id \
 --node-ip "192.168.56.13" \
 --flannel-iface "eth1" \
---flannel-backend host-gw \
---write-kubeconfig-mode 0644 \
+--flannel-backend "host-gw" \
+--write-kubeconfig-mode "0644" \
 --disable-helm-controller \
---disable traefik
+--disable "traefik"
 ```
 
 #### Install agent on VirtualBox:
@@ -41,9 +28,17 @@ curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.23.14+k3s1" sh -s - ser
 curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.23.14+k3s1" sh -s - agent \
 --server "https://192.168.56.13:6443" \
 --token "4Eja4ahRagJEhozmiRHKg3" \
+--node-name "k3s" \
 --with-node-id \
 --node-ip "192.168.56.14" \
 --flannel-iface "eth1"
+```
+
+#### Configure kubectl:
+```bash
+mkdir ~/.kube && scp k3s-server:/etc/rancher/k3s/k3s.yaml ~/.kube/ && \
+sed 's/127\.0\.0\.1/192\.168\.56\.13/g' ~/.kube/k3s.yaml > ~/.kube/config && \
+chmod 600 ~/.kube/config && rm -f ~/.kube/k3s.yaml
 ```
 
 #### Recommended for master node:
