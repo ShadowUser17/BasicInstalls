@@ -1,19 +1,18 @@
 apiVersion: "actions.summerwind.dev/v1alpha1"
 kind: "RunnerDeployment"
 metadata:
-  name: "ci-cd-runner-deploy"
+  name: "ci-cd-runner"
 spec:
   template:
     spec:
       repository: "ShadowUser17/ci-cd-testing"
-      labels:
-        - "testing"
+      labels: ["testing"]
 
 ---
 apiVersion: "actions.summerwind.dev/v1alpha1"
 kind: "HorizontalRunnerAutoscaler"
 metadata:
-  name: "ci-cd-runner-autoscaler"
+  name: "ci-cd-runner"
 spec:
   scaleTargetRef:
     name: "ci-cd-runner"

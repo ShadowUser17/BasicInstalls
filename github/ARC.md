@@ -15,7 +15,7 @@ helm upgrade --install --namespace actions-runner-system --create-namespace \
 
 #### Example deploy:
 ```bash
-kubectl apply -f runner-deploy.yml -n testing
+kubectl apply -n testing -f "https://raw.githubusercontent.com/ShadowUser17/BasicInstalls/master/github/runner-deploy.yml"
 ```
 
 #### Get runners:
@@ -33,8 +33,6 @@ kubectl -n actions-runner-system get secret controller-manager -o jsonpath="{.da
 echo -n "$GITHUB_TOKEN" | base64
 ```
 ```bash
-kubectl -n actions-runner-system patch secret controller-manager -p '{"data": {"github_token": "<secret>"}}'
-```
-```bash
+kubectl -n actions-runner-system patch secret controller-manager -p '{"data": {"github_token": "<secret>"}}' && \
 kubectl rollout restart deploy actions-runner-controller -n actions-runner-system
 ```
