@@ -1,3 +1,6 @@
+#### URLs:
+- [Docs](https://argo-cd.readthedocs.io/en/stable/)
+
 #### Deploy to cluster:
 ```bash
 kubectl create namespace argocd && \
