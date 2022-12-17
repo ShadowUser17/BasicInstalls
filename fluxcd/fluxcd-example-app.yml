@@ -1,15 +1,3 @@
-apiVersion: "source.toolkit.fluxcd.io/v1beta2"
-kind: "GitRepository"
-metadata:
-  namespace: "flux-system"
-  name: "docker-templates"
-spec:
-  interval: "1m0s"
-  url: "https://github.com/ShadowUser17/DockerTemplates.git"
-  ref:
-    branch: "master"
-
----
 apiVersion: "kustomize.toolkit.fluxcd.io/v1beta2"
 kind: "Kustomization"
 metadata:
@@ -18,7 +6,7 @@ metadata:
 spec:
   path: "./K8S/whoami"
   prune: true
-  interval: "5m0s"
+  interval: "1m0s"
   sourceRef:
     kind: "GitRepository"
     name: "docker-templates"

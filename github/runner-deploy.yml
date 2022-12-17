@@ -1,3 +1,9 @@
+apiVersion: "v1"
+kind: "ServiceAccount"
+metadata:
+  name: "ci-cd-runner"
+
+---
 apiVersion: "actions.summerwind.dev/v1alpha1"
 kind: "RunnerDeployment"
 metadata:
@@ -5,6 +11,7 @@ metadata:
 spec:
   template:
     spec:
+      serviceAccountName: "ci-cd-runner"
       repository: "ShadowUser17/ci-cd-testing"
       labels: ["testing"]
 

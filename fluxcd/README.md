@@ -24,9 +24,14 @@ flux create kustomization whoami \
 --interval=5m
 ```
 
-#### Show Sources/Sustomizes:
+#### Show Sources/Kustomizations:
 ```bash
 flux get sources git && flux get kustomizations
+```
+
+#### Suspend:
+```bash
+kubectl patch gitrepository <repository> --field-manager=flux-client-side-apply -p '{"spec": {"suspend": true }}'
 ```
 
 #### Validate:
