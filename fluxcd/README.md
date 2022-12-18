@@ -1,10 +1,11 @@
 #### URLs:
-- [get-started](https://fluxcd.io/flux/get-started/)
+- [FluxCD](https://fluxcd.io/flux/get-started/)
+- [Flagger](https://fluxcd.io/flagger/usage/how-it-works/)
 
 #### Install/Upgrade:
 ```bash
-curl -L -O "https://github.com/fluxcd/flux2/releases/download/v0.37.0/flux_0.37.0_linux_amd64.tar.gz" && \
-tar -xzf flux_0.37.0_linux_amd64.tar.gz flux && rm -f flux_0.37.0_linux_amd64.tar.gz && \
+curl -L "https://github.com/fluxcd/flux2/releases/download/v0.37.0/flux_0.37.0_linux_amd64.tar.gz" -o "flux_linux_amd64.tgz" && \
+tar -xzf flux_linux_amd64.tgz flux && rm -f flux_linux_amd64.tgz && \
 mv ./flux /usr/local/bin/ && flux install
 ```
 
