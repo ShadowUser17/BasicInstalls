@@ -1,4 +1,5 @@
 #### URLs:
+- [CLI](https://github.com/cli/cli/releases)
 - [Actions](https://docs.github.com/en/actions)
 - [Releases](https://github.com/actions/runner/releases)
 

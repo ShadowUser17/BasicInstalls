@@ -4,3 +4,4 @@
 - [eks-docs](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html)
 - [kind-docs](https://kind.sigs.k8s.io/docs/user/quick-start/)
 - [kubectl-docs](https://kubectl.docs.kubernetes.io/references/)
+- [k8s-client](https://github.com/kubernetes/client-go)
