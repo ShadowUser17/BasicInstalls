@@ -38,7 +38,3 @@ linkerd viz uninstall | kubectl delete -f -
 ```bash
 linkerd uninstall | kubectl delete -f -
 ```
-
-#### URLs:
-- [Releases](https://github.com/linkerd/linkerd2/releases)
-- [Documentation](https://linkerd.io/2/getting-started/)

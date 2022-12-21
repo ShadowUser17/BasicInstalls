@@ -27,7 +27,3 @@ annotations:
   traffic.sidecar.istio.io/includeInboundPorts: ""
   traffic.sidecar.istio.io/excludeInboundPorts: "80,443"
 ```
-
-#### URLs:
-- [Releases](https://github.com/istio/istio/releases)
-- [Documentation](https://istio.io/latest/docs/)

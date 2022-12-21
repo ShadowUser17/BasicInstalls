@@ -1,0 +1,25 @@
+apiVersion: "v1"
+kind: "Secret"
+metadata:
+  namespace: "flux-system"
+  name: "whoami-webhook"
+type: "Opaque"
+stringData:
+  token: "whoami-secret"
+
+---
+apiVersion: "notification.toolkit.fluxcd.io/v1beta2"
+kind: "Receiver"
+metadata:
+  namespace: "flux-system"
+  name: "whoami-webhook"
+spec:
+  type: "github"
+  events:
+    - "ping"
+    - "push"
+  secretRef:
+    name: "whoami-webhook"
+  resources:
+    - kind: "GitRepository"
+      name: "docker-templates"

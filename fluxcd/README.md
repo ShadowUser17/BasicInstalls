@@ -4,7 +4,7 @@
 
 #### Install/Upgrade:
 ```bash
-curl -L "https://github.com/fluxcd/flux2/releases/download/v0.37.0/flux_0.37.0_linux_amd64.tar.gz" -o "flux_linux_amd64.tgz" && \
+curl -L "https://github.com/fluxcd/flux2/releases/download/v0.38.1/flux_0.38.1_linux_amd64.tar.gz" -o "flux_linux_amd64.tgz" && \
 tar -xzf flux_linux_amd64.tgz flux && rm -f flux_linux_amd64.tgz && \
 mv ./flux /usr/local/bin/ && flux install
 ```
@@ -25,9 +25,9 @@ flux create kustomization whoami \
 --interval=5m
 ```
 
-#### Show Sources/Kustomizations:
+#### Show resources:
 ```bash
-flux get sources git && flux get kustomizations
+flux get all
 ```
 
 #### Suspend:
