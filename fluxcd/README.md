@@ -9,6 +9,11 @@ tar -xzf flux_linux_amd64.tgz flux && rm -f flux_linux_amd64.tgz && \
 mv ./flux /usr/local/bin/ && flux install
 ```
 
+#### Export installation manifests:
+```bash
+flux install --export > flux2-install.yaml
+```
+
 #### App deploy:
 ```bash
 flux create source git templates \

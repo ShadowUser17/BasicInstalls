@@ -5,7 +5,7 @@
 }
 
 ALTR_USER="alertmanager"
-ALTR_VERSION="0.24.0"
+ALTR_VERSION="0.25.0"
 ALTR_URL="https://github.com/prometheus/alertmanager/releases/download/v${ALTR_VERSION}"
 ALTR_FILE="alertmanager-${ALTR_VERSION}.linux-amd64.tar.gz"
 ALTR_BASE="/var/lib"
