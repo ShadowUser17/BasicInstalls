@@ -23,6 +23,11 @@ kubectl apply -n testing -f "https://raw.githubusercontent.com/ShadowUser17/Basi
 kubectl get runners -A
 ```
 
+#### Attach runner container:
+```bash
+kubectl exec -n <ns> -it --container <runner|docker> <pod> -- bash
+```
+
 #### Get secret:
 ```bash
 kubectl -n actions-runner-system get secret controller-manager -o jsonpath="{.data.github_token}" | base64 -d; echo

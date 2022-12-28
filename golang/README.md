@@ -6,8 +6,11 @@
 #### Frameworks:
 - [gin](https://github.com/gin-gonic/gin/blob/master/README.md)
 
-#### Tools:
+#### Security:
 - [age](https://github.com/FiloSottile/age/releases)
+
+#### Tools:
 - [delve](https://github.com/go-delve/delve/releases)
-- [mkcert](https://github.com/FiloSottile/mkcert/releases)
 - [gobrew](https://github.com/kevincobain2000/gobrew/releases)
+- [mkcert](https://github.com/FiloSottile/mkcert/releases)
+- [goreleaser](https://github.com/goreleaser/goreleaser/releases)
