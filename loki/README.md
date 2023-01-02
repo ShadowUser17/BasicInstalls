@@ -8,4 +8,5 @@ template:
   metadata:
     annotations:
       promtail.io/collect: "true"
+      promtail.io/type: "raw"
 ```
