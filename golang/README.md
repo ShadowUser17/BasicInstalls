@@ -5,6 +5,7 @@
 
 #### Frameworks:
 - [gin](https://github.com/gin-gonic/gin/blob/master/README.md)
+- [cobra](https://github.com/spf13/cobra/blob/main/README.md)
 
 #### Security:
 - [age](https://github.com/FiloSottile/age/releases)

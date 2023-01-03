@@ -13,9 +13,6 @@ scrape_configs:
   - job_name: "pod-logs"
     kubernetes_sd_configs:
       - role: "pod"
-        selectors:
-          - role: "pod"
-            field: ""
     pipeline_stages:
       - cri: {}
     relabel_configs:
