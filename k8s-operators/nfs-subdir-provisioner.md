@@ -3,13 +3,18 @@
 kubectl get storageclasses
 ```
 
-#### Deploying NFS provisioner:
+#### Install NFS provisioner:
 ```bash
 helm repo add nfs-subdir-external-provisioner "https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner"
 ```
 ```bash
 helm install nfs-subdir-external-provisioner nfs-subdir-external-provisioner/nfs-subdir-external-provisioner \
---set 'nfs.server=192.168.56.10' --set 'nfs.path=/var/nfs/k3s_data'
+--set 'nfs.server=192.168.56.10' --set 'nfs.path=/var/nfs'
+```
+
+#### Uninstall NFS provisioner:
+```bash
+helm uninstall nfs-subdir-external-provisioner
 ```
 
 #### Deploying persistent volume claim:
@@ -26,3 +31,7 @@ spec:
     requests:
       storage: "1G"
 ```
+
+#### URLs:
+- [README](https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner/blob/master/README.md)
+- [Releases](https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner/releases)
