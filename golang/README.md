@@ -5,6 +5,7 @@
 
 #### Frameworks:
 - [gin](https://github.com/gin-gonic/gin/blob/master/README.md)
+- [yaml](https://github.com/go-yaml/yaml/blob/v3/README.md)
 - [cobra](https://github.com/spf13/cobra/blob/main/README.md)
 
 #### Security:
