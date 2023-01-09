@@ -4,7 +4,6 @@ curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.23.15+k3s1" sh -s - ser
 --token "AoNwhviL4xukEwTFntvmVpKK" \
 --node-name "k3s" \
 --with-node-id \
---write-kubeconfig-mode "0644" \
 --disable-helm-controller \
 --disable "traefik"
 ```
@@ -13,12 +12,11 @@ curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.23.15+k3s1" sh -s - ser
 ```bash
 curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.23.15+k3s1" sh -s - server \
 --token "4Eja4ahRagJEhozmiRHKg3" \
+--write-kubeconfig-mode "0644" \
 --node-name "k3s" \
 --with-node-id \
 --node-ip "192.168.56.13" \
 --flannel-iface "eth1" \
---flannel-backend "host-gw" \
---write-kubeconfig-mode "0644" \
 --disable-helm-controller \
 --disable "traefik"
 ```

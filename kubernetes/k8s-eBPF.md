@@ -1,3 +1,11 @@
+### Warning! Networking provided by Cilium.
+
+#### Required for K3S:
+```bash
+--flannel-backend "none" \
+--disable-network-policy
+```
+
 #### Install Cilium CLI:
 ```bash
 curl -L "https://github.com/cilium/cilium-cli/releases/download/v0.12.11/cilium-linux-amd64.tar.gz" -o cilium-linux.tgz && \
@@ -12,20 +20,29 @@ tar -xzf hubble-linux.tgz hubble && mv ./hubble /usr/local/bin/ && rm -f ./hubbl
 
 #### Install Cilium:
 ```bash
-cilium install
+cilium install \
+--helm-set "prometheus.enabled=true" \
+--helm-set "operator.prometheus.enabled=true"
 ```
 
 #### Validate Cilium:
 ```bash
 cilium status --wait
 ```
+
+#### Validate network connectivity:
 ```bash
-kubectl -n kube-system get pods -l k8s-app=cilium
+cilium connectivity test
 ```
 
 #### Enable Hubble:
 ```bash
-cilium hubble enable
+cilium hubble enable --ui
+```
+
+#### Open Hubble UI:
+```bash
+cilium hubble ui
 ```
 
 #### Validate Hubble:
