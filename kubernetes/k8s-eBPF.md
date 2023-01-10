@@ -35,7 +35,7 @@ cilium status --wait
 cilium connectivity test
 ```
 
-#### Enable Hubble:
+#### Enable Hubble with UI:
 ```bash
 cilium hubble enable --ui
 ```
@@ -56,6 +56,27 @@ hubble status
 #### Uninstall:
 ```bash
 cilium uninstall
+```
+
+#### Export manifests:
+```bash
+helm repo add cilium "https://helm.cilium.io/" && helm repo update
+```
+```bash
+helm template cilium cilium/cilium \
+--version "1.12.5" \
+--namespace "kube-system" \
+--set "operator.replicas=1" \
+--set "prometheus.enabled=true" \
+--set "operator.prometheus.enabled=true" > cilium-deploy.yml
+```
+```bash
+helm template cilium cilium/cilium \
+--version "1.12.5" \
+--namespace "kube-system" \
+--set "hubble.enabled=true" \
+--set "hubble.relay.enabled=true" \
+--set hubble.metrics.enabled="{dns,drop,tcp,flow,icmp,http}" > hubble-deploy.yml
 ```
 
 #### URLs:
