@@ -4,6 +4,7 @@
 - [httpx](https://github.com/projectdiscovery/httpx/releases)
 - [dnsx](https://github.com/projectdiscovery/dnsx/releases)
 - [subfinder](https://github.com/projectdiscovery/subfinder/releases)
+- [katana](https://github.com/projectdiscovery/katana/releases)
 - [mapcidr](https://github.com/projectdiscovery/mapcidr/releases)
 - [tlsx](https://github.com/projectdiscovery/tlsx/releases)
 - [proxify](https://github.com/projectdiscovery/proxify/releases)
