@@ -4,5 +4,5 @@
 - [Installation](https://github.com/nodesource/distributions/blob/master/README.md)
 
 #### Software:
-- [TypeScript](https://www.typescriptlang.org/docs/)
-- [Yarn](https://classic.yarnpkg.com/en/)
+- [TypeScript](https://www.typescriptlang.org/download)
+- [Yarn](https://classic.yarnpkg.com/en/docs/install)

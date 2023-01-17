@@ -14,8 +14,8 @@ dnf -y install terraform
 curl -fsSL "https://rpm.nodesource.com/setup_16.x" | bash -
 ```
 ```bash
-npm install -g "typescript@4.4.4"
+npm install -g "typescript@4.4"
 ```
 ```bash
-npm install -g "cdktf-cli@0.13.3"
+npm install -g "cdktf-cli@latest"
 ```
