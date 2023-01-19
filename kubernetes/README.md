@@ -5,4 +5,5 @@
 - [kubectl-docs](https://kubectl.docs.kubernetes.io/references/)
 - [kind-docs](https://kind.sigs.k8s.io/docs/user/quick-start/)
 - [helm-docs](https://helm.sh/docs/)
-- [k8s-client](https://github.com/kubernetes/client-go)
+- [k8s-client-go](https://github.com/kubernetes/client-go)
+- [k8s-client-py](https://github.com/kubernetes-client/python)
