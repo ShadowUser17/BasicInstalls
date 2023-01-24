@@ -8,13 +8,13 @@
 
 #### Install Cilium CLI:
 ```bash
-curl -L "https://github.com/cilium/cilium-cli/releases/download/v0.12.11/cilium-linux-amd64.tar.gz" -o cilium-linux.tgz && \
+curl -L "https://github.com/cilium/cilium-cli/releases/download/v0.12.12/cilium-linux-amd64.tar.gz" -o cilium-linux.tgz && \
 tar -xzf cilium-linux.tgz cilium && mv ./cilium /usr/local/bin/ && rm -f ./cilium-linux.tgz
 ```
 
 #### Install Hubble CLI:
 ```bash
-curl -L "https://github.com/cilium/hubble/releases/download/v0.10.0/hubble-linux-amd64.tar.gz" -o hubble-linux.tgz && \
+curl -L "https://github.com/cilium/hubble/releases/download/v0.11.1/hubble-linux-amd64.tar.gz" -o hubble-linux.tgz && \
 tar -xzf hubble-linux.tgz hubble && mv ./hubble /usr/local/bin/ && rm -f ./hubble-linux.tgz
 ```
 
