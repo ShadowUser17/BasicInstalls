@@ -7,7 +7,7 @@ mv ./linux-amd64/helm /usr/local/bin/ && rm -f helm-linux-amd64.tgz && rmdir ./l
 
 ### Install datree
 ```bash
-curl -L "https://github.com/datreeio/datree/releases/download/1.8.14/datree-cli_1.8.14_Linux_x86_64.zip" -o datree-cli.zip && \
+curl -L "https://github.com/datreeio/datree/releases/download/1.8.20/datree-cli_1.8.20_Linux_x86_64.zip" -o datree-cli.zip && \
 unzip datree-cli.zip datree && mv ./datree /usr/local/bin/ && rm -f datree-cli.zip
 ```
 
@@ -29,7 +29,7 @@ tar -xzf nerdctl-linux-amd64.tgz nerdctl && mv ./nerdctl /usr/local/bin/ && rm -
 
 ### Install kubectl
 ```bash
-curl -O -L 'https://storage.googleapis.com/kubernetes-release/release/v1.23.15/bin/linux/amd64/kubectl' && \
+curl -O -L 'https://storage.googleapis.com/kubernetes-release/release/v1.23.16/bin/linux/amd64/kubectl' && \
 chmod +x ./kubectl && mv ./kubectl /usr/local/bin/
 ```
 
@@ -38,10 +38,4 @@ chmod +x ./kubectl && mv ./kubectl /usr/local/bin/
 curl -L -O "https://github.com/kubernetes-sigs/krew/releases/download/v0.4.3/krew-linux_amd64.tar.gz" && \
 tar -xzf ./krew-linux_amd64.tar.gz ./krew-linux_amd64 && mv ./krew-linux_amd64 /usr/local/bin/krew && \
 echo 'export PATH="$PATH:$HOME/.krew/bin"' >> ~/.bashrc && rm -f ./krew-linux_amd64.tar.gz
-```
-
-### Install k9s
-```bash
-curl -O -L "https://github.com/derailed/k9s/releases/download/v0.26.7/k9s_Linux_x86_64.tar.gz" && \
-tar -xzf k9s_Linux_x86_64.tar.gz k9s && rm -f k9s_Linux_x86_64.tar.gz && mv ./k9s /usr/local/bin/
 ```
