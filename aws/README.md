@@ -2,6 +2,10 @@
 - [ALL](https://docs.aws.amazon.com/index.html)
 - [CLI](https://docs.aws.amazon.com/cli/latest/index.html)
 
+#### SDK:
+- [Golang](https://docs.aws.amazon.com/sdk-for-go/)
+- [Python](https://docs.aws.amazon.com/pythonsdk/)
+
 #### Resources:
 - [aws](https://github.com/aws)
 - [aws-docs](https://github.com/awsdocs)

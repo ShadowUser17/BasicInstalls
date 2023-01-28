@@ -1,13 +1,13 @@
 #### Install VirtualBox on Fedora 36:
 ```bash
-curl -L "https://download.virtualbox.org/virtualbox/6.1.40/VirtualBox-6.1-6.1.40_154048_fedora36-1.x86_64.rpm" -o virtualbox_x86_64.rpm && \
-dnf install -y ./virtualbox_x86_64.rpm
+curl -LO "https://download.virtualbox.org/virtualbox/6.1.42/VirtualBox-6.1-6.1.42_155177_fedora36-1.x86_64.rpm" && \
+dnf install -y ./VirtualBox-6.1-6.1.42_155177_fedora36-1.x86_64.rpm
 ```
 
 #### Install Extension Pack:
 ```bash
-curl -L "https://download.virtualbox.org/virtualbox/6.1.40/Oracle_VM_VirtualBox_Extension_Pack-6.1.40.vbox-extpack" -o virtualbox.vbox-extpack && \
-VBoxManage extpack install --replace ./virtualbox.vbox-extpack
+curl -LO "https://download.virtualbox.org/virtualbox/6.1.42/Oracle_VM_VirtualBox_Extension_Pack-6.1.42.vbox-extpack" && \
+VBoxManage extpack install --replace ./Oracle_VM_VirtualBox_Extension_Pack-6.1.42.vbox-extpack
 ```
 
 #### URLs:
