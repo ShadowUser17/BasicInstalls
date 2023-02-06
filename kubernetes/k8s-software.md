@@ -1,6 +1,6 @@
 ### Install helm
 ```bash
-curl -L "https://get.helm.sh/helm-v3.11.0-linux-amd64.tar.gz" -o helm-linux-amd64.tgz && \
+curl -L "https://get.helm.sh/helm-v3.11.1-linux-amd64.tar.gz" -o helm-linux-amd64.tgz && \
 tar -xzf helm-linux-amd64.tgz linux-amd64/helm && \
 mv ./linux-amd64/helm /usr/local/bin/ && rm -f helm-linux-amd64.tgz && rmdir ./linux-amd64
 ```
@@ -13,7 +13,7 @@ unzip datree-cli.zip datree && mv ./datree /usr/local/bin/ && rm -f datree-cli.z
 
 ### Install kubescape
 ```bash
-curl -L "https://github.com/kubescape/kubescape/releases/download/v2.0.183/kubescape-ubuntu-latest" -o kubescape && \
+curl -L "https://github.com/kubescape/kubescape/releases/download/v2.1.3/kubescape-ubuntu-latest" -o kubescape && \
 chmod 755 ./kubescape && mv ./kubescape /usr/local/bin/
 ```
 
