@@ -1,7 +1,7 @@
 #### URLs:
-- [loki-releases](https://github.com/grafana/loki/releases)
-- [loki-docs](https://github.com/grafana/loki/tree/main/docs/sources)
-- [helm-charts](https://github.com/grafana/helm-charts)
+- [Docs](https://github.com/grafana/loki/tree/main/docs/sources)
+- [Releases](https://github.com/grafana/loki/releases)
+- [Charts](https://github.com/grafana/helm-charts)
 
 #### Enable log collection:
 ```yaml

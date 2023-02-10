@@ -1,6 +1,8 @@
-#### URLs:
-- [agent-docs](https://grafana.com/docs/agent/latest/)
-- [grafana-docs](https://grafana.com/docs/grafana/latest/)
-- [agent-releases](https://github.com/grafana/agent/releases)
-- [grafana-releases](https://github.com/grafana/grafana/releases)
-- [helm-charts](https://github.com/grafana/helm-charts)
+#### Grafana:
+- [Docs](https://grafana.com/docs/grafana/latest/)
+- [Releases](https://github.com/grafana/grafana/releases)
+- [Charts](https://github.com/grafana/helm-charts)
+
+#### Agent:
+- [Docs](https://grafana.com/docs/agent/latest/)
+- [Releases](https://github.com/grafana/agent/releases)
