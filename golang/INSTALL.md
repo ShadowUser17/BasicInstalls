@@ -7,5 +7,5 @@ chmod 755 ./gobrew && mv ./gobrew /usr/local/bin/
 echo -e 'export PATH="$HOME/.gobrew/current/bin:$HOME/.gobrew/bin:$PATH"\nexport GOROOT="$HOME/.gobrew/current/go"' >> ~/.bashrc
 ```
 ```bash
-gobrew install 1.19.5
+gobrew install 1.19.6
 ```
