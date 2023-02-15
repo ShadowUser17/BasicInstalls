@@ -3,7 +3,7 @@ Add `--disable traefik` to installation script.
 
 #### Install Nginx:
 ```bash
-kubectl apply -f "https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.5.1/deploy/static/provider/cloud/deploy.yaml"
+kubectl apply -f "https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.6.4/deploy/static/provider/cloud/deploy.yaml"
 ```
 
 #### Usage Nginx:
