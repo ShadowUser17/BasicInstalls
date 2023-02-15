@@ -14,7 +14,7 @@ tar -xzf cilium-linux.tgz cilium && mv ./cilium /usr/local/bin/ && rm -f ./ciliu
 
 #### Install Hubble CLI:
 ```bash
-curl -L "https://github.com/cilium/hubble/releases/download/v0.11.1/hubble-linux-amd64.tar.gz" -o hubble-linux.tgz && \
+curl -L "https://github.com/cilium/hubble/releases/download/v0.11.2/hubble-linux-amd64.tar.gz" -o hubble-linux.tgz && \
 tar -xzf hubble-linux.tgz hubble && mv ./hubble /usr/local/bin/ && rm -f ./hubble-linux.tgz
 ```
 
