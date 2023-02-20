@@ -4,7 +4,7 @@
 
 #### Install/Upgrade:
 ```bash
-curl -L "https://github.com/fluxcd/flux2/releases/download/v0.38.3/flux_0.38.3_linux_amd64.tar.gz" -o "flux_linux_amd64.tgz" && \
+curl -L "https://github.com/fluxcd/flux2/releases/download/v0.40.1/flux_0.40.1_linux_amd64.tar.gz" -o "flux_linux_amd64.tgz" && \
 tar -xzf flux_linux_amd64.tgz flux && rm -f flux_linux_amd64.tgz && \
 mv ./flux /usr/local/bin/ && flux install
 ```
