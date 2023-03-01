@@ -1,9 +1,7 @@
-#### PSQL backup database:
-```bash
-pg_dump -h <host> -d <db> -U <user> -W > backup.psql
-```
+#### Redis clients:
+- [python](https://github.com/redis/redis-py)
+- [golang](https://github.com/redis/go-redis)
 
-#### PSQL restore database:
-```bash
-psql -h <host> -d <db> -U <user> -W -f backup.psql
-```
+#### Postgres clients:
+- [python](https://github.com/psycopg/psycopg2)
+- [golang](https://github.com/lib/pq)
