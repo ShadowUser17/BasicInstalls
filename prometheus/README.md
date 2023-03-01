@@ -5,3 +5,4 @@
 - [helm-charts](https://github.com/prometheus-community/helm-charts)
 - [client_python](https://github.com/prometheus/client_python)
 - [client_golang](https://github.com/prometheus/client_golang)
+- [rules_linter](https://github.com/cloudflare/pint/releases)
