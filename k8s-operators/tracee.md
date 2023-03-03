@@ -1,6 +1,6 @@
 #### Install:
 ```bash
-kubectl apply -f "https://raw.githubusercontent.com/aquasecurity/tracee/v0.11.1/deploy/kubernetes/tracee/tracee.yaml"
+kubectl apply -f "https://raw.githubusercontent.com/aquasecurity/tracee/v0.12.0/deploy/kubernetes/tracee/tracee.yaml"
 ```
 
 #### URLs:
