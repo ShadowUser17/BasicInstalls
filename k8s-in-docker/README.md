@@ -19,5 +19,5 @@ curl -L "https://github.com/kubernetes-sigs/kind/releases/download/v0.17.0/kind-
 ```
 
 #### URLs:
+- [Docs](https://kind.sigs.k8s.io/docs/user/quick-start/)
 - [Releases](https://github.com/kubernetes-sigs/kind/releases)
-- [Configuration](https://kind.sigs.k8s.io/docs/user/configuration/)

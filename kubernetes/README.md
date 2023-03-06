@@ -1,9 +1,16 @@
-#### URLs:
+#### Kubernetes:
 - [k8s-docs](https://kubernetes.io/docs/home/)
 - [k3s-docs](https://rancher.com/docs/k3s/latest/en/)
 - [eks-docs](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html)
-- [kubectl-docs](https://kubectl.docs.kubernetes.io/references/)
-- [kind-docs](https://kind.sigs.k8s.io/docs/user/quick-start/)
-- [helm-docs](https://helm.sh/docs/)
-- [k8s-client-go](https://github.com/kubernetes/client-go)
-- [k8s-client-py](https://github.com/kubernetes-client/python)
+
+#### Clients:
+- [client-go](https://github.com/kubernetes/client-go)
+- [client-py](https://github.com/kubernetes-client/python)
+
+#### Tools:
+- [kubectl](https://kubectl.docs.kubernetes.io/references/)
+- [helm](https://helm.sh/docs/)
+- [datree](https://hub.datree.io/)
+
+#### Desktop:
+- [rancher-desktop](https://docs.rancherdesktop.io/)
