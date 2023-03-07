@@ -8,7 +8,7 @@
 mkdir /opt/traefik && cd /opt/traefik
 ```
 ```bash
-curl -L "https://github.com/traefik/traefik/releases/download/v2.9.7/traefik_v2.9.7_linux_amd64.tar.gz" \
+curl -L "https://github.com/traefik/traefik/releases/download/v2.9.8/traefik_v2.9.8_linux_amd64.tar.gz" \
 -o traefik_linux_amd64.tar.gz && tar -xzf traefik_linux_amd64.tar.gz
 ```
 ```bash
