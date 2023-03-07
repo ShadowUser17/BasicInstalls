@@ -19,6 +19,7 @@
 - [pip-audit](https://github.com/pypa/pip-audit/releases)
 - [trivy](https://github.com/aquasecurity/trivy/releases)
 - [dockle](https://github.com/goodwithtech/dockle/releases)
+- [flightsim](https://github.com/alphasoc/flightsim/releases)
 
 #### Tools manager:
 - [pdtm](https://github.com/projectdiscovery/pdtm/releases)

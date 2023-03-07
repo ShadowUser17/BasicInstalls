@@ -1,5 +1,8 @@
 ### NetworkManager configure static IP:
 ```bash
+nmcli connection modify <cname> ipv6.method disabled
+```
+```bash
 nmcli connection modify <cname> ipv4.method manual
 ```
 ```bash
