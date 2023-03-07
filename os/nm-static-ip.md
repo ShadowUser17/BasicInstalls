@@ -1,4 +1,4 @@
-### NetworkManager set static IP
+### NetworkManager configure static IP:
 ```bash
 nmcli connection modify <cname> ipv4.method manual
 ```
