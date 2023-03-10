@@ -29,7 +29,7 @@ tar -xzf nerdctl-linux-amd64.tgz nerdctl && mv ./nerdctl /usr/local/bin/ && rm -
 
 ### Install kubectl
 ```bash
-curl -O -L 'https://storage.googleapis.com/kubernetes-release/release/v1.23.16/bin/linux/amd64/kubectl' && \
+curl -O -L 'https://storage.googleapis.com/kubernetes-release/release/v1.23.17/bin/linux/amd64/kubectl' && \
 chmod +x ./kubectl && mv ./kubectl /usr/local/bin/
 ```
 
