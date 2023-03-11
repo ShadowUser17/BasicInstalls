@@ -9,8 +9,10 @@
 
 #### Tools:
 - [kubectl](https://kubectl.docs.kubernetes.io/references/)
+- [krew](https://krew.sigs.k8s.io/docs/)
 - [helm](https://helm.sh/docs/)
 - [datree](https://hub.datree.io/)
+- [kubescape](https://github.com/kubescape/kubescape/blob/master/docs/getting-started.md)
 
 #### Desktop:
-- [rancher-desktop](https://docs.rancherdesktop.io/)
+- [rancher](https://docs.rancherdesktop.io/)
