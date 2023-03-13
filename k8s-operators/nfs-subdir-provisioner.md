@@ -9,7 +9,10 @@ helm repo add nfs-subdir-external-provisioner "https://kubernetes-sigs.github.io
 ```
 ```bash
 helm install nfs-subdir-external-provisioner nfs-subdir-external-provisioner/nfs-subdir-external-provisioner \
---set 'nfs.server=192.168.56.10' --set 'nfs.path=/var/nfs'
+--set 'nfs.server=192.168.56.10' \
+--set 'nfs.path=/var/nfs' \
+--set 'storageClass.name=nfs-client' \
+--set 'storageClass.provisionerName=k8s-sigs.io/nfs-subdir-external-provisioner'
 ```
 
 #### Uninstall NFS provisioner:
