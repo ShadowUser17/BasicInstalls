@@ -39,3 +39,9 @@ dnf config-manager --add-repo "https://download.docker.com/linux/fedora/docker-c
 dnf install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin && \
 systemctl enable --now docker.service
 ```
+
+#### Support deprecated compose command:
+```bash
+curl -L "https://raw.githubusercontent.com/ShadowUser17/BasicInstalls/master/containerisation/docker-compose" -o /usr/local/bin/docker-compose && \
+chmod 755 /usr/local/bin/docker-compose
+```
