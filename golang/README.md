@@ -2,7 +2,7 @@
 - [Documentation](https://go.dev/doc/)
 - [Downloads](https://go.dev/dl/)
 - [Library](https://pkg.go.dev/std)
-- [Awesome](https://github.com/avelino/awesome-go/blob/main/README.md)
+- [Awesome](https://awesome-go.com/)
 
 #### Frameworks:
 - [gin](https://github.com/gin-gonic/gin/blob/master/README.md)
