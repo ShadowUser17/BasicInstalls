@@ -6,3 +6,9 @@
 - [client_python](https://github.com/prometheus/client_python)
 - [client_golang](https://github.com/prometheus/client_golang)
 - [rules_linter](https://github.com/cloudflare/pint/releases)
+
+#### Install rules linter:
+```bash
+curl -L "https://github.com/cloudflare/pint/releases/download/v0.42.2/pint-0.42.2-linux-amd64.tar.gz" -o pint-linux-amd64.tgz && \
+tar -xzf pint-linux-amd64.tgz pint-linux-amd64 && mv ./pint-linux-amd64 /usr/local/bin/pint && rm -f pint-linux-amd64.tgz
+```
