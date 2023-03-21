@@ -1,6 +1,7 @@
 #### Documentation:
 - [ALL](https://docs.aws.amazon.com/index.html)
 - [CLI](https://docs.aws.amazon.com/cli/latest/index.html)
+- [CWAgent](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/download-cloudwatch-agent-commandline.html)
 
 #### SDK:
 - [Golang](https://docs.aws.amazon.com/sdk-for-go/)
