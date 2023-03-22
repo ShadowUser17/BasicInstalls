@@ -1,5 +1,5 @@
 {{- range .items -}}
-    {{ $name := .metadata.name }}
+    {{- $name := .metadata.name }}
     {{- range .spec.containers -}}
         {{- if not .resources.limits -}}
             {{"no limits for: "}}{{$name}}{{"/"}}{{.name}}{{"\n"}}

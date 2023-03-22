@@ -1,0 +1,11 @@
+{{- range .items -}}
+    {{- $kind := .spec.targetRef.kind }}
+    {{- $name := .spec.targetRef.name }}
+    {{- range .status.recommendation.containerRecommendations -}}
+        {{- $kind}}{{": "}}{{$name}}{{" (CPU/MEM):\n"}}
+        {{- "\tlowerBound: "}}{{.lowerBound.cpu}}{{" / "}}{{.lowerBound.memory}}{{"\n"}}
+        {{- "\ttarget: "}}{{.target.cpu}}{{" / "}}{{.target.memory}}{{"\n"}}
+        {{- "\tuncappedTarget: "}}{{.uncappedTarget.cpu}}{{" / "}}{{.uncappedTarget.memory}}{{"\n"}}
+        {{- "\tupperBound: "}}{{.upperBound.cpu}}{{" / "}}{{.upperBound.memory}}{{"\n"}}
+    {{- end -}}
+{{- end -}}

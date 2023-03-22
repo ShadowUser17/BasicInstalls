@@ -1,11 +1,11 @@
 #### Install to cluster:
 ```bash
-kubectl create -f "https://github.com/kyverno/kyverno/releases/download/v1.9.0/install.yaml"
+kubectl create -f "https://github.com/kyverno/kyverno/releases/download/v1.9.2/install.yaml"
 ```
 
 #### Install CLI:
 ```bash
-curl -L "https://github.com/kyverno/kyverno/releases/download/v1.9.0/kyverno-cli_v1.9.0_linux_x86_64.tar.gz" -o kyverno-cli.tgz && \
+curl -L "https://github.com/kyverno/kyverno/releases/download/v1.9.2/kyverno-cli_v1.9.2_linux_x86_64.tar.gz" -o kyverno-cli.tgz && \
 tar -xzf kyverno-cli.tgz kyverno && mv ./kyverno /usr/local/bin/ && rm -f kyverno-cli.tgz
 ```
 
