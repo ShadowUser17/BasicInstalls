@@ -15,5 +15,5 @@ kubectl -n <namespace> get pods -o go-template-file=k8s-templates/pods-without-l
 
 #### URLs:
 - [autoscaler](https://github.com/kubernetes/autoscaler/)
-- [goldilocks](https://github.com/FairwindsOps/goldilocks/)
+- [kube-state-metrics](https://github.com/kubernetes/kube-state-metrics)
 - [kube-capacity](https://github.com/robscott/kube-capacity/)
