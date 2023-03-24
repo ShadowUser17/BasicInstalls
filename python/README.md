@@ -14,4 +14,5 @@
 #### Tools:
 - [pip-audit](https://github.com/pypa/pip-audit/releases)
 - [flake8](https://github.com/PyCQA/flake8/tags)
+- [pipx](https://github.com/pypa/pipx/releases)
 - [poetry](https://github.com/python-poetry/poetry/releases)
