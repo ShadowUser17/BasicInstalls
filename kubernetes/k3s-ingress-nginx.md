@@ -1,36 +1,12 @@
 #### Cluster install:
 Add `--disable traefik` to installation script.
 
-#### Install Nginx:
+#### Install Kubernetes Nginx:
 ```bash
 kubectl apply -f "https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.6.4/deploy/static/provider/cloud/deploy.yaml"
 ```
 
-#### Usage Nginx:
-```yaml
-apiVersion: "networking.k8s.io/v1"
-kind: "Ingress"
-metadata:
-  name: "test-ingress"
-  namespace: "testing"
-  annotations:
-    nginx.ingress.kubernetes.io/ssl-redirect: "false"
-spec:
-  ingressClassName: "nginx"
-  rules:
-    - host: "testing.k3s"
-      http:
-        paths:
-          - path: "/"
-            pathType: "Prefix"
-            backend:
-              service:
-                name: "test-service"
-                port:
-                  number: 80
-```
-
-#### Enable ModSecurity:
+#### Enable ModSecurity in Kubernetes Nginx:
 ```bash
 kubectl edit cm/ingress-nginx-controller -n ingress-nginx
 ```
@@ -44,7 +20,7 @@ data:
     SecRequestBodyAccess On
 ```
 
-#### Enable metrics:
+#### Enable metrics in Kubernetes Nginx:
 ```bash
 kubectl edit deploy/ingress-nginx-controller -n ingress-nginx
 ```
@@ -62,6 +38,18 @@ ports:
     protocol: TCP
 ```
 
+#### Install Nginx Controller:
+```bash
+helm repo add nginx-stable "https://helm.nginx.com/stable" && \
+helm repo update
+```
+```bash
+helm template helm "nginx-stable/nginx-ingress" \
+--namespace nginx-ingress \
+--version "0.16.2" > nginx-ingress-helm-v0.16.2.yaml
+```
+
 #### Documentation:
-- [ingress-nginx](https://github.com/kubernetes/ingress-nginx/)
+- [k8s-ingress-nginx](https://github.com/kubernetes/ingress-nginx/)
+- [nginx-ingress-nginx](https://github.com/nginxinc/kubernetes-ingress)
 - [k3s-networking](https://docs.k3s.io/networking)
