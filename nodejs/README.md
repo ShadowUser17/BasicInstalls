@@ -1,8 +1,11 @@
 #### URLs:
+- [Reference](https://nodejs.org/api/)
 - [Download](https://nodejs.org/en/download/)
 - [DockerHub](https://hub.docker.com/_/node/)
 - [Installation](https://github.com/nodesource/distributions/blob/master/README.md)
 
 #### Software:
-- [TypeScript](https://www.typescriptlang.org/download)
-- [Yarn](https://classic.yarnpkg.com/en/docs/install)
+- [tsc](https://www.typescriptlang.org/download)
+- [npm](https://docs.npmjs.com/)
+- [yarn](https://classic.yarnpkg.com/en/docs/install)
+- [eslint](https://github.com/eslint/eslint/releases)
