@@ -24,6 +24,3 @@ cd /var/lib/runner && sudo -u runner -s
 ```bash
 ./config.sh remove --token "$REPO_KEY"
 ```
-
-#### URLs:
-- [Docs](https://docs.github.com/en/actions)

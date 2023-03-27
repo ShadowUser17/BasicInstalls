@@ -37,6 +37,3 @@ echo -n "$GITHUB_TOKEN" | base64
 kubectl -n actions-runner-system patch secret controller-manager -p '{"data": {"github_token": "<secret>"}}' && \
 kubectl rollout restart deploy actions-runner-controller -n actions-runner-system
 ```
-
-#### URLs:
-- [Docs](https://github.com/actions/actions-runner-controller/tree/master/docs)
