@@ -1,7 +1,3 @@
-#### URLs:
-- [Docs](https://github.com/actions/actions-runner-controller/tree/master/docs)
-- [Releases](https://github.com/actions/actions-runner-controller/releases)
-
 #### Install:
 ```bash
 helm repo add actions-runner-controller "https://actions-runner-controller.github.io/actions-runner-controller"
@@ -41,3 +37,6 @@ echo -n "$GITHUB_TOKEN" | base64
 kubectl -n actions-runner-system patch secret controller-manager -p '{"data": {"github_token": "<secret>"}}' && \
 kubectl rollout restart deploy actions-runner-controller -n actions-runner-system
 ```
+
+#### URLs:
+- [Docs](https://github.com/actions/actions-runner-controller/tree/master/docs)

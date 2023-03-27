@@ -1,31 +1,5 @@
 #### URLs:
-- [CLI](https://github.com/cli/cli/releases)
-- [Actions](https://docs.github.com/en/actions)
-- [Releases](https://github.com/actions/runner/releases)
-
-#### Install:
-```bash
-useradd --system -s /sbin/nologin -b /var/lib -m runner
-```
-```bash
-curl -L "https://github.com/actions/runner/releases/download/v2.303.0/actions-runner-linux-x64-2.303.0.tar.gz" -o /var/lib/runner/actions-runner.tgz && \
-tar -xzf /var/lib/runner/actions-runner.tgz -C /var/lib/runner/ && rm -f /var/lib/runner/actions-runner.tgz
-```
-```bash
-cd /var/lib/runner && sudo -u runner -s
-```
-```bash
-./config.sh --disableupdate --unattended --url "$REPO_URL" --token "$REPO_KEY"
-```
-```bash
-curl -L "https://raw.githubusercontent.com/ShadowUser17/BasicInstalls/master/github/runner.service" -o /etc/systemd/system/runner.service && \
-systemctl daemon-reload && systemctl enable --now runner.service
-```
-
-#### Remove:
-```bash
-cd /var/lib/runner && sudo -u runner -s
-```
-```bash
-./config.sh remove --token "$REPO_KEY"
-```
+- [runner](https://github.com/actions/runner/releases)
+- [commitizen](https://github.com/commitizen/cz-cli/releases)
+- [release-please](https://github.com/googleapis/release-please/releases)
+- [actions-runner-controller](https://github.com/actions/actions-runner-controller/releases)
