@@ -6,6 +6,7 @@
 
 #### Software:
 - [tsc](https://www.typescriptlang.org/download)
+- [tsc-bases](https://github.com/tsconfig/bases/)
 - [npm](https://docs.npmjs.com/)
 - [yarn](https://classic.yarnpkg.com/en/docs/install)
 - [eslint](https://github.com/eslint/eslint/releases)
