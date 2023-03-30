@@ -31,7 +31,7 @@ brew install hyperkit minikube kubernetes-cli
 minikube config set driver hyperkit
 ```
 ```bash
-minikube config set kubernetes-version v1.23.16
+minikube config set kubernetes-version v1.23.17
 ```
 ```bash
 minikube start
