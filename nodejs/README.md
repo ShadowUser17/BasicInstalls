@@ -1,7 +1,7 @@
 #### URLs:
-- [Reference](https://nodejs.org/api/)
+- [Documentation](https://nodejs.org/api/)
 - [Download](https://nodejs.org/en/download/)
-- [DockerHub](https://hub.docker.com/_/node/)
+- [Images](https://hub.docker.com/_/node/)
 - [Installation](https://github.com/nodesource/distributions/blob/master/README.md)
 
 #### Software:
