@@ -1,7 +1,8 @@
 #### URLs:
-- [docs](https://doc.traefik.io/traefik/)
-- [releases](https://github.com/traefik/traefik/releases)
-- [helm-chart](https://github.com/traefik/traefik-helm-chart)
+- [Docs](https://doc.traefik.io/traefik/)
+- [Images](https://hub.docker.com/_/traefik/tags)
+- [Releases](https://github.com/traefik/traefik/releases)
+- [Charts](https://github.com/traefik/traefik-helm-chart)
 
 #### Install:
 ```bash
