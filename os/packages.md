@@ -8,16 +8,24 @@ rpm -qa
 
 #### List package files on Debian/Fedora:
 ```bash
-dpkg -L <package>
+dpkg -L <package-name>
 ```
 ```bash
-rpm -ql <package>
+rpm -ql <package-name>
 ```
 
 #### Show who owns this file on Debian/Fedora:
 ```bash
-dpkg -S <command>
+dpkg -S <cmd-name>
 ```
 ```bash
-rpm -qf <path>
+rpm -qf <file-path>
+```
+
+#### Show package dependencies on Debian/Fedora:
+```bash
+dpkg -I <package-path>
+```
+```bash
+rpm -q --requires <package-name>
 ```

@@ -7,6 +7,7 @@
 
 #### Tools:
 - [runner](https://github.com/actions/runner/releases)
+- [nuclei-action](https://github.com/projectdiscovery/nuclei-action)
 - [github-actions-checkout](https://github.com/actions/checkout)
 - [release-please-action](https://github.com/google-github-actions/release-please-action)
 - [renovatebot-github-action](https://github.com/renovatebot/github-action)
