@@ -1,0 +1,6 @@
+{{- range .items -}}
+    {{- "Node: "}}{{.metadata.name}}{{"\n"}}
+    {{- "\tCPU: "}}{{.status.capacity.cpu}}{{"\n"}}
+    {{- "\tMemory: "}}{{.status.capacity.memory}}{{"\n"}}
+    {{- "\tEphemeralStorage: "}}{{index .status.capacity "ephemeral-storage"}}{{"\n"}}
+{{- end -}}
