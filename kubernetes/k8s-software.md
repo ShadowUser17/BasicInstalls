@@ -23,7 +23,7 @@ mkdir /etc/nerdctl && \
 curl -L "https://raw.githubusercontent.com/ShadowUser17/BasicInstalls/master/kubernetes/k3s-nerdctl.toml" -o "/etc/nerdctl/nerdctl.toml"
 ```
 ```bash
-curl -L "https://github.com/containerd/nerdctl/releases/download/v1.2.1/nerdctl-1.2.1-linux-amd64.tar.gz" -o nerdctl-linux-amd64.tgz && \
+curl -L "https://github.com/containerd/nerdctl/releases/download/v1.3.0/nerdctl-1.3.0-linux-amd64.tar.gz" -o nerdctl-linux-amd64.tgz && \
 tar -xzf nerdctl-linux-amd64.tgz nerdctl && mv ./nerdctl /usr/local/bin/ && rm -f nerdctl-linux-amd64.tgz
 ```
 
