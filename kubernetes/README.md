@@ -13,6 +13,7 @@
 - [helm](https://helm.sh/docs/)
 - [datree](https://hub.datree.io/)
 - [kubescape](https://github.com/kubescape/kubescape/blob/master/docs/getting-started.md)
+- [kube-bench](https://github.com/aquasecurity/kube-bench/blob/main/README.md)
 
 #### Desktop:
 - [rancher](https://docs.rancherdesktop.io/)
