@@ -11,4 +11,5 @@
 - [aws](https://github.com/aws)
 - [aws-docs](https://github.com/awsdocs)
 - [aws-labs](https://github.com/awslabs)
+- [aws-actions](https://github.com/aws-actions)
 - [aws-samples](https://github.com/aws-samples)
