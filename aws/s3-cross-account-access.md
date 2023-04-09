@@ -34,7 +34,7 @@
     "Version": "2012-10-17",
     "Statement": [
         {
-            "Sid": "AccessToS3",
+            "Sid": "AllowAccessToS3",
             "Effect": "Allow",
             "Action": [
                 "s3:GetObject",
@@ -57,7 +57,7 @@
     "Version": "2012-10-17",
     "Statement": [
         {
-            "Sid": "CrossAccountAccess",
+            "Sid": "AllowCrossAccountAccess",
             "Effect": "Allow",
             "Principal": {
                 "AWS": [

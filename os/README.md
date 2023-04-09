@@ -8,3 +8,6 @@
 
 #### Tools:
 - [Ventoy](https://github.com/ventoy/Ventoy/releases)
+
+#### Other:
+- [tldr-pages](https://github.com/tldr-pages/tldr)
