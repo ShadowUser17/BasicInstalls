@@ -3,6 +3,7 @@
 - [Download](https://nodejs.org/en/download/)
 - [Images](https://hub.docker.com/_/node/)
 - [Installation](https://github.com/nodesource/distributions/blob/master/README.md)
+- [BestPractices](https://github.com/goldbergyoni/nodebestpractices/blob/master/README.md)
 
 #### Software:
 - [tsc](https://www.typescriptlang.org/download)
