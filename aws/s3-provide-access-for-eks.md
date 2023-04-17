@@ -4,16 +4,6 @@
     "Version": "2012-10-17",
     "Statement": [
         {
-            "Sid": "AllowAssumeRole",
-            "Effect": "Allow",
-            "Action": [
-                "sts:AssumeRole"
-            ],
-            "Resource": [
-                "arn:aws:iam::<account_id>:role/*"
-            ]
-        },
-        {
             "Sid": "AllowAccessToS3",
             "Effect": "Allow",
             "Action": [
@@ -45,10 +35,9 @@
                 "sts:AssumeRoleWithWebIdentity"
             ],
             "Condition": {
-                "ForAllValues:StringEquals": {
-                    "oidc.eks.<region>.amazonaws.com/id/<oidc_id>:sub": [
-                        "system:serviceaccount:<namespace>:<serviceaccount>"
-                    ]
+                "StringEquals": {
+                    "oidc.eks.<region>.amazonaws.com/id/<oidc_id>:sub": "system:serviceaccount:<namespace>:<serviceaccount>",
+                    "oidc.eks.<region>.amazonaws.com/id/<oidc_id>:aud": "sts.amazonaws.com"
                 }
             }
         }
