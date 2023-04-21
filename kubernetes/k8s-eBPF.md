@@ -8,7 +8,7 @@
 
 #### Install Cilium CLI:
 ```bash
-curl -L "https://github.com/cilium/cilium-cli/releases/download/v0.13.1/cilium-linux-amd64.tar.gz" -o cilium-linux.tgz && \
+curl -L "https://github.com/cilium/cilium-cli/releases/download/v0.13.2/cilium-linux-amd64.tar.gz" -o cilium-linux.tgz && \
 tar -xzf cilium-linux.tgz cilium && mv ./cilium /usr/local/bin/ && rm -f ./cilium-linux.tgz
 ```
 
@@ -64,7 +64,7 @@ helm repo add cilium "https://helm.cilium.io/" && helm repo update
 ```
 ```bash
 helm template cilium cilium/cilium \
---version "1.13.1" \
+--version "1.13.2" \
 --namespace "kube-system" \
 --set "operator.replicas=1" \
 --set "prometheus.enabled=true" \
@@ -72,7 +72,7 @@ helm template cilium cilium/cilium \
 ```
 ```bash
 helm template cilium cilium/cilium \
---version "1.13.1" \
+--version "1.13.2" \
 --namespace "kube-system" \
 --set "hubble.enabled=true" \
 --set "hubble.relay.enabled=true" \
