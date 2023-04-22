@@ -21,3 +21,4 @@
 - [delve](https://github.com/go-delve/delve/releases)
 - [gobrew](https://github.com/kevincobain2000/gobrew/releases)
 - [goreleaser](https://github.com/goreleaser/goreleaser/releases)
+- [golangci-lint](https://github.com/golangci/golangci-lint/releases)
