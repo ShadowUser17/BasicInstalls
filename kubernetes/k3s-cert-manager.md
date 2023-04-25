@@ -3,9 +3,10 @@
 kubectl apply -f "https://github.com/cert-manager/cert-manager/releases/download/v1.11.1/cert-manager.yaml"
 ```
 
-#### Usage:
-- Create Issuer or ClusterIssuer: [doc](https://cert-manager.io/docs/configuration/selfsigned/)
-- Edit Ingress: [doc](https://cert-manager.io/docs/usage/ingress/)
+#### URLs:
+- [selfsigned-issuer](https://cert-manager.io/docs/configuration/selfsigned/)
+- [ingress-usage](https://cert-manager.io/docs/usage/ingress/)
+- [releases](https://github.com/cert-manager/cert-manager/releases)
 
 #### Example:
 ```yaml
