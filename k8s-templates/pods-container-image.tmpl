@@ -1,0 +1,6 @@
+{{- range .items -}}
+    {{.metadata.namespace}}{{"/"}}{{.metadata.name}}{{":\n"}}
+    {{- range .spec.containers -}}
+        {{"\t"}}{{.name}}{{": "}}{{.image}}{{"\n"}}
+    {{- end -}}
+{{- end -}}
