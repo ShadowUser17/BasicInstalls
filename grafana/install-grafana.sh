@@ -4,7 +4,7 @@
     echo -e "You must be root!"; exit 1
 }
 
-PKG_VERSION="9.2.15"
+PKG_VERSION="9.2.17"
 PKG_FILE="grafana-enterprise_${PKG_VERSION}_amd64.deb"
 PKG_URL="https://dl.grafana.com/enterprise/release/${PKG_FILE}"
 

@@ -1,0 +1,22 @@
+[Unit]
+Description=Vector
+Documentation=https://vector.dev
+After=network-online.target
+Requires=network-online.target
+
+[Service]
+User=vector
+Group=vector
+ExecStartPre=/usr/bin/vector validate --config-toml *.toml
+ExecStart=/usr/bin/vector --config *.toml
+ExecReload=/usr/bin/vector validate --config-toml *.toml
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=no
+AmbientCapabilities=CAP_NET_BIND_SERVICE
+EnvironmentFile=-/etc/default/vector
+WorkingDirectory=/etc/vector
+StartLimitInterval=10
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
