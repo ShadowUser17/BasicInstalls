@@ -1,0 +1,22 @@
+[sources.docker_logs]
+  type = "docker_logs"
+  include_containers = ["keycloak"]
+
+#[sinks.testing]
+#  type = "console"
+#  encoding.codec = "text"
+#  inputs = ["docker_logs"]
+
+[sinks.send_to_loki]
+  type = "loki"
+  inputs = ["docker_logs"]
+  endpoint = "http://192.168.56.130:3100"
+  labels.env = "test"
+  labels.host = "${HOSTNAME}"
+  labels.service = "{{ container_name }}"
+  compression = "none"
+  encoding.codec = "json"
+  # healthcheck.enabled = true
+  request.concurrency = 5
+  request.retry_attempts = 5
+  request.retry_backoff_secs = 15

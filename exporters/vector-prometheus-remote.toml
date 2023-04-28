@@ -1,0 +1,13 @@
+[sources.prometheus_scrape]
+  type = "prometheus_scrape"
+  scrape_interval_secs = 30
+  honor_labels = true
+  instance_tag = "instance"
+  endpoints = ["http://localhost:8080/metrics"]
+
+[sinks.write_to_prometheus]
+  type = "prometheus_remote_write"
+  inputs = ["prometheus_scrape"]
+  endpoint = "http://192.168.56.130:9090/api/v1/write"
+  default_namespace = "service"
+  healthcheck.enabled = false
