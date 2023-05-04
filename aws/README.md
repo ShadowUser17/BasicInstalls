@@ -7,6 +7,9 @@
 - [Golang](https://docs.aws.amazon.com/sdk-for-go/)
 - [Python](https://docs.aws.amazon.com/pythonsdk/)
 
+#### Tools:
+- [Chamber](https://github.com/segmentio/chamber/releases)
+
 #### Resources:
 - [aws](https://github.com/aws)
 - [aws-docs](https://github.com/awsdocs)
