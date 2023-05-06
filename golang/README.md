@@ -7,10 +7,17 @@
 - [Awesome](https://awesome-go.com/)
 - [GoStyle](https://google.github.io/styleguide/go/)
 
+#### Sub-repositories:
+- [sys](https://pkg.go.dev/golang.org/x/sys)
+- [net](https://pkg.go.dev/golang.org/x/net)
+- [crypto](https://pkg.go.dev/golang.org/x/crypto)
+
 #### Libraries:
-- [gin](https://github.com/gin-gonic/gin/blob/master/README.md)
-- [yaml](https://github.com/go-yaml/yaml/blob/v3/README.md)
-- [cobra](https://github.com/spf13/cobra/blob/main/README.md)
+- [gin](https://github.com/gin-gonic/gin)
+- [chi](https://github.com/go-chi/chi)
+- [coraza](https://github.com/corazawaf/coraza)
+- [yaml](https://github.com/go-yaml/yaml)
+- [cobra](https://github.com/spf13/cobra)
 
 #### Security:
 - [age](https://github.com/FiloSottile/age/releases)
