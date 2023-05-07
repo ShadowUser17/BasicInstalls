@@ -1,11 +1,12 @@
 #### URLs:
-- [docs](https://prometheus.io/docs/introduction/overview/)
+- [introduction](https://prometheus.io/docs/introduction/overview/)
 - [prometheus](https://github.com/prometheus/prometheus/releases)
 - [alertmanager](https://github.com/prometheus/alertmanager/releases)
-- [helm-charts](https://github.com/prometheus-community/helm-charts)
-- [client_python](https://github.com/prometheus/client_python)
-- [client_golang](https://github.com/prometheus/client_golang)
 - [rules_linter](https://github.com/cloudflare/pint/releases)
+- [helm-charts](https://github.com/prometheus-community/helm-charts)
+- [go-libraries](https://pkg.go.dev/github.com/prometheus/common)
+- [client_golang](https://github.com/prometheus/client_golang)
+- [client_python](https://github.com/prometheus/client_python)
 
 #### Install rules linter:
 ```bash
