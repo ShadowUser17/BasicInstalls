@@ -1,13 +1,13 @@
 ### Install helm
 ```bash
-curl -L "https://get.helm.sh/helm-v3.11.3-linux-amd64.tar.gz" -o helm-linux-amd64.tgz && \
+curl -L "https://get.helm.sh/helm-v3.12.0-linux-amd64.tar.gz" -o helm-linux-amd64.tgz && \
 tar -xzf helm-linux-amd64.tgz linux-amd64/helm && \
 mv ./linux-amd64/helm /usr/local/bin/ && rm -f helm-linux-amd64.tgz && rmdir ./linux-amd64
 ```
 
 ### Install datree
 ```bash
-curl -L "https://github.com/datreeio/datree/releases/download/1.8.67/datree-cli_1.8.67_Linux_x86_64.zip" -o datree-cli.zip && \
+curl -L "https://github.com/datreeio/datree/releases/download/1.9.0/datree-cli_1.9.0_Linux_x86_64.zip" -o datree-cli.zip && \
 unzip datree-cli.zip datree && mv ./datree /usr/local/bin/ && rm -f datree-cli.zip
 ```
 
