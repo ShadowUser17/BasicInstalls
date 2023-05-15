@@ -7,7 +7,7 @@ mv ./linux-amd64/helm /usr/local/bin/ && rm -f helm-linux-amd64.tgz && rmdir ./l
 
 ### Install datree
 ```bash
-curl -L "https://github.com/datreeio/datree/releases/download/1.9.0/datree-cli_1.9.0_Linux_x86_64.zip" -o datree-cli.zip && \
+curl -L "https://github.com/datreeio/datree/releases/download/1.9.2/datree-cli_1.9.2_Linux_x86_64.zip" -o datree-cli.zip && \
 unzip datree-cli.zip datree && mv ./datree /usr/local/bin/ && rm -f datree-cli.zip
 ```
 
