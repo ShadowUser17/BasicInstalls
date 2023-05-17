@@ -5,7 +5,7 @@ curl -L "https://github.com/kubernetes-sigs/kind/releases/download/v0.19.0/kind-
 
 #### Create cluster:
 ```bash
-./kind create cluster --image kindest/node:v1.23.17 --name k8s-test
+./kind create cluster --image kindest/node:v1.25.9 --name k8s-test
 ```
 
 #### Delete cluster:
