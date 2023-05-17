@@ -1,6 +1,6 @@
 #### Install kind:
 ```bash
-curl -L "https://github.com/kubernetes-sigs/kind/releases/download/v0.18.0/kind-linux-amd64" -o kind && chmod +x kind
+curl -L "https://github.com/kubernetes-sigs/kind/releases/download/v0.19.0/kind-linux-amd64" -o kind && chmod +x kind
 ```
 
 #### Create cluster:
