@@ -3,7 +3,7 @@ Add `--disable traefik` to installation script.
 
 #### Install Kubernetes Nginx:
 ```bash
-kubectl apply -f "https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.6.4/deploy/static/provider/cloud/deploy.yaml"
+kubectl apply -f "https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.7.1/deploy/static/provider/cloud/deploy.yaml"
 ```
 
 #### Enable ModSecurity in Kubernetes Nginx:
@@ -38,18 +38,9 @@ ports:
     protocol: TCP
 ```
 
-#### Install Nginx Controller:
-```bash
-helm repo add nginx-stable "https://helm.nginx.com/stable" && \
-helm repo update
-```
-```bash
-helm template helm "nginx-stable/nginx-ingress" \
---namespace nginx-ingress \
---version "0.16.2" > nginx-ingress-helm-v0.16.2.yaml
-```
-
-#### Documentation:
-- [k8s-ingress-nginx](https://github.com/kubernetes/ingress-nginx/)
-- [nginx-ingress-nginx](https://github.com/nginxinc/kubernetes-ingress)
-- [k3s-networking](https://docs.k3s.io/networking)
+#### URLs:
+- [k8s-ingress-nginx-docs](https://github.com/kubernetes/ingress-nginx/)
+- [k8s-ingress-nginx-releases](https://github.com/kubernetes/ingress-nginx/releases)
+- [nginx-ingress-docs](https://github.com/nginxinc/kubernetes-ingress)
+- [nginx-ingress-releases](https://github.com/nginxinc/kubernetes-ingress/releases)
+- [k3s-networking-docs](https://docs.k3s.io/networking)
