@@ -1,13 +1,26 @@
-#### Install VirtualBox on Fedora 36:
+#### Install VirtualBox on Fedora:
 ```bash
-curl -LO "https://download.virtualbox.org/virtualbox/6.1.44/VirtualBox-6.1-6.1.44_156814_fedora36-1.x86_64.rpm" && \
-dnf install -y ./VirtualBox-6.1-6.1.44_156814_fedora36-1.x86_64.rpm
+dnf config-manager --add-repo "http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo"
+```
+```bash
+dnf install -y VirtualBox-7.0
+```
+```bash
+usermod -aG vboxusers <username>
 ```
 
 #### Install Extension Pack:
 ```bash
-curl -LO "https://download.virtualbox.org/virtualbox/6.1.44/Oracle_VM_VirtualBox_Extension_Pack-6.1.44.vbox-extpack" && \
-VBoxManage extpack install --replace ./Oracle_VM_VirtualBox_Extension_Pack-6.1.44.vbox-extpack
+curl -LO "https://download.virtualbox.org/virtualbox/7.0.8/Oracle_VM_VirtualBox_Extension_Pack-7.0.8.vbox-extpack" && \
+VBoxManage extpack install --replace ./Oracle_VM_VirtualBox_Extension_Pack-7.0.8.vbox-extpack
+```
+
+#### Install Vagrant on Fedora:
+```bash
+dnf config-manager --add-repo "https://rpm.releases.hashicorp.com/fedora/hashicorp.repo"
+```
+```bash
+dnf -y install vagrant
 ```
 
 #### URLs:
