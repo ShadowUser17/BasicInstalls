@@ -4,7 +4,7 @@
     echo -e "You must be root!"; exit 1
 }
 
-VECTOR_VERSION="0.29.1"
+VECTOR_VERSION="0.30.0"
 VECTOR_FILE="vector_${VECTOR_VERSION}-1_amd64.deb"
 VECTOR_URL="https://github.com/vectordotdev/vector/releases/download/v${VECTOR_VERSION}/${VECTOR_FILE}"
 
