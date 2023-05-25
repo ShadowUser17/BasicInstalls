@@ -1,6 +1,7 @@
 #### URLs:
 - [introduction](https://prometheus.io/docs/introduction/overview/)
 - [prometheus](https://github.com/prometheus/prometheus/releases)
+- [pushgateway](https://github.com/prometheus/pushgateway/releases)
 - [alertmanager](https://github.com/prometheus/alertmanager/releases)
 - [rules_linter](https://github.com/cloudflare/pint/releases)
 - [helm-charts](https://github.com/prometheus-community/helm-charts)
