@@ -8,7 +8,7 @@
 
 #### Install Cilium CLI:
 ```bash
-curl -L "https://github.com/cilium/cilium-cli/releases/download/v0.14.4/cilium-linux-amd64.tar.gz" -o cilium-linux.tgz && \
+curl -L "https://github.com/cilium/cilium-cli/releases/download/v0.14.5/cilium-linux-amd64.tar.gz" -o cilium-linux.tgz && \
 tar -xzf cilium-linux.tgz cilium && mv ./cilium /usr/local/bin/ && rm -f ./cilium-linux.tgz
 ```
 
