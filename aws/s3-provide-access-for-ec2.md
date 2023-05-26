@@ -1,16 +1,11 @@
-#### Bucket policy:
+#### Access policy:
 ```json
 {
     "Version": "2012-10-17",
     "Statement": [
         {
+            "Sid": "AllowAccessToS3",
             "Effect": "Allow",
-            "Principal": {
-                "AWS": [
-                    "arn:aws:iam::<account_id>:role/<role_name>",
-                    "arn:aws:iam::<account_id>:user/<user_name>"
-                ]
-            },
             "Action": [
                 "s3:GetObject",
                 "s3:PutObject",
@@ -26,6 +21,27 @@
 }
 ```
 
+#### Role trusted entities:
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowAssumeRole",
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": [
+                "sts:AssumeRole",
+                "sts:TagSession"
+            ]
+        }
+    ]
+}
+```
+
+#### Assume this role in the EC2 instance!
 #### Check permissions:
 ```bash
 aws s3 ls s3://<bucket_name>
