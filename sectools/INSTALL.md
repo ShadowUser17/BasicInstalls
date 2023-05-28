@@ -17,12 +17,12 @@ npm -g install snyk@latest && snyk auth <auth_token>
 
 #### Install osv-scanner:
 ```bash
-curl -L "https://github.com/google/osv-scanner/releases/download/v1.3.2/osv-scanner_1.3.2_linux_amd64" -o osv-scanner && \
+curl -L "https://github.com/google/osv-scanner/releases/download/v1.3.3/osv-scanner_1.3.3_linux_amd64" -o osv-scanner && \
 chmod 755 ./osv-scanner && mv ./osv-scanner /usr/local/bin/
 ```
 
 #### Install pdtm:
 ```bash
-curl -L "https://github.com/projectdiscovery/pdtm/releases/download/v0.0.6/pdtm_0.0.6_linux_amd64.zip" -o pdtm_linux_amd64.zip && \
+curl -L "https://github.com/projectdiscovery/pdtm/releases/download/v0.0.7/pdtm_0.0.7_linux_amd64.zip" -o pdtm_linux_amd64.zip && \
 unzip pdtm_linux_amd64.zip pdtm && mv ./pdtm /usr/local/bin/ && rm -f pdtm_linux_amd64.zip
 ```
