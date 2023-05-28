@@ -21,7 +21,9 @@
 }
 ```
 
-#### Role trusted entities:
+#### Create role with next parameters:
+- Trusted entity type: Custom trust policy.
+- Custom trust policy:
 ```json
 {
     "Version": "2012-10-17",
