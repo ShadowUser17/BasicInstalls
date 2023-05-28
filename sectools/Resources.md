@@ -9,6 +9,7 @@
 - [netcraft](https://sitereport.netcraft.com/)
 - [have-i-been-pwned](https://haveibeenpwned.com/)
 - [gtfobins](https://gtfobins.github.io/)
+- [revshells](https://www.revshells.com/)
 - [exploit-db](https://www.exploit-db.com/)
 - [cve-details](https://www.cvedetails.com/)
 - [nvd-nist](https://nvd.nist.gov/vuln)

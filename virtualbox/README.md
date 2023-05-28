@@ -23,6 +23,10 @@ dnf config-manager --add-repo "https://rpm.releases.hashicorp.com/fedora/hashico
 dnf -y install vagrant
 ```
 
+#### Warning!
+- VirtualBox doesn't work without CPU virtualization.
+- VirtualBox doesn't work when secure boot is enabled.
+
 #### URLs:
 - [VirtualBox](https://www.virtualbox.org/wiki/Download_Old_Builds)
 - [Vagrant](https://developer.hashicorp.com/vagrant/docs)
