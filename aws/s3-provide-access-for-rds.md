@@ -1,3 +1,4 @@
+#### Warning! The S3 bucket must be in the same region as the RDS instance.
 #### Access policy:
 ```json
 {
@@ -22,9 +23,8 @@
 ```
 
 #### Create role with next parameters:
-- Trusted entity type: AWS service.
-- Common use cases: RDS.
-- Trusted entities:
+- Trusted entity type: Custom trust policy.
+- Custom trust policy:
 ```json
 {
     "Version": "2012-10-17",
