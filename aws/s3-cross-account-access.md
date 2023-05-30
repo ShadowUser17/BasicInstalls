@@ -27,6 +27,40 @@
 }
 ```
 
+#### Bucket policy with multiple roles:
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "*"
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:ListBucket",
+                "s3:DeleteObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::<bucket_name>/*",
+                "arn:aws:s3:::<bucket_name>"
+            ],
+            "Condition": {
+                "ArnEquals": {
+                    "aws:PrincipalArn": [
+                        "arn:aws:iam::<account_id>:role/<role_name_1>",
+                        "arn:aws:iam::<account_id>:role/<role_name_2>",
+                        "arn:aws:iam::<account_id>:role/<role_name_3>"
+                    ]
+                }
+            }
+        }
+    ]
+}
+```
+
 ### Based on the Role:
 #### Access policy:
 ```json
