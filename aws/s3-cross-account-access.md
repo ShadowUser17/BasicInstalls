@@ -1,5 +1,5 @@
 ### Based on the Bucket policy:
-#### Bucket policy:
+#### Bucket policy with single role or user:
 ```json
 {
     "Version": "2012-10-17",
@@ -35,7 +35,7 @@
         {
             "Effect": "Allow",
             "Principal": {
-                "AWS": "*"
+                "AWS": "arn:aws:iam::<account_id>:root"
             },
             "Action": [
                 "s3:GetObject",
