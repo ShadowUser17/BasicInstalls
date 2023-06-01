@@ -14,6 +14,13 @@
 - [cve-details](https://www.cvedetails.com/)
 - [nvd-nist](https://nvd.nist.gov/vuln)
 
+#### Notes:
+- [HackTricks](https://book.hacktricks.xyz/welcome/readme)
+- [RedTeaming](https://www.ired.team/)
+- [MSFU](https://www.offsec.com/metasploit-unleashed/)
+- [Inventory](https://inventory.raw.pm/tools.html)
+
 #### CTF:
 - [tryhackme](https://tryhackme.com/)
+- [HackTheBox](https://www.hackthebox.com/)
 - [hacker101](https://www.hacker101.com/resources)
