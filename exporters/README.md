@@ -5,6 +5,7 @@
 - [redis_exporter](https://github.com/oliver006/redis_exporter/releases)
 - [postgres_exporter](https://github.com/prometheus-community/postgres_exporter/releases)
 - [blackbox_exporter](https://github.com/prometheus/blackbox_exporter/releases)
+- [statsd_exporter](https://github.com/prometheus/statsd_exporter/releases)
 - [cloudwatch_exporter](https://github.com/prometheus/cloudwatch_exporter/releases)
 - [rq_exporter](https://github.com/mdawar/rq-exporter/releases)
 - [kafka_exporter](https://github.com/danielqsj/kafka_exporter/releases)
