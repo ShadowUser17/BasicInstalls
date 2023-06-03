@@ -1,0 +1,132 @@
+---
+region: "us-west-2"
+period_seconds: 30
+range_seconds: 6000
+delay_seconds: 120
+metrics:
+  - aws_namespace: "AWS/EC2"
+    aws_metric_name: "CPUUtilization"
+    aws_dimensions: ["InstanceId"]
+    set_timestamp: false
+    aws_tag_select:
+      resource_type_selection: "ec2:instance"
+      resource_id_dimension: "InstanceId"
+      tag_selections:
+        Monitoring: ["enabled"]
+    aws_statistics: ["Average"]
+
+  - aws_namespace: "AWS/EC2"
+    aws_metric_name: "NetworkIn"
+    aws_dimensions: ["InstanceId"]
+    set_timestamp: false
+    aws_tag_select:
+      resource_type_selection: "ec2:instance"
+      resource_id_dimension: "InstanceId"
+      tag_selections:
+        Monitoring: ["enabled"]
+    aws_statistics: ["Average"]
+
+  - aws_namespace: "AWS/EC2"
+    aws_metric_name: "NetworkOut"
+    aws_dimensions: ["InstanceId"]
+    set_timestamp: false
+    aws_tag_select:
+      resource_type_selection: "ec2:instance"
+      resource_id_dimension: "InstanceId"
+      tag_selections:
+        Monitoring: ["enabled"]
+    aws_statistics: ["Average"]
+
+  - aws_namespace: "AWS/EC2"
+    aws_metric_name: "DiskWriteBytes"
+    aws_dimensions: ["InstanceId"]
+    set_timestamp: false
+    aws_tag_select:
+      resource_type_selection: "ec2:instance"
+      resource_id_dimension: "InstanceId"
+      tag_selections:
+        Monitoring: ["enabled"]
+    aws_statistics: ["Average"]
+
+  - aws_namespace: "AWS/EC2"
+    aws_metric_name: "DiskReadBytes"
+    aws_dimensions: ["InstanceId"]
+    set_timestamp: false
+    aws_tag_select:
+      resource_type_selection: "ec2:instance"
+      resource_id_dimension: "InstanceId"
+      tag_selections:
+        Monitoring: ["enabled"]
+    aws_statistics: ["Average"]
+
+  - aws_namespace: "CWAgent"
+    aws_metric_name: "cpu_usage_active"
+    aws_dimensions: ["InstanceId", "ImageId", "InstanceType", "cpu"]
+    aws_statistics: ["Average"]
+    set_timestamp: false
+
+  - aws_namespace: "CWAgent"
+    aws_metric_name: "cpu_usage_system"
+    aws_dimensions: ["InstanceId", "ImageId", "InstanceType", "cpu"]
+    aws_statistics: ["Average"]
+    set_timestamp: false
+
+  - aws_namespace: "CWAgent"
+    aws_metric_name: "cpu_usage_user"
+    aws_dimensions: ["InstanceId", "ImageId", "InstanceType", "cpu"]
+    aws_statistics: ["Average"]
+    set_timestamp: false
+
+  - aws_namespace: "CWAgent"
+    aws_metric_name: "cpu_usage_idle"
+    aws_dimensions: ["InstanceId", "ImageId", "InstanceType", "cpu"]
+    aws_statistics: ["Average"]
+    set_timestamp: false
+
+  - aws_namespace: "CWAgent"
+    aws_metric_name: "mem_used_percent"
+    aws_dimensions: ["InstanceId", "ImageId", "InstanceType"]
+    aws_statistics: ["Average"]
+    set_timestamp: false
+
+  - aws_namespace: "CWAgent"
+    aws_metric_name: "nvidia_smi_utilization_gpu"
+    aws_dimensions: ["InstanceId", "ImageId", "InstanceType", "index", "name"]
+    aws_statistics: ["Average"]
+    set_timestamp: false
+
+  - aws_namespace: "CWAgent"
+    aws_metric_name: "nvidia_smi_temperature_gpu"
+    aws_dimensions: ["InstanceId", "ImageId", "InstanceType", "index", "name"]
+    aws_statistics: ["Average"]
+    set_timestamp: false
+
+  - aws_namespace: "CWAgent"
+    aws_metric_name: "nvidia_smi_utilization_memory"
+    aws_dimensions: ["InstanceId", "ImageId", "InstanceType", "index", "name"]
+    aws_statistics: ["Average"]
+    set_timestamp: false
+
+  - aws_namespace: "CWAgent"
+    aws_metric_name: "nvidia_smi_memory_total"
+    aws_dimensions: ["InstanceId", "ImageId", "InstanceType", "index", "name"]
+    aws_statistics: ["Average"]
+    set_timestamp: false
+
+  - aws_namespace: "CWAgent"
+    aws_metric_name: "disk_used_percent"
+    aws_dimensions: ["InstanceId", "ImageId", "InstanceType", "device", "fstype", "path"]
+    aws_statistics: ["Average"]
+    set_timestamp: false
+
+  - aws_namespace: "CWAgent"
+    aws_metric_name: "netstat_tcp_established"
+    aws_dimensions: ["InstanceId", "ImageId", "InstanceType"]
+    aws_statistics: ["Average"]
+    set_timestamp: false
+
+  - aws_namespace: "CWAgent"
+    aws_metric_name: "netstat_tcp_time_wait"
+    aws_dimensions: ["InstanceId", "ImageId", "InstanceType"]
+    aws_statistics: ["Average"]
+    set_timestamp: false
