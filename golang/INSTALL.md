@@ -12,12 +12,12 @@ gobrew install 1.20.4
 
 #### Install golangci-lint from deb:
 ```bash
-curl -L "https://github.com/golangci/golangci-lint/releases/download/v1.53.1/golangci-lint-1.53.1-linux-amd64.deb" -o golangci-lint-linux-amd64.deb && \
+curl -L "https://github.com/golangci/golangci-lint/releases/download/v1.53.2/golangci-lint-1.53.2-linux-amd64.deb" -o golangci-lint-linux-amd64.deb && \
 dpkg -i golangci-lint-linux-amd64.deb && rm -f golangci-lint-linux-amd64.deb
 ```
 
 #### Install golangci-lint from rpm:
 ```bash
-curl -L "https://github.com/golangci/golangci-lint/releases/download/v1.53.1/golangci-lint-1.53.1-linux-amd64.rpm" -o golangci-lint-linux-amd64.rpm && \
+curl -L "https://github.com/golangci/golangci-lint/releases/download/v1.53.2/golangci-lint-1.53.2-linux-amd64.rpm" -o golangci-lint-linux-amd64.rpm && \
 rpm -U golangci-lint-linux-amd64.rpm ; rm -f golangci-lint-linux-amd64.rpm
 ```
