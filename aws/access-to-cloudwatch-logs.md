@@ -16,7 +16,7 @@
                 "logs:GetLogEvents"
             ],
             "Resource": [
-                "arn:aws:logs:<region>:<account_id>:<log_group>:*"
+                "arn:aws:logs:<region>:<account_id>:<log_group>:<stream_name>"
             ]
         }
     ]

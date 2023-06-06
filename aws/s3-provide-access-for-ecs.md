@@ -23,8 +23,9 @@
 ```
 
 #### Create role with next parameters:
-- Trusted entity type: Custom trust policy.
-- Custom trust policy:
+- Trusted entity type: AWS service.
+- Common use cases: EC2.
+- Trusted entities:
 ```json
 {
     "Version": "2012-10-17",
@@ -33,12 +34,8 @@
             "Effect": "Allow",
             "Principal": {
                 "Service": [
+                    "ec2.amazonaws.com",
                     "ecs-tasks.amazonaws.com"
-                ],
-                "AWS": [
-                    "arn:aws:iam::<account_id>:user/<user_name_1>",
-                    "arn:aws:iam::<account_id>:user/<user_name_2>",
-                    "arn:aws:iam::<account_id>:user/<user_name_3>"
                 ]
             },
             "Action": [
@@ -51,7 +48,3 @@
 ```
 
 #### Assume this role in the ECS task!
-#### Check permissions:
-```bash
-aws s3 ls s3://<bucket_name>
-```
