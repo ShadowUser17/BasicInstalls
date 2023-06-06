@@ -48,3 +48,6 @@
 ```
 
 #### Assume this role in the ECS task!
+#### Check permissions:
+- Image URI: `docker.io/amazon/aws-cli:latest`
+- Entry point: `/usr/local/bin/aws,s3,ls,s3://<bucket_name>/`
