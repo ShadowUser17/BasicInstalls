@@ -36,6 +36,7 @@
                 "Service": "rds.amazonaws.com"
             },
             "Action": [
+                "sts:TagSession",
                 "sts:AssumeRole"
             ],
             "Condition": {

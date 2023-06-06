@@ -1,3 +1,4 @@
+#### Execution required access to CloudWatch logs!
 #### Access policy:
 ```json
 {
@@ -32,8 +33,7 @@
             "Effect": "Allow",
             "Principal": {
                 "Service": [
-                    "ecs-tasks.amazonaws.com",
-                    "lambda.amazonaws.com"
+                    "ecs-tasks.amazonaws.com"
                 ],
                 "AWS": [
                     "arn:aws:iam::<account_id>:user/<user_name_1>",
