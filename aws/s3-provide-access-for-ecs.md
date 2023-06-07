@@ -1,4 +1,6 @@
-#### Execution required access to CloudWatch logs!
+#### ECS required the next permissions:
+- [execution-role](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html)
+
 #### Access policy:
 ```json
 {

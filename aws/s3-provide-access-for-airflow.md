@@ -1,4 +1,6 @@
-#### Execution required access to CloudWatch logs!
+#### #### ECS required the next permissions:
+- [execution-role](https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html)
+
 #### Access policy:
 ```json
 {
@@ -12,9 +14,7 @@
                 "s3:GetBucket*",
                 "s3:ListBucket",
                 "s3:PutObject",
-                "s3:DeleteObject",
-                "s3:GetEncryptionConfiguration",
-                "s3:GetAccountPublicAccessBlock"
+                "s3:DeleteObject"
             ],
             "Resource": [
                 "arn:aws:s3:::<bucket_name>/*",
