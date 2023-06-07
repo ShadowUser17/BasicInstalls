@@ -15,7 +15,8 @@
 - [nvd-nist](https://nvd.nist.gov/vuln)
 
 #### Notes:
-- [HackTricks](https://book.hacktricks.xyz/welcome/readme)
+- [CloudHackTricks](https://cloud.hacktricks.xyz/welcome/readme)
+- [BookHackTricks](https://book.hacktricks.xyz/welcome/readme)
 - [RedTeaming](https://www.ired.team/)
 - [MSFU](https://www.offsec.com/metasploit-unleashed/)
 - [Inventory](https://inventory.raw.pm/tools.html)
