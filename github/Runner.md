@@ -3,7 +3,7 @@
 useradd --system -s /sbin/nologin -b /var/lib -m runner
 ```
 ```bash
-curl -L "https://github.com/actions/runner/releases/download/v2.304.0/actions-runner-linux-x64-2.304.0.tar.gz" -o /var/lib/runner/actions-runner.tgz && \
+curl -L "https://github.com/actions/runner/releases/download/v2.305.0/actions-runner-linux-x64-2.305.0.tar.gz" -o /var/lib/runner/actions-runner.tgz && \
 tar -xzf /var/lib/runner/actions-runner.tgz -C /var/lib/runner/ && rm -f /var/lib/runner/actions-runner.tgz
 ```
 ```bash
