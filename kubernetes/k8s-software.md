@@ -1,6 +1,6 @@
 ### Install helm
 ```bash
-curl -L "https://get.helm.sh/helm-v3.12.0-linux-amd64.tar.gz" -o helm-linux-amd64.tgz && \
+curl -L "https://get.helm.sh/helm-v3.12.1-linux-amd64.tar.gz" -o helm-linux-amd64.tgz && \
 tar -xzf helm-linux-amd64.tgz linux-amd64/helm && \
 mv ./linux-amd64/helm /usr/local/bin/ && rm -f helm-linux-amd64.tgz && rmdir ./linux-amd64
 ```
