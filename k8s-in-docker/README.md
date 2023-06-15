@@ -1,11 +1,11 @@
 #### Install kind:
 ```bash
-curl -L "https://github.com/kubernetes-sigs/kind/releases/download/v0.19.0/kind-linux-amd64" -o kind && chmod +x kind
+curl -L "https://github.com/kubernetes-sigs/kind/releases/download/v0.20.0/kind-linux-amd64" -o kind && chmod +x kind
 ```
 
 #### Create cluster:
 ```bash
-./kind create cluster --image kindest/node:v1.25.9 --name k8s-test
+./kind create cluster --image kindest/node:v1.25.11 --name k8s-test
 ```
 
 #### Delete cluster:
