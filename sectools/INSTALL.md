@@ -1,12 +1,12 @@
 #### Install gitleaks:
 ```bash
-curl -L "https://github.com/zricethezav/gitleaks/releases/download/v8.16.4/gitleaks_8.16.4_linux_x64.tar.gz" -o gitleaks_linux_x64.tgz && \
+curl -L "https://github.com/zricethezav/gitleaks/releases/download/v8.17.0/gitleaks_8.17.0_linux_x64.tar.gz" -o gitleaks_linux_x64.tgz && \
 tar -xzf gitleaks_linux_x64.tgz gitleaks && mv ./gitleaks /usr/local/bin/ && rm -f gitleaks_linux_x64.tgz
 ```
 
 #### Install ddosify:
 ```bash
-curl -L "https://github.com/ddosify/ddosify/releases/download/v1.0.1/ddosify_1.0.1_linux_amd64.tar.gz" -o ddosify_linux_amd64.tgz && \
+curl -L "https://github.com/ddosify/ddosify/releases/download/v1.0.3/ddosify_1.0.3_linux_amd64.tar.gz" -o ddosify_linux_amd64.tgz && \
 tar -xzf ddosify_linux_amd64.tgz ddosify && ./ddosify /usr/local/bin/ && rm -f ddosify_linux_amd64.tgz
 ```
 
@@ -17,7 +17,7 @@ npm -g install snyk@latest && snyk auth <auth_token>
 
 #### Install osv-scanner:
 ```bash
-curl -L "https://github.com/google/osv-scanner/releases/download/v1.3.3/osv-scanner_1.3.3_linux_amd64" -o osv-scanner && \
+curl -L "https://github.com/google/osv-scanner/releases/download/v1.3.4/osv-scanner_1.3.4_linux_amd64" -o osv-scanner && \
 chmod 755 ./osv-scanner && mv ./osv-scanner /usr/local/bin/
 ```
 
