@@ -1,7 +1,7 @@
 images:
-- location: "https://cloud.debian.org/images/cloud/bullseye/20221205-1220/debian-11-generic-amd64-20221205-1220.qcow2"
+- location: "https://cloud.debian.org/images/cloud/bookworm/latest/debian-12-generic-amd64.qcow2"
   arch: "x86_64"
-- location: "https://cloud.debian.org/images/cloud/bullseye/20221205-1220/debian-11-generic-arm64-20221205-1220.qcow2"
+- location: "https://cloud.debian.org/images/cloud/bookworm/latest/debian-12-generic-arm64.qcow2"
   arch: "aarch64"
 
 cpus: 4
