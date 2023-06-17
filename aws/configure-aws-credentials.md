@@ -40,6 +40,9 @@ aws sts get-caller-identity --profile default
 ```bash
 aws eks update-kubeconfig --profile <name> --name <cluster_name>
 ```
+```bash
+kubectl config current-context
+```
 
 #### Get ECR password:
 ```bash
