@@ -7,153 +7,245 @@ metrics:
   - aws_namespace: "AWS/ELB"
     aws_metric_name: "HTTPCode_Backend_5XX"
     aws_dimensions: ["LoadBalancerName", "AvailabilityZone"]
-    set_timestamp: false
-    aws_tag_select:
-      resource_type_selection: "elasticloadbalancing:loadbalancer"
-      resource_id_dimension: "LoadBalancerName"
-      tag_selections:
-        Monitoring: ["enabled"]
     aws_statistics: ["Sum"]
+    set_timestamp: false
 
   - aws_namespace: "AWS/ELB"
     aws_metric_name: "HTTPCode_Backend_4XX"
     aws_dimensions: ["LoadBalancerName", "AvailabilityZone"]
-    set_timestamp: false
-    aws_tag_select:
-      resource_type_selection: "elasticloadbalancing:loadbalancer"
-      resource_id_dimension: "LoadBalancerName"
-      tag_selections:
-        Monitoring: ["enabled"]
     aws_statistics: ["Sum"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/ELB"
+    aws_metric_name: "HTTPCode_Backend_3XX"
+    aws_dimensions: ["LoadBalancerName", "AvailabilityZone"]
+    aws_statistics: ["Sum"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/ELB"
+    aws_metric_name: "HTTPCode_Backend_2XX"
+    aws_dimensions: ["LoadBalancerName", "AvailabilityZone"]
+    aws_statistics: ["Sum"]
+    set_timestamp: false
 
   - aws_namespace: "AWS/ELB"
     aws_metric_name: "HTTPCode_ELB_5XX"
     aws_dimensions: ["LoadBalancerName", "AvailabilityZone"]
-    set_timestamp: false
-    aws_tag_select:
-      resource_type_selection: "elasticloadbalancing:loadbalancer"
-      resource_id_dimension: "LoadBalancerName"
-      tag_selections:
-        Monitoring: ["enabled"]
     aws_statistics: ["Sum"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/ELB"
+    aws_metric_name: "HTTPCode_ELB_4XX"
+    aws_dimensions: ["LoadBalancerName", "AvailabilityZone"]
+    aws_statistics: ["Sum"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/ELB"
+    aws_metric_name: "HTTPCode_ELB_3XX"
+    aws_dimensions: ["LoadBalancerName", "AvailabilityZone"]
+    aws_statistics: ["Sum"]
+    set_timestamp: false
 
   - aws_namespace: "AWS/ELB"
     aws_metric_name: "RequestCount"
     aws_dimensions: ["LoadBalancerName", "AvailabilityZone"]
-    set_timestamp: false
-    aws_tag_select:
-      resource_type_selection: "elasticloadbalancing:loadbalancer"
-      resource_id_dimension: "LoadBalancerName"
-      tag_selections:
-        Monitoring: ["enabled"]
     aws_statistics: ["Sum"]
+    set_timestamp: false
 
   - aws_namespace: "AWS/ELB"
     aws_metric_name: "BackendConnectionErrors"
     aws_dimensions: ["LoadBalancerName", "AvailabilityZone"]
-    set_timestamp: false
-    aws_tag_select:
-      resource_type_selection: "elasticloadbalancing:loadbalancer"
-      resource_id_dimension: "LoadBalancerName"
-      tag_selections:
-        Monitoring: ["enabled"]
     aws_statistics: ["Sum"]
+    set_timestamp: false
 
   - aws_namespace: "AWS/ELB"
     aws_metric_name: "Latency"
     aws_dimensions: ["LoadBalancerName", "AvailabilityZone"]
-    set_timestamp: false
-    aws_tag_select:
-      resource_type_selection: "elasticloadbalancing:loadbalancer"
-      resource_id_dimension: "LoadBalancerName"
-      tag_selections:
-        Monitoring: ["enabled"]
     aws_statistics: ["Average", "Maximum"]
+    set_timestamp: false
 
   - aws_namespace: "AWS/ApplicationELB"
     aws_metric_name: "HTTPCode_ELB_5XX_Count"
     aws_dimensions: ["LoadBalancer", "AvailabilityZone"]
-    set_timestamp: false
-    aws_tag_select:
-      resource_type_selection: "elasticloadbalancing:loadbalancer"
-      resource_id_dimension: "LoadBalancer"
-      tag_selections:
-        Monitoring: ["enabled"]
     aws_statistics: ["Sum"]
+    set_timestamp: false
 
   - aws_namespace: "AWS/ApplicationELB"
     aws_metric_name: "HTTPCode_ELB_4XX_Count"
     aws_dimensions: ["LoadBalancer", "AvailabilityZone"]
-    set_timestamp: false
-    aws_tag_select:
-      resource_type_selection: "elasticloadbalancing:loadbalancer"
-      resource_id_dimension: "LoadBalancer"
-      tag_selections:
-        Monitoring: ["enabled"]
     aws_statistics: ["Sum"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/ApplicationELB"
+    aws_metric_name: "HTTPCode_ELB_3XX_Count"
+    aws_dimensions: ["LoadBalancer", "AvailabilityZone"]
+    aws_statistics: ["Sum"]
+    set_timestamp: false
 
   - aws_namespace: "AWS/ApplicationELB"
     aws_metric_name: "HTTPCode_Target_5XX_Count"
     aws_dimensions: ["LoadBalancer", "AvailabilityZone"]
-    set_timestamp: false
-    aws_tag_select:
-      resource_type_selection: "elasticloadbalancing:loadbalancer"
-      resource_id_dimension: "LoadBalancer"
-      tag_selections:
-        Monitoring: ["enabled"]
     aws_statistics: ["Sum"]
+    set_timestamp: false
 
   - aws_namespace: "AWS/ApplicationELB"
     aws_metric_name: "HTTPCode_Target_4XX_Count"
     aws_dimensions: ["LoadBalancer", "AvailabilityZone"]
-    set_timestamp: false
-    aws_tag_select:
-      resource_type_selection: "elasticloadbalancing:loadbalancer"
-      resource_id_dimension: "LoadBalancer"
-      tag_selections:
-        Monitoring: ["enabled"]
     aws_statistics: ["Sum"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/ApplicationELB"
+    aws_metric_name: "HTTPCode_Target_3XX_Count"
+    aws_dimensions: ["LoadBalancer", "AvailabilityZone"]
+    aws_statistics: ["Sum"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/ApplicationELB"
+    aws_metric_name: "HTTPCode_Target_2XX_Count"
+    aws_dimensions: ["LoadBalancer", "AvailabilityZone"]
+    aws_statistics: ["Sum"]
+    set_timestamp: false
 
   - aws_namespace: "AWS/ApplicationELB"
     aws_metric_name: "ActiveConnectionCount"
     aws_dimensions: ["LoadBalancer", "AvailabilityZone"]
-    set_timestamp: false
-    aws_tag_select:
-      resource_type_selection: "elasticloadbalancing:loadbalancer"
-      resource_id_dimension: "LoadBalancer"
-      tag_selections:
-        Monitoring: ["enabled"]
     aws_statistics: ["Sum"]
+    set_timestamp: false
 
   - aws_namespace: "AWS/ApplicationELB"
     aws_metric_name: "NewConnectionCount"
     aws_dimensions: ["LoadBalancer", "AvailabilityZone"]
-    set_timestamp: false
-    aws_tag_select:
-      resource_type_selection: "elasticloadbalancing:loadbalancer"
-      resource_id_dimension: "LoadBalancer"
-      tag_selections:
-        Monitoring: ["enabled"]
     aws_statistics: ["Sum"]
+    set_timestamp: false
 
   - aws_namespace: "AWS/ApplicationELB"
     aws_metric_name: "RequestCount"
     aws_dimensions: ["LoadBalancer", "AvailabilityZone"]
-    set_timestamp: false
-    aws_tag_select:
-      resource_type_selection: "elasticloadbalancing:loadbalancer"
-      resource_id_dimension: "LoadBalancer"
-      tag_selections:
-        Monitoring: ["enabled"]
     aws_statistics: ["Sum"]
+    set_timestamp: false
 
   - aws_namespace: "AWS/ApplicationELB"
     aws_metric_name: "TargetResponseTime"
     aws_dimensions: ["LoadBalancer", "AvailabilityZone"]
-    set_timestamp: false
-    aws_tag_select:
-      resource_type_selection: "elasticloadbalancing:loadbalancer"
-      resource_id_dimension: "LoadBalancer"
-      tag_selections:
-        Monitoring: ["enabled"]
     aws_statistics: ["Average", "Maximum"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/NetworkELB"
+    aws_metric_name: "ActiveFlowCount"
+    aws_dimensions: ["LoadBalancer", "AvailabilityZone"]
+    aws_statistics: ["Average"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/NetworkELB"
+    aws_metric_name: "ActiveFlowCount_TCP"
+    aws_dimensions: ["LoadBalancer", "AvailabilityZone"]
+    aws_statistics: ["Average"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/NetworkELB"
+    aws_metric_name: "ActiveFlowCount_TLS"
+    aws_dimensions: ["LoadBalancer", "AvailabilityZone"]
+    aws_statistics: ["Average"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/NetworkELB"
+    aws_metric_name: "ClientTLSNegotiationErrorCount"
+    aws_dimensions: ["LoadBalancer", "AvailabilityZone"]
+    aws_statistics: ["Sum"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/NetworkELB"
+    aws_metric_name: "PortAllocationErrorCount"
+    aws_dimensions: ["LoadBalancer", "AvailabilityZone"]
+    aws_statistics: ["Sum"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/NetworkELB"
+    aws_metric_name: "TargetTLSNegotiationErrorCount"
+    aws_dimensions: ["LoadBalancer", "AvailabilityZone"]
+    aws_statistics: ["Sum"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/NetworkELB"
+    aws_metric_name: "PeakPacketsPerSecond"
+    aws_dimensions: ["LoadBalancer", "AvailabilityZone"]
+    aws_statistics: ["Maximum"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/NetworkELB"
+    aws_metric_name: "ProcessedBytes"
+    aws_dimensions: ["LoadBalancer", "AvailabilityZone"]
+    aws_statistics: ["Sum"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/NetworkELB"
+    aws_metric_name: "ProcessedBytes_TCP"
+    aws_dimensions: ["LoadBalancer", "AvailabilityZone"]
+    aws_statistics: ["Sum"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/NetworkELB"
+    aws_metric_name: "ProcessedBytes_TLS"
+    aws_dimensions: ["LoadBalancer", "AvailabilityZone"]
+    aws_statistics: ["Sum"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/NetworkELB"
+    aws_metric_name: "ProcessedPackets"
+    aws_dimensions: ["LoadBalancer", "AvailabilityZone"]
+    aws_statistics: ["Sum"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/NetworkELB"
+    aws_metric_name: "TCP_Client_Reset_Count"
+    aws_dimensions: ["LoadBalancer", "AvailabilityZone"]
+    aws_statistics: ["Sum"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/NetworkELB"
+    aws_metric_name: "TCP_ELB_Reset_Count"
+    aws_dimensions: ["LoadBalancer", "AvailabilityZone"]
+    aws_statistics: ["Sum"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/NetworkELB"
+    aws_metric_name: "TCP_Target_Reset_Count"
+    aws_dimensions: ["LoadBalancer", "AvailabilityZone"]
+    aws_statistics: ["Sum"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/NetworkELB"
+    aws_metric_name: "NewFlowCount"
+    aws_dimensions: ["LoadBalancer", "AvailabilityZone"]
+    aws_statistics: ["Sum"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/NetworkELB"
+    aws_metric_name: "NewFlowCount_TCP"
+    aws_dimensions: ["LoadBalancer", "AvailabilityZone"]
+    aws_statistics: ["Sum"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/NetworkELB"
+    aws_metric_name: "NewFlowCount_TLS"
+    aws_dimensions: ["LoadBalancer", "AvailabilityZone"]
+    aws_statistics: ["Sum"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/NetworkELB"
+    aws_metric_name: "ConsumedLCUs"
+    aws_dimensions: ["LoadBalancer", "AvailabilityZone"]
+    aws_statistics: ["Average"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/NetworkELB"
+    aws_metric_name: "ConsumedLCUs_TCP"
+    aws_dimensions: ["LoadBalancer", "AvailabilityZone"]
+    aws_statistics: ["Average"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/NetworkELB"
+    aws_metric_name: "ConsumedLCUs_TLS"
+    aws_dimensions: ["LoadBalancer", "AvailabilityZone"]
+    aws_statistics: ["Average"]
+    set_timestamp: false

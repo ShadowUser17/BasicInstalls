@@ -7,57 +7,32 @@ metrics:
   - aws_namespace: "AWS/EC2"
     aws_metric_name: "CPUUtilization"
     aws_dimensions: ["InstanceId"]
-    set_timestamp: false
-    aws_tag_select:
-      resource_type_selection: "ec2:instance"
-      resource_id_dimension: "InstanceId"
-      tag_selections:
-        Monitoring: ["enabled"]
     aws_statistics: ["Average"]
+    set_timestamp: false
 
   - aws_namespace: "AWS/EC2"
     aws_metric_name: "NetworkIn"
     aws_dimensions: ["InstanceId"]
-    set_timestamp: false
-    aws_tag_select:
-      resource_type_selection: "ec2:instance"
-      resource_id_dimension: "InstanceId"
-      tag_selections:
-        Monitoring: ["enabled"]
     aws_statistics: ["Average"]
+    set_timestamp: false
 
   - aws_namespace: "AWS/EC2"
     aws_metric_name: "NetworkOut"
     aws_dimensions: ["InstanceId"]
-    set_timestamp: false
-    aws_tag_select:
-      resource_type_selection: "ec2:instance"
-      resource_id_dimension: "InstanceId"
-      tag_selections:
-        Monitoring: ["enabled"]
     aws_statistics: ["Average"]
+    set_timestamp: false
 
   - aws_namespace: "AWS/EC2"
     aws_metric_name: "DiskWriteBytes"
     aws_dimensions: ["InstanceId"]
-    set_timestamp: false
-    aws_tag_select:
-      resource_type_selection: "ec2:instance"
-      resource_id_dimension: "InstanceId"
-      tag_selections:
-        Monitoring: ["enabled"]
     aws_statistics: ["Average"]
+    set_timestamp: false
 
   - aws_namespace: "AWS/EC2"
     aws_metric_name: "DiskReadBytes"
     aws_dimensions: ["InstanceId"]
-    set_timestamp: false
-    aws_tag_select:
-      resource_type_selection: "ec2:instance"
-      resource_id_dimension: "InstanceId"
-      tag_selections:
-        Monitoring: ["enabled"]
     aws_statistics: ["Average"]
+    set_timestamp: false
 
   - aws_namespace: "CWAgent"
     aws_metric_name: "cpu_usage_active"

@@ -1,0 +1,71 @@
+---
+region: "us-west-2"
+period_seconds: 30
+range_seconds: 450
+delay_seconds: 120
+metrics:
+  - aws_namespace: "AWS/ElastiCache"
+    aws_metric_name: "CurrItems"
+    aws_dimensions: ["CacheNodeId", "CacheClusterId"]
+    aws_statistics: ["Maximum"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/ElastiCache"
+    aws_metric_name: "CPUUtilization"
+    aws_dimensions: ["CacheNodeId", "CacheClusterId"]
+    aws_statistics: ["Average"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/ElastiCache"
+    aws_metric_name: "CPUCreditBalance"
+    aws_dimensions: ["CacheNodeId", "CacheClusterId"]
+    aws_statistics: ["Minimum"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/ElastiCache"
+    aws_metric_name: "DatabaseMemoryUsagePercentage"
+    aws_dimensions: ["CacheNodeId", "CacheClusterId"]
+    aws_statistics: ["Average"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/ElastiCache"
+    aws_metric_name: "DB0AverageTTL"
+    aws_dimensions: ["CacheNodeId", "CacheClusterId"]
+    aws_statistics: ["Average"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/ElastiCache"
+    aws_metric_name: "CurrConnections"
+    aws_dimensions: ["CacheNodeId", "CacheClusterId"]
+    aws_statistics: ["Average"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/ElastiCache"
+    aws_metric_name: "NetworkBytesIn"
+    aws_dimensions: ["CacheNodeId", "CacheClusterId"]
+    aws_statistics: ["Average"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/ElastiCache"
+    aws_metric_name: "NetworkBytesOut"
+    aws_dimensions: ["CacheNodeId", "CacheClusterId"]
+    aws_statistics: ["Average"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/ElastiCache"
+    aws_metric_name: "CacheHits"
+    aws_dimensions: ["CacheNodeId", "CacheClusterId"]
+    aws_statistics: ["Average"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/ElastiCache"
+    aws_metric_name: "SwapUsage"
+    aws_dimensions: ["CacheNodeId", "CacheClusterId"]
+    aws_statistics: ["Average"]
+    set_timestamp: false
+
+  - aws_namespace: "AWS/ElastiCache"
+    aws_metric_name: "FreeableMemory"
+    aws_dimensions: ["CacheNodeId", "CacheClusterId"]
+    aws_statistics: ["Average"]
+    set_timestamp: false
