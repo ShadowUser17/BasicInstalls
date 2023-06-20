@@ -9,8 +9,12 @@
 - [client_golang](https://github.com/prometheus/client_golang)
 - [client_python](https://github.com/prometheus/client_python)
 
+#### Prometheus Operator:
+- [Docs](https://prometheus-operator.dev/docs/prologue/introduction/)
+- [Charts](https://github.com/bitnami/charts)
+
 #### Install rules linter:
 ```bash
-curl -L "https://github.com/cloudflare/pint/releases/download/v0.43.1/pint-0.43.1-linux-amd64.tar.gz" -o pint-linux-amd64.tgz && \
+curl -L "https://github.com/cloudflare/pint/releases/download/v0.44.1/pint-0.44.1-linux-amd64.tar.gz" -o pint-linux-amd64.tgz && \
 tar -xzf pint-linux-amd64.tgz pint-linux-amd64 && mv ./pint-linux-amd64 /usr/local/bin/pint && rm -f pint-linux-amd64.tgz
 ```
