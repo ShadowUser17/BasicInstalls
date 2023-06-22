@@ -6,7 +6,7 @@
 
 #### Install earthly:
 ```bash
-curl -L "https://github.com/earthly/earthly/releases/download/v0.7.8/earthly-linux-amd64" -o earthly && \
+curl -L "https://github.com/earthly/earthly/releases/download/v0.7.9/earthly-linux-amd64" -o earthly && \
 chmod 755 ./earthly && mv ./earthly /usr/local/bin/
 ```
 
