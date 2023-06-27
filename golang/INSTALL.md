@@ -10,6 +10,11 @@ echo -e 'export PATH="$HOME/.gobrew/current/bin:$HOME/go/bin:$PATH"\nexport GORO
 gobrew install 1.20.5
 ```
 
+#### Install Delve debugger:
+```bash
+go install github.com/go-delve/delve/cmd/dlv@latest
+```
+
 #### Install golangci-lint from deb:
 ```bash
 curl -L "https://github.com/golangci/golangci-lint/releases/download/v1.53.3/golangci-lint-1.53.3-linux-amd64.deb" -o golangci-lint-linux-amd64.deb && \

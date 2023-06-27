@@ -15,9 +15,8 @@
 #### Libraries:
 - [gin](https://github.com/gin-gonic/gin)
 - [chi](https://github.com/go-chi/chi)
-- [coraza](https://github.com/corazawaf/coraza)
 - [yaml](https://github.com/go-yaml/yaml)
-- [cobra](https://github.com/spf13/cobra)
+- [coraza](https://github.com/corazawaf/coraza)
 
 #### Security:
 - [age](https://github.com/FiloSottile/age/releases)
