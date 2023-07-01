@@ -3,6 +3,9 @@
 - [Docs](https://k6.io/docs/)
 - [Releases](https://github.com/grafana/k6/releases)
 
+#### Extensions:
+- [xk6-loki](https://github.com/grafana/xk6-loki)
+
 #### Install K6:
 ```bash
 curl -L "https://github.com/grafana/k6/releases/download/v0.45.0/k6-v0.45.0-linux-amd64.tar.gz" -o k6-linux-amd64.tgz && \
