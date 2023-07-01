@@ -11,3 +11,18 @@ template:
     annotations:
       promtail.io/collect: "true"
 ```
+
+#### List running services:
+```bash
+curl "http://127.0.0.1:3100/services"
+```
+
+#### Validate cluster membership (reader):
+```bash
+curl "http://127.0.0.1:3100/compactor/ring"
+```
+
+#### Validate cluster membership (writer):
+```bash
+curl "http://127.0.0.1:3100/distributor/ring"
+```
