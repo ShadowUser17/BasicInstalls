@@ -12,6 +12,11 @@ template:
       promtail.io/collect: "true"
 ```
 
+#### Run load test:
+```bash
+k6 run ./my-write-scenario.js
+```
+
 #### List running services:
 ```bash
 curl "http://127.0.0.1:3100/services"
