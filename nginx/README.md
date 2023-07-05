@@ -1,5 +1,5 @@
 #### Nginx:
-- [Docs](https://docs.nginx.com/)
+- [Docs](https://docs.nginx.com/nginx/)
 - [Images](https://hub.docker.com/_/nginx/tags)
 - [Download](https://nginx.org/en/download.html)
 
