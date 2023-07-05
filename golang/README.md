@@ -23,6 +23,7 @@
 - [gopass](https://github.com/gopasspw/gopass/releases)
 
 #### Tools:
+- [nfpm](https://github.com/goreleaser/nfpm/releases)
 - [cfssl](https://github.com/cloudflare/cfssl/releases)
 - [delve](https://github.com/go-delve/delve/releases)
 - [gobrew](https://github.com/kevincobain2000/gobrew/releases)
