@@ -1,0 +1,16 @@
+job-dsl
+cobertura
+prometheus
+uno-choice
+ws-cleanup
+role-strategy
+dashboard-view
+authorize-project
+lockable-resources
+workflow-aggregator
+pipeline-github-lib
+pipeline-stage-view
+throttle-concurrents
+parameterized-scheduler
+generic-webhook-trigger
+cloudbees-disk-usage-simple
