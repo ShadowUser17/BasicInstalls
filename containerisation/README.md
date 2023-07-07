@@ -1,4 +1,5 @@
 #### URLs:
+- [dive](https://github.com/wagoodman/dive/releases)
 - [trivy](https://github.com/aquasecurity/trivy/releases)
 - [dockle](https://github.com/goodwithtech/dockle/releases)
 - [slimtoolkit](https://github.com/slimtoolkit/slim/releases)
