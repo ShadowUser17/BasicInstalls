@@ -25,7 +25,7 @@ spec:
     - name: "recommender"
       args:
         - "--storage=prometheus"
-        - "--prometheus-address=http://prometheus-testing.testing.svc:9090"
+        - "--prometheus-address=http://prometheus.testing.svc:9090"
 ```
 
 #### URLs:
