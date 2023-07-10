@@ -1,14 +1,19 @@
 auth_enabled: false
 
 server:
-  http_listen_port: 3100
-  grpc_listen_port: 9095
   log_level: "info"
+  http_listen_port: 3100
+  http_server_read_timeout: "300s"
+  http_server_write_timeout: "300s"
+  grpc_listen_port: 9095
+  grpc_server_max_recv_msg_size: 52428800
+  grpc_server_max_send_msg_size: 52428800
 
 common:
   path_prefix: "/var/lib/loki"
   replication_factor: 1
   ring:
+    instance_addr: "0.0.0.0"
     kvstore:
       store: "inmemory"
 
@@ -26,6 +31,8 @@ limits_config:
   enforce_metric_name: false
   reject_old_samples: true
   reject_old_samples_max_age: "72h"
+  ingestion_rate_mb: 20
+  ingestion_burst_size_mb: 30
   split_queries_by_interval: "15m"
   max_cache_freshness_per_query: "10m"
 
@@ -40,13 +47,19 @@ query_range:
         size: 1024
         validity: "12h"
 
-query_scheduler:
-  # In-flight requests above this limit will fail with HTTP response status code 429
-  max_outstanding_requests_per_tenant: 300
-
 frontend:
   compress_responses: true
   log_queries_longer_than: "10s"
+
+ingester:
+  chunk_encoding: "snappy"
+  chunk_idle_period: "5m"
+  chunk_retain_period: "1m"
+
+ingester_client:
+  grpc_client_config:
+    max_recv_msg_size: 52428800
+    max_send_msg_size: 52428800
 
 ruler:
   enable_api: true
