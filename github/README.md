@@ -6,7 +6,6 @@
 - [managing-your-github-profile](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile)
 
 #### Tools:
-- [act](https://github.com/nektos/act/releases)
 - [commitizen](https://github.com/commitizen-tools/commitizen)
 - [github-runner](https://github.com/actions/runner/releases)
 - [actions-runner-controller](https://github.com/actions/actions-runner-controller/releases)
