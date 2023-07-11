@@ -1,7 +1,8 @@
 #### Nginx:
 - [Docs](https://docs.nginx.com/nginx/)
-- [Images](https://hub.docker.com/_/nginx/tags)
-- [Download](https://nginx.org/en/download.html)
+- [Releases](https://nginx.org/download/)
+- [nginx](https://hub.docker.com/_/nginx/tags)
+- [nginx-unprivileged](https://hub.docker.com/r/nginxinc/nginx-unprivileged/tags)
 
 #### NginxProxyManager:
 - [Guide](https://nginxproxymanager.com/guide/)
