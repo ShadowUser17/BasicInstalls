@@ -8,7 +8,7 @@
 [sinks.write_to_prometheus]
   type = "prometheus_remote_write"
   inputs = ["prometheus_scrape"]
-  endpoint = "http://192.168.56.130:9090/api/v1/write"
+  endpoint = "http://prometheus.k3s:9090/api/v1/write"
   default_namespace = "service"
   healthcheck.enabled = false
 

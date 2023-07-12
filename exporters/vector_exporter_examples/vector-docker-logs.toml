@@ -1,16 +1,11 @@
 [sources.docker_logs]
   type = "docker_logs"
-  include_containers = ["keycloak"]
-
-#[sinks.testing]
-#  type = "console"
-#  encoding.codec = "text"
-#  inputs = ["docker_logs"]
+  # include_containers = ["keycloak"]
 
 [sinks.send_to_loki]
   type = "loki"
   inputs = ["docker_logs"]
-  endpoint = "http://192.168.56.130:3100"
+  endpoint = "http://grafana-loki.k3s"
   labels.env = "test"
   labels.host = "${HOSTNAME}"
   labels.service = "{{ container_name }}"

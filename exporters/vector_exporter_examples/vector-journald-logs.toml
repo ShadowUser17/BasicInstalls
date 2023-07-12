@@ -1,0 +1,18 @@
+[sources.system_logs]
+  type = "journald"
+  # include_units = ["nginx"]
+  # include_matches._UID = 0
+  # include_matches._GID = 0
+
+[sinks.send_to_loki]
+  type = "loki"
+  inputs = ["system_logs"]
+  endpoint = "http://grafana-loki.k3s"
+  labels.env = "test"
+  labels.host = "${HOSTNAME}"
+  compression = "none"
+  encoding.codec = "json"
+  # healthcheck.enabled = true
+  request.concurrency = 5
+  request.retry_attempts = 5
+  request.retry_backoff_secs = 15
