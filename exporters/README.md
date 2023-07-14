@@ -3,6 +3,7 @@
 - [node_exporter](https://github.com/prometheus/node_exporter/releases)
 - [snmp_exporter](https://github.com/prometheus/snmp_exporter/releases)
 - [redis_exporter](https://github.com/oliver006/redis_exporter/releases)
+- [memcached_exporter](https://github.com/prometheus/memcached_exporter/releases)
 - [postgres_exporter](https://github.com/prometheus-community/postgres_exporter/releases)
 - [blackbox_exporter](https://github.com/prometheus/blackbox_exporter/releases)
 - [statsd_exporter](https://github.com/prometheus/statsd_exporter/releases)
