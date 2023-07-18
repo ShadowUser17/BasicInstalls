@@ -15,6 +15,7 @@
 
 #### Libraries:
 - [gin](https://github.com/gin-gonic/gin)
+- [mux](https://github.com/gorilla/mux)
 - [chi](https://github.com/go-chi/chi)
 - [echo](https://github.com/labstack/echo)
 - [yaml](https://github.com/go-yaml/yaml)

@@ -11,8 +11,8 @@ usermod -aG vboxusers <username>
 
 #### Install Extension Pack:
 ```bash
-curl -LO "https://download.virtualbox.org/virtualbox/7.0.8/Oracle_VM_VirtualBox_Extension_Pack-7.0.8.vbox-extpack" && \
-VBoxManage extpack install --replace ./Oracle_VM_VirtualBox_Extension_Pack-7.0.8.vbox-extpack
+curl -LO "https://download.virtualbox.org/virtualbox/7.0.10/Oracle_VM_VirtualBox_Extension_Pack-7.0.10.vbox-extpack" && \
+VBoxManage extpack install --replace ./Oracle_VM_VirtualBox_Extension_Pack-7.0.10.vbox-extpack
 ```
 
 #### Install Vagrant on Fedora:
@@ -28,6 +28,6 @@ dnf -y install vagrant
 - VirtualBox doesn't work when secure boot is enabled.
 
 #### URLs:
-- [VirtualBox](https://www.virtualbox.org/wiki/Download_Old_Builds)
+- [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 - [Vagrant](https://developer.hashicorp.com/vagrant/docs)
 - [Packer](https://developer.hashicorp.com/packer/docs)
