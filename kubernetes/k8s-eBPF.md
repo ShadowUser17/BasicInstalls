@@ -80,9 +80,9 @@ helm template cilium cilium/cilium \
 ```
 
 #### URLs:
-- [cilium-cli](https://github.com/cilium/cilium-cli/releases)
 - [what-is-ebpf](https://ebpf.io/what-is-ebpf)
+- [cilium-cli](https://github.com/cilium/cilium-cli/releases)
 - [cilium-docs](https://docs.cilium.io/en/stable/)
-- [hubble-docs](https://github.com/cilium/hubble/blob/master/Documentation/README.md)
 - [cilium-releases](https://github.com/cilium/cilium/releases)
+- [hubble-docs](https://github.com/cilium/hubble/blob/master/Documentation/README.md)
 - [hubble-releases](https://github.com/cilium/hubble/releases)
