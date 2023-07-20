@@ -4,12 +4,6 @@ curl -L "https://github.com/zricethezav/gitleaks/releases/download/v8.17.0/gitle
 tar -xzf gitleaks_linux_x64.tgz gitleaks && mv ./gitleaks /usr/local/bin/ && rm -f gitleaks_linux_x64.tgz
 ```
 
-#### Install ddosify:
-```bash
-curl -L "https://github.com/ddosify/ddosify/releases/download/v1.0.3/ddosify_1.0.3_linux_amd64.tar.gz" -o ddosify_linux_amd64.tgz && \
-tar -xzf ddosify_linux_amd64.tgz ddosify && ./ddosify /usr/local/bin/ && rm -f ddosify_linux_amd64.tgz
-```
-
 #### Install snyk:
 ```bash
 npm -g install snyk@latest && snyk auth <auth_token>
