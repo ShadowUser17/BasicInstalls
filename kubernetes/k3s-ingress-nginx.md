@@ -40,6 +40,7 @@ ports:
 
 #### URLs:
 - [k3s-networking-docs](https://docs.k3s.io/networking)
-- [k8s-ingress-nginx-docs](https://github.com/kubernetes/ingress-nginx/)
+- [k8s-ingress-concepts](https://kubernetes.io/docs/concepts/services-networking/ingress/)
+- [k8s-ingress-nginx-docs](https://kubernetes.github.io/ingress-nginx/)
 - [k8s-ingress-nginx-releases](https://github.com/kubernetes/ingress-nginx/releases)
 - [k8s-ingress-nginx-dashboards](https://github.com/kubernetes/ingress-nginx/tree/main/deploy/grafana/dashboards)
