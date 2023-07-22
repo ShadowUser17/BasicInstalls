@@ -1,18 +1,10 @@
-#### Install server on Lima:
-```bash
-curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.25.11+k3s1" sh -s - server \
---token "AoNwhviL4xukEwTFntvmVpKK" \
---node-name "k3s" \
---with-node-id \
---disable-helm-controller \
---disable "traefik"
-```
-
 #### Install server on VirtualBox:
 ```bash
 curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.25.11+k3s1" sh -s - server \
 --token "4Eja4ahRagJEhozmiRHKg3" \
 --write-kubeconfig-mode "0644" \
+--cluster-init \
+--etcd-expose-metrics \
 --node-name "k3s" \
 --with-node-id \
 --node-ip "192.168.56.13" \

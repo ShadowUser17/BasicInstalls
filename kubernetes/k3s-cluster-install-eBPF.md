@@ -1,9 +1,39 @@
 ### Warning! Networking provided by Cilium.
 
-#### Required for K3S:
+#### URLs:
+- [what-is-ebpf](https://ebpf.io/what-is-ebpf)
+- [cilium-cli](https://github.com/cilium/cilium-cli/releases)
+- [cilium-docs](https://docs.cilium.io/en/stable/)
+- [cilium-releases](https://github.com/cilium/cilium/releases)
+- [hubble-docs](https://github.com/cilium/hubble/blob/master/Documentation/README.md)
+- [hubble-releases](https://github.com/cilium/hubble/releases)
+
+#### Install server on VirtualBox:
 ```bash
+curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.25.11+k3s1" sh -s - server \
+--token "4Eja4ahRagJEhozmiRHKg3" \
+--write-kubeconfig-mode "0644" \
+--cluster-init \
+--etcd-expose-metrics \
+--node-name "k3s" \
+--with-node-id \
+--node-ip "192.168.56.13" \
+--flannel-iface "eth1" \
 --flannel-backend "none" \
---disable-network-policy
+--disable-network-policy \
+--disable-helm-controller \
+--disable "traefik"
+```
+
+#### Install agent on VirtualBox:
+```bash
+curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.25.11+k3s1" sh -s - agent \
+--server "https://192.168.56.13:6443" \
+--token "4Eja4ahRagJEhozmiRHKg3" \
+--node-name "k3s" \
+--with-node-id \
+--node-ip "192.168.56.14" \
+--flannel-iface "eth1"
 ```
 
 #### Install Cilium CLI:
@@ -78,11 +108,3 @@ helm template cilium cilium/cilium \
 --set "hubble.relay.enabled=true" \
 --set hubble.metrics.enabled="{dns,drop,tcp,flow,icmp,http}" > hubble-deploy.yml
 ```
-
-#### URLs:
-- [what-is-ebpf](https://ebpf.io/what-is-ebpf)
-- [cilium-cli](https://github.com/cilium/cilium-cli/releases)
-- [cilium-docs](https://docs.cilium.io/en/stable/)
-- [cilium-releases](https://github.com/cilium/cilium/releases)
-- [hubble-docs](https://github.com/cilium/hubble/blob/master/Documentation/README.md)
-- [hubble-releases](https://github.com/cilium/hubble/releases)
