@@ -13,11 +13,11 @@ curl -L "https://github.com/traefik/traefik/releases/download/v2.10.3/traefik_v2
 -o traefik_linux_amd64.tar.gz && tar -xzf traefik_linux_amd64.tar.gz
 ```
 ```bash
-curl -L "https://raw.githubusercontent.com/ShadowUser17/BasicInstalls/master/traefik/config.yml" \
+curl -L "https://raw.githubusercontent.com/ShadowUser17/BasicInstalls/master/web-proxy/traefik-configs/config.yml" \
 -o /opt/traefik/config.yml
 ```
 ```bash
-curl -L "https://raw.githubusercontent.com/ShadowUser17/BasicInstalls/master/traefik/traefik.service" \
+curl -L "https://raw.githubusercontent.com/ShadowUser17/BasicInstalls/master/web-proxy/traefik-configs/traefik.service" \
 -o /etc/systemd/system/traefik.service
 ```
 ```bash
