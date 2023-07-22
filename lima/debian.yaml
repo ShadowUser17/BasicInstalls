@@ -1,9 +1,0 @@
-images:
-- location: "https://cloud.debian.org/images/cloud/bookworm/latest/debian-12-generic-amd64.qcow2"
-  arch: "x86_64"
-- location: "https://cloud.debian.org/images/cloud/bookworm/latest/debian-12-generic-arm64.qcow2"
-  arch: "aarch64"
-
-cpus: 4
-memory: "4G"
-disk: "35G"
