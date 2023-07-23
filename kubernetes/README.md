@@ -15,5 +15,9 @@
 - [kubescape](https://github.com/kubescape/kubescape/blob/master/docs/getting-started.md)
 - [kube-bench](https://github.com/aquasecurity/kube-bench/blob/main/README.md)
 
+#### Plugins:
+- [kube-capacity](https://github.com/robscott/kube-capacity)
+- [pv-migrate](https://github.com/utkuozdemir/pv-migrate)
+
 #### Desktop:
 - [rancher](https://docs.rancherdesktop.io/)

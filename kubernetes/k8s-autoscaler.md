@@ -29,6 +29,5 @@ spec:
 ```
 
 #### URLs:
-- [autoscaler](https://github.com/kubernetes/autoscaler/)
+- [autoscaler](https://github.com/kubernetes/autoscaler)
 - [kube-state-metrics](https://github.com/kubernetes/kube-state-metrics)
-- [kube-capacity](https://github.com/robscott/kube-capacity/)
