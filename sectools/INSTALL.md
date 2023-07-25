@@ -11,7 +11,7 @@ npm -g install snyk@latest && snyk auth <auth_token>
 
 #### Install osv-scanner:
 ```bash
-curl -L "https://github.com/google/osv-scanner/releases/download/v1.3.4/osv-scanner_1.3.4_linux_amd64" -o osv-scanner && \
+curl -L "https://github.com/google/osv-scanner/releases/download/v1.3.6/osv-scanner_1.3.6_linux_amd64" -o osv-scanner && \
 chmod 755 ./osv-scanner && mv ./osv-scanner /usr/local/bin/
 ```
 
