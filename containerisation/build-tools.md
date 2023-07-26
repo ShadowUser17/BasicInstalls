@@ -14,7 +14,7 @@ tar -xzf act_linux_amd64.tgz act && mv ./act /usr/local/bin/ && rm -f act_linux_
 
 #### Install earthly:
 ```bash
-curl -L "https://github.com/earthly/earthly/releases/download/v0.7.12/earthly-linux-amd64" -o earthly && \
+curl -L "https://github.com/earthly/earthly/releases/download/v0.7.13/earthly-linux-amd64" -o earthly && \
 chmod 755 ./earthly && mv ./earthly /usr/local/bin/
 ```
 
