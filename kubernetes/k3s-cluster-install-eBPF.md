@@ -38,7 +38,7 @@ curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.25.11+k3s1" sh -s - age
 
 #### Install Cilium CLI:
 ```bash
-curl -L "https://github.com/cilium/cilium-cli/releases/download/v0.15.2/cilium-linux-amd64.tar.gz" -o cilium-linux.tgz && \
+curl -L "https://github.com/cilium/cilium-cli/releases/download/v0.15.4/cilium-linux-amd64.tar.gz" -o cilium-linux.tgz && \
 tar -xzf cilium-linux.tgz cilium && mv ./cilium /usr/local/bin/ && rm -f ./cilium-linux.tgz
 ```
 
@@ -94,7 +94,7 @@ helm repo add cilium "https://helm.cilium.io/" && helm repo update
 ```
 ```bash
 helm template cilium cilium/cilium \
---version "1.13.4" \
+--version "1.14.0" \
 --namespace "kube-system" \
 --set "operator.replicas=1" \
 --set "prometheus.enabled=true" \
@@ -102,7 +102,7 @@ helm template cilium cilium/cilium \
 ```
 ```bash
 helm template cilium cilium/cilium \
---version "1.13.4" \
+--version "1.14.0" \
 --namespace "kube-system" \
 --set "hubble.enabled=true" \
 --set "hubble.relay.enabled=true" \
