@@ -1,5 +1,7 @@
 #### URLs:
 - [Lambda](https://docs.aws.amazon.com/lambda/)
+- [Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/lambda-concurrency.html)
+- [Limits](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-limits.html)
 
 #### Access policy:
 ```json
