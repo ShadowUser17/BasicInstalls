@@ -23,9 +23,14 @@ npm install -g "cdktf-cli@latest"
 #### Create project:
 - Create a folder for the project.
 - Go to folder and run: `cdktf init --template="typescript"`
-- Set `Project Name: <name>`
-- Set `Project Description: <description>`
-- Set `Do you want to start from an existing Terraform project: No`
-- Set `Do you want to send crash reports to the CDKTF team: No`
 - Install AWS provider: `npm install @cdktf/provider-aws`
 - Install modules: `cdktf get`
+
+#### Generate terraform configs:
+```bash
+cdktf synth
+```
+The terraform config for each stack in this location:
+```
+ls -hl cdktf.out/stacks/*/cdk.tf.json
+```
