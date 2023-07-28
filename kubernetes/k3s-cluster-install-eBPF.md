@@ -10,7 +10,7 @@
 
 #### Install server on VirtualBox:
 ```bash
-curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.25.11+k3s1" sh -s - server \
+curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.25.12+k3s1" sh -s - server \
 --token "4Eja4ahRagJEhozmiRHKg3" \
 --write-kubeconfig-mode "0644" \
 --cluster-init \
@@ -27,7 +27,7 @@ curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.25.11+k3s1" sh -s - ser
 
 #### Install agent on VirtualBox:
 ```bash
-curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.25.11+k3s1" sh -s - agent \
+curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.25.12+k3s1" sh -s - agent \
 --server "https://192.168.56.13:6443" \
 --token "4Eja4ahRagJEhozmiRHKg3" \
 --node-name "k3s" \
