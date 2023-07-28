@@ -35,7 +35,7 @@ The terraform config for each stack in this location:
 ls -hl cdktf.out/stacks/*/cdk.tf.json
 ```
 
-#### Import existing resources:
+#### Import existing resource:
 ```bash
 cd cdktf.out/stacks/<stack_name>/
 ```
@@ -44,4 +44,20 @@ terraform import <terraform_type.terraform_name> <resource_aws_id>
 ```
 ```bash
 cd - && cdktf deploy <stack_name>
+```
+
+#### Show current state:
+```bash
+cd cdktf.out/stacks/<stack_name>/
+```
+```bash
+terraform state pull
+```
+
+#### List state resources:
+```bash
+cd cdktf.out/stacks/<stack_name>/
+```
+```bash
+terraform state list
 ```
