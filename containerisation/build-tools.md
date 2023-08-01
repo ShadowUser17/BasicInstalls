@@ -8,13 +8,13 @@
 
 #### Install act:
 ```bash
-curl -L "https://github.com/nektos/act/releases/download/v0.2.48/act_Linux_x86_64.tar.gz" -o act_linux_amd64.tgz && \
+curl -L "https://github.com/nektos/act/releases/download/v0.2.49/act_Linux_x86_64.tar.gz" -o act_linux_amd64.tgz && \
 tar -xzf act_linux_amd64.tgz act && mv ./act /usr/local/bin/ && rm -f act_linux_amd64.tgz
 ```
 
 #### Install earthly:
 ```bash
-curl -L "https://github.com/earthly/earthly/releases/download/v0.7.13/earthly-linux-amd64" -o earthly && \
+curl -L "https://github.com/earthly/earthly/releases/download/v0.7.14/earthly-linux-amd64" -o earthly && \
 chmod 755 ./earthly && mv ./earthly /usr/local/bin/
 ```
 
