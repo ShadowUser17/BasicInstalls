@@ -11,10 +11,10 @@ dnf -y install terraform
 
 #### Install CDKTF:
 ```bash
-curl -fsSL "https://rpm.nodesource.com/setup_16.x" | bash -
+curl -fsSL "https://rpm.nodesource.com/setup_lts.x" | bash -
 ```
 ```bash
-npm install -g "typescript@4.4"
+npm install -g "typescript@4.9"
 ```
 ```bash
 npm install -g "cdktf-cli@latest"
