@@ -26,6 +26,14 @@ npm install -g "cdktf-cli@latest"
 - Install AWS provider: `npm install @cdktf/provider-aws`
 - Install modules: `cdktf get`
 
+#### Deploy stack:
+```bash
+cdktf list
+```
+```bash
+cdktf deploy <stack_name>
+```
+
 #### Update dependencies:
 ```bash
 rm -rf package-lock.json node_modules
