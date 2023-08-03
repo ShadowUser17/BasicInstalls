@@ -26,6 +26,15 @@ npm install -g "cdktf-cli@latest"
 - Install AWS provider: `npm install @cdktf/provider-aws`
 - Install modules: `cdktf get`
 
+#### Update dependencies:
+```bash
+rm -rf package-lock.json node_modules
+```
+- Change versions of components in `package.json`
+```bash
+npm install
+```
+
 #### Generate terraform configs:
 ```bash
 cdktf synth
