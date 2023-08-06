@@ -3,6 +3,12 @@
 kubectl apply -f "https://github.com/cert-manager/cert-manager/releases/download/v1.12.3/cert-manager.yaml"
 ```
 
+#### Install CLI:
+```bash
+curl -LO "https://github.com/cert-manager/cert-manager/releases/download/v1.12.3/cmctl-linux-amd64.tar.gz" && \
+tar -xzf cmctl-linux-amd64.tar.gz cmctl && mv ./cmctl /usr/local/bin/ && rm -f cmctl-linux-amd64.tar.gz
+```
+
 #### URLs:
 - [selfsigned-issuer](https://cert-manager.io/docs/configuration/selfsigned/)
 - [ingress-usage](https://cert-manager.io/docs/usage/ingress/)
