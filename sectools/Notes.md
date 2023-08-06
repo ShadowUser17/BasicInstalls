@@ -3,6 +3,11 @@
 ncat -v -n -l <host> <port>
 ```
 
+#### Ncat simple portscan:
+```bash
+nc -z -v <host> <port_range>
+```
+
 #### Gobuster DNS subdomain enumeration:
 ```bash
 gobuster dns -d <domain> -w <wordlist> -o <report> -q
