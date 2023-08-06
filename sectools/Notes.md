@@ -1,16 +1,16 @@
-#### Get local VPN address:
-```bash
-ip -j address show dev tun0 | jq -r '.[0].addr_info[0].local'
-```
-
-#### Get external TOR address:
-```bash
-curl --proxy "socks5://127.0.0.1:9050" "http://ident.me/"
-```
-
 #### Ncat start handler:
 ```bash
 ncat -v -n -l <host> <port>
+```
+
+#### Gobuster DNS subdomain enumeration:
+```bash
+gobuster dns -d <domain> -w <wordlist> -o <report> -q
+```
+
+#### Gobuster directory/file enumeration:
+```bash
+gobuster dir -u <url> -w <wordlist> -o <report> -q
 ```
 
 #### Nmap SYN scan:
