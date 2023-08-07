@@ -1,4 +1,5 @@
 #### Docs:
+- [github-cli](https://docs.github.com/github-cli)
 - [github-actions](https://docs.github.com/en/actions)
 - [github-actions-toolkit](https://github.com/actions/toolkit)
 - [conventional-commits](https://www.conventionalcommits.org/)
@@ -6,6 +7,7 @@
 - [managing-your-github-profile](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile)
 
 #### Tools:
+- [github-cli](https://github.com/cli/cli/releases)
 - [commitizen](https://github.com/commitizen-tools/commitizen)
 - [github-runner](https://github.com/actions/runner/releases)
 - [actions-runner-controller](https://github.com/actions/actions-runner-controller/releases)
