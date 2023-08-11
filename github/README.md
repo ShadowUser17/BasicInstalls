@@ -1,5 +1,5 @@
 #### Docs:
-- [github-cli](https://docs.github.com/github-cli)
+- [github-cli](https://cli.github.com/manual/gh)
 - [github-actions](https://docs.github.com/en/actions)
 - [github-actions-toolkit](https://github.com/actions/toolkit)
 - [conventional-commits](https://www.conventionalcommits.org/)
