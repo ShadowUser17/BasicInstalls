@@ -94,7 +94,7 @@ helm repo add cilium "https://helm.cilium.io/" && helm repo update
 ```
 ```bash
 helm template cilium cilium/cilium \
---version "1.14.0" \
+--version "1.14.1" \
 --namespace "kube-system" \
 --set "operator.replicas=1" \
 --set "prometheus.enabled=true" \
@@ -102,7 +102,7 @@ helm template cilium cilium/cilium \
 ```
 ```bash
 helm template cilium cilium/cilium \
---version "1.14.0" \
+--version "1.14.1" \
 --namespace "kube-system" \
 --set "hubble.enabled=true" \
 --set "hubble.relay.enabled=true" \
