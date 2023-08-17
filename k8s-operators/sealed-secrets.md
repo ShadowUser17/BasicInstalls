@@ -1,11 +1,11 @@
 #### Install controller:
 ```bash
-kubectl apply -f "https://github.com/bitnami-labs/sealed-secrets/releases/download/v0.23.0/controller.yaml"
+kubectl apply -f "https://github.com/bitnami-labs/sealed-secrets/releases/download/v0.23.1/controller.yaml"
 ```
 
 #### Install CLI:
 ```bash
-curl -L "https://github.com/bitnami-labs/sealed-secrets/releases/download/v0.23.0/kubeseal-0.23.0-linux-amd64.tar.gz" -o "kubeseal-linux-amd64.tar.gz" && \
+curl -L "https://github.com/bitnami-labs/sealed-secrets/releases/download/v0.23.1/kubeseal-0.23.1-linux-amd64.tar.gz" -o "kubeseal-linux-amd64.tar.gz" && \
 tar -xzf kubeseal-linux-amd64.tar.gz kubeseal && mv ./kubeseal /usr/local/bin/ && rm -f kubeseal-linux-amd64.tar.gz
 ```
 
