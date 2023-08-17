@@ -8,3 +8,19 @@ docker run --rm --name node_build_env --volume "${PWD}:/data:rw" --entrypoint "/
 ```bash
 cd /data && npm install && npm run build
 ```
+
+#### Use custom DNS:
+```
+--dns 172.30.1.252 --dns-search local.dev
+```
+
+#### Use custom repo:
+- Create `.npmrc`:
+```toml
+strict-ssl=false
+registry=<repo_url>
+```
+- Login to repo:
+```bash
+npm adduser
+```
