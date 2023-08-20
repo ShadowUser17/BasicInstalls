@@ -18,6 +18,26 @@ flatpak remote-delete <repo_name>
 flatpak install <repo_name> <app_id>
 ```
 
+#### List apps:
+```bash
+flatpak list
+```
+
+#### Run app:
+```bash
+flatpak run <app_id>
+```
+
+#### List processes:
+```bash
+flatpak ps
+```
+
+#### Kill app:
+```bash
+flatpak kill <app_id>
+```
+
 #### Delete app:
 ```bash
 flatpak uninstall <app_id>
