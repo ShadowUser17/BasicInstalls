@@ -1,6 +1,6 @@
 #### Install gitleaks:
 ```bash
-curl -L "https://github.com/zricethezav/gitleaks/releases/download/v8.17.0/gitleaks_8.17.0_linux_x64.tar.gz" -o gitleaks_linux_x64.tgz && \
+curl -L "https://github.com/zricethezav/gitleaks/releases/download/v8.18.0/gitleaks_8.18.0_linux_x64.tar.gz" -o gitleaks_linux_x64.tgz && \
 tar -xzf gitleaks_linux_x64.tgz gitleaks && mv ./gitleaks /usr/local/bin/ && rm -f gitleaks_linux_x64.tgz
 ```
 
