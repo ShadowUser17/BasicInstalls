@@ -63,6 +63,11 @@ terraform import <terraform_type.terraform_name> <resource_aws_id>
 cd - && cdktf deploy <stack_name>
 ```
 
+#### Remove resource from state:
+```bash
+terraform state rm <terraform_type.terraform_name>
+```
+
 #### Show current state:
 ```bash
 cd cdktf.out/stacks/<stack_name>/
