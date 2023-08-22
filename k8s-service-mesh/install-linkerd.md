@@ -1,6 +1,6 @@
 #### Install CLI and check cluster:
 ```bash
-curl -L "https://github.com/linkerd/linkerd2/releases/download/stable-2.13.5/linkerd2-cli-stable-2.13.5-linux-amd64" -o linkerd && \
+curl -L "https://github.com/linkerd/linkerd2/releases/download/stable-2.14.0/linkerd2-cli-stable-2.14.0-linux-amd64" -o linkerd && \
 chmod 755 ./linkerd && mv ./linkerd /usr/local/bin/ && linkerd check --pre
 ```
 
