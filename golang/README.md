@@ -20,6 +20,7 @@
 - [echo](https://github.com/labstack/echo)
 - [yaml](https://github.com/go-yaml/yaml)
 - [coraza](https://github.com/corazawaf/coraza)
+- [toxiproxy](https://github.com/Shopify/toxiproxy)
 - [certmagic](https://github.com/caddyserver/certmagic)
 
 #### Security:
