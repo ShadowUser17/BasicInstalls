@@ -14,11 +14,15 @@
 - [osv-scanner](https://github.com/google/osv-scanner/releases)
 - [snyk-cli](https://github.com/snyk/cli/releases)
 - [amass](https://github.com/OWASP/Amass/releases)
+- [mitmproxy](https://github.com/mitmproxy/mitmproxy/releases)
 - [gobuster](https://github.com/OJ/gobuster/releases)
 - [nettacker](https://github.com/OWASP/Nettacker/releases)
 - [PEASS-ng](https://github.com/carlospolop/PEASS-ng/releases)
 - [gitleaks](https://github.com/zricethezav/gitleaks/releases)
 - [flightsim](https://github.com/alphasoc/flightsim/releases)
+
+#### Libraries:
+- [impacket](https://github.com/fortra/impacket/releases)
 
 #### Tools manager:
 - [pdtm](https://github.com/projectdiscovery/pdtm/releases)
