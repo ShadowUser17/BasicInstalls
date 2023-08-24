@@ -13,7 +13,7 @@ unzip datree-cli.zip datree && mv ./datree /usr/local/bin/ && rm -f datree-cli.z
 
 ### Install kubescape
 ```bash
-curl -L "https://github.com/kubescape/kubescape/releases/download/v2.3.8/kubescape-ubuntu-latest" -o kubescape && \
+curl -L "https://github.com/kubescape/kubescape/releases/download/v2.9.0/kubescape-ubuntu-latest" -o kubescape && \
 chmod 755 ./kubescape && mv ./kubescape /usr/local/bin/
 ```
 
@@ -29,7 +29,7 @@ tar -xzf nerdctl-linux-amd64.tgz nerdctl && mv ./nerdctl /usr/local/bin/ && rm -
 
 ### Install kubectl
 ```bash
-curl -LO "https://storage.googleapis.com/kubernetes-release/release/v1.25.12/bin/linux/amd64/kubectl" && \
+curl -LO "https://storage.googleapis.com/kubernetes-release/release/v1.25.13/bin/linux/amd64/kubectl" && \
 chmod +x ./kubectl && mv ./kubectl /usr/local/bin/
 ```
 
