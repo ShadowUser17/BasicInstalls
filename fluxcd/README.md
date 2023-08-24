@@ -1,4 +1,4 @@
-#### Warning! Minimum required version of K8S is 1.24
+#### Warning! Minimum required version of K8S is 1.25
 
 #### URLs:
 - [FluxCD](https://fluxcd.io/flux/get-started/)
@@ -6,7 +6,7 @@
 
 #### Install/Upgrade:
 ```bash
-curl -L "https://github.com/fluxcd/flux2/releases/download/v2.0.1/flux_2.0.1_linux_amd64.tar.gz" -o "flux_linux_amd64.tgz" && \
+curl -L "https://github.com/fluxcd/flux2/releases/download/v2.1.0/flux_2.1.0_linux_amd64.tar.gz" -o "flux_linux_amd64.tgz" && \
 tar -xzf flux_linux_amd64.tgz flux && rm -f flux_linux_amd64.tgz && \
 mv ./flux /usr/local/bin/ && flux install
 ```
