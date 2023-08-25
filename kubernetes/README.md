@@ -9,6 +9,7 @@
 
 #### Tools:
 - [kubectl](https://kubectl.docs.kubernetes.io/references/)
+- [crictl](https://github.com/kubernetes-sigs/cri-tools/releases)
 - [krew](https://krew.sigs.k8s.io/docs/)
 - [helm](https://helm.sh/docs/)
 - [datree](https://hub.datree.io/)
