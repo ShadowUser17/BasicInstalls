@@ -1,3 +1,11 @@
+#### Check pod permissions:
+```bash
+cat /var/run/secrets/kubernetes.io/serviceaccount/token
+```
+```bash
+kubectl --token <token> auth can-i --list
+```
+
 #### Check action possibility:
 ```bash
 kubectl auth can-i <command> [--as <user_name>]
