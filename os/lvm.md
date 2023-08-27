@@ -30,7 +30,7 @@ vgchange -a <y|n> <group_name>
 
 #### Create logical volume:
 ```bash
-lvcreate -L <size> <volume_group> -n <name> [block_device]
+lvcreate <volume_group> -L <size> -n <name> [block_device]
 ```
 
 #### Show logical volumes:
@@ -41,4 +41,7 @@ lvdisplay | lvscan | lvs
 #### Extend logical volume:
 ```bash
 lvextend -L <+size> -r /dev/<volume_group>/<volume_name>
+```
+```bash
+lvextend -r -l +100%FREE /dev/<volume_group>/<volume_name>
 ```
