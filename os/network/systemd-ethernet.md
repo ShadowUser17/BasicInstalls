@@ -10,7 +10,7 @@ touch /etc/systemd/network/ethernet.network
 ```
 ```toml
 [Match]
-Name=enp0s2
+Name=eth0
 
 [Network]
 DHCP=false
