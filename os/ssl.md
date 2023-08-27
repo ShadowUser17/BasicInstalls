@@ -19,3 +19,8 @@ cp /root/CustomRootCA.pem /etc/pki/ca-trust/source/anchors/
 ```bash
 update-ca-trust
 ```
+
+#### Generate Self-signed certificate:
+```bash
+openssl req -x509 -sha256 -nodes -newkey rsa:2048 -keyout srv.key -out srv.crt -days 730
+```
