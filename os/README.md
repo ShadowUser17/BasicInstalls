@@ -10,6 +10,7 @@
 #### Recovery:
 - [SystemRescueCD](https://www.system-rescue.org/Download/)
 - [Rescatux](https://www.supergrubdisk.org/rescatux/)
+- [Clonezilla](https://clonezilla.org/downloads.php)
 
 #### Tools:
 - [fq](https://github.com/wader/fq/releases)
