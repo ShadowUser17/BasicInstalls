@@ -23,6 +23,8 @@
 - [BookHackTricks](https://book.hacktricks.xyz/welcome/readme)
 - [RedTeaming](https://www.ired.team/)
 - [MSFU](https://www.offsec.com/metasploit-unleashed/)
+- [Cyberclopaedia](https://cr0mll.github.io/cyberclopaedia/Cyberclopaedia/index.html)
+- [BinaryExploitation](https://ir0nstone.gitbook.io/notes/)
 - [Inventory](https://inventory.raw.pm/tools.html)
 
 #### CTF:
