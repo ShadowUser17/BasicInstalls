@@ -14,6 +14,10 @@
 - [cve-details](https://www.cvedetails.com/)
 - [nvd-nist](https://nvd.nist.gov/vuln)
 
+#### Tools:
+- [kali-tools](https://www.kali.org/tools/)
+- [blackarch-tools](https://blackarch.org/tools.html)
+
 #### Notes:
 - [CloudHackTricks](https://cloud.hacktricks.xyz/welcome/readme)
 - [BookHackTricks](https://book.hacktricks.xyz/welcome/readme)

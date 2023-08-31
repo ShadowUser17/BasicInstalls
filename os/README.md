@@ -4,6 +4,7 @@
 - [Ubuntu](https://help.ubuntu.com/)
 - [Alpine](https://docs.alpinelinux.org/)
 - [Parrot](https://www.parrotsec.org/docs/)
+- [Kali](https://www.kali.org/docs/)
 - [Arch](https://wiki.archlinux.org/title/Main_page)
 - [Gentoo](https://wiki.gentoo.org/wiki/Main_Page)
 
