@@ -8,7 +8,7 @@
 
 #### Install act:
 ```bash
-curl -L "https://github.com/nektos/act/releases/download/v0.2.49/act_Linux_x86_64.tar.gz" -o act_linux_amd64.tgz && \
+curl -L "https://github.com/nektos/act/releases/download/v0.2.50/act_Linux_x86_64.tar.gz" -o act_linux_amd64.tgz && \
 tar -xzf act_linux_amd64.tgz act && mv ./act /usr/local/bin/ && rm -f act_linux_amd64.tgz
 ```
 
