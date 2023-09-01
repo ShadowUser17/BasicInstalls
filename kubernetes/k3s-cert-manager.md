@@ -1,11 +1,11 @@
 #### Install:
 ```bash
-kubectl apply -f "https://github.com/cert-manager/cert-manager/releases/download/v1.12.3/cert-manager.yaml"
+kubectl apply -f "https://github.com/cert-manager/cert-manager/releases/download/v1.12.4/cert-manager.yaml"
 ```
 
 #### Install CLI:
 ```bash
-curl -LO "https://github.com/cert-manager/cert-manager/releases/download/v1.12.3/cmctl-linux-amd64.tar.gz" && \
+curl -LO "https://github.com/cert-manager/cert-manager/releases/download/v1.12.4/cmctl-linux-amd64.tar.gz" && \
 tar -xzf cmctl-linux-amd64.tar.gz cmctl && mv ./cmctl /usr/local/bin/ && rm -f cmctl-linux-amd64.tar.gz
 ```
 
