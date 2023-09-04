@@ -2,10 +2,10 @@
 Set `nodeName` in the pod template spec to force run pod on a specific node.
 
 #### Select node with labels:
-Add `nodeSelector` to pod template spec.
+Add `nodeSelector` to the pod template spec.
 ```yaml
 nodeSelector:
-    kubernetes.io/os: "linux"
+  kubernetes.io/os: "linux"
 ```
 
 #### Schedule pods with nodeAffinity:
@@ -36,6 +36,18 @@ affinity:
               operator: "In"
               values: ["cache"]
           topologyKey: "topology.kubernetes.io/zone"
+```
+
+#### Schedule pods with topologySpreadConstraints:
+Add `topologySpreadConstraints` to the pod template spec for deploying 2 pods per node.
+```yaml
+topologySpreadConstraints:
+  - maxSkew: 2
+    topologyKey: "topology.kubernetes.io/zone"
+    whenUnsatisfiable: "DoNotSchedule"
+    labelSelector:
+      matchLabels:
+        app.kubernetes.io/type: "cache"
 ```
 
 #### Schedule pods with Taints/Tolerations:
