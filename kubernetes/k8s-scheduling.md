@@ -9,7 +9,7 @@ nodeSelector:
 ```
 
 #### Schedule pods with nodeAffinity:
-Add `affinity.nodeAffinity` to pod template spec for enforce deployment in specific `AZ`.
+Add `affinity.nodeAffinity` to the pod template spec for enforce deployment in specific `AZ`.
 ```yaml
 affinity:
   nodeAffinity:
@@ -37,3 +37,17 @@ affinity:
               values: ["cache"]
           topologyKey: "topology.kubernetes.io/zone"
 ```
+
+#### Schedule pods with Taints/Tolerations:
+Add `tolerations` to the pod template spec to allow scheduling pods on marked nodes.
+```yaml
+tolerations:
+  - key: "node-role.kubernetes.io/master"
+    operator: "Exists"
+    effect: "NoSchedule"
+```
+
+#### URLs:
+- [taint-and-toleration](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/)
+- [assign-pod-node](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/)
+- [topology-spread-constraints](https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/)
