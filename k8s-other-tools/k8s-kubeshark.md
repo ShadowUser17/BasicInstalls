@@ -1,6 +1,6 @@
 #### Install CLI:
 ```bash
-curl -L "https://github.com/kubeshark/kubeshark/releases/download/41.3/kubeshark_linux_amd64" -o kubeshark && \
+curl -L "https://github.com/kubeshark/kubeshark/releases/download/50.2/kubeshark_linux_amd64" -o kubeshark && \
 chmod +x ./kubeshark && mv ./kubeshark /usr/local/bin/
 ```
 
