@@ -1,4 +1,6 @@
-#### Example:
+#### Allow access to the pod from external namespaces:
+- By default, all egress traffic is allowed!
+- Warning! After applying the policy all undescribed traffic isn't allowed!
 ```yaml
 apiVersion: "networking.k8s.io/v1"
 kind: "NetworkPolicy"
