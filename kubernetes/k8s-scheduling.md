@@ -9,7 +9,8 @@ nodeSelector:
 ```
 
 #### Schedule pods with nodeAffinity:
-Add `affinity.nodeAffinity` to the pod template spec for enforce deployment in specific `AZ`.
+- Add `affinity.nodeAffinity` to the pod template spec for enforce deployment in specific `AZ`.
+- Multiple items in `nodeSelectorTerms` are selected with `OR` logic but sub-elements in `matchExpressions` have `AND` logic!
 ```yaml
 affinity:
   nodeAffinity:
@@ -25,21 +26,23 @@ affinity:
 ```
 
 #### Schedule pods with podAntiAffinity:
-Add `affinity.podAntiAffinity` to the pod template spec to prevent running more than one copy per node.
+- Add `affinity.podAntiAffinity` to the pod template spec to prevent running more than one copy per node.
+- The logic is similar to `nodeAffinity`.
 ```yaml
 affinity:
   podAntiAffinity:
     requiredDuringSchedulingIgnoredDuringExecution:
-      - labelSelector:
+      - topologyKey: "topology.kubernetes.io/zone"
+        labelSelector:
           matchExpressions:
             - key: "app.kubernetes.io/type"
               operator: "In"
               values: ["cache"]
-          topologyKey: "topology.kubernetes.io/zone"
 ```
 
 #### Schedule pods with topologySpreadConstraints:
-Add `topologySpreadConstraints` to the pod template spec for deploying 2 pods per node.
+- Add `topologySpreadConstraints` to the pod template spec for deploying 2 pods per node.
+- These items are combined using `AND` logic!
 ```yaml
 topologySpreadConstraints:
   - maxSkew: 2
