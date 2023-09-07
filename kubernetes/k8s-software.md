@@ -23,6 +23,12 @@ curl -LO "https://storage.googleapis.com/kubernetes-release/release/v1.25.13/bin
 chmod +x ./kubectl && mv ./kubectl /usr/local/bin/
 ```
 
+#### Install rbac-lookup
+```bash
+curl -L "https://github.com/FairwindsOps/rbac-lookup/releases/download/v0.10.2/rbac-lookup_0.10.2_Linux_x86_64.tar.gz" -o rbac-lookup.tgz && \
+tar -xzf rbac-lookup.tgz rbac-lookup && mv ./rbac-lookup /usr/local/bin/ && rm -f rbac-lookup.tgz
+```
+
 #### Install krew
 ```bash
 curl -L -O "https://github.com/kubernetes-sigs/krew/releases/download/v0.4.4/krew-linux_amd64.tar.gz" && \
