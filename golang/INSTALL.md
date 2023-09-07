@@ -7,7 +7,7 @@ chmod 755 ./gobrew && mv ./gobrew /usr/local/bin/
 echo -e 'export PATH="$HOME/.gobrew/current/bin:$HOME/go/bin:$PATH"\nexport GOROOT="$HOME/.gobrew/current/go"' >> ~/.bashrc
 ```
 ```bash
-gobrew install 1.21.0
+gobrew install 1.21.1
 ```
 
 #### Install Delve debugger:
