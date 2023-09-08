@@ -1,3 +1,4 @@
+#### Warning! Only TCP and HTTP probes support named ports!
 #### Probe types:
 - `startupProbe`
 - `livenessProbe`
