@@ -13,11 +13,9 @@
 curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.25.13+k3s1" sh -s - server \
 --token "4Eja4ahRagJEhozmiRHKg3" \
 --write-kubeconfig-mode "0644" \
---cluster-init \
---etcd-expose-metrics \
---node-name "k3s" \
+--node-name "server" \
 --with-node-id \
---node-ip "192.168.56.13" \
+--node-ip "192.168.56.11" \
 --flannel-iface "eth1" \
 --flannel-backend "none" \
 --disable-network-policy \
@@ -28,11 +26,11 @@ curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.25.13+k3s1" sh -s - ser
 #### Install agent on VirtualBox:
 ```bash
 curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.25.13+k3s1" sh -s - agent \
---server "https://192.168.56.13:6443" \
+--server "https://192.168.56.11:6443" \
 --token "4Eja4ahRagJEhozmiRHKg3" \
---node-name "k3s" \
+--node-name "agent" \
 --with-node-id \
---node-ip "192.168.56.14" \
+--node-ip "192.168.56.12" \
 --flannel-iface "eth1"
 ```
 
