@@ -9,13 +9,13 @@
 - [Gentoo](https://wiki.gentoo.org/wiki/Main_Page)
 
 #### Recovery:
-- [SystemRescueCD](https://www.system-rescue.org/Download/)
+- [SRCD](https://www.system-rescue.org/Download/)
 - [Rescatux](https://www.supergrubdisk.org/rescatux/)
 - [Clonezilla](https://clonezilla.org/downloads.php)
 
 #### Tools:
 - [fq](https://github.com/wader/fq/releases)
-- [Ventoy](https://github.com/ventoy/Ventoy/releases)
+- [ventoy](https://github.com/ventoy/Ventoy/releases)
 
 #### Other:
 - [tldr-pages](https://github.com/tldr-pages/tldr)
