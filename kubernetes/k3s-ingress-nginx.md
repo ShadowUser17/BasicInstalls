@@ -3,7 +3,7 @@ Add `--disable traefik` to installation script.
 
 #### Install Kubernetes Nginx:
 ```bash
-kubectl apply -f "https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.8.1/deploy/static/provider/cloud/deploy.yaml"
+kubectl apply -f "https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.8.2/deploy/static/provider/cloud/deploy.yaml"
 ```
 
 #### Enable ModSecurity in Kubernetes Nginx:
