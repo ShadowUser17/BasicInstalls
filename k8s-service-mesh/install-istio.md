@@ -22,10 +22,13 @@ istioctl kube-inject -f ./deploy.yml | kubectl apply -f -
 kubectl label namespace default istio-injection=enabled --overwrite
 ```
 
-#### Configure Nginx Ingress:
-```yaml
-annotations:
-  sidecar.istio.io/inject: "true"
-  traffic.sidecar.istio.io/includeInboundPorts: ""
-  traffic.sidecar.istio.io/excludeInboundPorts: "80,443"
+#### Create IngressClass:
+```bash
+kubectl apply -f "https://raw.githubusercontent.com/ShadowUser17/BasicInstalls/master/k8s-service-mesh/istio-ingress-class.yml"
+```
+
+#### Create Issuer:
+- Warning! The `secret` for `ingress` must be in the `istio-system` namespace!
+```bash
+kubectl apply -f "https://raw.githubusercontent.com/ShadowUser17/BasicInstalls/master/k8s-service-mesh/istio-ingress-issuer.yml"
 ```
