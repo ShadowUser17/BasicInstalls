@@ -32,3 +32,10 @@ kubectl apply -f "https://raw.githubusercontent.com/ShadowUser17/BasicInstalls/m
 ```bash
 kubectl apply -f "https://raw.githubusercontent.com/ShadowUser17/BasicInstalls/master/k8s-service-mesh/istio-ingress-issuer.yml"
 ```
+
+#### Dashboards:
+- [istio-wasm-extension](https://grafana.com/grafana/dashboards/13277-istio-wasm-extension-dashboard/)
+- [istio-control-plane](https://grafana.com/grafana/dashboards/7645-istio-control-plane-dashboard/)
+- [istio-workload](https://grafana.com/grafana/dashboards/7630-istio-workload-dashboard/)
+- [istio-service](https://grafana.com/grafana/dashboards/7636-istio-service-dashboard/)
+- [istio-mesh](https://grafana.com/grafana/dashboards/7639-istio-mesh-dashboard/)
