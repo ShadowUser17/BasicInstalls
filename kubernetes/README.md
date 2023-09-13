@@ -20,5 +20,6 @@
 - [kube-capacity](https://github.com/robscott/kube-capacity)
 - [pv-migrate](https://github.com/utkuozdemir/pv-migrate)
 
-#### Desktop:
+#### Alternatives:
 - [rancher](https://docs.rancherdesktop.io/)
+- [talos](https://github.com/siderolabs/talos/releases)
