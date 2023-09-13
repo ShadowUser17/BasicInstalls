@@ -8,3 +8,6 @@
 - [Docs](https://grafana.com/docs/agent/latest/)
 - [Images](https://hub.docker.com/r/grafana/agent/tags)
 - [Releases](https://github.com/grafana/agent/releases)
+
+#### Plugins:
+- [button-panel](https://grafana.com/grafana/plugins/cloudspout-button-panel/)
