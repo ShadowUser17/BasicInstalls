@@ -29,3 +29,17 @@ dpkg -I <package-path>
 ```bash
 rpm -q --requires <package-name>
 ```
+
+#### Install specific version on Debian/Fedora:
+```bash
+dnf list --showduplicates <package-name>
+```
+```bash
+dnf install <package-name>-<package-version>
+```
+```bash
+apt-cache policy <package-name>
+```
+```bash
+apt-get install <package-name>=<package-version>
+```
