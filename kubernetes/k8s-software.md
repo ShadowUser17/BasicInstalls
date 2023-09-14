@@ -19,7 +19,7 @@ chmod 755 ./kubescape && mv ./kubescape /usr/local/bin/
 
 #### Install kubectl
 ```bash
-curl -LO "https://storage.googleapis.com/kubernetes-release/release/v1.25.13/bin/linux/amd64/kubectl" && \
+curl -LO "https://storage.googleapis.com/kubernetes-release/release/v1.25.14/bin/linux/amd64/kubectl" && \
 chmod +x ./kubectl && mv ./kubectl /usr/local/bin/
 ```
 
