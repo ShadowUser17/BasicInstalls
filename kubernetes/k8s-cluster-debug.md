@@ -1,3 +1,8 @@
+#### Show events:
+```bash
+kubectl get event -n <namespace>
+```
+
 #### List pods:
 ```bash
 crictl pods
