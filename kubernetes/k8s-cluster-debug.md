@@ -1,6 +1,11 @@
 #### Show events:
 ```bash
-kubectl get event -n <namespace>
+kubectl get event -n <namespace> --field-selector 'involvedObject.name=<object_name>'
+```
+
+#### Exec command:
+```bash
+kubectl -n <namespace> exec -it <pod> -c <container> -- <command>
 ```
 
 #### List pods:
