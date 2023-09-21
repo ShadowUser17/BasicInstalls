@@ -1,3 +1,7 @@
+#### URLs:
+- [infinispan](https://infinispan.org/documentation/)
+- [jgroups](http://www.jgroups.org/ug.html)
+
 #### Run embedded mode:
 ```
 /opt/jboss/keycloak/bin/jboss-cli.sh
