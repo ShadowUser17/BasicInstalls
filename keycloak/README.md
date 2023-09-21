@@ -12,12 +12,12 @@ embed-server --server-config=standalone-ha.xml
 
 #### Show attributes:
 ```
-ls /subsystem=infinispan/cache-container=keycloak/local-cache=keys/expiration=EXPIRATION
+ls /subsystem=infinispan/cache-container=keycloak/local-cache=keys/component=expiration
 ```
 
 #### Set attribute:
 ```
-/subsystem=infinispan/cache-container=keycloak/local-cache=keys/expiration=EXPIRATION/:write-attribute(name="max-idle", value=3600000)
+/subsystem=infinispan/cache-container=keycloak/local-cache=keys/component=expiration/:write-attribute(name="max-idle", value=3600000)
 ```
 
 #### Run script:
@@ -27,11 +27,11 @@ ls /subsystem=infinispan/cache-container=keycloak/local-cache=keys/expiration=EX
 
 #### Example script:
 ```
-embed-server --server-config=standalone-ha.xml
+embed-server --server-config=standalone-ha.xml --std-out=echo
 batch
-/subsystem=infinispan/cache-container=keycloak/local-cache=keys/expiration=EXPIRATION/:write-attribute(name="max-idle", value=3600000)
-/subsystem=infinispan/cache-container=keycloak/local-cache=users/expiration=EXPIRATION/:write-attribute(name="max-idle", value=3600000)
-/subsystem=infinispan/cache-container=keycloak/local-cache=realms/expiration=EXPIRATION/:write-attribute(name="max-idle", value=3600000)
+/subsystem=infinispan/cache-container=keycloak/local-cache=keys/component=expiration/:write-attribute(name="max-idle", value=3600000)
+/subsystem=infinispan/cache-container=keycloak/local-cache=users/component=expiration/:write-attribute(name="max-idle", value=3600000)
+/subsystem=infinispan/cache-container=keycloak/local-cache=realms/component=expiration/:write-attribute(name="max-idle", value=3600000)
 run-batch
 stop-embedded-server
 ```
