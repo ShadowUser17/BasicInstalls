@@ -3,6 +3,11 @@
 qemu-img create -f qcow2 vm-100-001.qcow2 20G
 ```
 
+#### Convert template:
+```bash
+qemu-img convert -f qcow2 -O qcow2 debian-nocloud-amd64.qcow2 vm-100-001.qcow2
+```
+
 #### Resize disk:
 ```bash
 qemu-img resize vm-100-001.qcow2 +5G

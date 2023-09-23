@@ -1,5 +1,7 @@
 #### URLs:
-- [Documentation](https://wiki.qemu.org/Documentation)
+- [qemu-docs](https://www.qemu.org/docs/master/)
+- [qemu-wiki](https://wiki.qemu.org/Documentation)
+- [cloud-init](https://cloudinit.readthedocs.io/en/latest/)
 
 #### Install for Fedora:
 ```bash
