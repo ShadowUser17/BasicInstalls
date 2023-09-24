@@ -17,6 +17,11 @@ tar -xzf tetra-linux-amd64.tar.gz tetra && mv ./tetra /usr/local/bin/ && rm -f t
 helm template tetragon cilium/tetragon -n kube-system > tetragon-deploy.yml
 ```
 
+#### Show logs:
+```bash
+kubectl logs -n kube-system -l "app.kubernetes.io/name=tetragon" -c export-stdout -f | tetra getevents -o compact
+```
+
 #### URLs:
 - [Docs](https://tetragon.cilium.io/docs/)
 - [Releases](https://github.com/cilium/tetragon/releases)
