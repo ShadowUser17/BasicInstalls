@@ -33,6 +33,7 @@ data:
 ```
 
 #### URLs:
-- [Docs](https://tetragon.cilium.io/docs/)
-- [Releases](https://github.com/cilium/tetragon/releases)
+- [docs](https://tetragon.cilium.io/docs/)
+- [releases](https://github.com/cilium/tetragon/releases)
 - [helm-chart](https://tetragon.cilium.io/docs/reference/helm-chart/)
+- [capabilities](https://tetragon.cilium.io/docs/reference/grpc-api/)
