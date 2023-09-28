@@ -1,0 +1,30 @@
+#### List available versions:
+```bash
+helm search repo <repo> -l
+```
+
+#### Show releases:
+```bash
+helm list -n <namespace>
+```
+```bash
+helm history <release> -n <namespace>
+```
+
+#### Revert the previous release:
+```bash
+helm rollback <release> <revision> -n <namespace>
+```
+
+#### Install specific version:
+```bash
+helm install <release> <repo> -f values.yml -n <namespace> --version <version>
+```
+
+#### Upgrade to specific version:
+```bash
+helm upgrade <release> <repo> -f values.yml -n <namespace> --version <version>
+```
+```bash
+helm upgrade --install <release> <repo> -f values.yml -n <namespace> --version <version>
+```
