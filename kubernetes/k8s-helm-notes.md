@@ -11,6 +11,11 @@ helm list -n <namespace>
 helm history <release> -n <namespace>
 ```
 
+#### Show default values:
+```bash
+helm show values <repo>
+```
+
 #### Revert the previous release:
 ```bash
 helm rollback <release> <revision> -n <namespace>
