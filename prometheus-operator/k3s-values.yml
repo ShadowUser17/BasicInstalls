@@ -1,0 +1,92 @@
+alertmanager:
+  enabled: false
+  alertmanagerSpec:
+    retention: "10h"
+    storage:
+      volumeClaimTemplate:
+        spec:
+          accessModes: ["ReadWriteOnce"]
+          storageClassName: "local-path"
+          resources:
+            requests:
+              storage: "1Gi"
+
+prometheus:
+  enabled: true
+  thanosService:
+    enabled: false
+  prometheusSpec:
+    retention: "7d"
+    resources:
+      requests:
+        cpu: "100m"
+        memory: "500Mi"
+      limits:
+        cpu: "200m"
+        memory: "700Mi"
+    storageSpec:
+      volumeClaimTemplate:
+        spec:
+          accessModes: ["ReadWriteOnce"]
+          storageClassName: "local-path"
+          resources:
+            requests:
+              storage: "8Gi"
+
+# Using default values from https://github.com/grafana/helm-charts/blob/main/charts/grafana/values.yaml
+grafana:
+  enabled: false
+  additionalDataSources: []
+  resources:
+    requests:
+      cpu: "50m"
+      memory: "200Mi"
+    limits:
+      cpu: "50m"
+      memory: "250Mi"
+  ingress:
+    enabled: false
+    path: "/"
+    hosts: ["grafana.k3s"]
+    ingressClassName: "nginx"
+  persistence:
+    enabled: true
+    type: "pvc"
+    size: "1Gi"
+    accessModes: ["ReadWriteOnce"]
+    storageClassName: "local-path"
+
+defaultRules:
+  create: false
+  additionalRuleLabels:
+    env: "test"
+    team: "devops"
+  rules:
+    alertmanager: true
+    etcd: true
+    configReloaders: true
+    general: true
+    k8s: true
+    kubeApiserverAvailability: true
+    kubeApiserverBurnrate: true
+    kubeApiserverHistogram: true
+    kubeApiserverSlos: true
+    kubeControllerManager: true
+    kubelet: true
+    kubeProxy: true
+    kubePrometheusGeneral: true
+    kubePrometheusNodeRecording: false
+    kubernetesApps: true
+    kubernetesResources: true
+    kubernetesStorage: true
+    kubernetesSystem: true
+    kubeSchedulerAlerting: true
+    kubeSchedulerRecording: false
+    kubeStateMetrics: true
+    network: true
+    node: true
+    nodeExporterAlerting: true
+    nodeExporterRecording: false
+    prometheus: true
+    prometheusOperator: true
+    windows: false
