@@ -35,7 +35,7 @@ prometheus:
 
 # Using default values from https://github.com/grafana/helm-charts/blob/main/charts/grafana/values.yaml
 grafana:
-  enabled: false
+  enabled: true
   additionalDataSources: []
   resources:
     requests:
@@ -45,7 +45,7 @@ grafana:
       cpu: "50m"
       memory: "250Mi"
   ingress:
-    enabled: false
+    enabled: true
     path: "/"
     hosts: ["grafana.k3s"]
     ingressClassName: "nginx"
@@ -57,7 +57,7 @@ grafana:
     storageClassName: "local-path"
 
 defaultRules:
-  create: false
+  create: true
   additionalRuleLabels:
     env: "test"
     team: "devops"
