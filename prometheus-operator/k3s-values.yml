@@ -36,7 +36,15 @@ prometheus:
 # Using default values from https://github.com/grafana/helm-charts/blob/main/charts/grafana/values.yaml
 grafana:
   enabled: true
-  additionalDataSources: []
+  adminPassword: "prom-operator"
+  additionalDataSources:
+    - name: "Loki"
+      type: "loki"
+      access: "proxy"
+      url: "http://grafana-loki.testing.svc:3100"
+      jsonData:
+        timeout: 120
+        maxLines: 2000
   resources:
     requests:
       cpu: "50m"
