@@ -17,6 +17,23 @@ kubectl -n monitoring get secret prom-operator-grafana -o jsonpath='{.data.admin
 kubectl -n monitoring get secret prom-operator-grafana -o jsonpath='{.data.admin-password}' | base64 -d
 ```
 
+#### Get operator selectors:
+```bash
+kubectl -n monitoring get prometheus prom-operator-kube-prometh-prometheus -o jsonpath='{.spec.podMonitorSelector}'
+```
+```bash
+kubectl -n monitoring get prometheus prom-operator-kube-prometh-prometheus -o jsonpath='{.spec.probeSelector}'
+```
+```bash
+kubectl -n monitoring get prometheus prom-operator-kube-prometh-prometheus -o jsonpath='{.spec.ruleSelector}'
+```
+```bash
+kubectl -n monitoring get prometheus prom-operator-kube-prometh-prometheus -o jsonpath='{.spec.scrapeConfigSelector}'
+```
+```bash
+kubectl -n monitoring get prometheus prom-operator-kube-prometh-prometheus -o jsonpath='{.spec.serviceMonitorSelector}'
+```
+
 #### Get default manifests:
 ```bash
 helm template prom-operator "prometheus-community/kube-prometheus-stack" > manifests.yml
