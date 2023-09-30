@@ -47,6 +47,16 @@ helm template prom-operator "prometheus-community/kube-prometheus-stack" > manif
 helm show values "prometheus-community/kube-prometheus-stack" > values.yml
 ```
 
+#### Create dashboard:
+- Required labels:
+```yaml
+labels:
+  grafana_dashboard: "1"
+```
+```bash
+kubectl create configmap <name> -n monitoring --from-file=dashboard.json
+```
+
 #### URLs:
 - [Docs](https://prometheus-operator.dev/docs/prologue/introduction/)
 - [Charts](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack)
