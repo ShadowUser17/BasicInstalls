@@ -33,6 +33,9 @@ kubectl -n monitoring get prometheus prom-operator-kube-prometh-prometheus -o js
 ```bash
 kubectl -n monitoring get prometheus prom-operator-kube-prometh-prometheus -o jsonpath='{.spec.serviceMonitorSelector}'
 ```
+```bash
+kubectl -n monitoring get alertmanager prom-operator-kube-prometh-alertmanager -o jsonpath='{.spec.alertmanagerConfigSelector}'
+```
 
 #### Get default manifests:
 ```bash

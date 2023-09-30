@@ -1,7 +1,10 @@
 alertmanager:
-  enabled: false
+  enabled: true
   alertmanagerSpec:
     retention: "10h"
+    alertmanagerConfigSelector:
+      matchLabels:
+        release: "prom-operator"
     storage:
       volumeClaimTemplate:
         spec:
