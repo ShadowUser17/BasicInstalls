@@ -8,6 +8,7 @@
 - [dnsdumpster](https://dnsdumpster.com/)
 - [netcraft](https://sitereport.netcraft.com/)
 - [have-i-been-pwned](https://haveibeenpwned.com/)
+- [malware-bazaar](https://bazaar.abuse.ch/browse/)
 - [gtfobins](https://gtfobins.github.io/)
 - [revshells](https://www.revshells.com/)
 - [exploit-db](https://www.exploit-db.com/)

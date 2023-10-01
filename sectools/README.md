@@ -13,7 +13,9 @@
 #### Other tools:
 - [osv-scanner](https://github.com/google/osv-scanner/releases)
 - [snyk-cli](https://github.com/snyk/cli/releases)
+- [yara](https://github.com/VirusTotal/yara/releases)
 - [amass](https://github.com/OWASP/Amass/releases)
+- [chisel](https://github.com/jpillora/chisel/releases)
 - [sliver](https://github.com/BishopFox/sliver/releases)
 - [mitmproxy](https://github.com/mitmproxy/mitmproxy/releases)
 - [gobuster](https://github.com/OJ/gobuster/releases)
