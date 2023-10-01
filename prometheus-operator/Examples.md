@@ -63,7 +63,7 @@ spec:
 ```
 
 #### Create Grafana dashboard:
-- Required labels:
+- Check the selector in Grafana `sidecar` params!
 ```yaml
 labels:
   grafana_dashboard: "1"
@@ -73,4 +73,17 @@ kubectl create configmap <name> -n monitoring --from-file=dashboard.json
 ```
 ```bash
 kubectl label configmap <name> -n monitoring grafana_dashboard="1"
+```
+
+#### Create Grafana datasource:
+- Check the selector in Grafana `sidecar` params!
+```yaml
+labels:
+  grafana_datasource: "1"
+```
+```bash
+kubectl create configmap <name> -n monitoring --from-file=datasource.json
+```
+```bash
+kubectl label configmap <name> -n monitoring grafana_datasource="1"
 ```
