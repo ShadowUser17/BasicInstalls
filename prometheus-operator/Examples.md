@@ -62,6 +62,24 @@ spec:
           sendResolved: true
 ```
 
+#### PrometheusRule example:
+ Check `ruleSelector` labels!
+```yaml
+apiVersion: "monitoring.coreos.com/v1"
+kind: "PrometheusRule"
+metadata:
+  name: "example-alert-rules"
+  namespace: "testing"
+  labels:
+    release: "prom-operator"
+spec:
+  groups:
+    - name: "./example-alerts.rules"
+      rules:
+        - alert: "ExampleAlert"
+          expr: "vector(1)"
+```
+
 #### Create Grafana dashboard:
 - Check the selector in Grafana `sidecar` params!
 ```yaml
