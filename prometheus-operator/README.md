@@ -9,6 +9,11 @@ helm repo add prometheus-community "https://prometheus-community.github.io/helm-
 helm install prom-operator "prometheus-community/kube-prometheus-stack" -f k3s-values.yml -n monitoring
 ```
 
+#### Update existing deployment:
+```bash
+helm upgrade --install prom-operator "prometheus-community/kube-prometheus-stack" -f k3s-values.yml -n monitoring
+```
+
 #### Get Grafana credentials:
 ```bash
 kubectl -n monitoring get secret prom-operator-grafana -o jsonpath='{.data.admin-user}' | base64 -d
@@ -45,16 +50,6 @@ helm template prom-operator "prometheus-community/kube-prometheus-stack" > manif
 #### Get default values:
 ```bash
 helm show values "prometheus-community/kube-prometheus-stack" > values.yml
-```
-
-#### Create dashboard:
-- Required labels:
-```yaml
-labels:
-  grafana_dashboard: "1"
-```
-```bash
-kubectl create configmap <name> -n monitoring --from-file=dashboard.json
 ```
 
 #### URLs:

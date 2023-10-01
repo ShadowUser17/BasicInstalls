@@ -74,7 +74,7 @@ defaultRules:
     team: "devops"
   rules:
     alertmanager: true
-    etcd: true
+    etcd: false
     configReloaders: true
     general: true
     k8s: true
@@ -84,14 +84,14 @@ defaultRules:
     kubeApiserverSlos: true
     kubeControllerManager: true
     kubelet: true
-    kubeProxy: true
+    kubeProxy: false
     kubePrometheusGeneral: true
     kubePrometheusNodeRecording: false
     kubernetesApps: true
     kubernetesResources: true
     kubernetesStorage: true
     kubernetesSystem: true
-    kubeSchedulerAlerting: true
+    kubeSchedulerAlerting: false
     kubeSchedulerRecording: false
     kubeStateMetrics: true
     network: true
