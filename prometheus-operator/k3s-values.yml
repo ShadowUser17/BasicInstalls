@@ -1,5 +1,10 @@
 alertmanager:
   enabled: true
+  ingress:
+    enabled: true
+    path: "/"
+    hosts: ["alertmanager.k3s"]
+    ingressClassName: "nginx"
   alertmanagerSpec:
     retention: "8h"
     resources:
@@ -27,6 +32,11 @@ prometheus:
   enabled: true
   thanosService:
     enabled: false
+  ingress:
+    enabled: true
+    path: "/"
+    hosts: ["prometheus.k3s"]
+    ingressClassName: "nginx"
   prometheusSpec:
     retention: "7d"
     resources:
