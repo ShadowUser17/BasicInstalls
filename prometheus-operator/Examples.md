@@ -74,16 +74,22 @@ spec:
 apiVersion: "monitoring.coreos.com/v1"
 kind: "PrometheusRule"
 metadata:
-  name: "example-alert-rules"
+  name: "test-alert-rules"
   namespace: "testing"
   labels:
     release: "prom-operator"
 spec:
   groups:
-    - name: "./example-alerts.rules"
+    - name: "./test-alert.rules"
       rules:
-        - alert: "ExampleAlert"
+        - alert: "AlwaysFiring"
           expr: "vector(1)"
+          for: "1m"
+          labels:
+            severity: "warning"
+          annotations:
+            summary: "Testing..."
+            description: "Testing..."
 ```
 
 #### Create Grafana dashboard:
