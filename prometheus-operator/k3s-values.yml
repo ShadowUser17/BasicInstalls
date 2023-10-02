@@ -12,6 +12,8 @@ alertmanager:
     alertmanagerConfigSelector:
       matchLabels:
         release: "prom-operator"
+    alertmanagerConfigMatcherStrategy:
+      type: "None"
     storage:
       volumeClaimTemplate:
         spec:
