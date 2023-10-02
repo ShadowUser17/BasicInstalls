@@ -22,6 +22,11 @@ kubectl -n monitoring get secret prom-operator-grafana -o jsonpath='{.data.admin
 kubectl -n monitoring get secret prom-operator-grafana -o jsonpath='{.data.admin-password}' | base64 -d
 ```
 
+#### Get Alertmanager config:
+```bash
+kubectl -n monitoring exec -it alertmanager-prom-operator-kube-prometh-alertmanager-0 -- cat /etc/alertmanager/config_out/alertmanager.env.yaml
+```
+
 #### Get operator selectors:
 ```bash
 kubectl -n monitoring get prometheus prom-operator-kube-prometh-prometheus -o jsonpath='{.spec.podMonitorSelector}'

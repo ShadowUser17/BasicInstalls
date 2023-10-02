@@ -55,6 +55,12 @@ spec:
     groupInterval: "5m"
     repeatInterval: "1h"
     receiver: "echo-server"
+    routes:
+      - receiver: "echo-server"
+        matchers:
+          - name: "severity"
+            value: "warning|error|critical"
+            matchType: "=~"
   receivers:
     - name: "echo-server"
       webhookConfigs:
