@@ -112,8 +112,28 @@ labels:
   grafana_datasource: "1"
 ```
 ```bash
-kubectl create configmap <name> -n monitoring --from-file=datasource.json
+kubectl create configmap <name> -n monitoring --from-file=datasource.yaml
 ```
 ```bash
 kubectl label configmap <name> -n monitoring grafana_datasource="1"
+```
+
+#### Create Grafana resources from kustomize:
+```yaml
+apiVersion: "kustomize.config.k8s.io/v1beta1"
+kind: "Kustomization"
+namespace: "monitoring"
+generatorOptions:
+  disableNameSuffixHash: true
+configMapGenerator:
+  - name: "test-dashboard"
+    files: ["test-dashboard.json"]
+    options:
+      labels:
+        grafana_dashboard: "1"
+  - name: "test-datasource"
+    files: ["test-datasource.yaml"]
+    options:
+      labels:
+        grafana_datasource: "1"
 ```
