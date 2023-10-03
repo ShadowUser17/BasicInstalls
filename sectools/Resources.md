@@ -5,6 +5,7 @@
 - [mitre-car](https://car.mitre.org/)
 - [owasp-projects](https://owasp.org/projects/)
 - [virustotal](https://www.virustotal.com/gui/home/upload)
+- [loldrivers](https://www.loldrivers.io/)
 - [dnsdumpster](https://dnsdumpster.com/)
 - [netcraft](https://sitereport.netcraft.com/)
 - [have-i-been-pwned](https://haveibeenpwned.com/)
