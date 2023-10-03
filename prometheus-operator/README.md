@@ -57,6 +57,12 @@ helm template prom-operator "prometheus-community/kube-prometheus-stack" > manif
 helm show values "prometheus-community/kube-prometheus-stack" > values.yml
 ```
 
+#### Disable the next rules for EKS:
+- `kubeSchedulerAlerting`
+- `kubeSchedulerRecording`
+- `kubeControllerManager`
+- `kubeProxy`
+
 #### URLs:
 - [API](https://prometheus-operator.dev/docs/operator/api/)
 - [Docs](https://prometheus-operator.dev/docs/prologue/introduction/)

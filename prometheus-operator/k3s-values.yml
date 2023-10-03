@@ -101,7 +101,7 @@ defaultRules:
     kubeApiserverBurnrate: true
     kubeApiserverHistogram: true
     kubeApiserverSlos: true
-    kubeControllerManager: true
+    kubeControllerManager: false
     kubelet: true
     kubeProxy: false
     kubePrometheusGeneral: true
