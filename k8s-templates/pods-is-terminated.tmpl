@@ -1,0 +1,10 @@
+{{- range .items -}}
+    {{- $name := .metadata.name }}
+    {{- $namespace := .metadata.namespace }}
+    {{- range .status.containerStatuses -}}
+        {{- if .lastState.terminated -}}
+            {{- $namespace}}{{"/"}}{{$name}}{{":\n"}}
+            {{- "\t"}}{{.name}}{{": "}}{{.lastState.terminated.reason}}{{"/"}}{{.lastState.terminated.exitCode}}{{"\n"}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
