@@ -1,0 +1,10 @@
+{{- range .items -}}
+    {{- "Node: "}}{{.metadata.name}}{{"\n"}}
+    {{- "Images:\n"}}
+    {{- range .status.images -}}
+        {{- range .names -}}
+            {{- "\t"}}{{ . }}{{"\n"}}
+        {{- end -}}
+    {{- end -}}
+    {{- "\n"}}
+{{- end -}}
