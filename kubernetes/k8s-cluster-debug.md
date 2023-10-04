@@ -1,3 +1,11 @@
+#### Show resource usage:
+```bash
+kubectl top pods -A
+```
+```bash
+kubectl top pods -n <namespace> --containers
+```
+
 #### Show events:
 ```bash
 kubectl get event -n <namespace> --field-selector 'involvedObject.name=<object_name>'
