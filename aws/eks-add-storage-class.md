@@ -14,3 +14,9 @@ reclaimPolicy: "Delete"
 volumeBindingMode: "WaitForFirstConsumer"
 allowVolumeExpansion: true
 ```
+
+#### Resize existing volume:
+- Required option `allowVolumeExpansion` is `true`
+```bash
+kubectl -n <namespace> patch pvc <name> -p '{"spec": {"resources": {"requests": {"storage": "<size>"}}}}'
+```
