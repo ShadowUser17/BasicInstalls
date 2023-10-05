@@ -1,6 +1,6 @@
 {{- range .items -}}
     {{- "Node: "}}{{.metadata.name}}{{"\n"}}
-    {{- "\tCPU: "}}{{.status.allocatable.cpu}}{{"\n"}}
-    {{- "\tMemory: "}}{{.status.allocatable.memory}}{{"\n"}}
+    {{- "\tCPU:     "}}{{.status.allocatable.cpu}}{{"\n"}}
+    {{- "\tMemory:  "}}{{.status.allocatable.memory}}{{"\n"}}
     {{- "\tStorage: "}}{{index .status.allocatable "ephemeral-storage"}}{{"\n"}}
 {{- end -}}

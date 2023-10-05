@@ -1,0 +1,11 @@
+{{- range .items -}}
+    {{- $name := .metadata.name }}
+    {{- if .spec.taints -}}
+        {{- "Node: "}}{{$name}}{{"\n"}}
+        {{- range .spec.taints -}}
+            {{- "\tEffect: "}}{{.effect}}{{"\n"}}
+            {{- "\tKey:    "}}{{.key}}{{"\n"}}
+            {{- "\tValue:  "}}{{.value}}{{"\n"}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
