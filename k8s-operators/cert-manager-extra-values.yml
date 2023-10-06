@@ -1,0 +1,10 @@
+global:
+  installCRDs: true
+
+prometheus:
+  enabled: true
+  servicemonitor:
+    enabled: true
+    scrapeTimeout: "30s"
+    labels:
+      release: "prom-operator"

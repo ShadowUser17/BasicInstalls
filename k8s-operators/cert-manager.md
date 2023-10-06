@@ -1,6 +1,22 @@
-#### Install:
+#### Install to cluster:
 ```bash
 kubectl apply -f "https://github.com/cert-manager/cert-manager/releases/download/v1.13.1/cert-manager.yaml"
+```
+
+#### Alternative installation:
+```bash
+helm repo add jetstack "https://charts.jetstack.io" && helm repo update
+```
+```bash
+helm show values "jetstack/cert-manager" > values.yml
+```
+```bash
+helm upgrade --install cert-manager "jetstack/cert-manager" -f cert-manager-values.yml --version v1.13.1 -n cert-manager --create-namespace
+```
+
+#### Get default manifests:
+```bash
+helm template cert-manager "jetstack/cert-manager" -n cert-manager --create-namespace > manifests.yml
 ```
 
 #### Install CLI:
@@ -8,11 +24,6 @@ kubectl apply -f "https://github.com/cert-manager/cert-manager/releases/download
 curl -LO "https://github.com/cert-manager/cert-manager/releases/download/v1.13.1/cmctl-linux-amd64.tar.gz" && \
 tar -xzf cmctl-linux-amd64.tar.gz cmctl && mv ./cmctl /usr/local/bin/ && rm -f cmctl-linux-amd64.tar.gz
 ```
-
-#### URLs:
-- [selfsigned-issuer](https://cert-manager.io/docs/configuration/selfsigned/)
-- [ingress-usage](https://cert-manager.io/docs/usage/ingress/)
-- [releases](https://github.com/cert-manager/cert-manager/releases)
 
 #### Example:
 ```yaml
@@ -36,3 +47,8 @@ spec:
   issuerRef:
     name: "testing-issuer"
 ```
+
+#### URLs:
+- [docs](https://cert-manager.io/docs/)
+- [charts](https://artifacthub.io/packages/helm/cert-manager/cert-manager)
+- [releases](https://github.com/cert-manager/cert-manager/releases)
