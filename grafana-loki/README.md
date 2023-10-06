@@ -14,10 +14,10 @@ template:
 
 #### Run load test:
 ```bash
-k6 run ./my-write-scenario.js
+k6 run ./k6/my-write-scenario.js
 ```
 ```bash
-k6 run ./my-read-scenario.js
+k6 run ./k6/my-read-scenario.js
 ```
 
 #### List running services:
