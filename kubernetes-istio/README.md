@@ -24,14 +24,18 @@ kubectl label namespace default istio-injection=enabled --overwrite
 
 #### Create IngressClass:
 ```bash
-kubectl apply -f "https://raw.githubusercontent.com/ShadowUser17/BasicInstalls/master/k8s-service-mesh/istio-ingress-class.yml"
+kubectl apply -f "https://raw.githubusercontent.com/ShadowUser17/BasicInstalls/master/kubernetes-istio/istio-ingress-class.yml"
 ```
 
 #### Create Issuer:
 - Warning! The `secret` for `ingress` must be in the `istio-system` namespace!
 ```bash
-kubectl apply -f "https://raw.githubusercontent.com/ShadowUser17/BasicInstalls/master/k8s-service-mesh/istio-ingress-issuer.yml"
+kubectl apply -f "https://raw.githubusercontent.com/ShadowUser17/BasicInstalls/master/kubernetes-istio/istio-ingress-issuer.yml"
 ```
+
+#### URLs:
+- [Releases](https://github.com/istio/istio/releases)
+- [Documentation](https://istio.io/latest/docs/)
 
 #### Dashboards:
 - [istio-wasm-extension](https://grafana.com/grafana/dashboards/13277-istio-wasm-extension-dashboard/)
