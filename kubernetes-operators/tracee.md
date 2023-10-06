@@ -1,6 +1,17 @@
-#### Install:
+#### Install to cluster:
 ```bash
-kubectl apply -f "https://raw.githubusercontent.com/aquasecurity/tracee/v0.17.1/deploy/kubernetes/tracee/tracee.yaml"
+helm repo add aqua "https://aquasecurity.github.io/helm-charts" && helm repo update
+```
+```bash
+helm show values "aqua/tracee" > values.yml
+```
+```bash
+helm upgrade --install tracee "aqua/tracee" -n tracee-system --create-namespace
+```
+
+#### Export manifests:
+```bash
+helm template tracee "aqua/tracee" -n tracee-system --create-namespace > manifests.yml
 ```
 
 #### URLs:
