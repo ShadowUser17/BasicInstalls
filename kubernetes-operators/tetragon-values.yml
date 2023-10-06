@@ -1,0 +1,10 @@
+podAnnotations:
+  promtail.io/collect: "true"
+  prometheus.io/scrape: "true"
+  prometheus.io/port: "2112"
+
+tetragon:
+  enableProcessCred: true
+  enableProcessNs: true
+  prometheus:
+    enabled: true
