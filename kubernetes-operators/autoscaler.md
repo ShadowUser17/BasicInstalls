@@ -5,17 +5,17 @@ kubectl -n <namespace> autoscale <type/name> --min=<min> --max=<max> --cpu-perce
 
 #### Get VPA recomendations:
 ```bash
-kubectl -n <namespace> get vpa -o go-template-file=k8s-templates/vpa-recomendations.tmpl
+kubectl -n <namespace> get vpa -o go-template-file=kubernetes-templates/vpa-recomendations.tmpl
 ```
 
 #### Get pods without resource limit:
 ```bash
-kubectl -n <namespace> get pods -o go-template-file=k8s-templates/pods-without-limits.tmpl
+kubectl -n <namespace> get pods -o go-template-file=kubernetes-templates/pods-without-limits.tmpl
 ```
 
 #### Get nodes capacity:
 ```bash
-kubectl -n <namespace> get pods -o go-template-file=k8s-templates/nodes-capacity.tmpl
+kubectl -n <namespace> get pods -o go-template-file=kubernetes-templates/nodes-capacity.tmpl
 ```
 
 #### Set Prometheus storage for vpa-recommender:
