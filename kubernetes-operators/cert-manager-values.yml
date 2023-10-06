@@ -3,8 +3,5 @@ installCRDs: true
 startupapicheck:
   enabled: false
 
-podAnnotations:
-  promtail.io/collect: "true"
-
 prometheus:
   enabled: true
