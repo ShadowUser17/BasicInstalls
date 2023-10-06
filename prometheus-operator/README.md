@@ -6,11 +6,6 @@ kubectl create namespace monitoring
 helm repo add prometheus-community "https://prometheus-community.github.io/helm-charts" && helm repo update
 ```
 ```bash
-helm install prom-operator "prometheus-community/kube-prometheus-stack" -f k3s-values.yml -n monitoring
-```
-
-#### Update existing deployment:
-```bash
 helm upgrade --install prom-operator "prometheus-community/kube-prometheus-stack" -f k3s-values.yml -n monitoring
 ```
 
