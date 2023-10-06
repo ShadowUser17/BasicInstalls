@@ -1,0 +1,20 @@
+controller:
+  ingressClassResource:
+    default: true
+  podAnnotations:
+    promtail.io/collect: "true"
+  metrics:
+    enabled: true
+    service:
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "10254"
+    serviceMonitor:
+      enabled: false
+      scrapeInterval: "30s"
+      additionalLabels:
+        release: "prom-operator"
+    prometheusRule:
+      enabled: false
+      additionalLabels:
+        release: "prom-operator"

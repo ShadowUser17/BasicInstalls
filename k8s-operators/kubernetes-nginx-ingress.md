@@ -14,7 +14,7 @@ helm repo add ingress-nginx "https://kubernetes.github.io/ingress-nginx" && helm
 helm show values "ingress-nginx/ingress-nginx" > values.yml
 ```
 ```bash
-helm upgrade --install ingress-nginx "ingress-nginx/ingress-nginx" -f values.yml -n ingress-nginx --create-namespace
+helm upgrade --install ingress-nginx "ingress-nginx/ingress-nginx" -f nginx-ingress-values.yml -n ingress-nginx --create-namespace
 ```
 
 #### Get default manifests:
