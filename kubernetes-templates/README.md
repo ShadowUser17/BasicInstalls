@@ -3,7 +3,7 @@
 
 #### go-template-file:
 ```bash
-kubectl -n <namespace> get pods -o go-template-file='k8s-templates/<template_file>.tmpl'
+kubectl -n <namespace> get pods -o go-template-file='<template_file>.tmpl'
 ```
 
 #### jsonpath:
