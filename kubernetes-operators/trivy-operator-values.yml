@@ -1,0 +1,4 @@
+service:
+  metricsPort: 8080
+  annotations:
+    prometheus.io/scrape: "true"

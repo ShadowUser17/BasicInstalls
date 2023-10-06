@@ -1,6 +1,17 @@
-#### Install:
+#### Install to cluster:
 ```bash
-kubectl apply -f "https://raw.githubusercontent.com/aquasecurity/trivy-operator/v0.16.1/deploy/static/trivy-operator.yaml"
+helm repo add aqua "https://aquasecurity.github.io/helm-charts" && helm repo update
+```
+```bash
+helm show values "aqua/trivy-operator" > values.yml
+```
+```bash
+helm upgrade --install trivy-operator "aqua/trivy-operator" -f trivy-operator-values.yml -n trivy-system --create-namespace
+```
+
+#### Export manifests:
+```bash
+helm template trivy-operator "aqua/trivy-operator" -n trivy-system --create-namespace > manifests.yml
 ```
 
 #### Enable metrics:
