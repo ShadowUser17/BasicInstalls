@@ -1,12 +1,28 @@
-#### Cluster install:
+#### Before cluster install:
 Add `--disable traefik` to installation script.
 
-#### Install Kubernetes Nginx:
+#### Install ingress to cluster:
 ```bash
 kubectl apply -f "https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.9.1/deploy/static/provider/cloud/deploy.yaml"
 ```
 
-#### Enable ModSecurity in Kubernetes Nginx:
+#### Alternative installation:
+```bash
+helm repo add ingress-nginx "https://kubernetes.github.io/ingress-nginx" && helm repo update
+```
+```bash
+helm show values "ingress-nginx/ingress-nginx" > values.yml
+```
+```bash
+helm upgrade --install ingress-nginx "ingress-nginx/ingress-nginx" -f values.yml -n ingress-nginx --create-namespace
+```
+
+#### Get default manifests:
+```bash
+helm template ingress-nginx "ingress-nginx/ingress-nginx" -n ingress-nginx --create-namespace > manifests.yml
+```
+
+#### Enable ModSecurity:
 ```bash
 kubectl edit cm/ingress-nginx-controller -n ingress-nginx
 ```
@@ -20,7 +36,7 @@ data:
     SecRequestBodyAccess On
 ```
 
-#### Enable metrics in Kubernetes Nginx:
+#### Enable metrics:
 ```bash
 kubectl edit deploy/ingress-nginx-controller -n ingress-nginx
 ```
@@ -42,5 +58,6 @@ ports:
 - [k3s-networking-docs](https://docs.k3s.io/networking)
 - [k8s-ingress-concepts](https://kubernetes.io/docs/concepts/services-networking/ingress/)
 - [k8s-ingress-nginx-docs](https://kubernetes.github.io/ingress-nginx/)
+- [k8s-ingress-nginx-charts](https://github.com/kubernetes/ingress-nginx/tree/main/charts/ingress-nginx)
 - [k8s-ingress-nginx-releases](https://github.com/kubernetes/ingress-nginx/releases)
 - [k8s-ingress-nginx-dashboards](https://github.com/kubernetes/ingress-nginx/tree/main/deploy/grafana/dashboards)
