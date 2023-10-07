@@ -3,11 +3,6 @@ Add `--disable traefik` to installation script.
 
 #### Install ingress to cluster:
 ```bash
-kubectl apply -f "https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.9.1/deploy/static/provider/cloud/deploy.yaml"
-```
-
-#### Alternative installation:
-```bash
 helm repo add ingress-nginx "https://kubernetes.github.io/ingress-nginx" && helm repo update
 ```
 ```bash
@@ -34,24 +29,6 @@ data:
   modsecurity-snippet: |-
     SecRuleEngine On
     SecRequestBodyAccess On
-```
-
-#### Enable metrics:
-```bash
-kubectl edit deploy/ingress-nginx-controller -n ingress-nginx
-```
-```yaml
-template:
-  metadata:
-    annotations:
-      prometheus.io/scrape: "true"
-      prometheus.io/port: "10254"
-```
-```yaml
-ports:
-  - containerPort: 10254
-    name: prometheus
-    protocol: TCP
 ```
 
 #### URLs:

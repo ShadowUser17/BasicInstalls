@@ -14,7 +14,7 @@ helm show values "traefik/traefik" > values.yml
 helm upgrade --install traefik "traefik/traefik"
 ```
 
-#### Get default manifests:
+#### Export manifests:
 ```bash
 helm template traefik "traefik/traefik" -n kube-system > manifests.yml
 ```

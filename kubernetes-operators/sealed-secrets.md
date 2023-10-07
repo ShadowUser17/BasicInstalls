@@ -1,10 +1,5 @@
 #### Install to cluster:
 ```bash
-kubectl apply -f "https://github.com/bitnami-labs/sealed-secrets/releases/download/v0.24.1/controller.yaml"
-```
-
-#### Alternative installation:
-```bash
 helm repo add sealed-secrets "https://bitnami-labs.github.io/sealed-secrets" && helm repo update
 ```
 ```bash

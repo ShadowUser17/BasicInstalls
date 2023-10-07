@@ -1,10 +1,5 @@
 #### Install to cluster:
 ```bash
-kubectl create -f "https://github.com/kyverno/kyverno/releases/download/v1.10.3/install.yaml"
-```
-
-#### Alternative installation:
-```bash
 helm repo add kyverno "https://kyverno.github.io/kyverno" && helm repo update
 ```
 ```bash

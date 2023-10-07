@@ -1,20 +1,15 @@
 #### Install to cluster:
 ```bash
-kubectl apply -f "https://github.com/cert-manager/cert-manager/releases/download/v1.13.1/cert-manager.yaml"
-```
-
-#### Alternative installation:
-```bash
 helm repo add jetstack "https://charts.jetstack.io" && helm repo update
 ```
 ```bash
 helm show values "jetstack/cert-manager" > values.yml
 ```
 ```bash
-helm upgrade --install cert-manager "jetstack/cert-manager" -f cert-manager-values.yml --version v1.13.1 -n cert-manager --create-namespace
+helm upgrade --install cert-manager "jetstack/cert-manager" -f cert-manager-values.yml -n cert-manager --create-namespace
 ```
 
-#### Get default manifests:
+#### Get manifests:
 ```bash
 helm template cert-manager "jetstack/cert-manager" -n cert-manager --create-namespace > manifests.yml
 ```

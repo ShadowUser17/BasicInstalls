@@ -14,18 +14,6 @@ helm upgrade --install trivy-operator "aqua/trivy-operator" -f trivy-operator-va
 helm template trivy-operator "aqua/trivy-operator" -n trivy-system --create-namespace > manifests.yml
 ```
 
-#### Enable metrics:
-```bash
-kubectl edit deploy/trivy-operator -n trivy-system
-```
-```yaml
-template:
-  metadata:
-    annotations:
-      prometheus.io/scrape: "true"
-      prometheus.io/port: "8080"
-```
-
 #### Show reports:
 ```bash
 kubectl get vulnerabilityreports -o wide -A
