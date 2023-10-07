@@ -8,7 +8,7 @@ curl -LO "https://raw.githubusercontent.com/traefik/traefik/v2.10/docs/content/r
 helm repo add traefik "https://traefik.github.io/charts" && helm repo update
 ```
 ```bash
-helm show values "traefik/traefik" > values.yml
+helm show values "traefik/traefik" > default-values.yml
 ```
 ```bash
 helm upgrade --install traefik "traefik/traefik"

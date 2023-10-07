@@ -8,10 +8,13 @@ kubectl get storageclasses
 helm repo add nfs-subdir-external-provisioner "https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner"
 ```
 ```bash
-helm show values "nfs-subdir-external-provisioner/nfs-subdir-external-provisioner" > values.yml
+helm show values "nfs-subdir-external-provisioner/nfs-subdir-external-provisioner" > default-values.yml
 ```
 ```bash
-helm install nfs-subdir-external-provisioner "nfs-subdir-external-provisioner/nfs-subdir-external-provisioner" \
+kubectl create namespace nfs-subdir-provisioner
+```
+```bash
+helm install nfs-subdir-provisioner "nfs-subdir-external-provisioner/nfs-subdir-external-provisioner" -n nfs-subdir-provisioner \
 --set 'nfs.path=/var/nfs' \
 --set 'nfs.server=192.168.56.10' \
 --set 'storageClass.name=nfs-client' \
@@ -20,7 +23,7 @@ helm install nfs-subdir-external-provisioner "nfs-subdir-external-provisioner/nf
 
 #### Uninstall NFS provisioner:
 ```bash
-helm uninstall nfs-subdir-external-provisioner
+helm uninstall nfs-subdir-external-provisioner -n nfs-subdir-provisioner
 ```
 
 #### Deploying persistent volume claim:

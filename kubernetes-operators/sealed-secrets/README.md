@@ -3,7 +3,7 @@
 helm repo add sealed-secrets "https://bitnami-labs.github.io/sealed-secrets" && helm repo update
 ```
 ```bash
-helm show values "sealed-secrets/sealed-secrets" > values.yml
+helm show values "sealed-secrets/sealed-secrets" > default-values.yml
 ```
 ```bash
 helm upgrade --install sealed-secrets "sealed-secrets/sealed-secrets" -n kube-system
