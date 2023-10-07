@@ -1,13 +1,13 @@
 #### Install and configure an environment:
 ```bash
-curl -L "https://github.com/kevincobain2000/gobrew/releases/download/v1.8.7/gobrew-linux-amd64" -o gobrew && \
+curl -L "https://github.com/kevincobain2000/gobrew/releases/download/v1.9.3/gobrew-linux-amd64" -o gobrew && \
 chmod 755 ./gobrew && mv ./gobrew /usr/local/bin/
 ```
 ```bash
 echo -e 'export PATH="$HOME/.gobrew/current/bin:$HOME/go/bin:$PATH"\nexport GOROOT="$HOME/.gobrew/current/go"' >> ~/.bashrc
 ```
 ```bash
-gobrew install 1.21.1
+gobrew install 1.21.2
 ```
 
 #### Install Delve debugger:
