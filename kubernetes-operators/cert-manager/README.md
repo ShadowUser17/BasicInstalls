@@ -3,15 +3,15 @@
 helm repo add jetstack "https://charts.jetstack.io" && helm repo update
 ```
 ```bash
-helm show values "jetstack/cert-manager" > values.yml
+helm show values "jetstack/cert-manager" > default-values.yml
 ```
 ```bash
-helm upgrade --install cert-manager "jetstack/cert-manager" -f cert-manager-values.yml -n cert-manager --create-namespace
+helm upgrade --install cert-manager "jetstack/cert-manager" -f values.yml -n cert-manager --create-namespace
 ```
 
 #### Get manifests:
 ```bash
-helm template cert-manager "jetstack/cert-manager" -n cert-manager --create-namespace > manifests.yml
+helm template cert-manager "jetstack/cert-manager" -f values.yml -n cert-manager > manifests.yml
 ```
 
 #### Install CLI:
