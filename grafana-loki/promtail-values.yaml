@@ -21,8 +21,6 @@ tolerations:
 
 serviceMonitor:
   enabled: false
-  labels:
-    release: "prom-operator"
   prometheusRule:
     enabled: false
 

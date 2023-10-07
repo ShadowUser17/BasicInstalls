@@ -27,8 +27,6 @@ test:
 monitoring:
   dashboards:
     enabled: false
-    labels:
-      grafana_dashboard: "1"
   rules:
     enabled: false
     alerting: false
