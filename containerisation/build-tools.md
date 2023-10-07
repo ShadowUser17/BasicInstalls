@@ -20,12 +20,12 @@ chmod 755 ./earthly && mv ./earthly /usr/local/bin/
 
 #### Install task from deb:
 ```bash
-curl -LO "https://github.com/go-task/task/releases/download/v3.30.1/task_linux_amd64.deb" && \
+curl -LO "https://github.com/go-task/task/releases/download/v3.31.0/task_linux_amd64.deb" && \
 dpkg -i task_linux_amd64.deb && rm -f task_linux_amd64.deb
 ```
 
 #### Install task from rpm:
 ```bash
-curl -LO "https://github.com/go-task/task/releases/download/v3.30.1/task_linux_amd64.rpm" && \
+curl -LO "https://github.com/go-task/task/releases/download/v3.31.0/task_linux_amd64.rpm" && \
 rpm -U task_linux_amd64.rpm ; rm -f task_linux_amd64.rpm
 ```
