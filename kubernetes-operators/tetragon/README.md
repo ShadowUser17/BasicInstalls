@@ -3,10 +3,10 @@
 helm repo add cilium "https://helm.cilium.io" && helm repo update
 ```
 ```bash
-helm show values "cilium/tetragon" > values.yml
+helm show values "cilium/tetragon" > default-values.yml
 ```
 ```bash
-helm upgrade --install tetragon "cilium/tetragon" -f tetragon-values.yml -n kube-system
+helm upgrade --install tetragon "cilium/tetragon" -f values.yml -n kube-system
 ```
 
 #### Install CLI:
@@ -17,7 +17,7 @@ tar -xzf tetra-linux-amd64.tar.gz tetra && mv ./tetra /usr/local/bin/ && rm -f t
 
 #### Export manifests:
 ```bash
-helm template tetragon "cilium/tetragon" -n kube-system > manifests.yml
+helm template tetragon "cilium/tetragon" -f values.yml -n kube-system > manifests.yml
 ```
 
 #### Show logs:
