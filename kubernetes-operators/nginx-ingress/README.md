@@ -6,15 +6,15 @@ Add `--disable traefik` to installation script.
 helm repo add ingress-nginx "https://kubernetes.github.io/ingress-nginx" && helm repo update
 ```
 ```bash
-helm show values "ingress-nginx/ingress-nginx" > values.yml
+helm show values "ingress-nginx/ingress-nginx" > default-values.yml
 ```
 ```bash
-helm upgrade --install ingress-nginx "ingress-nginx/ingress-nginx" -f nginx-ingress-values.yml -n ingress-nginx --create-namespace
+helm upgrade --install ingress-nginx "ingress-nginx/ingress-nginx" -f values.yml -n ingress-nginx --create-namespace
 ```
 
 #### Get default manifests:
 ```bash
-helm template ingress-nginx "ingress-nginx/ingress-nginx" -n ingress-nginx --create-namespace > manifests.yml
+helm template ingress-nginx "ingress-nginx/ingress-nginx" -f values.yml -n ingress-nginx > manifests.yml
 ```
 
 #### Enable ModSecurity:
