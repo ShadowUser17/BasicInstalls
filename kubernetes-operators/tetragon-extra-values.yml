@@ -3,6 +3,17 @@ podAnnotations:
   prometheus.io/scrape: "true"
   prometheus.io/port: "2112"
 
+nodeSelector:
+  kubernetes.io/os: "linux"
+
+tolerations:
+  - key: "node-role.kubernetes.io/master"
+    operator: "Exists"
+    effect: "NoSchedule"
+  - key: "node-role.kubernetes.io/control-plane"
+    operator: "Exists"
+    effect: "NoSchedule"
+
 tetragon:
   enableProcessCred: true
   enableProcessNs: true

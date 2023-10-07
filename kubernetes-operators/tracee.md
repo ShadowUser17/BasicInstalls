@@ -6,12 +6,17 @@ helm repo add aqua "https://aquasecurity.github.io/helm-charts" && helm repo upd
 helm show values "aqua/tracee" > values.yml
 ```
 ```bash
-helm upgrade --install tracee "aqua/tracee" -n tracee-system --create-namespace
+helm upgrade --install tracee "aqua/tracee" -n tracee-system -f tracee-values.yml --create-namespace
 ```
 
 #### Export manifests:
 ```bash
 helm template tracee "aqua/tracee" -n tracee-system --create-namespace > manifests.yml
+```
+
+#### Show logs:
+```bash
+kubectl logs -f daemonset/tracee -n tracee-system
 ```
 
 #### URLs:
