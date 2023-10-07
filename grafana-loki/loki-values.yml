@@ -34,5 +34,9 @@ monitoring:
     alerting: false
   serviceMonitor:
     enabled: false
+  selfMonitoring:
+    enabled: false
+    grafanaAgent:
+      installOperator: false
   lokiCanary:
     enabled: false

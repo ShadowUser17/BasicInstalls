@@ -31,13 +31,15 @@ monitoring:
       grafana_dashboard: "1"
   rules:
     enabled: false
-    alerting: true
-    labels:
-      release: "prom-operator"
+    alerting: false
   serviceMonitor:
     enabled: true
     interval: "30s"
     labels:
       release: "prom-operator"
+  selfMonitoring:
+    enabled: false
+    grafanaAgent:
+      installOperator: false
   lokiCanary:
     enabled: false
