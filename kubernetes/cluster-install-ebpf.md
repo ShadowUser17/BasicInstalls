@@ -36,13 +36,13 @@ curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.26.9+k3s1" sh -s - agen
 
 #### Install Cilium CLI:
 ```bash
-curl -L "https://github.com/cilium/cilium-cli/releases/download/v0.15.8/cilium-linux-amd64.tar.gz" -o cilium-linux.tgz && \
+curl -L "https://github.com/cilium/cilium-cli/releases/download/v0.15.10/cilium-linux-amd64.tar.gz" -o cilium-linux.tgz && \
 tar -xzf cilium-linux.tgz cilium && mv ./cilium /usr/local/bin/ && rm -f ./cilium-linux.tgz
 ```
 
 #### Install Hubble CLI:
 ```bash
-curl -L "https://github.com/cilium/hubble/releases/download/v0.12.0/hubble-linux-amd64.tar.gz" -o hubble-linux.tgz && \
+curl -L "https://github.com/cilium/hubble/releases/download/v0.12.1/hubble-linux-amd64.tar.gz" -o hubble-linux.tgz && \
 tar -xzf hubble-linux.tgz hubble && mv ./hubble /usr/local/bin/ && rm -f ./hubble-linux.tgz
 ```
 
