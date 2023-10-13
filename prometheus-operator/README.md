@@ -3,13 +3,13 @@
 kubectl create namespace monitoring
 ```
 ```bash
-kubectl apply -f cert-manager-issuer.yml
+kubectl apply -f cert-issuer.yml
 ```
 ```bash
 helm repo add prometheus-community "https://prometheus-community.github.io/helm-charts" && helm repo update
 ```
 ```bash
-helm upgrade --install prom-operator "prometheus-community/kube-prometheus-stack" -f k3s-values.yml -n monitoring
+helm upgrade --install prom-operator "prometheus-community/kube-prometheus-stack" -f values.yml -n monitoring
 ```
 
 #### Get Grafana credentials:
@@ -52,7 +52,7 @@ helm template prom-operator "prometheus-community/kube-prometheus-stack" > manif
 
 #### Get default values:
 ```bash
-helm show values "prometheus-community/kube-prometheus-stack" > values.yml
+helm show values "prometheus-community/kube-prometheus-stack" > default-values.yml
 ```
 
 #### Disable the next rules for EKS:
