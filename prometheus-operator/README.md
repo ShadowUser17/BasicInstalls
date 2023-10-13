@@ -3,6 +3,9 @@
 kubectl create namespace monitoring
 ```
 ```bash
+kubectl apply -f cert-manager-issuer.yml
+```
+```bash
 helm repo add prometheus-community "https://prometheus-community.github.io/helm-charts" && helm repo update
 ```
 ```bash
