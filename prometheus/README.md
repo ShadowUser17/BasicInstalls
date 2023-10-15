@@ -11,6 +11,6 @@
 
 #### Install rules linter:
 ```bash
-curl -L "https://github.com/cloudflare/pint/releases/download/v0.45.0/pint-0.45.0-linux-amd64.tar.gz" -o pint-linux-amd64.tgz && \
+curl -L "https://github.com/cloudflare/pint/releases/download/v${version}/pint-${version}-linux-amd64.tar.gz" -o pint-linux-amd64.tgz && \
 tar -xzf pint-linux-amd64.tgz pint-linux-amd64 && mv ./pint-linux-amd64 /usr/local/bin/pint && rm -f pint-linux-amd64.tgz
 ```
