@@ -1,6 +1,3 @@
-#### URLs:
-- [Docs](https://argo-cd.readthedocs.io/en/stable/)
-
 #### Deploy to cluster:
 ```bash
 kubectl create namespace argocd && \
@@ -60,3 +57,6 @@ kubectl edit secret argocd-secret -n argocd
 stringData:
   webhook.github.secret: argocd-testing
 ```
+
+#### URLs:
+- [Docs](https://argo-cd.readthedocs.io/en/stable/)

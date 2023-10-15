@@ -11,7 +11,7 @@ argocd app create whoami \
 
 #### Declarative create app:
 ```bash
-kubectl apply -f argocd-application.yml -n argocd
+kubectl apply -f application.yml -n argocd
 ```
 
 #### List apps:
