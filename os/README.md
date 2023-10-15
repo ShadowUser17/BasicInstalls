@@ -15,6 +15,7 @@
 
 #### Tools:
 - [fq](https://github.com/wader/fq/releases)
+- [pwru](https://github.com/cilium/pwru/releases)
 - [ventoy](https://github.com/ventoy/Ventoy/releases)
 
 #### Other:
