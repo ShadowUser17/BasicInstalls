@@ -4,13 +4,13 @@
 
 #### Install LogCLI for Linux:
 ```bash
-curl -LO "https://github.com/grafana/loki/releases/download/v2.9.1/logcli-linux-amd64.zip" && \
+curl -LO "https://github.com/grafana/loki/releases/download/v${version}/logcli-linux-amd64.zip" && \
 unzip logcli-linux-amd64.zip && mv ./logcli-linux-amd64 /usr/local/bin/logcli && rm -f logcli-linux-amd64.zip
 ```
 
 #### Install LogCLI for MacOS:
 ```bash
-curl -LO "https://github.com/grafana/loki/releases/download/v2.9.1/logcli-darwin-amd64.zip" && \
+curl -LO "https://github.com/grafana/loki/releases/download/v${version}/logcli-darwin-amd64.zip" && \
 unzip logcli-darwin-amd64.zip && mv ./logcli-darwin-amd64 /usr/local/bin/logcli && rm -f logcli-darwin-amd64.zip
 ```
 
