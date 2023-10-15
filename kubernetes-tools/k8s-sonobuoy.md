@@ -1,6 +1,6 @@
 #### Install CLI:
 ```bash
-curl -L "https://github.com/vmware-tanzu/sonobuoy/releases/download/v0.56.16/sonobuoy_0.56.16_linux_amd64.tar.gz" -o sonobuoy_linux.tgz && \
+curl -L "https://github.com/vmware-tanzu/sonobuoy/releases/download/v${version}/sonobuoy_${version}_linux_amd64.tar.gz" -o sonobuoy_linux.tgz && \
 tar -xzf sonobuoy_linux.tgz sonobuoy && mv ./sonobuoy /usr/local/bin/ && rm -f ./sonobuoy_linux.tgz
 ```
 
