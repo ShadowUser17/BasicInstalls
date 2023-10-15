@@ -13,7 +13,8 @@ mkdir -p /etc/apt/keyrings && \
 curl -fsSL 'https://download.docker.com/linux/debian/gpg' | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 ```
 ```bash
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" > /etc/apt/sources.list.d/docker.list
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" \
+> /etc/apt/sources.list.d/docker.list
 ```
 
 #### Install for Ubuntu:
@@ -22,7 +23,8 @@ mkdir -p /etc/apt/keyrings && \
 curl -fsSL 'https://download.docker.com/linux/ubuntu/gpg' | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 ```
 ```bash
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" > /etc/apt/sources.list.d/docker.list
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" \
+> /etc/apt/sources.list.d/docker.list
 ```
 
 #### Install for Debian/Ubuntu:
@@ -38,10 +40,4 @@ dnf config-manager --add-repo "https://download.docker.com/linux/fedora/docker-c
 ```bash
 dnf install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin && \
 systemctl enable --now docker.service
-```
-
-#### Support deprecated compose command:
-```bash
-curl -L "https://raw.githubusercontent.com/ShadowUser17/BasicInstalls/master/containerisation/docker-compose" -o /usr/local/bin/docker-compose && \
-chmod 755 /usr/local/bin/docker-compose
 ```
