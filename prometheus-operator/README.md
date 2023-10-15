@@ -64,5 +64,6 @@ helm show values "prometheus-community/kube-prometheus-stack" > default-values.y
 #### URLs:
 - [API](https://prometheus-operator.dev/docs/operator/api/)
 - [Docs](https://prometheus-operator.dev/docs/prologue/introduction/)
+- [Metrics](https://kubernetes.io/docs/reference/instrumentation/metrics/)
 - [Charts](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack)
 - [Releases](https://github.com/prometheus-operator/prometheus-operator/releases)
