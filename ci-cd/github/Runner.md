@@ -13,7 +13,7 @@ cd /var/lib/runner && sudo -u runner -s
 ./config.sh --disableupdate --unattended --url "$REPO_URL" --token "$REPO_KEY"
 ```
 ```bash
-curl -L "https://raw.githubusercontent.com/ShadowUser17/BasicInstalls/master/github/runner.service" -o /etc/systemd/system/runner.service && \
+curl -L "https://raw.githubusercontent.com/ShadowUser17/BasicInstalls/master/ci-cd/github/runner.service" -o /etc/systemd/system/runner.service && \
 systemctl daemon-reload && systemctl enable --now runner.service
 ```
 
