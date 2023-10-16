@@ -30,4 +30,4 @@ spec:
 
 #### URLs:
 - [autoscaler](https://github.com/kubernetes/autoscaler)
-- [kube-state-metrics](https://github.com/kubernetes/kube-state-metrics)
+- [metrics-server](https://github.com/kubernetes-sigs/metrics-server)
