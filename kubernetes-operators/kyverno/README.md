@@ -19,7 +19,7 @@ helm template kyverno "kyverno/kyverno" -n kyverno > manifests.yml
 
 #### Install CLI:
 ```bash
-curl -L "https://github.com/kyverno/kyverno/releases/download/v1.10.3/kyverno-cli_v1.10.3_linux_x86_64.tar.gz" -o kyverno-cli.tgz && \
+curl -L "https://github.com/kyverno/kyverno/releases/download/v${version}/kyverno-cli_v${version}_linux_x86_64.tar.gz" -o kyverno-cli.tgz && \
 tar -xzf kyverno-cli.tgz kyverno && mv ./kyverno /usr/local/bin/ && rm -f kyverno-cli.tgz
 ```
 

@@ -16,7 +16,7 @@ helm template cert-manager "jetstack/cert-manager" -f values.yml -n cert-manager
 
 #### Install CLI:
 ```bash
-curl -LO "https://github.com/cert-manager/cert-manager/releases/download/v1.13.1/cmctl-linux-amd64.tar.gz" && \
+curl -LO "https://github.com/cert-manager/cert-manager/releases/download/v${version}/cmctl-linux-amd64.tar.gz" && \
 tar -xzf cmctl-linux-amd64.tar.gz cmctl && mv ./cmctl /usr/local/bin/ && rm -f cmctl-linux-amd64.tar.gz
 ```
 

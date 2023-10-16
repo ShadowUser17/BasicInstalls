@@ -16,7 +16,7 @@ helm template sealed-secrets "sealed-secrets/sealed-secrets" -n kube-system > ma
 
 #### Install CLI:
 ```bash
-curl -L "https://github.com/bitnami-labs/sealed-secrets/releases/download/v0.24.1/kubeseal-0.24.1-linux-amd64.tar.gz" -o "kubeseal-linux-amd64.tar.gz" && \
+curl -L "https://github.com/bitnami-labs/sealed-secrets/releases/download/v${version}/kubeseal-${version}-linux-amd64.tar.gz" -o "kubeseal-linux-amd64.tar.gz" && \
 tar -xzf kubeseal-linux-amd64.tar.gz kubeseal && mv ./kubeseal /usr/local/bin/ && rm -f kubeseal-linux-amd64.tar.gz
 ```
 
