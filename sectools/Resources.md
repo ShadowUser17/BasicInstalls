@@ -5,6 +5,8 @@
 - [mitre-car](https://car.mitre.org/)
 - [owasp-projects](https://owasp.org/projects/)
 - [virustotal](https://www.virustotal.com/gui/home/upload)
+- [safeweb-norton](https://safeweb.norton.com/)
+- [urlvoid](https://www.urlvoid.com/)
 - [loldrivers](https://www.loldrivers.io/)
 - [dnsdumpster](https://dnsdumpster.com/)
 - [netcraft](https://sitereport.netcraft.com/)
