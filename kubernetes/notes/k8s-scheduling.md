@@ -65,4 +65,5 @@ tolerations:
 #### URLs:
 - [taint-and-toleration](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/)
 - [assign-pod-node](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/)
+- [pod-priority-preemption](https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/)
 - [topology-spread-constraints](https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/)
