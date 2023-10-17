@@ -1,4 +1,9 @@
-#### URLs:
+#### Metrics:
+- [metrics-reference](https://kubernetes.io/docs/reference/instrumentation/metrics/)
+- [system-metrics](https://kubernetes.io/docs/concepts/cluster-administration/system-metrics/)
+- [kube-state-metrics](https://github.com/kubernetes/kube-state-metrics/tree/main/docs)
+
+#### Dashboards:
 - [kubernetes-views-global](https://grafana.com/grafana/dashboards/15757-kubernetes-views-global/)
 - [kubernetes-system-api-server](https://grafana.com/grafana/dashboards/15761-kubernetes-system-api-server/)
 - [kubernetes-system-coredns](https://grafana.com/grafana/dashboards/15762-kubernetes-system-coredns/)
