@@ -6,6 +6,13 @@ labels:
   pod-security.kubernetes.io/warn: "baseline"
   pod-security.kubernetes.io/warn-version: "latest"
 ```
+```bash
+kubectl label namespace <name> \
+"pod-security.kubernetes.io/enforce=baseline" \
+"pod-security.kubernetes.io/enforce-version=latest" \
+"pod-security.kubernetes.io/warn=baseline" \
+"pod-security.kubernetes.io/warn-version=latest"
+```
 
 #### Pod level example:
 ```yaml
