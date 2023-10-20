@@ -37,5 +37,5 @@ helm upgrade --install <release> <repo> -f values.yml -n <namespace> --version <
 #### Add config hash to pod annotations:
 ```yaml
 annotations:
-  checksum/config: {{ .Files.Get "config.yml" | sha256sum | quote }}
+  checksum/config: {{ include (print .Template.BasePath "/config.yml") . | sha256sum | quote }}
 ```
