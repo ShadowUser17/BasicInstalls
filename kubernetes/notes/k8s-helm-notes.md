@@ -33,3 +33,9 @@ helm upgrade <release> <repo> -f values.yml -n <namespace> --version <version>
 ```bash
 helm upgrade --install <release> <repo> -f values.yml -n <namespace> --version <version>
 ```
+
+#### Add config hash to pod annotations:
+```yaml
+annotations:
+  checksum/config: {{ .Files.Get "config.yml" | sha256sum | quote }}
+```
