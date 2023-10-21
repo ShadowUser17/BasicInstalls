@@ -1,9 +1,11 @@
+#### Add helm repo:
+```bash
+helm repo add grafana "https://grafana.github.io/helm-charts" && helm repo update
+```
+
 #### Install Loki:
 ```bash
 kubectl create namespace monitoring
-```
-```bash
-helm repo add grafana "https://grafana.github.io/helm-charts" && helm repo update
 ```
 ```bash
 helm show values "grafana/loki" > loki-default-values.yml
