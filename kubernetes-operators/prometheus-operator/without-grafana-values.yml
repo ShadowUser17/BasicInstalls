@@ -1,0 +1,91 @@
+alertmanager:
+  enabled: true
+  ingress:
+    enabled: true
+    path: "/"
+    hosts: ["alertmanager.k3s"]
+    ingressClassName: "nginx"
+  alertmanagerSpec:
+    retention: "8h"
+    resources:
+      requests:
+        cpu: "20m"
+        memory: "50Mi"
+      limits:
+        cpu: "20m"
+        memory: "50Mi"
+    alertmanagerConfigSelector:
+      matchLabels:
+        release: "prom-operator"
+    alertmanagerConfigMatcherStrategy:
+      type: "None"
+    storage:
+      volumeClaimTemplate:
+        spec:
+          accessModes: ["ReadWriteOnce"]
+          storageClassName: "local-path"
+          resources:
+            requests:
+              storage: "1Gi"
+
+prometheus:
+  enabled: true
+  thanosService:
+    enabled: false
+  ingress:
+    enabled: true
+    path: "/"
+    hosts: ["prometheus.k3s"]
+    ingressClassName: "nginx"
+  prometheusSpec:
+    retention: "7d"
+    resources:
+      requests:
+        cpu: "100m"
+        memory: "700Mi"
+      limits:
+        cpu: "200m"
+        memory: "850Mi"
+    storageSpec:
+      volumeClaimTemplate:
+        spec:
+          accessModes: ["ReadWriteOnce"]
+          storageClassName: "local-path"
+          resources:
+            requests:
+              storage: "6Gi"
+
+grafana:
+  enabled: false
+
+defaultRules:
+  create: true
+  rules:
+    alertmanager: true
+    etcd: false
+    configReloaders: true
+    general: true
+    k8s: true
+    kubeApiserverAvailability: true
+    kubeApiserverBurnrate: true
+    kubeApiserverHistogram: true
+    kubeApiserverSlos: true
+    kubeControllerManager: false
+    kubelet: true
+    kubeProxy: false
+    kubePrometheusGeneral: true
+    kubePrometheusNodeRecording: false
+    kubernetesApps: true
+    kubernetesResources: true
+    kubernetesStorage: true
+    kubernetesSystem: true
+    kubeSchedulerAlerting: false
+    kubeSchedulerRecording: false
+    kubeStateMetrics: true
+    network: true
+    node: true
+    nodeExporterAlerting: true
+    nodeExporterRecording: false
+    prometheus: true
+    prometheusOperator: true
+    windows: false

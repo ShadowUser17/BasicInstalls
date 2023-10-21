@@ -9,7 +9,7 @@ kubectl apply -f cert-issuer.yml
 helm repo add prometheus-community "https://prometheus-community.github.io/helm-charts" && helm repo update
 ```
 ```bash
-helm upgrade --install prom-operator "prometheus-community/kube-prometheus-stack" -f values.yml -n monitoring
+helm upgrade --install prom-operator "prometheus-community/kube-prometheus-stack" -f prom-operator-values.yml -n monitoring
 ```
 
 #### Get Grafana credentials:
