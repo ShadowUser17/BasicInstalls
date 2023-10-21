@@ -1,4 +1,5 @@
 #### Namespace level example:
+- Available modes: `privileged`, `baseline`, `restricted`
 ```yaml
 labels:
   pod-security.kubernetes.io/enforce: "baseline"
