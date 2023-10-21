@@ -11,7 +11,7 @@ kubectl create namespace monitoring
 helm show values "grafana/loki" > loki-default-values.yml
 ```
 ```bash
-helm upgrade --install loki "grafana/loki" -f loki-values.yml -n monitoring
+helm upgrade --install loki "grafana/loki" -f ./values/loki-values.yml -n monitoring
 ```
 
 #### Install Promtail:
@@ -19,7 +19,7 @@ helm upgrade --install loki "grafana/loki" -f loki-values.yml -n monitoring
 helm show values "grafana/promtail" > promtail-default-values.yml
 ```
 ```bash
-helm upgrade --install promtail "grafana/promtail" -f promtail-values.yaml -n monitoring
+helm upgrade --install promtail "grafana/promtail" -f ./values/promtail-values.yml -n monitoring
 ```
 
 #### Export manifests:
