@@ -1,7 +1,8 @@
 #### Terraform:
 - [Terraform](https://developer.hashicorp.com/terraform/docs)
-- [tf-providers](https://registry.terraform.io/search/providers)
-- [tf-modules](https://registry.terraform.io/search/modules)
+- [Providers](https://registry.terraform.io/search/providers)
+- [Modules](https://registry.terraform.io/search/modules)
+- [HCL](https://github.com/hashicorp/hcl)
 
 #### CDK for Terraform:
 - [JavaScript](https://javascript.info/)
