@@ -24,5 +24,20 @@ spec:
               required.cache: "redis"
 ```
 
+#### Allow all ingress traffic:
+```yaml
+apiVersion: "networking.k8s.io/v1"
+kind: "NetworkPolicy"
+metadata:
+  name: "grafana-loki-allow-all"
+spec:
+  policyTypes: ["Ingress"]
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/name: "grafana-loki"
+  ingress:
+    - {}
+```
+
 #### URLs:
 - [network-policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
