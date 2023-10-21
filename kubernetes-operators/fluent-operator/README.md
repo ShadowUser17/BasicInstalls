@@ -5,10 +5,13 @@ helm repo add fluent "https://fluent.github.io/helm-charts" && helm repo update
 
 #### Deploy fluent-operator:
 ```bash
+kubectl create namespace monitoring
+```
+```bash
 helm show values "fluent/fluent-operator" > fluent-operator-default-values.yml
 ```
 ```bash
-helm upgrade --install fluent-operator "fluent/fluent-operator" -f fluent-operator-values.yml -n fluent --create-namespace
+helm upgrade --install fluent-operator "fluent/fluent-operator" -f fluent-operator-values.yml -n monitoring
 ```
 
 #### Deploy fluent-bit:
