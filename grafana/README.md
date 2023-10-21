@@ -1,8 +1,13 @@
 #### Grafana:
 - [Docs](https://grafana.com/docs/grafana/latest/)
-- [Releases](https://github.com/grafana/grafana/releases)
-- [Images](https://hub.docker.com/r/grafana/grafana/tags)
 - [Charts](https://github.com/grafana/helm-charts)
+- [Images](https://hub.docker.com/r/grafana/grafana/tags)
+- [Releases](https://github.com/grafana/grafana/releases)
+
+#### Tempo:
+- [Docs](https://github.com/grafana/tempo/tree/main/docs/sources/tempo)
+- [Images](https://hub.docker.com/r/grafana/tempo/tags)
+- [Releases](https://github.com/grafana/tempo/releases)
 
 #### Agent:
 - [Docs](https://grafana.com/docs/agent/latest/)
