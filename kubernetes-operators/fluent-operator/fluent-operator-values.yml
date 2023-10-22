@@ -1,5 +1,8 @@
 containerRuntime: "containerd"
 fluentbit:
+  annotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/port: "2020"
   output:
     loki:
       enable: true
@@ -7,6 +10,13 @@ fluentbit:
       port: 80
       httpUser: ""
       httpPassword: ""
+  prometheusMetricsExporter:
+    match: "fb.metrics"
+    metricsExporter:
+      host: "0.0.0.0"
+      port: 2020
+      addLabels:
+        app: "fluentbit"
   nodeSelector:
     kubernetes.io/os: "linux"
   tolerations:

@@ -27,7 +27,7 @@ helm upgrade --install fluent-bit "fluent/fluent-bit" -f fluent-bit-values.yml -
 
 #### Export manifests:
 ```bash
-helm template fluent-operator "fluent/fluent-operator" -n fluent > fluent-operator-manifests.yml
+helm template fluent-operator "fluent/fluent-operator" -n monitoring > fluent-operator-manifests.yml
 ```
 ```bash
 helm template fluent-bit "fluent/fluent-bit" -n monitoring > fluent-bit-manifests.yml
