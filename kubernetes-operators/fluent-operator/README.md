@@ -54,6 +54,7 @@ kubectl get cfdc -o yaml
 #### fluent-operator:
 - [Docs](https://github.com/fluent/fluent-operator/blob/master/README.md)
 - [Charts](https://github.com/fluent/helm-charts/tree/main/charts/fluent-operator)
+- [Dashboard](https://grafana.com/grafana/dashboards/7752-logging-dashboard/)
 
 #### fluent-bit:
 - [Docs](https://docs.fluentbit.io/manual)
