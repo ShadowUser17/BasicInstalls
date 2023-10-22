@@ -59,3 +59,4 @@ kubectl get cfdc -o yaml
 - [Docs](https://docs.fluentbit.io/manual)
 - [Images](https://hub.docker.com/r/fluent/fluent-bit/tags)
 - [Charts](https://github.com/fluent/helm-charts/tree/main/charts/fluent-bit)
+- [Monitoring](https://docs.fluentbit.io/manual/administration/monitoring)

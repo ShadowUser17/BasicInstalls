@@ -11,6 +11,6 @@ spec:
       app.kubernetes.io/name: "fluent-bit"
   podMetricsEndpoints:
     - port: "metrics"
-      path: "/"
+      path: "/api/v1/metrics/prometheus"
       honorLabels: true
       scrapeTimeout: "30s"
