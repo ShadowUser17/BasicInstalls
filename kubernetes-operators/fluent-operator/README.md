@@ -25,6 +25,11 @@ helm show values "fluent/fluent-bit" > fluent-bit-default-values.yml
 helm upgrade --install fluent-bit "fluent/fluent-bit" -f fluent-bit-values.yml -n monitoring
 ```
 
+#### Enable monitoring:
+```bash
+kubectl apply -f fluent-bit-monitoring.yml
+```
+
 #### Export manifests:
 ```bash
 helm template fluent-operator "fluent/fluent-operator" -n monitoring > fluent-operator-manifests.yml

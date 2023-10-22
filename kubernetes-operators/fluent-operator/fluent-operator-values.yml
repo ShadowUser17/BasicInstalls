@@ -3,6 +3,7 @@ fluentbit:
   annotations:
     prometheus.io/scrape: "true"
     prometheus.io/port: "2020"
+    prometheus.io/path: "/"
   output:
     loki:
       enable: true
