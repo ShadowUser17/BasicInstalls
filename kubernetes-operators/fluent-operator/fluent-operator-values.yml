@@ -1,6 +1,12 @@
 containerRuntime: "containerd"
 fluentbit:
-  affinity: {}
+  output:
+    loki:
+      enable: true
+      host: "loki-gateway.monitoring.svc"
+      port: 80
+      httpUser: ""
+      httpPassword: ""
   nodeSelector:
     kubernetes.io/os: "linux"
   tolerations:

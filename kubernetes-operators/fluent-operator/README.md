@@ -33,6 +33,19 @@ helm template fluent-operator "fluent/fluent-operator" -n fluent > fluent-operat
 helm template fluent-bit "fluent/fluent-bit" -n monitoring > fluent-bit-manifests.yml
 ```
 
+#### Get API resources:
+```bash
+kubectl api-resources | grep fluent
+```
+
+#### Get configuration:
+```bash
+kubectl get cfbc -o yaml
+```
+```bash
+kubectl get cfdc -o yaml
+```
+
 #### fluent-operator:
 - [Docs](https://github.com/fluent/fluent-operator/blob/master/README.md)
 - [Charts](https://github.com/fluent/helm-charts/tree/main/charts/fluent-operator)
@@ -41,7 +54,3 @@ helm template fluent-bit "fluent/fluent-bit" -n monitoring > fluent-bit-manifest
 - [Docs](https://docs.fluentbit.io/manual)
 - [Images](https://hub.docker.com/r/fluent/fluent-bit/tags)
 - [Charts](https://github.com/fluent/helm-charts/tree/main/charts/fluent-bit)
-
-#### logging-operator:
-- [Docs](https://kube-logging.dev/docs/)
-- [Charts](https://github.com/kube-logging/logging-operator/tree/master/charts/logging-operator)
