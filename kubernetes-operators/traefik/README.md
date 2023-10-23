@@ -1,9 +1,4 @@
-#### Get resource definitions:
-```bash
-curl -LO "https://raw.githubusercontent.com/traefik/traefik/v2.10/docs/content/reference/dynamic-configuration/kubernetes-crd-definition-v1.yml"
-```
-
-#### Get manifest:
+#### Install to cluster:
 ```bash
 helm repo add traefik "https://traefik.github.io/charts" && helm repo update
 ```
@@ -14,7 +9,7 @@ helm show values "traefik/traefik" > default-values.yml
 helm upgrade --install traefik "traefik/traefik" -n kube-system
 ```
 
-#### Export manifests:
+#### Get default manifests:
 ```bash
 helm template traefik "traefik/traefik" -n kube-system > manifests.yml
 ```
