@@ -6,12 +6,12 @@ kubectl create namespace monitoring
 helm show values "oci://ghcr.io/kube-logging/helm-charts/logging-operator" > default-values.yml
 ```
 ```bash
-helm upgrade --install --wait -f values.yml -n monitoring logging logging-operator "oci://ghcr.io/kube-logging/helm-charts/logging-operator"
+helm upgrade --install logging-operator "oci://ghcr.io/kube-logging/helm-charts/logging-operator" -f values.yml -n monitoring
 ```
 
 #### Export manifests:
 ```bash
-helm template -f values.yml -n monitoring logging logging-operator "oci://ghcr.io/kube-logging/helm-charts/logging-operator"
+helm template logging-operator "oci://ghcr.io/kube-logging/helm-charts/logging-operator" -f values.yml -n monitoring > manifests.yml
 ```
 
 #### URLs:
