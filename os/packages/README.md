@@ -32,14 +32,19 @@ rpm -q --requires <package-name>
 
 #### Install specific version on Debian/Fedora:
 ```bash
+apt-cache policy <package-name>
+```
+```bash
+apt-get install <package-name>=<package-version>
+```
+```bash
 dnf list --showduplicates <package-name>
 ```
 ```bash
 dnf install <package-name>-<package-version>
 ```
+
+#### Update specific package only on Debian:
 ```bash
-apt-cache policy <package-name>
-```
-```bash
-apt-get install <package-name>=<package-version>
+apt-get --only-upgrade install <package-name>
 ```
