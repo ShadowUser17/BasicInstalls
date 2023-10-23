@@ -5,11 +5,15 @@ annotations:
 logging:
   enabled: true
   fluentbit:
+    metrics:
+      prometheusAnnotations: true
     nodeSelector:
       kubernetes.io/os: "linux"
     tolerations:
       - operator: "Exists"
   fluentd:
+    metrics:
+      prometheusAnnotations: true
     bufferStorageVolume:
       pvc:
         spec:
@@ -17,3 +21,10 @@ logging:
           resources:
             requests:
               storage: "6G"
+  eventTailer:
+    pvc:
+      spec:
+        accessModes: ["ReadWriteOnce"]
+        resources:
+          requests:
+            storage: "1G"
