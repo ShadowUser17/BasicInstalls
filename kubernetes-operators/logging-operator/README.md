@@ -14,6 +14,11 @@ helm upgrade --install logging-operator "oci://ghcr.io/kube-logging/helm-charts/
 helm template logging-operator "oci://ghcr.io/kube-logging/helm-charts/logging-operator" -f values.yml -n monitoring > manifests.yml
 ```
 
+#### Send logs to Loki:
+```bash
+kubectl apply -f loki-output.yml
+```
+
 #### Get API resources:
 ```bash
 kubectl api-resources | grep banzaicloud

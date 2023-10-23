@@ -1,5 +1,5 @@
 apiVersion: "logging.banzaicloud.io/v1beta1"
-kind: "Output"
+kind: "ClusterOutput"
 metadata:
   name: "loki-output"
   namespace: "monitoring"
@@ -14,13 +14,22 @@ spec:
 
 ---
 apiVersion: "logging.banzaicloud.io/v1beta1"
-kind: "Flow"
+kind: "ClusterFlow"
 metadata:
   name: "loki-flow"
   namespace: "monitoring"
 spec:
-  localOutputRefs: ["loki-output"]
-  # match:
-  #   - select:
-  #       labels:
-  #         app.kubernetes.io/managed-by: "Helm"
+  globalOutputRefs: ["loki-output"]
+  match:
+    - select:
+        labels:
+          app.kubernetes.io/name: "tetragon"
+    - select:
+        labels:
+          app.kubernetes.io/name: "echo-server"
+    - select:
+        labels:
+          app.kubernetes.io/name: "event-tailer"
+    - select:
+        labels:
+          app.kubernetes.io/name: "ingress-nginx"
