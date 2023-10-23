@@ -1,26 +1,28 @@
-logging:
-  enabled: true
-  clusterFlows:
-    - name: "pods"
-      spec:
-        globalOutputRefs: ["loki"]
-        match:
-          - select:
-              labels:
-                fluentbit.fluent.io/collect: "true"
-  clusterOutputs:
-    - name: "loki"
-      spec:
-        url: "http://loki-gateway.monitoring.svc"
-        configure_kubernetes_labels: true
-        buffer:
-          timekey: "1m"
-          timekey_wait: "30s"
-          timekey_use_utc: true
-
 annotations:
   prometheus.io/scrape: "true"
   prometheus.io/port: "8080"
+
+logging:
+  enabled: true
+  fluentbit:
+    metrics:
+      serviceMonitor: true
+      prometheusAnnotations: true
+    nodeSelector:
+      kubernetes.io/os: "linux"
+    tolerations:
+      - operator: "Exists"
+  fluentd:
+    metrics:
+      serviceMonitor: true
+      prometheusAnnotations: true
+    bufferStorageVolume:
+      pvc:
+        spec:
+          accessModes: ["ReadWriteOnce"]
+          resources:
+            requests:
+              storage: "6G"
 
 monitoring:
   serviceMonitor:
