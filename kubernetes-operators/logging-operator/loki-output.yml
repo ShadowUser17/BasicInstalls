@@ -1,0 +1,26 @@
+apiVersion: "logging.banzaicloud.io/v1beta1"
+kind: "Output"
+metadata:
+  name: "loki-output"
+  namespace: "monitoring"
+spec:
+  loki:
+    url: "http://loki-gateway.monitoring.svc"
+    configure_kubernetes_labels: true
+    buffer:
+      timekey: "1m"
+      timekey_wait: "30s"
+      timekey_use_utc: true
+
+---
+apiVersion: "logging.banzaicloud.io/v1beta1"
+kind: "Flow"
+metadata:
+  name: "loki-flow"
+  namespace: "monitoring"
+spec:
+  localOutputRefs: ["loki-output"]
+  # match:
+  #   - select:
+  #       labels:
+  #         app.kubernetes.io/managed-by: "Helm"
