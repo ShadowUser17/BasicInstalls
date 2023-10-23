@@ -1,5 +1,3 @@
-createCustomResource: true
-
 logging:
   enabled: true
   clusterFlows:
