@@ -18,6 +18,10 @@ logging:
           timekey_wait: "30s"
           timekey_use_utc: true
 
+annotations:
+  prometheus.io/scrape: "true"
+  prometheus.io/port: "8080"
+
 monitoring:
   serviceMonitor:
     enabled: true
