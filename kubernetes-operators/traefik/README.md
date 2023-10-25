@@ -9,7 +9,12 @@ helm show values "traefik/traefik" > default-values.yml
 helm upgrade --install traefik "traefik/traefik" -n kube-system
 ```
 
-#### Get default manifests:
+#### Get available sharts:
+```bash
+helm search repo traefik
+```
+
+#### Get manifests:
 ```bash
 helm template traefik "traefik/traefik" -n kube-system > manifests.yml
 ```

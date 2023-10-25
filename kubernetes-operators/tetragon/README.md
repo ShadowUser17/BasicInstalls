@@ -15,6 +15,11 @@ curl -LO "https://github.com/cilium/tetragon/releases/latest/download/tetra-linu
 tar -xzf tetra-linux-amd64.tar.gz tetra && mv ./tetra /usr/local/bin/ && rm -f tetra-linux-amd64.tar.gz
 ```
 
+#### Get available sharts:
+```bash
+helm search repo cilium
+```
+
 #### Export manifests:
 ```bash
 helm template tetragon "cilium/tetragon" -f values.yml -n kube-system > manifests.yml

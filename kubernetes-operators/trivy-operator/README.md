@@ -9,7 +9,12 @@ helm show values "aqua/trivy-operator" > default-values.yml
 helm upgrade --install trivy-operator "aqua/trivy-operator" -f values.yml -n trivy-system --create-namespace
 ```
 
-#### Export manifests:
+#### Get available sharts:
+```bash
+helm search repo aqua
+```
+
+#### Get manifests:
 ```bash
 helm template trivy-operator "aqua/trivy-operator" -f values.yml -n trivy-system > manifests.yml
 ```

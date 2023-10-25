@@ -45,9 +45,14 @@ kubectl -n monitoring get prometheus prom-operator-kube-prometh-prometheus -o js
 kubectl -n monitoring get alertmanager prom-operator-kube-prometh-alertmanager -o jsonpath='{.spec.alertmanagerConfigSelector}'
 ```
 
-#### Get default manifests:
+#### Get available sharts:
 ```bash
-helm template prom-operator "prometheus-community/kube-prometheus-stack" > manifests.yml
+helm search repo prometheus-community
+```
+
+#### Get manifests:
+```bash
+helm template prom-operator "prometheus-community/kube-prometheus-stack" -f prom-operator-values.yml -n monitoring > manifests.yml
 ```
 
 #### Get default values:

@@ -17,9 +17,14 @@ helm upgrade --install fluent-operator "fluent/fluent-operator" -f fluent-operat
 kubectl apply -f fluent-bit-monitoring.yml
 ```
 
-#### Get default manifests:
+#### Get available sharts:
 ```bash
-helm template fluent-operator "fluent/fluent-operator" -n monitoring > fluent-operator-manifests.yml
+helm search repo fluent
+```
+
+#### Get manifests:
+```bash
+helm template fluent-operator "fluent/fluent-operator" -f fluent-operator-values.yml -n monitoring > manifests.yml
 ```
 
 #### Get API resources:

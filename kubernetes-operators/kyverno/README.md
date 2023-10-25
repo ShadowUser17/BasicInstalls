@@ -12,6 +12,11 @@ helm upgrade --install kyverno "kyverno/kyverno" -n kyverno --create-namespace
 helm install kyverno-policies "kyverno/kyverno-policies" -n kyverno
 ```
 
+#### Get available sharts:
+```bash
+helm search repo kyverno
+```
+
 #### Get manifests:
 ```bash
 helm template kyverno "kyverno/kyverno" -n kyverno > manifests.yml

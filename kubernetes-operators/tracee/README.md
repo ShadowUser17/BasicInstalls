@@ -9,6 +9,11 @@ helm show values "aqua/tracee" > default-values.yml
 helm upgrade --install tracee "aqua/tracee" -f values.yml -n tracee-system --create-namespace
 ```
 
+#### Get available sharts:
+```bash
+helm search repo aqua
+```
+
 #### Export manifests:
 ```bash
 helm template tracee "aqua/tracee" -f values.yml -n tracee-system > manifests.yml
