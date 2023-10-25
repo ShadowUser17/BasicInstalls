@@ -10,6 +10,11 @@ curl -LO "https://github.com/cilium/pwru/releases/download/v${version}/pwru-linu
 tar -xzf pwru-linux-amd64.tar.gz pwru && mv ./pwru /usr/local/bin/ && rm -f pwru-linux-amd64.tar.gz
 ```
 
+#### Install viddy:
+```bash
+go install github.com/sachaos/viddy@latest
+```
+
 #### Install cfssl:
 ```bash
 go install github.com/cloudflare/cfssl/cmd/...@latest

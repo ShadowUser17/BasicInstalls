@@ -16,6 +16,7 @@
 #### Tools:
 - [fq](https://github.com/wader/fq/releases)
 - [pwru](https://github.com/cilium/pwru/releases)
+- [viddy](https://github.com/sachaos/viddy/releases)
 - [cfssl](https://github.com/cloudflare/cfssl/releases)
 - [ventoy](https://github.com/ventoy/Ventoy/releases)
 
