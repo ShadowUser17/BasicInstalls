@@ -12,7 +12,7 @@ helm upgrade --install kyverno "kyverno/kyverno" -n kyverno --create-namespace
 helm install kyverno-policies "kyverno/kyverno-policies" -n kyverno
 ```
 
-#### Get available sharts:
+#### Get available charts:
 ```bash
 helm search repo kyverno
 ```

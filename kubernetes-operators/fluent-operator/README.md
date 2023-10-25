@@ -17,7 +17,7 @@ helm upgrade --install fluent-operator "fluent/fluent-operator" -f fluent-operat
 kubectl apply -f fluent-bit-monitoring.yml
 ```
 
-#### Get available sharts:
+#### Get available charts:
 ```bash
 helm search repo fluent
 ```

@@ -9,7 +9,7 @@ helm show values "aqua/trivy-operator" > default-values.yml
 helm upgrade --install trivy-operator "aqua/trivy-operator" -f values.yml -n trivy-system --create-namespace
 ```
 
-#### Get available sharts:
+#### Get available charts:
 ```bash
 helm search repo aqua
 ```

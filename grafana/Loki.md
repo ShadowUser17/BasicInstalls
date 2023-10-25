@@ -22,12 +22,17 @@ helm show values "grafana/promtail" > promtail-default-values.yml
 helm upgrade --install promtail "grafana/promtail" -f ./values/promtail-values.yml -n monitoring
 ```
 
+#### Get available charts:
+```bash
+helm search repo grafana
+```
+
 #### Export manifests:
 ```bash
-helm template loki "grafana/loki" -n monitoring > loki-manifests.yml
+helm template loki "grafana/loki" -f ./values/loki-values.yml -n monitoring > loki-manifests.yml
 ```
 ```bash
-helm template promtail "grafana/promtail" -n monitoring > promtail-manifests.yml
+helm template promtail "grafana/promtail" -f ./values/promtail-values.yml -n monitoring > promtail-manifests.yml
 ```
 
 #### Enable log collection:

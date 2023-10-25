@@ -45,7 +45,7 @@ kubectl -n monitoring get prometheus prom-operator-kube-prometh-prometheus -o js
 kubectl -n monitoring get alertmanager prom-operator-kube-prometh-alertmanager -o jsonpath='{.spec.alertmanagerConfigSelector}'
 ```
 
-#### Get available sharts:
+#### Get available charts:
 ```bash
 helm search repo prometheus-community
 ```

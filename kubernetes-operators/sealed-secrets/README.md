@@ -9,7 +9,7 @@ helm show values "sealed-secrets/sealed-secrets" > default-values.yml
 helm upgrade --install sealed-secrets "sealed-secrets/sealed-secrets" -n kube-system
 ```
 
-#### Get available sharts:
+#### Get available charts:
 ```bash
 helm search repo sealed-secrets
 ```

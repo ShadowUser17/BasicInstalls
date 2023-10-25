@@ -21,7 +21,7 @@ helm install nfs-subdir-provisioner "nfs-subdir-external-provisioner/nfs-subdir-
 --set 'storageClass.archiveOnDelete=false'
 ```
 
-#### Get available sharts:
+#### Get available charts:
 ```bash
 helm search repo nfs-subdir-external-provisioner
 ```

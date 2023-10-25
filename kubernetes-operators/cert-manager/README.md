@@ -9,7 +9,7 @@ helm show values "jetstack/cert-manager" > default-values.yml
 helm upgrade --install cert-manager "jetstack/cert-manager" -f values.yml -n cert-manager --create-namespace
 ```
 
-#### Get available sharts:
+#### Get available charts:
 ```bash
 helm search repo jetstack
 ```

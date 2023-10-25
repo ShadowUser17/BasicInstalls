@@ -15,7 +15,7 @@ curl -LO "https://github.com/cilium/tetragon/releases/latest/download/tetra-linu
 tar -xzf tetra-linux-amd64.tar.gz tetra && mv ./tetra /usr/local/bin/ && rm -f tetra-linux-amd64.tar.gz
 ```
 
-#### Get available sharts:
+#### Get available charts:
 ```bash
 helm search repo cilium
 ```

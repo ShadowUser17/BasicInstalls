@@ -12,7 +12,7 @@ helm show values "ingress-nginx/ingress-nginx" > default-values.yml
 helm upgrade --install ingress-nginx "ingress-nginx/ingress-nginx" -f values.yml -n ingress-nginx --create-namespace
 ```
 
-#### Get available sharts:
+#### Get available charts:
 ```bash
 helm search repo ingress-nginx
 ```
