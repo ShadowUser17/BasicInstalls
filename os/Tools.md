@@ -10,6 +10,11 @@ curl -LO "https://github.com/cilium/pwru/releases/download/v${version}/pwru-linu
 tar -xzf pwru-linux-amd64.tar.gz pwru && mv ./pwru /usr/local/bin/ && rm -f pwru-linux-amd64.tar.gz
 ```
 
+#### Install cfssl:
+```bash
+go install github.com/cloudflare/cfssl/cmd/...@latest
+```
+
 #### Install ventoy:
 ```bash
 curl -L "https://github.com/ventoy/Ventoy/releases/download/v${version}/ventoy-${version}-linux.tar.gz" -o ventoy-linux.tgz && \

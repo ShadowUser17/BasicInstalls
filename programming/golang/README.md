@@ -23,14 +23,8 @@
 - [toxiproxy](https://github.com/Shopify/toxiproxy)
 - [certmagic](https://github.com/caddyserver/certmagic)
 
-#### Security:
-- [age](https://github.com/FiloSottile/age/releases)
-- [gopass](https://github.com/gopasspw/gopass/releases)
-
 #### Tools:
 - [gobrew](https://github.com/kevincobain2000/gobrew/releases)
-- [cfssl](https://github.com/cloudflare/cfssl/releases)
-- [caddy](https://github.com/caddyserver/caddy/releases)
 - [delve](https://github.com/go-delve/delve/releases)
 - [nfpm](https://github.com/goreleaser/nfpm/releases)
 - [goreleaser](https://github.com/goreleaser/goreleaser/releases)
