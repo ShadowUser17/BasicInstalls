@@ -7,6 +7,10 @@
 - [client-go](https://github.com/kubernetes/client-go)
 - [client-py](https://github.com/kubernetes-client/python)
 
+#### SDK:
+- [kubebuilder](https://book.kubebuilder.io/introduction)
+- [operator-sdk](https://sdk.operatorframework.io/docs/)
+
 #### Tools:
 - [kubectl](https://kubectl.docs.kubernetes.io/references/)
 - [crictl](https://github.com/kubernetes-sigs/cri-tools/releases)
