@@ -7,8 +7,8 @@ fluentbit:
   output:
     loki:
       enable: true
-      host: "loki-gateway.monitoring.svc"
-      port: 80
+      host: "loki.monitoring.svc"
+      port: 3100
       httpUser: ""
       httpPassword: ""
   prometheusMetricsExporter:

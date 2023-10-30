@@ -5,7 +5,7 @@ metadata:
   namespace: "monitoring"
 spec:
   loki:
-    url: "http://loki-gateway.monitoring.svc"
+    url: "http://loki.monitoring.svc:3100"
     configure_kubernetes_labels: true
     buffer:
       timekey: "1m"

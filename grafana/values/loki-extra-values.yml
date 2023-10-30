@@ -21,6 +21,9 @@ singleBinary:
     storageClass: "local-path"
     size: "6Gi"
 
+gateway:
+  enabled: false
+
 test:
   enabled: false
 

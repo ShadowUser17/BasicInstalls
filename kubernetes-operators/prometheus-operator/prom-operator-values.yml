@@ -63,7 +63,7 @@ grafana:
     - name: "Loki"
       type: "loki"
       access: "proxy"
-      url: "http://loki-gateway.monitoring.svc"
+      url: "http://loki.monitoring.svc:3100"
       jsonData:
         timeout: 120
         maxLines: 2000
