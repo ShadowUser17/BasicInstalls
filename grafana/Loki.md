@@ -45,9 +45,10 @@ template:
 
 #### loki:
 - [Docs](https://grafana.com/docs/loki/latest/)
-- [Releases](https://github.com/grafana/loki/releases)
 - [Images](https://hub.docker.com/r/grafana/loki/tags)
-- [Charts](https://github.com/grafana/helm-charts)
+- [Charts](https://github.com/grafana/loki/tree/main/production/helm/loki)
+- [Releases](https://github.com/grafana/loki/releases)
+- [Monitoring](https://grafana.com/docs/loki/latest/operations/observability/)
 
 #### k8s-event-exporter:
 - [Docs](https://github.com/resmoio/kubernetes-event-exporter)
