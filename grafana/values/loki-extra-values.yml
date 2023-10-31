@@ -10,12 +10,12 @@ loki:
     reject_old_samples_max_age: "72h"
     split_queries_by_interval: "15m"
     max_cache_freshness_per_query: "10m"
-  podAnnotations:
-    prometheus.io/scrape: "true"
-    prometheus.io/port: "3100"
 
 singleBinary:
   replicas: 1
+  podAnnotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/port: "3100"
   persistence:
     volumeClaimsEnabled: true
     storageClass: "local-path"
