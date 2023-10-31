@@ -1,0 +1,66 @@
+loki:
+  auth_enabled: false
+  commonConfig:
+    replication_factor: 1
+  storage:
+    type: "s3"
+    bucketNames:
+      chunks: "loki-data"
+      ruler: "loki-ruler"
+      admin: "loki-data"
+    s3:
+      endpoint: "minio.testing.svc:9000"
+      accessKeyId: "testing"
+      secretAccessKey: "1qaz!QAZ"
+      insecure: true
+      s3ForcePathStyle: false
+  limits_config:
+    enforce_metric_name: false
+    reject_old_samples: true
+    reject_old_samples_max_age: "72h"
+    split_queries_by_interval: "15m"
+    max_cache_freshness_per_query: "10m"
+  podLabels:
+    required.storage: "minio"
+  podAnnotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/port: "3100"
+
+write:
+  replicas: 1
+  persistence:
+    volumeClaimsEnabled: true
+    storageClass: "local-path"
+    size: "5Gi"
+
+read:
+  replicas: 1
+  persistence:
+    volumeClaimsEnabled: true
+    storageClass: "local-path"
+    size: "5Gi"
+
+backend:
+  replicas: 1
+  persistence:
+    volumeClaimsEnabled: true
+    storageClass: "local-path"
+    size: "5Gi"
+
+test:
+  enabled: false
+
+monitoring:
+  dashboards:
+    enabled: false
+  rules:
+    enabled: false
+    alerting: false
+  serviceMonitor:
+    enabled: false
+  selfMonitoring:
+    enabled: false
+    grafanaAgent:
+      installOperator: false
+  lokiCanary:
+    enabled: false
