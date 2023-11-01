@@ -19,6 +19,11 @@ helm template logging-operator "oci://ghcr.io/kube-logging/helm-charts/logging-o
 kubectl apply -f loki-output.yml
 ```
 
+#### Send logs to Elasticsearch:
+```bash
+kubectl apply -f es-output.yml
+```
+
 #### Get API resources:
 ```bash
 kubectl api-resources | grep banzaicloud

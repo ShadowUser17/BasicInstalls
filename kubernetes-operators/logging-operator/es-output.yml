@@ -1,12 +1,13 @@
 apiVersion: "logging.banzaicloud.io/v1beta1"
 kind: "ClusterOutput"
 metadata:
-  name: "loki-output"
+  name: "es-output"
   namespace: "monitoring"
 spec:
-  loki:
-    url: "http://loki.monitoring.svc:3100"
-    configure_kubernetes_labels: true
+  elasticsearch:
+    host: "es.monitoring.svc"
+    port: 9200
+    scheme: "http"
     buffer:
       timekey: "1m"
       timekey_wait: "30s"
@@ -16,10 +17,10 @@ spec:
 apiVersion: "logging.banzaicloud.io/v1beta1"
 kind: "ClusterFlow"
 metadata:
-  name: "loki-flow"
+  name: "es-flow"
   namespace: "monitoring"
 spec:
-  globalOutputRefs: ["loki-output"]
+  globalOutputRefs: ["es-output"]
   filters:
     - tag_normaliser: {}
   match:
