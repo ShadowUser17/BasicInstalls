@@ -13,6 +13,7 @@
 - [Releases](https://github.com/elastic/logstash/releases)
 
 #### Elasticsearch:
+- [API](https://www.elastic.co/guide/en/elasticsearch/reference/current/rest-apis.html)
 - [Docs](https://www.elastic.co/guide/en/elastic-stack/current/index.html)
 - [Images](https://hub.docker.com/_/elasticsearch/tags)
 - [Releases](https://github.com/elastic/elasticsearch/releases)
