@@ -8,6 +8,9 @@ helm show values "jetstack/cert-manager" > default-values.yml
 ```bash
 helm upgrade --install cert-manager "jetstack/cert-manager" -f values.yml -n cert-manager --create-namespace
 ```
+```bash
+helm upgrade --install cert-manager-csi-driver "jetstack/cert-manager-csi-driver" -n cert-manager
+```
 
 #### Get available charts:
 ```bash
@@ -25,7 +28,7 @@ curl -LO "https://github.com/cert-manager/cert-manager/releases/download/v${vers
 tar -xzf cmctl-linux-amd64.tar.gz cmctl && mv ./cmctl /usr/local/bin/ && rm -f cmctl-linux-amd64.tar.gz
 ```
 
-#### Example:
+#### Certificate example:
 ```yaml
 apiVersion: "cert-manager.io/v1"
 kind: "Issuer"
@@ -48,7 +51,23 @@ spec:
     name: "testing-issuer"
 ```
 
+#### CSI example:
+```bash
+kubectl get csidrivers
+```
+```yaml
+spec:
+  volumes:
+    - name: "tls"
+      csi:
+        driver: "csi.cert-manager.io"
+        volumeAttributes:
+          csi.cert-manager.io/issuer-name: "ca-issuer"
+          csi.cert-manager.io/dns-names: "${POD_NAME}.${POD_NAMESPACE}.svc.cluster.local"
+```
+
 #### URLs:
-- [docs](https://cert-manager.io/docs/)
-- [charts](https://artifacthub.io/packages/helm/cert-manager/cert-manager)
-- [releases](https://github.com/cert-manager/cert-manager/releases)
+- [cert-manager-docs](https://cert-manager.io/docs/)
+- [cert-manager-csi-docs](https://cert-manager.io/docs/usage/csi/)
+- [cert-manager-chart](https://artifacthub.io/packages/helm/cert-manager/cert-manager)
+- [cert-manager-releases](https://github.com/cert-manager/cert-manager/releases)
