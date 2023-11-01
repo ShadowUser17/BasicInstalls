@@ -27,3 +27,5 @@ kubectl api-resources | grep elastic
 #### URLs:
 - [k8s-quickstart](https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-quickstart.html)
 - [k8s-upgrading](https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-upgrading-eck.html)
+- [k8s-config](https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-operator-config.html)
+- [k8s-api](https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-api-reference.html)
