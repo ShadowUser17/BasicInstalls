@@ -3,13 +3,16 @@
 helm repo add jetstack "https://charts.jetstack.io" && helm repo update
 ```
 ```bash
-helm show values "jetstack/cert-manager" > default-values.yml
+helm show values "jetstack/cert-manager" > cert-manager-default-values.yml
 ```
 ```bash
-helm upgrade --install cert-manager "jetstack/cert-manager" -f values.yml -n cert-manager --create-namespace
+helm upgrade --install cert-manager "jetstack/cert-manager" -f cert-manager-values.yml -n cert-manager --create-namespace
 ```
 ```bash
-helm upgrade --install cert-manager-csi-driver "jetstack/cert-manager-csi-driver" -n cert-manager
+helm show values "jetstack/cert-manager-csi-driver" > cert-manager-csi-default-values.yml
+```
+```bash
+helm upgrade --install cert-manager-csi-driver "jetstack/cert-manager-csi-driver" -f cert-manager-csi-values.yml -n cert-manager
 ```
 
 #### Get available charts:
@@ -19,7 +22,7 @@ helm search repo jetstack
 
 #### Get manifests:
 ```bash
-helm template cert-manager "jetstack/cert-manager" -f values.yml -n cert-manager > manifests.yml
+helm template cert-manager "jetstack/cert-manager" -f values.yml -n cert-manager > cert-manager-manifests.yml
 ```
 
 #### Install CLI:
