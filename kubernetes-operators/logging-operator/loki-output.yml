@@ -25,6 +25,9 @@ spec:
   match:
     - select:
         labels:
+          app.kubernetes.io/name: "loki"
+    - select:
+        labels:
           app.kubernetes.io/name: "tetragon"
     - select:
         labels:
