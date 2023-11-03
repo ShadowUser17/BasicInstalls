@@ -28,6 +28,7 @@ kubectl get configauditreports -o wide -A
 ```
 
 #### URLs:
-- [Documentation](https://aquasecurity.github.io/trivy-operator/latest)
+- [Documentation](https://aquasecurity.github.io/trivy-operator/latest/docs/vulnerability-scanning/)
 - [Releases](https://github.com/aquasecurity/trivy-operator/releases)
-- [Dashboard](https://grafana.com/grafana/dashboards/16337-trivy-operator-vulnerabilities/)
+- [Metrics](https://aquasecurity.github.io/trivy-operator/latest/tutorials/integrations/metrics/)
+- [Dashboard](https://grafana.com/grafana/dashboards/17813-trivy-operator-dashboard/)

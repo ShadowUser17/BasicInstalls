@@ -25,5 +25,6 @@ kubectl logs -f daemonset/tracee -n tracee-system
 ```
 
 #### URLs:
-- [Documentation](https://aquasecurity.github.io/tracee/latest)
+- [Documentation](https://aquasecurity.github.io/tracee/latest/docs/overview/)
+- [Dashboard](https://aquasecurity.github.io/tracee/latest/tutorials/deploy-grafana-dashboard/)
 - [Releases](https://github.com/aquasecurity/tracee/releases)
