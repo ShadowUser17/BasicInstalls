@@ -1,0 +1,12 @@
+metrics:
+  enabled: true
+  serviceMonitor:
+    enabled: false
+  prometheusRule:
+    enabled: false
+
+tolerations:
+  - operator: "Exists"
+
+nodeSelector:
+  kubernetes.io/os: "linux"
