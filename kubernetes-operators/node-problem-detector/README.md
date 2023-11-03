@@ -22,6 +22,11 @@ helm template node-monitor "deliveryhero/node-problem-detector" -f values.yml -n
 helm search repo deliveryhero
 ```
 
+#### Get available pods:
+```bash
+kubectl -n monitoring get pods -o wide -l "app.kubernetes.io/name=node-problem-detector"
+```
+
 #### URLs:
 - [Docs](https://github.com/kubernetes/node-problem-detector/blob/master/README.md)
 - [Charts](https://github.com/deliveryhero/helm-charts/tree/master/stable/node-problem-detector)
