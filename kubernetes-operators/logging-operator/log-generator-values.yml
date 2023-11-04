@@ -1,0 +1,8 @@
+replicaCount: 1
+
+app:
+  eventPerSec: 5
+
+api:
+  serviceMonitor:
+    enabled: true
