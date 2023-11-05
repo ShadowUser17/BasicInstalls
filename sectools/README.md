@@ -17,6 +17,7 @@
 - [amass](https://github.com/OWASP/Amass/releases)
 - [chisel](https://github.com/jpillora/chisel/releases)
 - [sliver](https://github.com/BishopFox/sliver/releases)
+- [peirates](https://github.com/inguardians/peirates/releases)
 - [mitmproxy](https://github.com/mitmproxy/mitmproxy/releases)
 - [gobuster](https://github.com/OJ/gobuster/releases)
 - [gitleaks](https://github.com/zricethezav/gitleaks/releases)

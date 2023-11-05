@@ -13,12 +13,12 @@ rmdir amass_Linux_amd64 && rm -f amass_Linux_amd64.zip
 
 #### Install gobuster:
 ```bash
-go install github.com/OJ/gobuster/v3@latest
+go install "github.com/OJ/gobuster/v3@latest"
 ```
 
 #### Install snyk:
 ```bash
-npm -g install snyk@latest && snyk auth <auth_token>
+npm -g install "snyk@latest" && snyk auth <auth_token>
 ```
 
 #### Install osv-scanner:
