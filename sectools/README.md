@@ -15,6 +15,7 @@
 - [snyk-cli](https://github.com/snyk/cli/releases)
 - [yara](https://github.com/VirusTotal/yara/releases)
 - [amass](https://github.com/OWASP/Amass/releases)
+- [merlin](https://github.com/Ne0nd0g/merlin/releases)
 - [chisel](https://github.com/jpillora/chisel/releases)
 - [sliver](https://github.com/BishopFox/sliver/releases)
 - [peirates](https://github.com/inguardians/peirates/releases)
