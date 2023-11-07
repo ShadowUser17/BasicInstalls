@@ -65,7 +65,7 @@ grafana:
       access: "proxy"
       url: "http://loki.monitoring.svc:3100"
       jsonData:
-        timeout: 120
+        timeout: 300
         maxLines: 2000
   resources:
     requests:
