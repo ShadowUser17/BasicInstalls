@@ -1,10 +1,5 @@
 alertmanager:
   enabled: true
-  ingress:
-    enabled: true
-    path: "/"
-    hosts: ["alertmanager.k3s"]
-    ingressClassName: "nginx"
   alertmanagerSpec:
     retention: "8h"
     resources:
@@ -32,11 +27,6 @@ prometheus:
   enabled: true
   thanosService:
     enabled: false
-  ingress:
-    enabled: true
-    path: "/"
-    hosts: ["prometheus.k3s"]
-    ingressClassName: "nginx"
   prometheusSpec:
     retention: "7d"
     resources:
@@ -55,36 +45,8 @@ prometheus:
             requests:
               storage: "6Gi"
 
-# Using default values from https://github.com/grafana/helm-charts/blob/main/charts/grafana/values.yaml
 grafana:
-  enabled: true
-  adminPassword: "prom-operator"
-  additionalDataSources:
-    - name: "Loki"
-      type: "loki"
-      access: "proxy"
-      url: "http://loki.monitoring.svc:3100"
-      jsonData:
-        timeout: 120
-        maxLines: 2000
-  resources:
-    requests:
-      cpu: "50m"
-      memory: "200Mi"
-    limits:
-      cpu: "50m"
-      memory: "250Mi"
-  ingress:
-    enabled: true
-    path: "/"
-    hosts: ["grafana.k3s"]
-    ingressClassName: "nginx"
-  persistence:
-    enabled: true
-    type: "pvc"
-    size: "1Gi"
-    accessModes: ["ReadWriteOnce"]
-    storageClassName: "local-path"
+  enabled: false
 
 defaultRules:
   create: true
