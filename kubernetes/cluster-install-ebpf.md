@@ -36,7 +36,7 @@ curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.26.10+k3s2" sh -s - age
 
 #### Install Cilium CLI:
 ```bash
-curl -L "https://github.com/cilium/cilium-cli/releases/download/v0.15.11/cilium-linux-amd64.tar.gz" -o cilium-linux.tgz && \
+curl -L "https://github.com/cilium/cilium-cli/releases/download/v0.15.13/cilium-linux-amd64.tar.gz" -o cilium-linux.tgz && \
 tar -xzf cilium-linux.tgz cilium && mv ./cilium /usr/local/bin/ && rm -f ./cilium-linux.tgz
 ```
 
