@@ -15,7 +15,7 @@ spec:
   endpoints:
     - port: "metrics"
       honorLabels: true
-      scrapeTimeout: "30s"
+      scrapeInterval: "30s"
 ```
 
 #### PodMonitor example:
@@ -35,7 +35,28 @@ spec:
   podMetricsEndpoints:
     - port: "metrics"
       honorLabels: true
-      scrapeTimeout: "30s"
+      scrapeInterval: "30s"
+```
+
+#### ScrapeConfig example:
+- Check `scrapeConfigSelector` labels!
+```yaml
+apiVersion: "monitoring.coreos.com/v1alpha1"
+kind: "ScrapeConfig"
+metadata:
+  name: "static-config"
+  namespace: "testing"
+  labels:
+    release: "prom-operator"
+spec:
+  honorLabels: true
+  scrapeInterval: "30s"
+  staticConfigs:
+    - labels:
+        job: "node-services"
+      targets:
+        - "192.168.56.100:9090"
+        - "192.168.56.101:9090"
 ```
 
 #### AlertmanagerConfig example:
