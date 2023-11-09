@@ -46,3 +46,4 @@ kubectl -n monitoring get secret logging-operator-fluentbit -o jsonpath="{.data[
 #### URLs:
 - [Docs](https://kube-logging.dev/docs/)
 - [Charts](https://github.com/kube-logging/logging-operator/tree/master/charts/logging-operator)
+- [Dashboard](https://grafana.com/grafana/dashboards/7752-logging-dashboard/)

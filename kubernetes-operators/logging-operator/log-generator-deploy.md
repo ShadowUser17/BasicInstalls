@@ -8,8 +8,13 @@ helm show values "oci://ghcr.io/kube-logging/helm-charts/log-generator" > log-ge
 ```bash
 helm upgrade --install log-generator "oci://ghcr.io/kube-logging/helm-charts/log-generator" -f log-generator-values.yml -n testing
 ```
+
+#### Enable log collecting:
 ```bash
 kubectl apply -f test-output.yml
+```
+```bash
+kubectl -n testing patch deployment log-generator -p '{"spec": {"template": {"metadata": {"annotations": {"promtail.io/collect": "true"}}}}}'
 ```
 
 #### Get status:
