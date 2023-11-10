@@ -8,8 +8,9 @@
 - [Python](https://docs.aws.amazon.com/pythonsdk/)
 
 #### Tools:
-- [CLI](https://hub.docker.com/r/amazon/aws-cli/tags)
-- [Chamber](https://github.com/segmentio/chamber/releases)
+- [aws-cli](https://hub.docker.com/r/amazon/aws-cli/tags)
+- [eksctl](https://github.com/eksctl-io/eksctl/releases)
+- [chamber](https://github.com/segmentio/chamber/releases)
 
 #### Resources:
 - [aws](https://github.com/aws)
