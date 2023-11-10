@@ -25,11 +25,12 @@ serviceMonitor:
 
 config:
   enabled: true
+  serverPort: 9080
   file: |-
     server:
       log_level: "info"
       log_format: "logfmt"
-      http_listen_port: 9080
+      http_listen_port: {{ .Values.config.serverPort }}
 
     clients:
       - url: "http://loki-gateway.monitoring/loki/api/v1/push"
