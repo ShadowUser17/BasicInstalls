@@ -1,12 +1,12 @@
 daemonset:
   enabled: true
 
-deployment:
-  enabled: false
+configmap:
+  enabled: true
 
-podAnnotations:
-  prometheus.io/scrape: "true"
-  prometheus.io/port: "9080"
+sidecar:
+  configReloader:
+    enabled: true
 
 nodeSelector:
   kubernetes.io/os: "linux"
@@ -14,43 +14,49 @@ nodeSelector:
 tolerations:
   - operator: "Exists"
 
-serviceMonitor:
-  enabled: false
-  prometheusRule:
-    enabled: false
+podAnnotations:
+  prometheus.io/scrape: "true"
+  prometheus.io/port: "9080"
 
 config:
   enabled: true
-  logLevel: "info"
-  logFormat: "logfmt"
-  serverPort: 9080
-  clients:
-    - url: "http://loki-gateway.monitoring/loki/api/v1/push"
-  scrapeConfigs: |
-    - job_name: "pod-logs"
-    kubernetes_sd_configs:
-      - role: "pod"
-    pipeline_stages:
-      - cri: {}
-    relabel_configs:
-      - source_labels: ["__meta_kubernetes_pod_annotation_promtail_io_collect"]
-        action: "keep"
-        regex: "true"
-      - action: "labelmap"
-        regex: "__meta_kubernetes_pod_label_(.+)"
-      - source_labels: ["__meta_kubernetes_pod_node_name"]
-        action: "replace"
-        target_label: "node"
-      - source_labels: ["__meta_kubernetes_namespace"]
-        action: "replace"
-        target_label: "namespace"
-      - source_labels: ["__meta_kubernetes_pod_name"]
-        action: "replace"
-        target_label: "pod"
-      - source_labels: ["__meta_kubernetes_pod_container_name"]
-        action: "replace"
-        target_label: "container"
-      - source_labels: ["__meta_kubernetes_pod_uid", "__meta_kubernetes_pod_container_name"]
-        replacement: "/var/log/pods/*$1/$2/*.log"
-        separator: "/"
-        target_label: "__path__"
+  file: |-
+    server:
+      log_level: "info"
+      log_format: "logfmt"
+      http_listen_port: 9080
+
+    clients:
+      - url: "http://loki-gateway.monitoring/loki/api/v1/push"
+
+    positions:
+      filename: "/run/promtail/positions.yaml"
+
+    scrape_configs:
+      - job_name: "pod-logs"
+        kubernetes_sd_configs:
+          - role: "pod"
+        pipeline_stages:
+          - cri: {}
+        relabel_configs:
+          - source_labels: ["__meta_kubernetes_pod_annotation_promtail_io_collect"]
+            action: "keep"
+            regex: "true"
+          - action: "labelmap"
+            regex: "__meta_kubernetes_pod_label_(.+)"
+          - source_labels: ["__meta_kubernetes_pod_node_name"]
+            action: "replace"
+            target_label: "node"
+          - source_labels: ["__meta_kubernetes_namespace"]
+            action: "replace"
+            target_label: "namespace"
+          - source_labels: ["__meta_kubernetes_pod_name"]
+            action: "replace"
+            target_label: "pod"
+          - source_labels: ["__meta_kubernetes_pod_container_name"]
+            action: "replace"
+            target_label: "container"
+          - source_labels: ["__meta_kubernetes_pod_uid", "__meta_kubernetes_pod_container_name"]
+            replacement: "/var/log/pods/*$1/$2/*.log"
+            separator: "/"
+            target_label: "__path__"
