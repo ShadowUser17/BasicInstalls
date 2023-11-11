@@ -7,7 +7,6 @@ curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.26.10+k3s2" sh -s - ser
 --with-node-id \
 --node-ip "192.168.56.11" \
 --flannel-iface "eth1" \
---disable-helm-controller \
 --disable "traefik"
 ```
 

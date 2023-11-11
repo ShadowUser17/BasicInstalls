@@ -5,10 +5,9 @@ curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.26.10+k3s2" sh -s - ser
 --write-kubeconfig-mode "0644" \
 --node-name "server" \
 --with-node-id \
+--disable "traefik" \
 --node-taint "node-role.kubernetes.io/master:NoSchedule" \
---node-taint "node-role.kubernetes.io/control-plane:NoSchedule" \
---disable-helm-controller \
---disable "traefik"
+--node-taint "node-role.kubernetes.io/control-plane:NoSchedule"
 ```
 
 #### Install agent on QEMU:

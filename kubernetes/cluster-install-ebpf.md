@@ -19,7 +19,6 @@ curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.26.10+k3s2" sh -s - ser
 --flannel-iface "eth1" \
 --flannel-backend "none" \
 --disable-network-policy \
---disable-helm-controller \
 --disable "traefik"
 ```
 
