@@ -9,6 +9,11 @@ helm show values "longhorn/longhorn" > longhorn-default-values.yml
 helm upgrade --install longhorn "longhorn/longhorn" -f values.yml -n longhorn-system --create-namespace
 ```
 
+#### Get API resources:
+```bash
+kubectl api-resources | grep longhorn
+```
+
 #### Get available charts:
 ```bash
 helm search repo longhorn
