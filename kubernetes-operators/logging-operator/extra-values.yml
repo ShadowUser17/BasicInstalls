@@ -2,6 +2,14 @@ annotations:
   prometheus.io/scrape: "true"
   prometheus.io/port: "8080"
 
+resources:
+  requests:
+    cpu: "100m"
+    memory: "64Mi"
+  limits:
+    cpu: "100m"
+    memory: "128Mi"
+
 logging:
   enabled: true
   fluentbit:
@@ -11,6 +19,13 @@ logging:
       serviceMonitorConfig:
         additionalLabels:
           release: "prom-operator"
+    resources:
+      requests:
+        cpu: "100m"
+        memory: "64Mi"
+      limits:
+        cpu: "100m"
+        memory: "128Mi"
     nodeSelector:
       kubernetes.io/os: "linux"
     tolerations:
@@ -22,6 +37,13 @@ logging:
       serviceMonitorConfig:
         additionalLabels:
           release: "prom-operator"
+    resources:
+      requests:
+        cpu: "100m"
+        memory: "256Mi"
+      limits:
+        cpu: "200m"
+        memory: "512Mi"
     bufferStorageVolume:
       pvc:
         spec:
