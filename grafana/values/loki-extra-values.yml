@@ -49,6 +49,13 @@ singleBinary:
   podAnnotations:
     prometheus.io/scrape: "true"
     prometheus.io/port: "3100"
+  resources:
+    requests:
+      cpu: "200m"
+      memory: "256Mi"
+    limits:
+      cpu: "200m"
+      memory: "630Mi"
   persistence:
     volumeClaimsEnabled: true
     storageClass: "local-path"
