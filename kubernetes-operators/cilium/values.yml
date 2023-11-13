@@ -17,9 +17,11 @@ hubble:
     enabled:
       - "dns"
       - "tcp"
-      - "drop"
-      - "flow"
       - "icmp"
+      - "flow"
+      - "drop"
+      - "httpV2"
+      - "port-distribution"
     serviceMonitor:
       enabled: false
   relay:
