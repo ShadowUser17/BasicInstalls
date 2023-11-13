@@ -36,3 +36,9 @@ hubble:
         enabled: true
         labels:
           release: "prom-operator"
+  ui:
+    enabled: true
+    ingress:
+      enabled: true
+      hosts: ["hubble.k3s"]
+      className: "nginx"
