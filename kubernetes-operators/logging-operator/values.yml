@@ -50,3 +50,16 @@ logging:
         resources:
           requests:
             storage: "1G"
+  hostTailer:
+    workloadOverrides:
+      nodeSelector:
+        kubernetes.io/os: "linux"
+      tolerations:
+        - operator: "Exists"
+    systemdTailers:
+      - name: "k3s-master"
+        maxEntries: 100
+        systemdFilter: "k3s.service"
+      - name: "k3s-agent"
+        maxEntries: 100
+        systemdFilter: "k3s-agent.service"

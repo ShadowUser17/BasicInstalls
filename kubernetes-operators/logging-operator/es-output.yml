@@ -40,6 +40,9 @@ spec:
           app.kubernetes.io/name: "echo-server"
     - select:
         labels:
+          app.kubernetes.io/name: "host-tailer"
+    - select:
+        labels:
           app.kubernetes.io/name: "event-tailer"
     - select:
         labels:
