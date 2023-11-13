@@ -14,6 +14,11 @@ helm upgrade --install cilium "cilium/cilium" -f values.yml -n kube-system
 helm template cilium "cilium/cilium" -f values.yml -n kube-system > manifests.yml
 ```
 
+#### Get API resources:
+```bash
+kubectl api-resources | grep cilium
+```
+
 #### Install Cilium CLI:
 ```bash
 curl -L "https://github.com/cilium/cilium-cli/releases/download/v${version}/cilium-linux-amd64.tar.gz" -o cilium-linux.tgz && \
