@@ -1,38 +1,3 @@
-### Warning! Networking provided by Cilium.
-
-#### URLs:
-- [what-is-ebpf](https://ebpf.io/what-is-ebpf)
-- [cilium-cli](https://github.com/cilium/cilium-cli/releases)
-- [cilium-docs](https://docs.cilium.io/en/stable/)
-- [cilium-releases](https://github.com/cilium/cilium/releases)
-- [hubble-docs](https://github.com/cilium/hubble/blob/master/Documentation/README.md)
-- [hubble-releases](https://github.com/cilium/hubble/releases)
-
-#### Install server on VirtualBox:
-```bash
-curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.26.10+k3s2" sh -s - server \
---token "4Eja4ahRagJEhozmiRHKg3" \
---write-kubeconfig-mode "0644" \
---node-name "server" \
---with-node-id \
---node-ip "192.168.56.11" \
---flannel-iface "eth1" \
---flannel-backend "none" \
---disable-network-policy \
---disable "traefik"
-```
-
-#### Install agent on VirtualBox:
-```bash
-curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.26.10+k3s2" sh -s - agent \
---server "https://192.168.56.11:6443" \
---token "4Eja4ahRagJEhozmiRHKg3" \
---node-name "agent" \
---with-node-id \
---node-ip "192.168.56.12" \
---flannel-iface "eth1"
-```
-
 #### Install Cilium CLI:
 ```bash
 curl -L "https://github.com/cilium/cilium-cli/releases/download/v0.15.13/cilium-linux-amd64.tar.gz" -o cilium-linux.tgz && \
@@ -90,16 +55,24 @@ cilium uninstall
 helm repo add cilium "https://helm.cilium.io/" && helm repo update
 ```
 ```bash
-helm template cilium cilium/cilium \
+helm template cilium "cilium/cilium" \
 --namespace "kube-system" \
 --set "operator.replicas=1" \
 --set "prometheus.enabled=true" \
 --set "operator.prometheus.enabled=true" > cilium-deploy.yml
 ```
 ```bash
-helm template cilium cilium/cilium \
+helm template cilium "cilium/cilium" \
 --namespace "kube-system" \
 --set "hubble.enabled=true" \
 --set "hubble.relay.enabled=true" \
 --set hubble.metrics.enabled="{dns,drop,tcp,flow,icmp,http}" > hubble-deploy.yml
 ```
+
+#### URLs:
+- [what-is-ebpf](https://ebpf.io/what-is-ebpf)
+- [cilium-cli](https://github.com/cilium/cilium-cli/releases)
+- [cilium-docs](https://docs.cilium.io/en/stable/)
+- [cilium-releases](https://github.com/cilium/cilium/releases)
+- [hubble-docs](https://github.com/cilium/hubble/blob/master/Documentation/README.md)
+- [hubble-releases](https://github.com/cilium/hubble/releases)

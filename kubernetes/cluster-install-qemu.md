@@ -1,4 +1,4 @@
-#### Install server on QEMU:
+#### Install server on QEMU with enabled etcd:
 ```bash
 curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.26.10+k3s2" sh -s - server \
 --token "4Eja4ahRagJEhozmiRHKg3" \
@@ -12,6 +12,22 @@ curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.26.10+k3s2" sh -s - ser
 --node-taint "node-role.kubernetes.io/control-plane:NoSchedule"
 ```
 
+#### Install server on QEMU without network backend:
+```bash
+curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.26.10+k3s2" sh -s - server \
+--token "4Eja4ahRagJEhozmiRHKg3" \
+--write-kubeconfig-mode "0644" \
+--node-name "server" \
+--with-node-id \
+--cluster-init \
+--etcd-expose-metrics \
+--disable "traefik" \
+--flannel-backend "none" \
+--disable-network-policy \
+--node-taint "node-role.kubernetes.io/master:NoSchedule" \
+--node-taint "node-role.kubernetes.io/control-plane:NoSchedule"
+```
+
 #### Install agent on QEMU:
 ```bash
 curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.26.10+k3s2" sh -s - agent \
@@ -19,4 +35,11 @@ curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.26.10+k3s2" sh -s - age
 --token "4Eja4ahRagJEhozmiRHKg3" \
 --node-name "agent" \
 --with-node-id
+```
+
+#### Configure kubectl:
+```bash
+mkdir ~/.kube && scp k3s-server:/etc/rancher/k3s/k3s.yaml ~/.kube/ && \
+sed 's/127\.0\.0\.1/192\.168\.56\.11/g' ~/.kube/k3s.yaml > ~/.kube/config && \
+chmod 600 ~/.kube/config && rm -f ~/.kube/k3s.yaml
 ```
