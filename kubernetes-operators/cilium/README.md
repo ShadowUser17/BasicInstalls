@@ -49,10 +49,17 @@ cilium hubble port-forward &
 hubble status
 ```
 
-#### URLs:
+#### Docs:
 - [what-is-ebpf](https://ebpf.io/what-is-ebpf)
-- [cilium-cli](https://github.com/cilium/cilium-cli/releases)
 - [cilium-docs](https://docs.cilium.io/en/stable/)
-- [cilium-metrics](https://docs.cilium.io/en/stable/observability/metrics/)
 - [hubble-docs](https://github.com/cilium/hubble/blob/master/Documentation/README.md)
-- [hubble-releases](https://github.com/cilium/hubble/releases)
+- [observability](https://docs.cilium.io/en/stable/observability/metrics/)
+
+#### Releases:
+- [cilium](https://github.com/cilium/cilium-cli/releases)
+- [hubble](https://github.com/cilium/hubble/releases)
+
+#### Dashboards:
+- [cilium-operator](https://grafana.com/grafana/dashboards/16612-cilium-operator/)
+- [cilium-metrics](https://grafana.com/grafana/dashboards/16611-cilium-metrics/)
+- [hubble-metrics](https://grafana.com/grafana/dashboards/16613-hubble/)
