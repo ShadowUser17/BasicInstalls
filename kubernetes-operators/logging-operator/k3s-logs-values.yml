@@ -15,6 +15,10 @@ logging:
   fluentbit:
     metrics:
       prometheusAnnotations: true
+      serviceMonitor: true
+      serviceMonitorConfig:
+        additionalLabels:
+          release: "prom-operator"
     resources:
       requests:
         cpu: "100m"
@@ -29,6 +33,10 @@ logging:
   fluentd:
     metrics:
       prometheusAnnotations: true
+      serviceMonitor: true
+      serviceMonitorConfig:
+        additionalLabels:
+          release: "prom-operator"
     resources:
       requests:
         cpu: "100m"
@@ -50,3 +58,22 @@ logging:
         resources:
           requests:
             storage: "1G"
+  hostTailer:
+    workloadOverrides:
+      nodeSelector:
+        kubernetes.io/os: "linux"
+      tolerations:
+        - operator: "Exists"
+    systemdTailers:
+      - name: "k3s-master"
+        maxEntries: 100
+        systemdFilter: "k3s.service"
+      - name: "k3s-agent"
+        maxEntries: 100
+        systemdFilter: "k3s-agent.service"
+
+monitoring:
+  serviceMonitor:
+    enabled: true
+    additionalLabels:
+      release: "prom-operator"
