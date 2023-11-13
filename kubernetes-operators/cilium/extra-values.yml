@@ -1,0 +1,33 @@
+prometheus:
+  enabled: true
+  serviceMonitor:
+    enabled: true
+    labels:
+      release: "prom-operator"
+
+operator:
+  enabled: true
+  prometheus:
+    enabled: true
+    serviceMonitor:
+      enabled: true
+      labels:
+        release: "prom-operator"
+
+hubble:
+  enabled: true
+  metrics:
+    enableOpenMetrics: true
+    enabled: "{dns,drop,tcp,flow,port-distribution,icmp,httpV2:exemplars=true;labelsContext=source_ip\,source_namespace\,source_workload\,destination_ip\,destination_namespace\,destination_workload\,traffic_direction}"
+    serviceMonitor:
+      enabled: true
+      labels:
+        release: "prom-operator"
+  relay:
+    enabled: true
+    prometheus:
+      enabled: true
+      serviceMonitor:
+        enabled: true
+        labels:
+          release: "prom-operator"
