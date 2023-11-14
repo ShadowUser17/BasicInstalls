@@ -5,9 +5,7 @@ curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.26.10+k3s2" sh -s - ser
 --write-kubeconfig-mode "0644" \
 --node-name "server" \
 --with-node-id \
---cluster-init \
 --disable "traefik" \
---etcd-expose-metrics \
 --node-taint "node-role.kubernetes.io/master:NoSchedule" \
 --node-taint "node-role.kubernetes.io/control-plane:NoSchedule"
 ```
@@ -19,8 +17,6 @@ curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.26.10+k3s2" sh -s - ser
 --write-kubeconfig-mode "0644" \
 --node-name "server" \
 --with-node-id \
---cluster-init \
---etcd-expose-metrics \
 --disable "traefik" \
 --flannel-backend "none" \
 --disable-network-policy \
