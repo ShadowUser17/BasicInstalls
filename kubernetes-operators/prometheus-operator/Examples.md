@@ -14,8 +14,8 @@ spec:
       app.kubernetes.io/name: "testing-app"
   endpoints:
     - port: "metrics"
+      interval: "30s"
       honorLabels: true
-      scrapeInterval: "30s"
 ```
 
 #### PodMonitor example:
@@ -34,8 +34,8 @@ spec:
       app.kubernetes.io/name: "testing-app"
   podMetricsEndpoints:
     - port: "metrics"
+      interval: "30s"
       honorLabels: true
-      scrapeInterval: "30s"
 ```
 
 #### ScrapeConfig example:
