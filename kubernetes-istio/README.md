@@ -12,14 +12,22 @@ tar -xzf istio-linux-amd64.tar.gz && rm -f istio-linux-amd64.tar.gz && \
 istioctl uninstall --set profile=minimal --purge -y
 ```
 
-#### Deploy injection:
+#### Manual injection:
 ```bash
 istioctl kube-inject -f ./deploy.yml | kubectl apply -f -
+```
+```bash
+kubectl kustomize . | istioctl kube-inject -f - | kubectl apply -f -
 ```
 
 #### Namespace injection:
 ```bash
 kubectl label namespace default istio-injection=enabled --overwrite
+```
+
+#### Enable monitoring:
+```bash
+kubectl apply -f "https://raw.githubusercontent.com/ShadowUser17/BasicInstalls/master/kubernetes-istio/istio-prom-operator.yml"
 ```
 
 #### Create IngressClass:
