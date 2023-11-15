@@ -1,0 +1,19 @@
+prometheus:
+  url: "http://prom-operator-kube-prometh-prometheus.monitoring.svc"
+  port: 9090
+  path: ""
+
+resources:
+  requests:
+    cpu: "100m"
+    memory: "128Mi"
+  # limits:
+  #   cpu: "100m"
+  #   memory: "128Mi"
+
+nodeSelector:
+  kubernetes.io/os: "linux"
+
+rules:
+  default: false
+  custom: []
