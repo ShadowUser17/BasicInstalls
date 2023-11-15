@@ -3,17 +3,34 @@ prometheus:
   port: 9090
   path: ""
 
-resources:
-  requests:
-    cpu: "100m"
-    memory: "128Mi"
-  # limits:
-  #   cpu: "100m"
-  #   memory: "128Mi"
+resources: {}
 
 nodeSelector:
   kubernetes.io/os: "linux"
 
 rules:
   default: false
-  custom: []
+  custom:
+    - seriesQuery: '{__name__=~"^container_network_.*_bytes_total", namespace!="", pod!=""}'
+      resources:
+        template: "<<.Resource>>"
+      name:
+        matches: "^container_(.*)"
+        as: "${1}"
+      metricsQuery: 'sum(irate(<<.Series>>{<<.LabelMatchers>>}[2m])) by (<<.GroupBy>>)'
+
+    - seriesQuery: '{__name__=~"^container_network_.*_packets_total", namespace!="", pod!=""}'
+      resources:
+        template: "<<.Resource>>"
+      name:
+        matches: "^container_(.*)"
+        as: "${1}"
+      metricsQuery: 'sum(irate(<<.Series>>{<<.LabelMatchers>>}[2m])) by (<<.GroupBy>>)'
+
+    - seriesQuery: '{__name__="nginx_ingress_controller_requests", host!="", ingress!="", method!="", path!=""}'
+      resources:
+        template: "<<.Resource>>"
+      name:
+        matches: ""
+        as: "ingress_requests_total"
+      metricsQuery: 'sum(irate(<<.Series>>{<<.LabelMatchers>>}[2m])) by (<<.GroupBy>>)'
