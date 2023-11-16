@@ -19,7 +19,10 @@ helm template prom-adapter "prometheus-community/prometheus-adapter" -f values.y
 kubectl get --raw "/apis/custom.metrics.k8s.io/v1beta1"
 ```
 ```bash
-kubectl get --raw "/apis/custom.metrics.k8s.io/v1beta1/namespaces/*/metrics/<metrics>"
+kubectl get --raw "/apis/custom.metrics.k8s.io/v1beta1/namespaces/*/metrics/<metric>"
+```
+```bash
+kubectl get --raw "/apis/custom.metrics.k8s.io/v1beta1/namespaces/<ns>/pods/*/<metric>"
 ```
 
 #### URLs:

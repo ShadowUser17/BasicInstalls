@@ -11,26 +11,10 @@ nodeSelector:
 rules:
   default: false
   custom:
-    - seriesQuery: '{__name__=~"^container_network_.*_bytes_total", namespace!="", pod!=""}'
+    - seriesQuery: '{__name__=~"^container_network_.*_total", namespace!="", pod!=""}'
       resources:
         template: "<<.Resource>>"
       name:
         matches: "^container_(.*)"
         as: "${1}"
-      metricsQuery: 'sum(irate(<<.Series>>{<<.LabelMatchers>>}[2m])) by (<<.GroupBy>>)'
-
-    - seriesQuery: '{__name__=~"^container_network_.*_packets_total", namespace!="", pod!=""}'
-      resources:
-        template: "<<.Resource>>"
-      name:
-        matches: "^container_(.*)"
-        as: "${1}"
-      metricsQuery: 'sum(irate(<<.Series>>{<<.LabelMatchers>>}[2m])) by (<<.GroupBy>>)'
-
-    - seriesQuery: '{__name__="nginx_ingress_controller_requests", host!="", ingress!="", method!="", path!=""}'
-      resources:
-        template: "<<.Resource>>"
-      name:
-        matches: ""
-        as: "ingress_requests_total"
-      metricsQuery: 'sum(irate(<<.Series>>{<<.LabelMatchers>>}[2m])) by (<<.GroupBy>>)'
+      metricsQuery: 'sum(irate(<<.Series>>{<<.LabelMatchers>>}[1m])) by(<<.GroupBy>>)'
