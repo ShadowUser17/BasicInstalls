@@ -24,6 +24,9 @@ kubectl get --raw "/apis/custom.metrics.k8s.io/v1beta1/namespaces/*/metrics/<met
 ```bash
 kubectl get --raw "/apis/custom.metrics.k8s.io/v1beta1/namespaces/<ns>/pods/*/<metric>"
 ```
+```bash
+kubectl get --raw "/apis/custom.metrics.k8s.io/v1beta1/namespaces/<ns>/services/*/<metric>"
+```
 
 #### URLs:
 - [Docs](https://github.com/kubernetes-sigs/prometheus-adapter/blob/master/README.md)
