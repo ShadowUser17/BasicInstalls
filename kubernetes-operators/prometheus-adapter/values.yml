@@ -19,11 +19,15 @@ rules:
         as: "${1}"
       metricsQuery: 'sum(irate(<<.Series>>{<<.LabelMatchers>>}[1m])) by(<<.GroupBy>>)'
 
-    - seriesQuery: '{__name__="nginx_ingress_controller_requests", ingress!="", method!="", host!="", path!=""}'
+    - seriesQuery: '{__name__="nginx_ingress_controller_requests", ingress!=""}'
       resources:
         template: "<<.Resource>>"
+        overrides:
+          exported_namespace:
+            resource: "namespace"
+          exported_service:
+            resource: "service"
       name:
-        matches: ""
         as: "ingress_requests_total"
       metricsQuery: 'sum(irate(<<.Series>>{<<.LabelMatchers>>}[1m])) by(<<.GroupBy>>)'
 
@@ -31,6 +35,5 @@ rules:
       resources:
         template: "<<.Resource>>"
       name:
-        matches: ""
         as: "server_connections_total"
       metricsQuery: 'sum(<<.Series>>{<<.LabelMatchers>>}) by(<<.GroupBy>>)'
