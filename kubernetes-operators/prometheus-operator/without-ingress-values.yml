@@ -18,10 +18,10 @@ alertmanager:
       volumeClaimTemplate:
         spec:
           accessModes: ["ReadWriteOnce"]
-          storageClassName: "local-path"
+          storageClassName: "longhorn"
           resources:
             requests:
-              storage: "1Gi"
+              storage: "512Mi"
 
 prometheus:
   enabled: true
@@ -40,7 +40,7 @@ prometheus:
       volumeClaimTemplate:
         spec:
           accessModes: ["ReadWriteOnce"]
-          storageClassName: "local-path"
+          storageClassName: "longhorn"
           resources:
             requests:
               storage: "6Gi"
