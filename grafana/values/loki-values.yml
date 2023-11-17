@@ -9,7 +9,7 @@ loki:
         schema: "v12"
         object_store: "{{ .Values.loki.storage.type }}"
         index:
-          prefix: "loki_index_"
+          prefix: "index_"
           period: "24h"
   storage:
     type: "filesystem"
@@ -58,7 +58,7 @@ singleBinary:
       memory: "630Mi"
   persistence:
     volumeClaimsEnabled: true
-    storageClass: "local-path"
+    storageClass: "longhorn"
     size: "6Gi"
 
 gateway:
