@@ -35,6 +35,7 @@ helm template longhorn "longhorn/longhorn" -n longhorn-system --version "1.4.4" 
 ```
 
 #### URLs:
-- [Docs](https://longhorn.io/docs/latest/)
+- [Docs](https://longhorn.io/docs/1.4.4/)
 - [Charts](https://github.com/longhorn/charts)
 - [Releases](https://github.com/longhorn/longhorn/releases)
+- [Dashboard](https://grafana.com/grafana/dashboards/17626-longhorn-example-v1-4-0/)
