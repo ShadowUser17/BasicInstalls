@@ -8,13 +8,11 @@ persistence:
 defaultSettings:
   defaultReplicaCount: 1
 
-longhornManager:
-  nodeSelector:
-    kubernetes.io/os: "linux"
-
-longhornDriver:
-  nodeSelector:
-    kubernetes.io/os: "linux"
+csi:
+  resizerReplicaCount: 2
+  attacherReplicaCount: 2
+  snapshotterReplicaCount: 2
+  provisionerReplicaCount: 2
 
 longhornUI:
   replicas: 1
