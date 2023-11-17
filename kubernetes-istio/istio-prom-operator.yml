@@ -14,7 +14,7 @@ spec:
   podMetricsEndpoints:
     - port: "http-envoy-prom"
       path: "/stats/prometheus"
-      interval: "15s"
+      interval: "30s"
       honorLabels: true
 
 # ---
@@ -32,7 +32,7 @@ spec:
 #   endpoints:
 #     - port: "http-envoy-prom"
 #       path: "/stats/prometheus"
-#       interval: "15s"
+#       interval: "30s"
 #       honorLabels: true
 
 ---
@@ -49,5 +49,5 @@ spec:
       istio: "pilot"
   endpoints:
     - port: "http-monitoring"
-      interval: "15s"
+      interval: "30s"
       honorLabels: true
