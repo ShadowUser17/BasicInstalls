@@ -1,3 +1,6 @@
+#### Before cluster install:
+Add `--disable local-storage` to installation script.
+
 #### Install to cluster:
 ```bash
 helm repo add longhorn "https://charts.longhorn.io" && helm repo update

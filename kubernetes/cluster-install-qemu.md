@@ -1,4 +1,4 @@
-#### Install server on QEMU with enabled etcd:
+#### Install server on QEMU:
 ```bash
 curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.26.10+k3s2" sh -s - server \
 --token "4Eja4ahRagJEhozmiRHKg3" \
@@ -20,6 +20,19 @@ curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.26.10+k3s2" sh -s - ser
 --disable "traefik" \
 --flannel-backend "none" \
 --disable-network-policy \
+--node-taint "node-role.kubernetes.io/master:NoSchedule" \
+--node-taint "node-role.kubernetes.io/control-plane:NoSchedule"
+```
+
+#### Install server on QEMU without default storage:
+```bash
+curl -sfL "https://get.k3s.io" | INSTALL_K3S_CHANNEL="v1.26.10+k3s2" sh -s - server \
+--token "4Eja4ahRagJEhozmiRHKg3" \
+--write-kubeconfig-mode "0644" \
+--node-name "server" \
+--with-node-id \
+--disable "traefik" \
+--disable "local-storage" \
 --node-taint "node-role.kubernetes.io/master:NoSchedule" \
 --node-taint "node-role.kubernetes.io/control-plane:NoSchedule"
 ```
