@@ -3,10 +3,20 @@
 helm repo add longhorn "https://charts.longhorn.io" && helm repo update
 ```
 ```bash
-helm show values "longhorn/longhorn" > longhorn-default-values.yml
+helm show values "longhorn/longhorn" --version "1.4.4" > default-values.yml
 ```
 ```bash
-helm upgrade --install longhorn "longhorn/longhorn" -f values.yml -n longhorn-system --create-namespace
+helm upgrade --install longhorn "longhorn/longhorn" -n longhorn-system --create-namespace --version "1.4.4"
+```
+
+#### Create ingress:
+```bash
+kubectl apply -f "https://raw.githubusercontent.com/ShadowUser17/BasicInstalls/master/kubernetes-operators/longhorn/frontend-ingress.yml"
+```
+
+#### Enable monitoring:
+```bash
+kubectl apply -f "https://raw.githubusercontent.com/ShadowUser17/BasicInstalls/master/kubernetes-operators/longhorn/prom-operator.yml"
 ```
 
 #### Get API resources:
@@ -21,7 +31,7 @@ helm search repo longhorn
 
 #### Get manifests:
 ```bash
-helm template longhorn "longhorn/longhorn" -f values.yml -n longhorn-system > longhorn-manifests.yml
+helm template longhorn "longhorn/longhorn" -n longhorn-system --version "1.4.4" > manifests.yml
 ```
 
 #### URLs:
