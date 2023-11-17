@@ -1,5 +1,6 @@
 #### Before cluster install:
-Add `--disable local-storage` to installation script.
+- Add `--disable local-storage` to installation script.
+- Install `open-iscsi` on the worker nodes.
 
 #### Install to cluster:
 ```bash
