@@ -10,7 +10,7 @@ helm repo add longhorn "https://charts.longhorn.io" && helm repo update
 helm show values "longhorn/longhorn" --version "1.4.4" > default-values.yml
 ```
 ```bash
-helm upgrade --install longhorn "longhorn/longhorn" -n longhorn-system --create-namespace --version "1.4.4"
+helm upgrade --install longhorn "longhorn/longhorn" -f values.yml -n longhorn-system --create-namespace --version "1.4.4"
 ```
 
 #### Create ingress:
@@ -35,7 +35,7 @@ helm search repo longhorn
 
 #### Get manifests:
 ```bash
-helm template longhorn "longhorn/longhorn" -n longhorn-system --version "1.4.4" > manifests.yml
+helm template longhorn "longhorn/longhorn" -f values.yml -n longhorn-system --version "1.4.4" > manifests.yml
 ```
 
 #### URLs:

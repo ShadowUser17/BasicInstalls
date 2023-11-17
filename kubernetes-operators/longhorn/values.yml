@@ -1,0 +1,29 @@
+persistence:
+  defaultClass: true
+  defaultFsType: "ext4"
+  reclaimPolicy: "Delete"
+  defaultDataLocality: "disabled"
+  defaultClassReplicaCount: 1
+
+defaultSettings:
+  defaultReplicaCount: 1
+
+longhornManager:
+  nodeSelector:
+    kubernetes.io/os: "linux"
+
+longhornDriver:
+  nodeSelector:
+    kubernetes.io/os: "linux"
+
+longhornUI:
+  replicas: 1
+
+longhornConversionWebhook:
+  replicas: 1
+
+longhornAdmissionWebhook:
+  replicas: 1
+
+longhornRecoveryBackend:
+  replicas: 1
