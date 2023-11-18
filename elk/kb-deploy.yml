@@ -1,19 +1,11 @@
-apiVersion: "cert-manager.io/v1"
-kind: "Issuer"
-metadata:
-  name: "kibana-issuer"
-  namespace: "monitoring"
-spec:
-  selfSigned: {}
-
----
 apiVersion: "networking.k8s.io/v1"
 kind: "Ingress"
 metadata:
   name: "kibana"
   namespace: "monitoring"
   annotations:
-    cert-manager.io/issuer: "kibana-issuer"
+    cert-manager.io/cluster-issuer: "k8s-cluster-issuer"
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
 spec:
   ingressClassName: "nginx"
   tls:

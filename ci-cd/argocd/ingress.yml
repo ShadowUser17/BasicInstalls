@@ -7,8 +7,7 @@ spec:
   ingressClassName: "nginx"
   tls:
     - secretName: "argocd-secret"
-      hosts:
-        - "argocd.k3s"
+      hosts: ["argocd.k3s"]
   rules:
     - host: "argocd.k3s"
       http:
