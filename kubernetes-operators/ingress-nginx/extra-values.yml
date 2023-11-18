@@ -4,6 +4,9 @@ controller:
     default: true
   podAnnotations:
     promtail.io/collect: "true"
+  admissionWebhooks:
+    certManager:
+      enabled: true
   metrics:
     enabled: true
     service:

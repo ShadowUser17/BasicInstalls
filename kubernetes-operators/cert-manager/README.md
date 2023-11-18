@@ -31,6 +31,11 @@ curl -LO "https://github.com/cert-manager/cert-manager/releases/download/v${vers
 tar -xzf cmctl-linux-amd64.tar.gz cmctl && mv ./cmctl /usr/local/bin/ && rm -f cmctl-linux-amd64.tar.gz
 ```
 
+#### Create cluster issuer:
+```bash
+kubectl apply -f cert-manager-issuer.yml
+```
+
 #### Certificate example:
 ```yaml
 apiVersion: "cert-manager.io/v1"
