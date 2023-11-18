@@ -2,13 +2,6 @@ alertmanager:
   enabled: true
   alertmanagerSpec:
     retention: "8h"
-    resources:
-      requests:
-        cpu: "20m"
-        memory: "50Mi"
-      limits:
-        cpu: "20m"
-        memory: "50Mi"
     alertmanagerConfigSelector:
       matchLabels:
         release: "prom-operator"

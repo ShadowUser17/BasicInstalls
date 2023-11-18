@@ -2,18 +2,10 @@ alertmanager:
   enabled: true
   ingress:
     enabled: true
-    path: "/"
     hosts: ["alertmanager.k3s"]
     ingressClassName: "nginx"
   alertmanagerSpec:
     retention: "8h"
-    resources:
-      requests:
-        cpu: "20m"
-        memory: "50Mi"
-      limits:
-        cpu: "20m"
-        memory: "50Mi"
     alertmanagerConfigSelector:
       matchLabels:
         release: "prom-operator"
@@ -34,7 +26,6 @@ prometheus:
     enabled: false
   ingress:
     enabled: true
-    path: "/"
     hosts: ["prometheus.k3s"]
     ingressClassName: "nginx"
   prometheusSpec:
