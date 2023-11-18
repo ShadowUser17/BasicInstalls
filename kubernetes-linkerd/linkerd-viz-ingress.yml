@@ -1,19 +1,10 @@
-apiVersion: "cert-manager.io/v1"
-kind: "Issuer"
-metadata:
-  namespace: "linkerd-viz"
-  name: "linkerd-viz-issuer"
-spec:
-  selfSigned: {}
-
----
 apiVersion: "networking.k8s.io/v1"
 kind: "Ingress"
 metadata:
   namespace: "linkerd-viz"
   name: "linkerd-viz-dashboard"
   annotations:
-    cert-manager.io/issuer: "linkerd-viz-issuer"
+    cert-manager.io/cluster-issuer: "k8s-cluster-issuer"
     nginx.ingress.kubernetes.io/upstream-vhost: "$service_name.$namespace.svc.cluster.local:8084"
     nginx.ingress.kubernetes.io/configuration-snippet: |
       proxy_set_header Origin "";
