@@ -43,7 +43,7 @@ spec:
   storageClassName: "nfs-client"
   resources:
     requests:
-      storage: "1G"
+      storage: "1Gi"
 ```
 
 #### URLs:
