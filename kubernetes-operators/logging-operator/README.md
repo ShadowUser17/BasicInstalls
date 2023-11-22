@@ -37,10 +37,10 @@ kubectl get logging logging-operator -o yaml
 kubectl get fluentbitagents logging-operator -o yaml
 ```
 ```bash
-kubectl -n monitoring get secret logging-operator-fluentd-app -o jsonpath="{.data['fluentd\.conf']}" | base64 -d
+kubectl -n monitoring get secret logging-operator-fluentd-app -o go-template='{{index .data "fluentd.conf" | base64decode}}'
 ```
 ```bash
-kubectl -n monitoring get secret logging-operator-fluentbit -o jsonpath="{.data['fluent-bit\.conf']}" | base64 -d
+kubectl -n monitoring get secret logging-operator-fluentbit -o go-template='{{index .data "fluent-bit.conf" | base64decode}}'
 ```
 
 #### URLs:

@@ -11,10 +11,10 @@ helm upgrade --install prom-operator "prometheus-community/kube-prometheus-stack
 
 #### Get Grafana credentials:
 ```bash
-kubectl -n monitoring get secret prom-operator-grafana -o jsonpath='{.data.admin-user}' | base64 -d
+kubectl -n monitoring get secret prom-operator-grafana -o go-template='{{index .data "admin-user" | base64decode}}'
 ```
 ```bash
-kubectl -n monitoring get secret prom-operator-grafana -o jsonpath='{.data.admin-password}' | base64 -d
+kubectl -n monitoring get secret prom-operator-grafana -o go-template='{{index .data "admin-password" | base64decode}}'
 ```
 
 #### Get Alertmanager config:

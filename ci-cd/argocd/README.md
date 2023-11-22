@@ -12,12 +12,12 @@ chmod 755 ./argocd && mv argocd /usr/local/bin/
 
 #### Get initial password:
 ```bash
-kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
+kubectl -n argocd get secret argocd-initial-admin-secret -o go-template='{{.data.password | base64decode}}'
 ```
 
 ### Login with CLI:
 ```bash
-kubectl get svc/argocd-server -n argocd
+kubectl get "svc/argocd-server" -n argocd
 ```
 ```bash
 argocd login <ip/host>
@@ -28,7 +28,7 @@ argocd account update-password
 
 #### Access:
 ```bash
-kubectl port-forward svc/argocd-server -n argocd 8080:443
+kubectl port-forward "svc/argocd-server" -n argocd 8080:443
 ```
 
 #### Remove:
@@ -39,7 +39,7 @@ kubectl delete namespace argocd --force
 
 #### Disable redirect:
 ```bash
-kubectl edit cm/argocd-cmd-params-cm -n argocd
+kubectl edit "cm/argocd-cmd-params-cm" -n argocd
 ```
 ```yaml
 data:
