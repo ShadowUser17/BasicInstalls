@@ -104,13 +104,30 @@ spec:
     - name: "./test-alert.rules"
       rules:
         - alert: "AlwaysFiring"
-          expr: "vector(1)"
+          expr: 'vector(1)'
           for: "1m"
           labels:
             severity: "warning"
           annotations:
             summary: "Testing..."
             description: "Testing..."
+```
+```yaml
+apiVersion: "monitoring.coreos.com/v1"
+kind: "PrometheusRule"
+metadata:
+  name: "test-record-rules"
+  namespace: "testing"
+  labels:
+    release: "prom-operator"
+spec:
+  groups:
+    - name: "./test-record.rules"
+      rules:
+        - record: "http_requests_sum"
+          expr: 'sum(rate(http_requests[1m])) by(namespace, pod)'
+          labels:
+            service: "testing"
 ```
 
 #### Create Grafana dashboard:
