@@ -25,6 +25,11 @@ helm show values "ingress-nginx/ingress-nginx" > default-values.yml
 helm template ingress-nginx "ingress-nginx/ingress-nginx" -f values.yml -n ingress-nginx --version "4.8.3" > manifests.yml
 ```
 
+#### Enable monitoring:
+```bash
+kubectl apply -f monitoring.yml
+```
+
 #### URLs:
 - [k3s-networking-docs](https://docs.k3s.io/networking)
 - [k8s-ingress-concepts](https://kubernetes.io/docs/concepts/services-networking/ingress/)
