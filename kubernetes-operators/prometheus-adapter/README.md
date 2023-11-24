@@ -3,15 +3,22 @@
 helm repo add prometheus-community "https://prometheus-community.github.io/helm-charts" && helm repo update
 ```
 ```bash
-helm show values "prometheus-community/prometheus-adapter" > default-values.yml
+helm upgrade --install prom-adapter "prometheus-community/prometheus-adapter" -f values.yml -n monitoring --version "4.8.3"
 ```
+
+#### Check updates:
 ```bash
-helm upgrade --install prom-adapter "prometheus-community/prometheus-adapter" -f values.yml -n monitoring
+helm search repo "prometheus-community/prometheus-adapter"
+```
+
+#### Get default values:
+```bash
+helm show values "prometheus-community/prometheus-adapter" > default-values.yml
 ```
 
 #### Export manifests:
 ```bash
-helm template prom-adapter "prometheus-community/prometheus-adapter" -f values.yml -n monitoring > manifests.yml
+helm template prom-adapter "prometheus-community/prometheus-adapter" -f values.yml -n monitoring --version "4.8.3" > manifests.yml
 ```
 
 #### Get available metrics:
@@ -30,5 +37,5 @@ kubectl get --raw "/apis/custom.metrics.k8s.io/v1beta1/namespaces/<ns>/services/
 
 #### URLs:
 - [Docs](https://github.com/kubernetes-sigs/prometheus-adapter/blob/master/README.md)
-- [Charts](https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus-adapter)
+- [Chart](https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus-adapter)
 - [Releases](https://github.com/kubernetes-sigs/prometheus-adapter/releases)
