@@ -49,6 +49,7 @@ singleBinary:
   podAnnotations:
     prometheus.io/scrape: "true"
     prometheus.io/port: "3100"
+    promtail.io/collect: "true"
   resources:
     requests:
       cpu: "200m"
