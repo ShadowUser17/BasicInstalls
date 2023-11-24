@@ -6,10 +6,7 @@ helm repo add fluent "https://fluent.github.io/helm-charts" && helm repo update
 kubectl create namespace monitoring
 ```
 ```bash
-helm show values "fluent/fluent-operator" > fluent-operator-default-values.yml
-```
-```bash
-helm upgrade --install fluent-operator "fluent/fluent-operator" -f fluent-operator-values.yml -n monitoring
+helm upgrade --install fluent-operator "fluent/fluent-operator" -f fluent-operator-values.yml -n monitoring --version "2.5.0"
 ```
 
 #### Enable monitoring:
@@ -17,14 +14,19 @@ helm upgrade --install fluent-operator "fluent/fluent-operator" -f fluent-operat
 kubectl apply -f fluent-bit-monitoring.yml
 ```
 
-#### Get available charts:
+#### Check updates:
 ```bash
-helm search repo fluent
+helm search repo "fluent/fluent-operator"
+```
+
+#### Get default values:
+```bash
+helm show values "fluent/fluent-operator" > fluent-operator-default-values.yml
 ```
 
 #### Get manifests:
 ```bash
-helm template fluent-operator "fluent/fluent-operator" -f fluent-operator-values.yml -n monitoring > manifests.yml
+helm template fluent-operator "fluent/fluent-operator" -f fluent-operator-values.yml -n monitoring --version "2.5.0" > manifests.yml
 ```
 
 #### Get API resources:
@@ -43,6 +45,6 @@ kubectl get cfdc -o yaml
 #### URLs:
 - [fluent-operator](https://github.com/fluent/fluent-operator/blob/master/README.md)
 - [fluent-bit-docs](https://docs.fluentbit.io/manual)
-- [fluent-charts](https://github.com/fluent/helm-charts/tree/main/charts)
+- [fluent-chart](https://github.com/fluent/helm-charts/tree/main/charts/fluent-operator)
 - [monitoring](https://docs.fluentbit.io/manual/administration/monitoring)
 - [dashboard](https://grafana.com/grafana/dashboards/7752-logging-dashboard/)
