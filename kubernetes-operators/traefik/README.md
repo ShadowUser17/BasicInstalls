@@ -3,22 +3,24 @@
 helm repo add traefik "https://traefik.github.io/charts" && helm repo update
 ```
 ```bash
-helm show values "traefik/traefik" > default-values.yml
-```
-```bash
-helm upgrade --install traefik "traefik/traefik" -n kube-system
+helm upgrade --install traefik "traefik/traefik" -n kube-system --version "25.0.0"
 ```
 
-#### Get available charts:
+#### Check updates:
 ```bash
-helm search repo traefik
+helm search repo "traefik/traefik"
+```
+
+#### Get default values:
+```bash
+helm show values "traefik/traefik" > default-values.yml
 ```
 
 #### Get manifests:
 ```bash
-helm template traefik "traefik/traefik" -n kube-system > manifests.yml
+helm template traefik "traefik/traefik" -n kube-system --version "25.0.0" > manifests.yml
 ```
 
 #### URLs:
 - [Docs](https://doc.traefik.io/traefik/)
-- [Charts](https://github.com/traefik/traefik-helm-chart)
+- [Chart](https://github.com/traefik/traefik-helm-chart)
