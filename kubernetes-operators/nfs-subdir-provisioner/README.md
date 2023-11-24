@@ -8,22 +8,24 @@ kubectl get storageclasses
 helm repo add nfs-subdir-external-provisioner "https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner" && helm repo update
 ```
 ```bash
-helm show values "nfs-subdir-external-provisioner/nfs-subdir-external-provisioner" > default-values.yml
-```
-```bash
 kubectl create namespace nfs-subdir-provisioner
 ```
 ```bash
-helm install nfs-subdir-provisioner "nfs-subdir-external-provisioner/nfs-subdir-external-provisioner" -n nfs-subdir-provisioner \
+helm install nfs-subdir-provisioner "nfs-subdir-external-provisioner/nfs-subdir-external-provisioner" -n nfs-subdir-provisioner --version "4.0.18" \
 --set 'nfs.path=/var/nfs' \
 --set 'nfs.server=192.168.56.10' \
 --set 'storageClass.name=nfs-client' \
 --set 'storageClass.archiveOnDelete=false'
 ```
 
-#### Get available charts:
+#### Get default values:
 ```bash
-helm search repo nfs-subdir-external-provisioner
+helm show values "nfs-subdir-external-provisioner/nfs-subdir-external-provisioner" > default-values.yml
+```
+
+#### Check updates:
+```bash
+helm search repo "nfs-subdir-external-provisioner/nfs-subdir-external-provisioner"
 ```
 
 #### Uninstall NFS provisioner:
@@ -48,5 +50,5 @@ spec:
 
 #### URLs:
 - [Docs](https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner/blob/master/README.md)
-- [Charts](https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner/blob/master/charts/nfs-subdir-external-provisioner/README.md)
+- [Chart](https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner/tree/master/charts/nfs-subdir-external-provisioner)
 - [Releases](https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner/releases)
