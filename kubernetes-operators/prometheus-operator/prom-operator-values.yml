@@ -50,6 +50,8 @@ prometheus:
 grafana:
   enabled: true
   adminPassword: "prom-operator"
+  deploymentStrategy:
+    type: "Recreate"
   additionalDataSources:
     - name: "Loki"
       type: "loki"
