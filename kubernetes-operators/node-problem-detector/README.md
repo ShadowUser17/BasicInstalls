@@ -6,20 +6,22 @@ kubectl create namespace monitoring
 helm repo add deliveryhero "https://charts.deliveryhero.io/" && helm repo update
 ```
 ```bash
-helm show values "deliveryhero/node-problem-detector" > default-values.yml
+helm upgrade --install node-monitor "deliveryhero/node-problem-detector" -f values.yml -n monitoring --version "2.3.11"
 ```
+
+#### Check updates:
 ```bash
-helm upgrade --install node-monitor "deliveryhero/node-problem-detector" -f values.yml -n monitoring
+helm search repo "deliveryhero/node-problem-detector"
+```
+
+#### Get default values:
+```bash
+helm show values "deliveryhero/node-problem-detector" > default-values.yml
 ```
 
 #### Export manifests:
 ```bash
-helm template node-monitor "deliveryhero/node-problem-detector" -f values.yml -n monitoring > manifests.yml
-```
-
-#### Get available charts:
-```bash
-helm search repo deliveryhero
+helm template node-monitor "deliveryhero/node-problem-detector" -f values.yml -n monitoring --version "2.3.11" > manifests.yml
 ```
 
 #### Get available pods:
@@ -29,4 +31,4 @@ kubectl -n monitoring get pods -o wide -l "app.kubernetes.io/name=node-problem-d
 
 #### URLs:
 - [Docs](https://github.com/kubernetes/node-problem-detector/blob/master/README.md)
-- [Charts](https://github.com/deliveryhero/helm-charts/tree/master/stable/node-problem-detector)
+- [Chart](https://github.com/deliveryhero/helm-charts/tree/master/stable/node-problem-detector)
