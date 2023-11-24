@@ -7,12 +7,8 @@ configmap:
 sidecar:
   configReloader:
     enabled: true
-
-nodeSelector:
-  kubernetes.io/os: "linux"
-
-tolerations:
-  - operator: "Exists"
+    serviceMonitor:
+      enabled: true
 
 resources:
   requests:
@@ -22,9 +18,16 @@ resources:
     cpu: "200m"
     memory: "256Mi"
 
-podAnnotations:
-  prometheus.io/scrape: "true"
-  prometheus.io/port: "9080"
+nodeSelector:
+  kubernetes.io/os: "linux"
+
+tolerations:
+  - operator: "Exists"
+
+serviceMonitor:
+  enabled: true
+  labels:
+    release: "prom-operator"
 
 config:
   enabled: true

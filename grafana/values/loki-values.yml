@@ -75,7 +75,10 @@ monitoring:
     enabled: false
     alerting: false
   serviceMonitor:
-    enabled: false
+    enabled: true
+    interval: "30s"
+    labels:
+      release: "prom-operator"
   selfMonitoring:
     enabled: false
     grafanaAgent:
