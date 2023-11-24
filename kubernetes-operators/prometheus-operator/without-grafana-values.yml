@@ -15,15 +15,13 @@ alertmanager:
       volumeClaimTemplate:
         spec:
           accessModes: ["ReadWriteOnce"]
-          storageClassName: "longhorn"
+          storageClassName: "local-path"
           resources:
             requests:
               storage: "512Mi"
 
 prometheus:
   enabled: true
-  thanosService:
-    enabled: false
   ingress:
     enabled: true
     hosts: ["prometheus.k3s"]
@@ -41,10 +39,10 @@ prometheus:
       volumeClaimTemplate:
         spec:
           accessModes: ["ReadWriteOnce"]
-          storageClassName: "longhorn"
+          storageClassName: "local-path"
           resources:
             requests:
-              storage: "6Gi"
+              storage: "8Gi"
 
 grafana:
   enabled: false

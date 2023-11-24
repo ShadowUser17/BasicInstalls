@@ -6,7 +6,7 @@ kubectl create namespace monitoring
 helm repo add prometheus-community "https://prometheus-community.github.io/helm-charts" && helm repo update
 ```
 ```bash
-helm upgrade --install prom-operator "prometheus-community/kube-prometheus-stack" -f prom-operator-values.yml -n monitoring
+helm upgrade --install prom-operator "prometheus-community/kube-prometheus-stack" -f prom-operator-values.yml -n monitoring --version "54.2.2"
 ```
 
 #### Get Grafana credentials:
@@ -47,14 +47,14 @@ kubectl -n monitoring get alertmanager prom-operator-kube-prometh-alertmanager -
 helm search repo "prometheus-community/kube-prometheus-stack"
 ```
 
-#### Get manifests:
-```bash
-helm template prom-operator "prometheus-community/kube-prometheus-stack" -f prom-operator-values.yml -n monitoring > manifests.yml
-```
-
 #### Get default values:
 ```bash
 helm show values "prometheus-community/kube-prometheus-stack" > default-values.yml
+```
+
+#### Get manifests:
+```bash
+helm template prom-operator "prometheus-community/kube-prometheus-stack" -f prom-operator-values.yml -n monitoring --version "54.2.2" > manifests.yml
 ```
 
 #### Disable the next rules for EKS:
