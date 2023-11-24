@@ -1,6 +1,3 @@
-podAnnotations:
-  promtail.io/collect: "true"
-
 nodeSelector:
   kubernetes.io/os: "linux"
 
