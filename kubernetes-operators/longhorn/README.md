@@ -1,13 +1,10 @@
-#### Before cluster install:
+#### Before installation:
 - Add `--disable local-storage` to installation script.
 - Install `open-iscsi` on the worker nodes.
 
 #### Install to cluster:
 ```bash
 helm repo add longhorn "https://charts.longhorn.io" && helm repo update
-```
-```bash
-helm show values "longhorn/longhorn" --version "1.4.4" > default-values.yml
 ```
 ```bash
 helm upgrade --install longhorn "longhorn/longhorn" -f values.yml -n longhorn-system --create-namespace --version "1.4.4"
@@ -28,9 +25,14 @@ kubectl apply -f "https://raw.githubusercontent.com/ShadowUser17/BasicInstalls/m
 kubectl api-resources | grep longhorn
 ```
 
-#### Get available charts:
+#### Check updates:
 ```bash
-helm search repo longhorn
+helm search repo "longhorn/longhorn"
+```
+
+#### Get default values:
+```bash
+helm show values "longhorn/longhorn" --version "1.4.4" > default-values.yml
 ```
 
 #### Get manifests:
@@ -40,6 +42,6 @@ helm template longhorn "longhorn/longhorn" -f values.yml -n longhorn-system --ve
 
 #### URLs:
 - [Docs](https://longhorn.io/docs/1.4.4/)
-- [Charts](https://github.com/longhorn/charts)
+- [Chart](https://github.com/longhorn/charts/tree/v1.4.x/charts/longhorn)
 - [Releases](https://github.com/longhorn/longhorn/releases)
 - [Dashboard](https://grafana.com/grafana/dashboards/17626-longhorn-example-v1-4-0/)
