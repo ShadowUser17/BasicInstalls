@@ -1,7 +1,11 @@
 controller:
+  replicaCount: 1
   allowSnippetAnnotations: true
   ingressClassResource:
-    default: true
+    default: false
+  admissionWebhooks:
+    certManager:
+      enabled: true
   podAnnotations:
     promtail.io/collect: "true"
   metrics:
