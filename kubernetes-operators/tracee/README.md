@@ -3,20 +3,22 @@
 helm repo add aqua "https://aquasecurity.github.io/helm-charts" && helm repo update
 ```
 ```bash
-helm show values "aqua/tracee" > default-values.yml
-```
-```bash
-helm upgrade --install tracee "aqua/tracee" -f values.yml -n tracee-system --create-namespace
+helm upgrade --install tracee "aqua/tracee" -f values.yml -n tracee-system --version "0.18.1" --create-namespace
 ```
 
-#### Get available charts:
+#### Check updates:
 ```bash
-helm search repo aqua
+helm search repo "aqua/tracee"
+```
+
+#### Get default values:
+```bash
+helm show values "aqua/tracee" > default-values.yml
 ```
 
 #### Export manifests:
 ```bash
-helm template tracee "aqua/tracee" -f values.yml -n tracee-system > manifests.yml
+helm template tracee "aqua/tracee" -f values.yml -n tracee-system --version "0.18.1" > manifests.yml
 ```
 
 #### Show logs:
@@ -25,6 +27,6 @@ kubectl logs -f daemonset/tracee -n tracee-system
 ```
 
 #### URLs:
-- [Documentation](https://aquasecurity.github.io/tracee/latest/docs/overview/)
-- [Dashboard](https://aquasecurity.github.io/tracee/latest/tutorials/deploy-grafana-dashboard/)
+- [Docs](https://aquasecurity.github.io/tracee/latest/docs/overview/)
 - [Releases](https://github.com/aquasecurity/tracee/releases)
+- [Dashboard](https://aquasecurity.github.io/tracee/latest/tutorials/deploy-grafana-dashboard/)
