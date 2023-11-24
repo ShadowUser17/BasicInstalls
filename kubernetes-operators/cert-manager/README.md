@@ -24,6 +24,11 @@ helm show values "jetstack/cert-manager" > default-values.yml
 helm template cert-manager "jetstack/cert-manager" -f values.yml -n cert-manager --version "v1.13.2" > manifests.yml
 ```
 
+#### Enable monitoring:
+```bash
+kubectl apply -f monitoring.yml
+```
+
 #### Install CLI:
 ```bash
 curl -LO "https://github.com/cert-manager/cert-manager/releases/download/v${version}/cmctl-linux-amd64.tar.gz" && \
