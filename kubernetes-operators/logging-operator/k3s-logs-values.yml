@@ -48,16 +48,15 @@ logging:
       pvc:
         spec:
           accessModes: ["ReadWriteOnce"]
+          storageClassName: "local-path"
           resources:
             requests:
-              storage: "6G"
+              storage: "4G"
   eventTailer:
     pvc:
-      spec:
-        accessModes: ["ReadWriteOnce"]
-        resources:
-          requests:
-            storage: "1G"
+      storage: "512Mi"
+      accessModes: ["ReadWriteOnce"]
+      storageClassName: "local-path"
   hostTailer:
     workloadOverrides:
       nodeSelector:

@@ -40,12 +40,12 @@ logging:
       pvc:
         spec:
           accessModes: ["ReadWriteOnce"]
-          storageClassName: "longhorn"
+          storageClassName: "local-path"
           resources:
             requests:
-              storage: "6Gi"
+              storage: "4Gi"
   eventTailer:
     pvc:
       storage: "512Mi"
       accessModes: ["ReadWriteOnce"]
-      storageClassName: "longhorn"
+      storageClassName: "local-path"

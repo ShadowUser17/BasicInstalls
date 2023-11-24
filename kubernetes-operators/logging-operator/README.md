@@ -3,15 +3,17 @@
 kubectl create namespace monitoring
 ```
 ```bash
-helm show values "oci://ghcr.io/kube-logging/helm-charts/logging-operator" > default-values.yml
+helm upgrade --install logging-operator "oci://ghcr.io/kube-logging/helm-charts/logging-operator" -f values.yml -n monitoring --version "4.4.3"
 ```
+
+#### Get default values:
 ```bash
-helm upgrade --install logging-operator "oci://ghcr.io/kube-logging/helm-charts/logging-operator" -f values.yml -n monitoring
+helm show values "oci://ghcr.io/kube-logging/helm-charts/logging-operator" > default-values.yml
 ```
 
 #### Export manifests:
 ```bash
-helm template logging-operator "oci://ghcr.io/kube-logging/helm-charts/logging-operator" -f values.yml -n monitoring > manifests.yml
+helm template logging-operator "oci://ghcr.io/kube-logging/helm-charts/logging-operator" -f values.yml -n monitoring --version "4.4.3" > manifests.yml
 ```
 
 #### Send logs to Loki:
@@ -45,5 +47,5 @@ kubectl -n monitoring get secret logging-operator-fluentbit -o go-template='{{in
 
 #### URLs:
 - [Docs](https://kube-logging.dev/docs/)
-- [Charts](https://github.com/kube-logging/logging-operator/tree/master/charts/logging-operator)
+- [Chart](https://github.com/kube-logging/logging-operator/tree/master/charts/logging-operator)
 - [Dashboard](https://grafana.com/grafana/dashboards/7752-logging-dashboard/)
