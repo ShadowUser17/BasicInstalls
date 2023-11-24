@@ -1,17 +1,17 @@
 #### Thanos:
 - [Docs](https://thanos.io/tip/thanos/getting-started.md/)
-- [Releases](https://github.com/thanos-io/thanos/releases)
+- [Chart](https://github.com/bitnami/charts/tree/main/bitnami/thanos)
 - [Images](https://hub.docker.com/r/thanosio/thanos/tags)
-- [Charts](https://github.com/bitnami/charts)
+- [Releases](https://github.com/thanos-io/thanos/releases)
 
 #### Mimir:
 - [Docs](https://grafana.com/docs/mimir/latest/)
-- [Releases](https://github.com/grafana/mimir/releases)
-- [Images](https://hub.docker.com/r/grafana/mimir/tags)
 - [Charts](https://github.com/grafana/helm-charts)
+- [Images](https://hub.docker.com/r/grafana/mimir/tags)
+- [Releases](https://github.com/grafana/mimir/releases)
 
 #### Cortex:
 - [Docs](https://cortexmetrics.io/docs/)
-- [Releases](https://github.com/cortexproject/cortex/releases)
+- [Chart](https://github.com/cortexproject/cortex-helm-chart)
 - [Images](https://hub.docker.com/r/cortexproject/cortex/tags)
-- [Charts](https://github.com/cortexproject/cortex-helm-chart)
+- [Releases](https://github.com/cortexproject/cortex/releases)

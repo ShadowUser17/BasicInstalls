@@ -3,20 +3,22 @@
 helm repo add elastic "https://helm.elastic.co" && helm repo update
 ```
 ```bash
-helm show values "elastic/eck-operator" > default-values.yml
-```
-```bash
-helm upgrade --install elastic-operator "elastic/eck-operator" -n elastic-system --create-namespace
+helm upgrade --install elastic-operator "elastic/eck-operator" -n elastic-system --version "2.10.0" --create-namespace
 ```
 
-#### Get available charts:
+#### Check updates:
 ```bash
-helm search repo elastic
+helm search repo "elastic/eck-operator"
+```
+
+#### Get default values:
+```bash
+helm show values "elastic/eck-operator" > default-values.yml
 ```
 
 #### Get manifests:
 ```bash
-helm template elastic-operator "elastic/eck-operator" -n elastic-system > manifests.yml
+helm template elastic-operator "elastic/eck-operator" -n elastic-system --version "2.10.0" > manifests.yml
 ```
 
 #### Get API resources:
@@ -25,7 +27,7 @@ kubectl api-resources | grep elastic
 ```
 
 #### URLs:
-- [k8s-quickstart](https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-quickstart.html)
-- [k8s-upgrading](https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-upgrading-eck.html)
-- [k8s-config](https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-operator-config.html)
-- [k8s-api](https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-api-reference.html)
+- [quickstart](https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-quickstart.html)
+- [upgrading](https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-upgrading-eck.html)
+- [config](https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-operator-config.html)
+- [api](https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-api-reference.html)

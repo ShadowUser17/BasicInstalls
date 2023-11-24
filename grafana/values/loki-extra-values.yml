@@ -58,7 +58,7 @@ singleBinary:
       memory: "630Mi"
   persistence:
     volumeClaimsEnabled: true
-    storageClass: "longhorn"
+    storageClass: "local-path"
     size: "6Gi"
 
 gateway:
