@@ -3,20 +3,22 @@
 helm repo add sealed-secrets "https://bitnami-labs.github.io/sealed-secrets" && helm repo update
 ```
 ```bash
-helm show values "sealed-secrets/sealed-secrets" > default-values.yml
-```
-```bash
-helm upgrade --install sealed-secrets "sealed-secrets/sealed-secrets" -n kube-system
+helm upgrade --install sealed-secrets "sealed-secrets/sealed-secrets" -n kube-system --version "2.13.3"
 ```
 
-#### Get available charts:
+#### Check updates:
 ```bash
-helm search repo sealed-secrets
+helm search repo "sealed-secrets/sealed-secrets"
+```
+
+#### Get default values:
+```bash
+helm show values "sealed-secrets/sealed-secrets" > default-values.yml
 ```
 
 #### Get manifests:
 ```bash
-helm template sealed-secrets "sealed-secrets/sealed-secrets" -n kube-system > manifests.yml
+helm template sealed-secrets "sealed-secrets/sealed-secrets" -n kube-system --version "2.13.3" > manifests.yml
 ```
 
 #### Install CLI:
@@ -27,5 +29,5 @@ tar -xzf kubeseal-linux-amd64.tar.gz kubeseal && mv ./kubeseal /usr/local/bin/ &
 
 #### URLs:
 - [Docs](https://github.com/bitnami-labs/sealed-secrets/blob/main/README.md)
-- [Charts](https://github.com/bitnami-labs/sealed-secrets/tree/main/helm/sealed-secrets)
+- [Chart](https://github.com/bitnami-labs/sealed-secrets/tree/main/helm/sealed-secrets)
 - [Releases](https://github.com/bitnami-labs/sealed-secrets/releases)
