@@ -3,36 +3,41 @@
 helm repo add grafana "https://grafana.github.io/helm-charts" && helm repo update
 ```
 
+#### Get default values:
+```bash
+helm show values "grafana/loki" > loki-default-values.yml
+```
+```bash
+helm show values "grafana/promtail" > promtail-default-values.yml
+```
+
 #### Install Loki:
 ```bash
 kubectl create namespace monitoring
 ```
 ```bash
-helm show values "grafana/loki" > loki-default-values.yml
-```
-```bash
-helm upgrade --install loki "grafana/loki" -f ./values/loki-values.yml -n monitoring
+helm upgrade --install loki "grafana/loki" -f ./values/loki-values.yml -n monitoring --version "5.38.0"
 ```
 
 #### Install Promtail:
 ```bash
-helm show values "grafana/promtail" > promtail-default-values.yml
-```
-```bash
-helm upgrade --install promtail "grafana/promtail" -f ./values/promtail-values.yml -n monitoring
+helm upgrade --install promtail "grafana/promtail" -f ./values/promtail-values.yml -n monitoring --version "6.15.3"
 ```
 
-#### Get available charts:
+#### Check updates:
 ```bash
-helm search repo grafana
+helm search repo "grafana/loki"
+```
+```bash
+helm search repo "grafana/promtail"
 ```
 
 #### Export manifests:
 ```bash
-helm template loki "grafana/loki" -f ./values/loki-values.yml -n monitoring > loki-manifests.yml
+helm template loki "grafana/loki" -f ./values/loki-values.yml -n monitoring --version "5.38.0" > loki-manifests.yml
 ```
 ```bash
-helm template promtail "grafana/promtail" -f ./values/promtail-values.yml -n monitoring > promtail-manifests.yml
+helm template promtail "grafana/promtail" -f ./values/promtail-values.yml -n monitoring --version "6.15.3" > promtail-manifests.yml
 ```
 
 #### Enable log collection:
@@ -45,17 +50,16 @@ template:
 
 #### loki:
 - [Docs](https://grafana.com/docs/loki/latest/)
-- [Images](https://hub.docker.com/r/grafana/loki/tags)
-- [Charts](https://github.com/grafana/loki/tree/main/production/helm/loki)
+- [Chart](https://github.com/grafana/loki/tree/main/production/helm/loki)
 - [Releases](https://github.com/grafana/loki/releases)
 - [Monitoring](https://grafana.com/docs/loki/latest/operations/observability/)
 
 #### k8s-event-exporter:
 - [Docs](https://github.com/resmoio/kubernetes-event-exporter)
+- [Chart](https://github.com/bitnami/charts/tree/main/bitnami/kubernetes-event-exporter/)
 - [Images](https://hub.docker.com/r/bitnami/kubernetes-event-exporter/tags)
-- [Charts](https://github.com/bitnami/charts/tree/main/bitnami/kubernetes-event-exporter/)
 
 #### fluent-bit-plugin-loki:
 - [Docs](https://grafana.com/docs/loki/latest/send-data/fluentbit/)
+- [Chart](https://github.com/grafana/helm-charts/tree/main/charts/fluent-bit)
 - [Images](https://hub.docker.com/r/grafana/fluent-bit-plugin-loki/tags)
-- [Charts](https://github.com/grafana/helm-charts/tree/main/charts/fluent-bit)
