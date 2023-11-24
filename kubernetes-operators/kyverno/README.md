@@ -3,23 +3,28 @@
 helm repo add kyverno "https://kyverno.github.io/kyverno" && helm repo update
 ```
 ```bash
-helm show values "kyverno/kyverno" > default-values.yml
+helm upgrade --install kyverno "kyverno/kyverno" -n kyverno --version "3.1.0" --create-namespace
 ```
 ```bash
-helm upgrade --install kyverno "kyverno/kyverno" -n kyverno --create-namespace
-```
-```bash
-helm install kyverno-policies "kyverno/kyverno-policies" -n kyverno
+helm upgrade --install kyverno-policies "kyverno/kyverno-policies" -n kyverno --version "3.1.0"
 ```
 
-#### Get available charts:
+#### Check updates:
 ```bash
-helm search repo kyverno
+helm search repo "kyverno/kyverno"
+```
+
+#### Get default values:
+```bash
+helm show values "kyverno/kyverno" > default-values.yml
 ```
 
 #### Get manifests:
 ```bash
-helm template kyverno "kyverno/kyverno" -n kyverno > manifests.yml
+helm template kyverno "kyverno/kyverno" -n kyverno --version "3.1.0" > kyverno-manifests.yml
+```
+```bash
+helm template kyverno-policies "kyverno/kyverno-policies" -n kyverno --version "3.1.0" > kyverno-policies.yml
 ```
 
 #### Install CLI:
@@ -32,5 +37,5 @@ tar -xzf kyverno-cli.tgz kyverno && mv ./kyverno /usr/local/bin/ && rm -f kyvern
 - [kyverno-docs](https://kyverno.io/docs/introduction/)
 - [kyverno-releases](https://github.com/kyverno/kyverno/releases)
 - [kyverno-examples](https://github.com/kyverno/policies)
-- [kyverno-charts](https://github.com/kyverno/kyverno/tree/main/charts/kyverno)
-- [kyverno-policies-charts](https://github.com/kyverno/kyverno/tree/main/charts/kyverno-policies)
+- [kyverno-chart](https://github.com/kyverno/kyverno/tree/main/charts/kyverno)
+- [kyverno-policies-chart](https://github.com/kyverno/kyverno/tree/main/charts/kyverno-policies)
