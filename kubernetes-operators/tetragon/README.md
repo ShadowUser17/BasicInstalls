@@ -3,10 +3,7 @@
 helm repo add cilium "https://helm.cilium.io" && helm repo update
 ```
 ```bash
-helm show values "cilium/tetragon" > default-values.yml
-```
-```bash
-helm upgrade --install tetragon "cilium/tetragon" -f values.yml -n kube-system
+helm upgrade --install tetragon "cilium/tetragon" -f values.yml -n kube-system --version "1.0.0"
 ```
 
 #### Install CLI:
@@ -15,29 +12,24 @@ curl -LO "https://github.com/cilium/tetragon/releases/latest/download/tetra-linu
 tar -xzf tetra-linux-amd64.tar.gz tetra && mv ./tetra /usr/local/bin/ && rm -f tetra-linux-amd64.tar.gz
 ```
 
-#### Get available charts:
+#### Check updates:
 ```bash
-helm search repo cilium
+helm search repo "cilium/tetragon"
+```
+
+#### Get default values:
+```bash
+helm show values "cilium/tetragon" > default-values.yml
 ```
 
 #### Export manifests:
 ```bash
-helm template tetragon "cilium/tetragon" -f values.yml -n kube-system > manifests.yml
+helm template tetragon "cilium/tetragon" -f values.yml -n kube-system --version "1.0.0" > manifests.yml
 ```
 
 #### Show logs:
 ```bash
 kubectl logs -n kube-system -l "app.kubernetes.io/name=tetragon" -c export-stdout -f | tetra getevents -o compact
-```
-
-#### Enable process capabilities check:
-```bash
-kubectl edit cm tetragon-config -n kube-system
-```
-```yaml
-data:
-  enable-process-cred: "true"
-  enable-process-ns: "true"
 ```
 
 #### URLs:
