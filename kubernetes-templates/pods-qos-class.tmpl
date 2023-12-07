@@ -1,0 +1,3 @@
+{{- range .items -}}
+    {{.status.qosClass}}{{"\t"}}{{.spec.nodeName}}{{"\t"}}{{.metadata.namespace}}{{"\t"}}{{.metadata.name}}{{"\n"}}
+{{- end -}}
