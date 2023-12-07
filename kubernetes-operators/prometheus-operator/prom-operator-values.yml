@@ -28,12 +28,14 @@ prometheus:
     ingressClassName: "nginx"
   prometheusSpec:
     retention: "7d"
+    image:
+      registry: "quay.io"
+      repository: "prometheus/prometheus"
+      tag: "v2.48.0"
     resources:
       requests:
-        cpu: "100m"
-        memory: "700Mi"
+        memory: "850Mi"
       limits:
-        cpu: "200m"
         memory: "850Mi"
     storageSpec:
       volumeClaimTemplate:
@@ -50,6 +52,10 @@ grafana:
   adminPassword: "prom-operator"
   deploymentStrategy:
     type: "Recreate"
+  image:
+    registry: "docker.io"
+    repository: "grafana/grafana"
+    tag: "10.1.5"
   additionalDataSources:
     - name: "Loki"
       type: "loki"

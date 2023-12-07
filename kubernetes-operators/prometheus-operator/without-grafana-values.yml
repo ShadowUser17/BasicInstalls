@@ -28,12 +28,14 @@ prometheus:
     ingressClassName: "nginx"
   prometheusSpec:
     retention: "7d"
+    image:
+      registry: "quay.io"
+      repository: "prometheus/prometheus"
+      tag: "v2.48.0"
     resources:
       requests:
-        cpu: "100m"
-        memory: "700Mi"
+        memory: "850Mi"
       limits:
-        cpu: "200m"
         memory: "850Mi"
     storageSpec:
       volumeClaimTemplate:
