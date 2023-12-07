@@ -4,10 +4,8 @@ annotations:
 
 resources:
   requests:
-    cpu: "100m"
-    memory: "64Mi"
+    memory: "128Mi"
   limits:
-    cpu: "100m"
     memory: "128Mi"
 
 logging:
@@ -17,10 +15,8 @@ logging:
       prometheusAnnotations: true
     resources:
       requests:
-        cpu: "100m"
-        memory: "64Mi"
+        memory: "128Mi"
       limits:
-        cpu: "100m"
         memory: "128Mi"
     nodeSelector:
       kubernetes.io/os: "linux"
@@ -31,10 +27,8 @@ logging:
       prometheusAnnotations: true
     resources:
       requests:
-        cpu: "100m"
-        memory: "256Mi"
+        memory: "512Mi"
       limits:
-        cpu: "200m"
         memory: "512Mi"
     bufferStorageVolume:
       pvc:
