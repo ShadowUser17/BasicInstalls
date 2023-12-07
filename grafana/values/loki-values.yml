@@ -52,10 +52,8 @@ singleBinary:
     promtail.io/collect: "true"
   resources:
     requests:
-      cpu: "200m"
-      memory: "256Mi"
+      memory: "630Mi"
     limits:
-      cpu: "200m"
       memory: "630Mi"
   persistence:
     volumeClaimsEnabled: true
