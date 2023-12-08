@@ -1,3 +1,17 @@
+#### Cluster level example:
+```yaml
+apiVersion: "node.k8s.io/v1"
+kind: "RuntimeClass"
+metadata:
+  name: "crun"
+handler: "crun"
+```
+- Use `runtimeClassName` on Pod level:
+```yaml
+spec:
+  runtimeClassName: "crun"
+```
+
 #### Namespace level example:
 - Available modes: `privileged`, `baseline`, `restricted`
 ```yaml
@@ -23,6 +37,12 @@ securityContext:
   runAsUser: 65534
   runAsGroup: 65534
 ```
+- Use `seccompProfile` on Pod level:
+```yaml
+securityContext:
+  seccompProfile:
+    type: "RuntimeDefault"
+```
 
 #### Container level example:
 ```yaml
@@ -36,5 +56,7 @@ securityContext:
 
 #### URLs:
 - [security-checklist](https://kubernetes.io/docs/concepts/security/security-checklist/)
+- [runtime-class](https://kubernetes.io/docs/concepts/containers/runtime-class/)
+- [seccomp](https://kubernetes.io/docs/tutorials/security/seccomp/)
 - [security-context](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/)
 - [pod-security-standards](https://kubernetes.io/docs/concepts/security/pod-security-standards/)
