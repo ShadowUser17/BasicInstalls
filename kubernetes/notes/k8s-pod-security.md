@@ -29,7 +29,7 @@ kubectl label namespace <name> \
 "pod-security.kubernetes.io/warn-version=latest"
 ```
 
-#### Pod level example:
+#### Pod level examples:
 ```yaml
 automountServiceAccountToken: false
 securityContext:
@@ -37,7 +37,6 @@ securityContext:
   runAsUser: 65534
   runAsGroup: 65534
 ```
-- Use `seccompProfile` on Pod level:
 ```yaml
 securityContext:
   seccompProfile:
