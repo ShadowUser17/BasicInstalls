@@ -4,12 +4,6 @@ daemonset:
 configmap:
   enabled: true
 
-sidecar:
-  configReloader:
-    enabled: true
-    serviceMonitor:
-      enabled: true
-
 resources:
   requests:
     memory: "256Mi"
