@@ -70,7 +70,7 @@ grafana:
     ingressClassName: "nginx"
     annotations:
       cert-manager.io/cluster-issuer: "k8s-cluster-issuer"
-      nginx.ingress.kubernetes.io/ssl-redirect: "true"
+      nginx.ingress.kubernetes.io/ssl-redirect: "false"
     tls:
       - secretName: "prom-grafana-tls"
         hosts: ["grafana.k3s"]
