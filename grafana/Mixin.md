@@ -1,6 +1,11 @@
 #### Install jsonnet-bundler:
 ```bash
-go install -a github.com/jsonnet-bundler/jsonnet-bundler/cmd/jb@latest
+go install -a "github.com/jsonnet-bundler/jsonnet-bundler/cmd/jb@latest"
+```
+
+#### Install jsonnet:
+```bash
+go install "github.com/google/go-jsonnet/cmd/jsonnet@latest"
 ```
 
 #### Install grafana-grizzly:
@@ -9,7 +14,17 @@ curl -L "https://github.com/grafana/grizzly/releases/download/v${version}/grr-li
 chmod +x ./grr && mv ./grr /usr/local/bin/
 ```
 
-#### Build project:
+#### Build dashboards:
+- Clone repository.
+- Run the next commands:
+```bash
+jb install
+```
+```bash
+jsonnet -J ./vendor dashboards.jsonnet -o dashboards.json
+```
+
+#### Deploy to Grafana:
 - Clone repository.
 - Run the next commands:
 ```bash
@@ -20,6 +35,6 @@ GRAFANA_URL='<URL>' GRAFANA_TOKEN='<SA_TOKEN>' grr apply dashboards.libsonnet
 ```
 
 #### URLs:
-- [grafana-api-auth](https://grafana.com/docs/grafana/latest/developers/http_api/auth/)
+- [go-jsonnet-docs](https://github.com/google/go-jsonnet/blob/master/README.md)
 - [grafana-grizzly](https://grafana.github.io/grizzly/)
 - [jsonnet-bundler](https://github.com/jsonnet-bundler/jsonnet-bundler/blob/master/README.md)
