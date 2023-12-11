@@ -25,16 +25,12 @@ jsonnet -J ./vendor dashboards.jsonnet -o dashboards.json
 ```
 
 #### Deploy to Grafana:
-- Clone repository.
-- Run the next commands:
-```bash
-jb install
-```
 ```bash
 GRAFANA_URL='<URL>' GRAFANA_TOKEN='<SA_TOKEN>' grr apply dashboards.libsonnet
 ```
 
 #### URLs:
+- [jsonnet-language](https://jsonnet.org/)
 - [go-jsonnet-docs](https://github.com/google/go-jsonnet/blob/master/README.md)
 - [grafana-grizzly](https://grafana.github.io/grizzly/)
 - [jsonnet-bundler](https://github.com/jsonnet-bundler/jsonnet-bundler/blob/master/README.md)
