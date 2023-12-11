@@ -1,3 +1,7 @@
+#### Recommendations:
+- For cpu set only requests to avoid throttling.
+- For memory set requests and limits are equal.
+
 #### Limit per namespace:
 ```yaml
 apiVersion: "v1"
