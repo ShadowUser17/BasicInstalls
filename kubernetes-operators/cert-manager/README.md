@@ -3,7 +3,7 @@
 helm repo add jetstack "https://charts.jetstack.io" && helm repo update
 ```
 ```bash
-helm upgrade --install cert-manager "jetstack/cert-manager" -f values.yml -n cert-manager --version "v1.13.2" --create-namespace
+helm upgrade --install cert-manager "jetstack/cert-manager" -f values.yml -n cert-manager --version "v1.13.3" --create-namespace
 ```
 ```bash
 kubectl apply -f cluster-issuer.yml
@@ -21,7 +21,7 @@ helm show values "jetstack/cert-manager" > default-values.yml
 
 #### Get manifests:
 ```bash
-helm template cert-manager "jetstack/cert-manager" -f values.yml -n cert-manager --version "v1.13.2" > manifests.yml
+helm template cert-manager "jetstack/cert-manager" -f values.yml -n cert-manager --version "v1.13.3" > manifests.yml
 ```
 
 #### Enable monitoring:
