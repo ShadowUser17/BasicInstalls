@@ -21,6 +21,11 @@ serviceMonitor:
   labels:
     release: "prom-operator"
 
+image:
+  tag: "2.9.3"
+  registry: "docker.io"
+  repository: "grafana/promtail"
+
 config:
   enabled: true
   serverPort: 9080
