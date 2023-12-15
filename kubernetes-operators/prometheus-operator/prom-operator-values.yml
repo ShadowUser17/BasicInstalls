@@ -84,31 +84,10 @@ grafana:
 defaultRules:
   create: true
   rules:
-    alertmanager: true
-    etcd: false
-    configReloaders: true
-    general: true
-    k8s: true
-    kubeApiserverAvailability: true
-    kubeApiserverBurnrate: true
-    kubeApiserverHistogram: true
-    kubeApiserverSlos: true
-    kubeControllerManager: false
-    kubelet: true
     kubeProxy: false
-    kubePrometheusGeneral: true
-    kubePrometheusNodeRecording: false
-    kubernetesApps: true
-    kubernetesResources: true
-    kubernetesStorage: true
-    kubernetesSystem: true
+    windows: false
+    etcd: false
+    kubeControllerManager: false
     kubeSchedulerAlerting: false
     kubeSchedulerRecording: false
-    kubeStateMetrics: true
-    network: true
-    node: true
-    nodeExporterAlerting: true
-    nodeExporterRecording: false
-    prometheus: true
-    prometheusOperator: true
-    windows: false
+    kubePrometheusNodeRecording: false
