@@ -8,6 +8,11 @@ go install -a "github.com/jsonnet-bundler/jsonnet-bundler/cmd/jb@latest"
 go install "github.com/google/go-jsonnet/cmd/jsonnet@latest"
 ```
 
+#### Install jsonnet-lint:
+```bash
+go install "github.com/google/go-jsonnet/cmd/jsonnet-lint@latest"
+```
+
 #### Install grafana-grizzly:
 ```bash
 curl -L "https://github.com/grafana/grizzly/releases/download/v${version}/grr-linux-amd64" -o ./grr && \
