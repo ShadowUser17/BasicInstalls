@@ -7,7 +7,7 @@
 helm repo add ingress-nginx "https://kubernetes.github.io/ingress-nginx" && helm repo update
 ```
 ```bash
-helm upgrade --install ingress-nginx "ingress-nginx/ingress-nginx" -f values.yml -n ingress-nginx --version "4.8.4" --create-namespace
+helm upgrade --install ingress-nginx "ingress-nginx/ingress-nginx" -f values.yml -n ingress-nginx --version "4.9.0" --create-namespace
 ```
 
 #### Check updates:
@@ -22,7 +22,7 @@ helm show values "ingress-nginx/ingress-nginx" > default-values.yml
 
 #### Get manifests:
 ```bash
-helm template ingress-nginx "ingress-nginx/ingress-nginx" -f values.yml -n ingress-nginx --version "4.8.4" > manifests.yml
+helm template ingress-nginx "ingress-nginx/ingress-nginx" -f values.yml -n ingress-nginx --version "4.9.0" > manifests.yml
 ```
 
 #### Enable monitoring:
