@@ -3,7 +3,7 @@
 helm repo add cilium "https://helm.cilium.io" && helm repo update
 ```
 ```bash
-helm upgrade --install tetragon "cilium/tetragon" -f values.yml -n kube-system --version "1.0.0"
+helm upgrade --install tetragon "cilium/tetragon" -f values.yml -n kube-system --version "1.0.1"
 ```
 
 #### Install CLI:
@@ -24,7 +24,7 @@ helm show values "cilium/tetragon" > default-values.yml
 
 #### Export manifests:
 ```bash
-helm template tetragon "cilium/tetragon" -f values.yml -n kube-system --version "1.0.0" > manifests.yml
+helm template tetragon "cilium/tetragon" -f values.yml -n kube-system --version "1.0.1" > manifests.yml
 ```
 
 #### Show logs:
