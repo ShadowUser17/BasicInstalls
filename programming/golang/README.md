@@ -17,6 +17,7 @@
 - [gin](https://github.com/gin-gonic/gin)
 - [mux](https://github.com/gorilla/mux)
 - [yaml](https://github.com/go-yaml/yaml)
+- [cobra](https://github.com/spf13/cobra)
 - [coraza](https://github.com/corazawaf/coraza)
 - [toxiproxy](https://github.com/Shopify/toxiproxy)
 - [certmagic](https://github.com/caddyserver/certmagic)
