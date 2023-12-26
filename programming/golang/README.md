@@ -3,7 +3,7 @@
 - [Downloads](https://go.dev/dl/)
 - [Library](https://pkg.go.dev/std)
 - [Images](https://hub.docker.com/_/golang/tags)
-- [Wiki](https://github.com/golang/go/wiki)
+- [Wiki](https://go.dev/wiki/)
 - [Awesome](https://awesome-go.com/)
 - [GoStyle](https://google.github.io/styleguide/go/)
 - [GoByExample](https://gobyexample.com/)
