@@ -3,7 +3,7 @@
 helm repo add kubereboot "https://kubereboot.github.io/charts" && helm repo update
 ```
 ```bash
-helm upgrade --install krds "kubereboot/kured" -f values.yml -n kube-system --version "5.3.1"
+helm upgrade --install krds "kubereboot/kured" -f values.yml -n kube-system --version "5.3.2"
 ```
 
 #### Check updates:
@@ -18,7 +18,7 @@ helm show values "kubereboot/kured" > default-values.yml
 
 #### Export manifests:
 ```bash
-helm template krds "kubereboot/kured" -f values.yml -n kube-system --version "5.3.1" > manifests.yml
+helm template krds "kubereboot/kured" -f values.yml -n kube-system --version "5.3.2" > manifests.yml
 ```
 
 #### URLs:
