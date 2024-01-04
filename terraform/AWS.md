@@ -1,6 +1,8 @@
 #### URLs:
-- [terraform-provider-aws](https://github.com/hashicorp/terraform-provider-aws)
-- [cdktf-provider-aws](https://github.com/cdktf/cdktf-provider-aws)
+- [terraform-provider-aws](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
+- [terraform-provider-helm](https://registry.terraform.io/providers/hashicorp/helm/latest/docs)
+- [terraform-provider-kubectl](https://registry.terraform.io/providers/gavinbunney/kubectl/latest/docs)
+- [terraform-provider-kubernetes](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs)
 
 #### Remove lock in DynamoDB:
 - Get lock id and record name from error.
