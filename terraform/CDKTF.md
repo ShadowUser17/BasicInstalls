@@ -76,6 +76,11 @@ cd cdktf.out/stacks/<stack_name>/
 terraform state pull
 ```
 
+#### Scan current state:
+```bash
+tfsec cdktf.out/stacks/<stack_name>/
+```
+
 #### List state resources:
 ```bash
 cd cdktf.out/stacks/<stack_name>/
