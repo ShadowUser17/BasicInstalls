@@ -17,7 +17,7 @@ curl -fsSL "https://rpm.nodesource.com/setup_lts.x" | bash -
 npm install -g "typescript@4.9"
 ```
 ```bash
-npm install -g "cdktf-cli@latest"
+npm install -g "cdktf-cli@0.17.3"
 ```
 
 #### Create project:
