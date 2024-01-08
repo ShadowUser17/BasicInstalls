@@ -64,6 +64,11 @@ singleBinary:
     storageClass: "local-path"
     size: "6Gi"
 
+ingress:
+  enabled: true
+  hosts: ["grafana-loki.k3s"]
+  ingressClassName: "nginx"
+
 gateway:
   enabled: false
 
