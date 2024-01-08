@@ -16,6 +16,11 @@ nodeSelector:
 tolerations:
   - operator: "Exists"
 
+readinessProbe:
+  httpGet:
+    path: "/targets"
+    port: "http-metrics"
+
 serviceMonitor:
   enabled: true
   labels:
