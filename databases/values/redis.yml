@@ -1,0 +1,16 @@
+auth:
+  enabled: false
+  password: ""
+
+master:
+  persistence:
+    enabled: false
+    size: "2Gi"
+    accessModes: ["ReadWriteOnce"]
+    storageClass: "local-path"
+  resources:
+    limits: {}
+    requests: {}
+  nodeSelector:
+    kubernetes.io/os: "linux"
+  tolerations: []
