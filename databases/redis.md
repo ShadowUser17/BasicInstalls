@@ -3,6 +3,9 @@
 helm repo add bitnami "https://charts.bitnami.com/bitnami" && helm repo update
 ```
 ```bash
+kubectl create namespace testing
+```
+```bash
 helm upgrade --install cache "bitnami/redis" -f ./values/redis.yml -n testing --version "18.6.3"
 ```
 
