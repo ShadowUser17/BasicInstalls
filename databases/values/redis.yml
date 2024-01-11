@@ -4,8 +4,26 @@ auth:
   password: ""
 
 master:
+  count: 1
+  podAnnotations:
+    promtail.io/collect: "true"
   persistence:
-    enabled: false
+    enabled: true
+    size: "2Gi"
+    accessModes: ["ReadWriteOnce"]
+    storageClass: "local-path"
+  resources:
+    limits: {}
+    requests: {}
+  nodeSelector:
+    kubernetes.io/os: "linux"
+
+replica:
+  replicaCount: 2
+  podAnnotations:
+    promtail.io/collect: "true"
+  persistence:
+    enabled: true
     size: "2Gi"
     accessModes: ["ReadWriteOnce"]
     storageClass: "local-path"

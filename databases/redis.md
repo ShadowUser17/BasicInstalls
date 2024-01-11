@@ -24,6 +24,11 @@ helm show values "bitnami/redis" > redis-default.yml
 helm template cache "bitnami/redis" -f ./values/redis.yml -n testing --version "18.6.3" > redis-manifests.yml
 ```
 
+#### Delete volumes:
+```bash
+kubectl delete pvc -n testing -l 'app.kubernetes.io/name=redis'
+```
+
 #### URLs:
 - [Docs](https://redis.io/docs/)
 - [Chart](https://github.com/bitnami/charts/tree/main/bitnami/redis)
