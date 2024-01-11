@@ -1,7 +1,8 @@
 #### URLs:
 - [Docs](https://www.postgresql.org/docs/)
-- [Releases](https://www.postgresql.org/docs/release/)
+- [Chart](https://github.com/bitnami/charts/tree/main/bitnami/postgresql)
 - [Images](https://hub.docker.com/r/bitnami/postgresql/tags)
+- [Releases](https://www.postgresql.org/docs/release/)
 
 #### PSQL backup database:
 ```bash
