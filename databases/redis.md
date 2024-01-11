@@ -16,12 +16,12 @@ helm search repo "bitnami/redis"
 
 #### Get default values:
 ```bash
-helm show values "bitnami/redis" > default-values.yml
+helm show values "bitnami/redis" > redis-default.yml
 ```
 
 #### Export manifests:
 ```bash
-helm template cache "bitnami/redis" -f ./values/redis.yml -n testing --version "18.6.3" > manifests.yml
+helm template cache "bitnami/redis" -f ./values/redis.yml -n testing --version "18.6.3" > redis-manifests.yml
 ```
 
 #### URLs:

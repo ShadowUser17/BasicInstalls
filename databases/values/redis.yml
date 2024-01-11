@@ -1,5 +1,6 @@
 auth:
   enabled: false
+  sentinel: false
   password: ""
 
 master:
@@ -13,4 +14,11 @@ master:
     requests: {}
   nodeSelector:
     kubernetes.io/os: "linux"
-  tolerations: []
+
+metrics:
+  enabled: true
+  serviceMonitor:
+    enabled: true
+    interval: "30s"
+    additionalLabels:
+      release: "prom-operator"
