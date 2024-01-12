@@ -1,3 +1,6 @@
+# Allowed values: standalone or replication
+architecture: "standalone"
+
 auth:
   enabled: false
   sentinel: false
@@ -19,7 +22,7 @@ master:
     kubernetes.io/os: "linux"
 
 replica:
-  replicaCount: 2
+  replicaCount: 1
   podAnnotations:
     promtail.io/collect: "true"
   persistence:
