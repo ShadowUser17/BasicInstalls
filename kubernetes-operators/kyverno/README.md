@@ -3,10 +3,10 @@
 helm repo add kyverno "https://kyverno.github.io/kyverno" && helm repo update
 ```
 ```bash
-helm upgrade --install kyverno "kyverno/kyverno" -n kyverno --version "3.1.3" --create-namespace
+helm upgrade --install kyverno "kyverno/kyverno" -n kyverno --version "3.1.4" --create-namespace
 ```
 ```bash
-helm upgrade --install kyverno-policies "kyverno/kyverno-policies" -n kyverno --version "3.1.3"
+helm upgrade --install kyverno-policies "kyverno/kyverno-policies" -n kyverno --version "3.1.4"
 ```
 
 #### Check updates:
@@ -21,10 +21,10 @@ helm show values "kyverno/kyverno" > default-values.yml
 
 #### Get manifests:
 ```bash
-helm template kyverno "kyverno/kyverno" -n kyverno --version "3.1.3" > kyverno-manifests.yml
+helm template kyverno "kyverno/kyverno" -n kyverno --version "3.1.4" > kyverno-manifests.yml
 ```
 ```bash
-helm template kyverno-policies "kyverno/kyverno-policies" -n kyverno --version "3.1.3" > kyverno-policies.yml
+helm template kyverno-policies "kyverno/kyverno-policies" -n kyverno --version "3.1.4" > kyverno-policies.yml
 ```
 
 #### Install CLI:
