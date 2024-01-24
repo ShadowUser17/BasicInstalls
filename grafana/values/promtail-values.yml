@@ -16,18 +16,13 @@ nodeSelector:
 tolerations:
   - operator: "Exists"
 
-# readinessProbe:
-#   httpGet:
-#     path: "/targets"
-#     port: "http-metrics"
-
 serviceMonitor:
   enabled: true
   labels:
     release: "prom-operator"
 
 image:
-  tag: "2.9.3"
+  tag: "2.9.4"
   registry: "docker.io"
   repository: "grafana/promtail"
 
