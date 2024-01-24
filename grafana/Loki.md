@@ -27,7 +27,7 @@ helm upgrade --install loki "grafana/loki" -f ./values/loki-values.yml -n monito
 
 #### Install promtail:
 ```bash
-helm upgrade --install promtail "grafana/promtail" -f ./values/promtail-values.yml -n monitoring --version "6.15.3"
+helm upgrade --install promtail "grafana/promtail" -f ./values/promtail-values.yml -n monitoring --version "6.15.4"
 ```
 
 #### Install kubernetes-event-exporter:
@@ -51,7 +51,7 @@ helm search repo "bitnami/kubernetes-event-exporter"
 helm template loki "grafana/loki" -f ./values/loki-values.yml -n monitoring --version "5.41.8" > loki-manifests.yml
 ```
 ```bash
-helm template promtail "grafana/promtail" -f ./values/promtail-values.yml -n monitoring --version "6.15.3" > promtail-manifests.yml
+helm template promtail "grafana/promtail" -f ./values/promtail-values.yml -n monitoring --version "6.15.4" > promtail-manifests.yml
 ```
 ```bash
 helm template event-exporter "bitnami/kubernetes-event-exporter" -f ./values/event-exporter-values.yml -n monitoring --version "2.12.0" > event-exporter-manifests.yml
