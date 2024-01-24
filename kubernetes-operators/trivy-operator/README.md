@@ -3,7 +3,7 @@
 helm repo add aqua "https://aquasecurity.github.io/helm-charts" && helm repo update
 ```
 ```bash
-helm upgrade --install trivy-operator "aqua/trivy-operator" -f values.yml -n trivy-system --version "0.20.1" --create-namespace
+helm upgrade --install trivy-operator "aqua/trivy-operator" -f values.yml -n trivy-system --version "0.20.2" --create-namespace
 ```
 
 #### Check updates:
@@ -18,7 +18,7 @@ helm show values "aqua/trivy-operator" > default-values.yml
 
 #### Get manifests:
 ```bash
-helm template trivy-operator "aqua/trivy-operator" -f values.yml -n trivy-system --version "0.20.1" > manifests.yml
+helm template trivy-operator "aqua/trivy-operator" -f values.yml -n trivy-system --version "0.20.2" > manifests.yml
 ```
 
 #### Show reports:
