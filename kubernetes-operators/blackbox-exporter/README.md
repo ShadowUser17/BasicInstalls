@@ -3,7 +3,7 @@
 helm repo add prometheus-community "https://prometheus-community.github.io/helm-charts" && helm repo update
 ```
 ```bash
-helm upgrade --install blackbox-exporter "prometheus-community/prometheus-blackbox-exporter" -f values.yml -n monitoring --version "8.10.0"
+helm upgrade --install prober "prometheus-community/prometheus-blackbox-exporter" -f values.yml -n monitoring --version "8.10.0"
 ```
 
 #### Check updates:
@@ -27,7 +27,7 @@ metadata:
     release: "prom-operator"
 spec:
   prober:
-    url: "blackbox-exporter.monitoring.svc:9115"
+    url: "prober-prometheus-blackbox-exporter.monitoring.svc:9115"
   module: "http_2xx"
   interval: "60s"
   targets:
