@@ -1,0 +1,10 @@
+serviceMonitor:
+  selfMonitor:
+    enabled: true
+    labels:
+      release: "prom-operator"
+
+resources: {}
+
+nodeSelector:
+  kubernetes.io/os: "linux"
