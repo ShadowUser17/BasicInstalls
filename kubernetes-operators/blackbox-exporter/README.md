@@ -3,7 +3,7 @@
 helm repo add prometheus-community "https://prometheus-community.github.io/helm-charts" && helm repo update
 ```
 ```bash
-helm upgrade --install prober "prometheus-community/prometheus-blackbox-exporter" -f values.yml -n monitoring --version "8.10.0"
+helm upgrade --install prober "prometheus-community/prometheus-blackbox-exporter" -f values.yml -n monitoring --version "8.10.1"
 ```
 
 #### Check updates:
@@ -14,6 +14,11 @@ helm search repo "prometheus-community/prometheus-blackbox-exporter"
 #### Get default values:
 ```bash
 helm show values "prometheus-community/prometheus-blackbox-exporter" > default-values.yml
+```
+
+#### Get manifests:
+```bash
+helm template prober "prometheus-community/prometheus-blackbox-exporter" -f values.yml -n monitoring --version "8.10.1" > manifests.yml
 ```
 
 #### Probe example:
