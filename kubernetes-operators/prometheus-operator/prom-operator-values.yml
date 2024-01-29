@@ -50,6 +50,7 @@ prometheus:
 grafana:
   enabled: true
   adminPassword: "prom-operator"
+  assertNoLeakedSecrets: false
   image:
     registry: "docker.io"
     repository: "grafana/grafana"
