@@ -66,5 +66,5 @@ helm template prom-operator "prometheus-community/kube-prometheus-stack" -f prom
 #### URLs:
 - [API](https://prometheus-operator.dev/docs/operator/api/)
 - [Docs](https://prometheus-operator.dev/docs/prologue/introduction/)
-- [Charts](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack)
+- [Chart](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack)
 - [Releases](https://github.com/prometheus-operator/prometheus-operator/releases)

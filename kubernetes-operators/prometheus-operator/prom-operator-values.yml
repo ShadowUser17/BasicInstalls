@@ -50,8 +50,6 @@ prometheus:
 grafana:
   enabled: true
   adminPassword: "prom-operator"
-  deploymentStrategy:
-    type: "Recreate"
   image:
     registry: "docker.io"
     repository: "grafana/grafana"
@@ -76,7 +74,7 @@ grafana:
         hosts: ["grafana.k3s"]
   persistence:
     enabled: true
-    type: "pvc"
+    type: "sts"
     size: "1Gi"
     accessModes: ["ReadWriteOnce"]
     storageClassName: "local-path"
