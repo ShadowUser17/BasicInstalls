@@ -3,7 +3,7 @@
 helm repo add elastic "https://helm.elastic.co" && helm repo update
 ```
 ```bash
-helm upgrade --install elastic-operator "elastic/eck-operator" -n elastic-system --version "2.10.0" --create-namespace
+helm upgrade --install elastic-operator "elastic/eck-operator" -n elastic-system --version "2.11.1" --create-namespace
 ```
 
 #### Check updates:
@@ -18,7 +18,7 @@ helm show values "elastic/eck-operator" > default-values.yml
 
 #### Get manifests:
 ```bash
-helm template elastic-operator "elastic/eck-operator" -n elastic-system --version "2.10.0" > manifests.yml
+helm template elastic-operator "elastic/eck-operator" -n elastic-system --version "2.11.1" > manifests.yml
 ```
 
 #### Get API resources:
