@@ -6,7 +6,7 @@ helm repo add fluent "https://fluent.github.io/helm-charts" && helm repo update
 kubectl create namespace monitoring
 ```
 ```bash
-helm upgrade --install fluent-operator "fluent/fluent-operator" -f fluent-operator-values.yml -n monitoring --version "2.5.0"
+helm upgrade --install fluent-operator "fluent/fluent-operator" -f fluent-operator-values.yml -n monitoring --version "2.7.0"
 ```
 
 #### Enable monitoring:
@@ -26,7 +26,7 @@ helm show values "fluent/fluent-operator" > fluent-operator-default-values.yml
 
 #### Get manifests:
 ```bash
-helm template fluent-operator "fluent/fluent-operator" -f fluent-operator-values.yml -n monitoring --version "2.5.0" > manifests.yml
+helm template fluent-operator "fluent/fluent-operator" -f fluent-operator-values.yml -n monitoring --version "2.7.0" > manifests.yml
 ```
 
 #### Get API resources:
