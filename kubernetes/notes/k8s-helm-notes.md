@@ -39,3 +39,8 @@ helm upgrade --install <release> <repo> -f values.yml -n <namespace> --version <
 annotations:
   checksum/config: {{ include (print .Template.BasePath "/config.yml") . | sha256sum | quote }}
 ```
+
+#### Decode release object:
+```bash
+kubectl get secret <secret> -o jsonpath='{.data.release}' | base64 -d | base64 -d | gzip -d | jq
+```
