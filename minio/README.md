@@ -1,6 +1,29 @@
+#### Deploy to cluster:
+```bash
+helm repo add bitnami "https://charts.bitnami.com/bitnami" && helm repo update
+```
+```bash
+helm upgrade --install s3 "bitnami/minio" -f values.yml -n testing --version "13.3.3"
+```
+
+#### Check updates:
+```bash
+helm search repo "bitnami/minio"
+```
+
+#### Get default values:
+```bash
+helm show values "bitnami/minio" > default-values.yml
+```
+
+#### Get manifests:
+```bash
+helm template s3 "bitnami/minio" -f values.yml -n testing --version "13.3.3" > manifests.yml
+```
+
 #### URLs:
-- [kubernetes](https://min.io/docs/minio/kubernetes/upstream/)
-- [containers](https://min.io/docs/minio/container/index.html)
-- [releases](https://github.com/minio/minio/releases)
+- [kubernetes-example](https://min.io/docs/minio/kubernetes/upstream/)
+- [containers-example](https://min.io/docs/minio/container/index.html)
+- [chart](https://github.com/bitnami/charts/tree/main/bitnami/minio)
 - [images](https://hub.docker.com/r/minio/minio/tags)
-- [minio-go](https://github.com/minio/minio-go)
+- [client](https://github.com/minio/minio-go)
