@@ -7,9 +7,6 @@ auth:
   rootUser: "testing"
   rootPassword: "1qaz!QAZ"
 
-readinessProbe:
-  enabled: false
-
 resources:
   requests:
     memory: "512Mi"
