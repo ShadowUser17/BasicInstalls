@@ -1,10 +1,14 @@
 mode: "standalone"
 
-defaultBuckets: ""
+# Only in standalone mode!
+defaultBuckets: "backups"
 
 auth:
-  rootUser: "minio"
-  rootPassword: "testing"
+  rootUser: "testing"
+  rootPassword: "1qaz!QAZ"
+
+readinessProbe:
+  enabled: false
 
 resources:
   requests:
@@ -29,7 +33,7 @@ ingress:
 
 apiIngress:
   enabled: true
-  hostname: "minio.k3s"
+  hostname: "minio-api.k3s"
   ingressClassName: "nginx"
 
 nodeSelector:
