@@ -3,7 +3,7 @@
 kubectl create namespace monitoring
 ```
 ```bash
-helm upgrade --install logging-operator "oci://ghcr.io/kube-logging/helm-charts/logging-operator" -f values.yml -n monitoring --version "4.5.3"
+helm upgrade --install logging-operator "oci://ghcr.io/kube-logging/helm-charts/logging-operator" -f values.yml -n monitoring --version "4.5.4"
 ```
 
 #### Get default values:
@@ -13,7 +13,7 @@ helm show values "oci://ghcr.io/kube-logging/helm-charts/logging-operator" > def
 
 #### Export manifests:
 ```bash
-helm template logging-operator "oci://ghcr.io/kube-logging/helm-charts/logging-operator" -f values.yml -n monitoring --version "4.5.3" > manifests.yml
+helm template logging-operator "oci://ghcr.io/kube-logging/helm-charts/logging-operator" -f values.yml -n monitoring --version "4.5.4" > manifests.yml
 ```
 
 #### Send logs to Loki:
