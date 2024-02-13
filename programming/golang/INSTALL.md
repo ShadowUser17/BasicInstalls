@@ -10,9 +10,14 @@ echo -e 'export PATH="$HOME/.gobrew/current/bin:$HOME/go/bin:$PATH"\nexport GORO
 gobrew install <version>
 ```
 
-#### Install Delve debugger:
+#### Install Delve Debugger:
 ```bash
 go install github.com/go-delve/delve/cmd/dlv@latest
+```
+
+#### Install Go Security Checker:
+```bash
+go install github.com/securego/gosec/v2/cmd/gosec@latest
 ```
 
 #### Install nFPM packager:
