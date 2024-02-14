@@ -54,7 +54,7 @@ grafana:
   image:
     registry: "docker.io"
     repository: "grafana/grafana"
-    tag: "10.1.6"
+    tag: "10.1.7"
   additionalDataSources:
     - name: "Loki"
       type: "loki"
