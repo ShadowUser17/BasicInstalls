@@ -3,7 +3,7 @@
 helm repo add sealed-secrets "https://bitnami-labs.github.io/sealed-secrets" && helm repo update
 ```
 ```bash
-helm upgrade --install sealed-secrets "sealed-secrets/sealed-secrets" -n kube-system --version "2.14.2"
+helm upgrade --install sealed-secrets "sealed-secrets/sealed-secrets" -n kube-system --version "2.15.0"
 ```
 
 #### Check updates:
@@ -18,7 +18,7 @@ helm show values "sealed-secrets/sealed-secrets" > default-values.yml
 
 #### Get manifests:
 ```bash
-helm template sealed-secrets "sealed-secrets/sealed-secrets" -n kube-system --version "2.14.2" > manifests.yml
+helm template sealed-secrets "sealed-secrets/sealed-secrets" -n kube-system --version "2.15.0" > manifests.yml
 ```
 
 #### Install CLI:
