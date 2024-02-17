@@ -27,9 +27,10 @@ loki:
     compress_responses: true
     log_queries_longer_than: "20s"
   frontend_worker:
-    parallelism: 32
+    parallelism: 10
+    match_max_concurrent: false
   querier:
-    max_concurrent: 32
+    max_concurrent: 10
   query_scheduler:
     max_outstanding_requests_per_tenant: 32768
   compactor:
@@ -56,9 +57,9 @@ singleBinary:
     promtail.io/collect: "true"
   resources:
     requests:
-      memory: "630Mi"
+      memory: "850Mi"
     limits:
-      memory: "630Mi"
+      memory: "850Mi"
   persistence:
     volumeClaimsEnabled: true
     storageClass: "local-path"
