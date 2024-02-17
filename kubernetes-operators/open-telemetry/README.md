@@ -3,7 +3,10 @@
 helm repo add open-telemetry "https://open-telemetry.github.io/opentelemetry-helm-charts" && helm repo update
 ```
 ```bash
-helm upgrade --install otlp-operator "open-telemetry/opentelemetry-operator" --version "0.47.0"
+kubectl create namespace monitoring
+```
+```bash
+helm upgrade --install otlp-operator "open-telemetry/opentelemetry-operator" -f values.yml -n monitoring --version "0.47.0"
 ```
 
 #### Check updates:
@@ -18,7 +21,7 @@ helm show values "open-telemetry/opentelemetry-operator" > default-values.yml
 
 #### Get manifests:
 ```bash
-helm template otlp-operator "open-telemetry/opentelemetry-operator" --version "0.47.0" > manifests.yml
+helm template otlp-operator "open-telemetry/opentelemetry-operator" -f values.yml -n monitoring --version "0.47.0" > manifests.yml
 ```
 
 #### URLs:
