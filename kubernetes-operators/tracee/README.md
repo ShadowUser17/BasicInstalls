@@ -23,7 +23,12 @@ helm template tracee "aqua/tracee" -f values.yml -n tracee-system --version "0.2
 
 #### Show logs:
 ```bash
-kubectl logs -f daemonset/tracee -n tracee-system
+kubectl logs -f "daemonset/tracee" -n tracee-system
+```
+
+#### Get policies:
+```bash
+kubectl get policies -A
 ```
 
 #### URLs:
