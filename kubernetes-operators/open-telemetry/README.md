@@ -26,6 +26,17 @@ helm show values "open-telemetry/opentelemetry-operator" > default-values.yml
 helm template otlp-operator "open-telemetry/opentelemetry-operator" -f values.yml -n monitoring --version "0.47.0" > manifests.yml
 ```
 
+#### Get API resources:
+```bash
+kubectl api-resources | grep opentelemetry
+```
+```bash
+kubectl get otelinsts -A
+```
+```bash
+kubectl get otelcols -A
+```
+
 #### URLs:
 - [what-is-opentelemetry](https://opentelemetry.io/docs/what-is-opentelemetry/)
 - [opentelemetry-kubernetes](https://opentelemetry.io/docs/kubernetes/)

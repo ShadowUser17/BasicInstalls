@@ -23,10 +23,16 @@ helm template trivy-operator "aqua/trivy-operator" -f values.yml -n trivy-system
 
 #### Show reports:
 ```bash
-kubectl get vulnerabilityreports -o wide -A
+kubectl get clustervuln -o wide
 ```
 ```bash
-kubectl get configauditreports -o wide -A
+kubectl get vulns -o wide -A
+```
+```bash
+kubectl get clusterconfigaudit -o wide
+```
+```bash
+kubectl get configaudits -o wide -A
 ```
 
 #### URLs:
