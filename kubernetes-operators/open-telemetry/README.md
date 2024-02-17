@@ -1,3 +1,5 @@
+### Warning! Required installed cert-manager.
+
 #### Deploy to cluster:
 ```bash
 helm repo add open-telemetry "https://open-telemetry.github.io/opentelemetry-helm-charts" && helm repo update
