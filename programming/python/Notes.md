@@ -36,6 +36,17 @@ python3 -m tarfile -e <file>
 python3 -m tarfile -c <name> <file1> <...>
 ```
 
+#### Manage ZIP archive:
+```bash
+python3 -m zipfile -l <file>
+```
+```bash
+python3 -m zipfile -e <file>
+```
+```bash
+python3 -m zipfile -c <name> <file1> <...>
+```
+
 #### Run HTTP server:
 ```bash
 python3 -m http.server -b <address> <port>
