@@ -60,3 +60,4 @@ stringData:
 
 #### URLs:
 - [Docs](https://argo-cd.readthedocs.io/en/stable/)
+- [Metrics](https://argo-cd.readthedocs.io/en/stable/operator-manual/metrics/)
