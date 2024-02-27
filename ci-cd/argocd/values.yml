@@ -1,0 +1,18 @@
+global:
+  domain: "argocd.k3s"
+
+configs:
+  params:
+    server.insecure: true
+
+server:
+  ingress:
+    enabled: true
+    ingressClassName: "nginx"
+    annotations:
+      cert-manager.io/cluster-issuer: "k8s-cluster-issuer"
+      nginx.ingress.kubernetes.io/ssl-redirect: "false"
+      nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+    extraTls:
+      - hosts: ["argocd.k3s"]
+        secretName: "argocd-tls"

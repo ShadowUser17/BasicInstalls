@@ -1,64 +1,33 @@
 #### Deploy to cluster:
 ```bash
-kubectl create namespace argocd && \
-kubectl apply -n argocd -f 'https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml'
+helm repo add argocd "https://argoproj.github.io/argo-helm" && helm repo update
+```
+```bash
+helm upgrade --install argocd "argocd/argo-cd" -f values.yml -n argocd --version "6.4.0" --create-namespace
 ```
 
-#### Install CLI:
+#### Get default values:
 ```bash
-curl -L 'https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64' -o argocd && \
-chmod 755 ./argocd && mv argocd /usr/local/bin/
+helm show values "argocd/argo-cd" > default-values.yml
 ```
 
-#### Get initial password:
+#### Check updates:
 ```bash
-kubectl -n argocd get secret argocd-initial-admin-secret -o go-template='{{.data.password | base64decode}}'
+helm search repo "argocd/argo-cd"
 ```
 
-### Login with CLI:
+#### Get manifests:
 ```bash
-kubectl get "svc/argocd-server" -n argocd
-```
-```bash
-argocd login <ip/host>
-```
-```bash
-argocd account update-password
+helm template argocd "argocd/argo-cd" -f values.yml -n argocd --version "6.4.0" > manifests.yml
 ```
 
-#### Access:
+#### Enable monitoring:
 ```bash
-kubectl port-forward "svc/argocd-server" -n argocd 8080:443
-```
-
-#### Remove:
-```bash
-kubectl delete -n argocd -f 'https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml' && \
-kubectl delete namespace argocd --force
-```
-
-#### Disable redirect:
-```bash
-kubectl edit "cm/argocd-cmd-params-cm" -n argocd
-```
-```yaml
-data:
-  server.insecure: "true"
-```
-```bash
-kubectl rollout restart deploy argocd-server -n argocd
-```
-
-#### Set WebHook Secret:
-```bash
-kubectl edit secret argocd-secret -n argocd
-```
-```yaml
-stringData:
-  webhook.github.secret: argocd-testing
+kubectl apply -f monitoring.yml
 ```
 
 #### URLs:
 - [Docs](https://argo-cd.readthedocs.io/en/stable/)
+- [Chart](https://github.com/argoproj/argo-helm/tree/main/charts/argo-cd)
 - [Metrics](https://argo-cd.readthedocs.io/en/stable/operator-manual/metrics/)
 - [Dashboard](https://github.com/argoproj/argo-cd/blob/master/examples/dashboard.json)
