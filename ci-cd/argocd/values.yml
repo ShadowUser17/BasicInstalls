@@ -1,8 +1,5 @@
 global:
   domain: "argocd.k3s"
-  logging:
-    level: "info"
-    format: "text"
 
 configs:
   params:
@@ -13,12 +10,12 @@ controller:
   podAnnotations: {}
   metrics:
     enabled: true
-    serviceMonitor:
-      enabled: false
 
 server:
   resources: {}
   podAnnotations: {}
+  metrics:
+    enabled: true
   ingress:
     enabled: true
     ingressClassName: "nginx"
@@ -29,26 +26,18 @@ server:
     extraTls:
       - hosts: ["argocd.k3s"]
         secretName: "argocd-server-tls"
-  metrics:
-    enabled: true
-    serviceMonitor:
-      enabled: false
 
 repoServer:
   resources: {}
   podAnnotations: {}
   metrics:
     enabled: true
-    serviceMonitor:
-      enabled: false
 
 applicationSet:
   resources: {}
   podAnnotations: {}
   metrics:
     enabled: true
-    serviceMonitor:
-      enabled: false
 
 notifications:
   enabled: false
@@ -56,8 +45,6 @@ notifications:
   podAnnotations: {}
   metrics:
     enabled: true
-    serviceMonitor:
-      enabled: false
 
 dex:
   enabled: false
@@ -65,20 +52,15 @@ dex:
   podAnnotations: {}
   metrics:
     enabled: true
-    serviceMonitor:
-      enabled: false
 
 redis:
   enabled: true
   resources: {}
   podAnnotations: {}
-  metrics:
-    enabled: true
-    serviceMonitor:
-      enabled: false
   exporter:
     enabled: true
-    resources: {}
+  metrics:
+    enabled: true
 
 # externalRedis:
 #   host: ""
