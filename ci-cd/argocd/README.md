@@ -5,6 +5,9 @@ helm repo add argocd "https://argoproj.github.io/argo-helm" && helm repo update
 ```bash
 helm upgrade --install argocd "argocd/argo-cd" -f values.yml -n argocd --version "6.4.0" --create-namespace
 ```
+```bash
+kubectl -n argocd get secret argocd-initial-admin-secret -o go-template='{{.data.password | base64decode}}'
+```
 
 #### Get default values:
 ```bash
