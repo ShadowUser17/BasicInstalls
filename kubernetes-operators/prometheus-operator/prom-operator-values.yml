@@ -6,6 +6,10 @@ alertmanager:
     ingressClassName: "nginx"
   alertmanagerSpec:
     retention: "8h"
+    image:
+      registry: "quay.io"
+      repository: "prometheus/alertmanager"
+      tag: "v0.27.0"
     alertmanagerConfigSelector:
       matchLabels:
         release: "prom-operator"
