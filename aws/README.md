@@ -13,8 +13,10 @@
 - [chamber](https://github.com/segmentio/chamber/releases)
 
 #### Resources:
+- [vantage](https://instances.vantage.sh/)
 - [aws](https://github.com/aws)
 - [aws-docs](https://github.com/awsdocs)
 - [aws-labs](https://github.com/awslabs)
 - [aws-actions](https://github.com/aws-actions)
 - [aws-samples](https://github.com/aws-samples)
+- [aws-observability](https://github.com/aws-observability)
