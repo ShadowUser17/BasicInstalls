@@ -24,6 +24,7 @@ groups:
 ```
 
 #### Example test file:
+- Warning! The `eval_time` must be bigger than `for` in the alert rule!
 ```yaml
 rule_files:
   - "alerts.yml"
@@ -44,4 +45,6 @@ tests:
 ```
 
 #### URLs:
+- [alerting-rules](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/)
+- [recording-rules](https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/)
 - [unit-testing-rules](https://prometheus.io/docs/prometheus/latest/configuration/unit_testing_rules/)
