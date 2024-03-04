@@ -22,7 +22,7 @@ helm show values "bitnami/kubernetes-event-exporter" > event-exporter-default.ym
 kubectl create namespace monitoring
 ```
 ```bash
-helm upgrade --install loki "grafana/loki" -f ./values/loki-values.yml -n monitoring --version "5.43.3"
+helm upgrade --install loki "grafana/loki" -f ./values/loki-values.yml -n monitoring --version "5.43.4"
 ```
 
 #### Install promtail:
@@ -48,7 +48,7 @@ helm search repo "bitnami/kubernetes-event-exporter"
 
 #### Export manifests:
 ```bash
-helm template loki "grafana/loki" -f ./values/loki-values.yml -n monitoring --version "5.43.3" > loki-manifests.yml
+helm template loki "grafana/loki" -f ./values/loki-values.yml -n monitoring --version "5.43.4" > loki-manifests.yml
 ```
 ```bash
 helm template promtail "grafana/promtail" -f ./values/promtail-values.yml -n monitoring --version "6.15.5" > promtail-manifests.yml
