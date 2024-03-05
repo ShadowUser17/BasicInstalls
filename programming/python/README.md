@@ -1,6 +1,7 @@
 #### URLs:
 - [Documentation](https://docs.python.org/3/)
 - [Downloads](https://www.python.org/downloads/)
+- [Packaging](https://packaging.python.org/en/latest/)
 - [Images](https://hub.docker.com/_/python/tags)
 - [Awesome](https://www.awesomepython.org/)
 
