@@ -28,7 +28,13 @@ curl -L "https://github.com/kubescape/kubescape/releases/download/v${version}/ku
 chmod 755 ./kubescape && mv ./kubescape /usr/local/bin/
 ```
 
-#### Install kustomize:
+#### Install kube-bench
+```bash
+curl -L "https://github.com/aquasecurity/kube-bench/releases/download/v${version}/kube-bench_${version}_linux_amd64.tar.gz" -o kube-bench.tgz && \
+tar -xzf kube-bench.tgz kube-bench && ./kube-bench /usr/local/bin/ && rm -f kube-bench.tgz
+```
+
+#### Install kustomize
 ```bash
 curl -L "https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2Fv${version}/kustomize_v${version}_linux_amd64.tar.gz" -o kustomize.tgz && \
 tar -xzf kustomize.tgz kustomize && mv ./kustomize /usr/local/bin/ && rm -f kustomize.tgz
