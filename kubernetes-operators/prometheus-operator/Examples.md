@@ -111,6 +111,7 @@ spec:
           annotations:
             summary: "Testing..."
             description: "Testing..."
+            runbook_url: ""
 ```
 ```yaml
 apiVersion: "monitoring.coreos.com/v1"
