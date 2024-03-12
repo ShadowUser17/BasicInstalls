@@ -3,7 +3,7 @@
 helm repo add argocd "https://argoproj.github.io/argo-helm" && helm repo update
 ```
 ```bash
-helm upgrade --install argocd "argocd/argo-cd" -f values.yml -n argocd --version "6.6.0" --create-namespace
+helm upgrade --install argocd "argocd/argo-cd" -f values.yml -n argocd --version "6.7.1" --create-namespace
 ```
 ```bash
 kubectl -n argocd get secret argocd-initial-admin-secret -o go-template='{{.data.password | base64decode}}'
@@ -21,7 +21,7 @@ helm search repo "argocd/argo-cd"
 
 #### Get manifests:
 ```bash
-helm template argocd "argocd/argo-cd" -f values.yml -n argocd --version "6.6.0" > manifests.yml
+helm template argocd "argocd/argo-cd" -f values.yml -n argocd --version "6.7.1" > manifests.yml
 ```
 
 #### Enable monitoring:
