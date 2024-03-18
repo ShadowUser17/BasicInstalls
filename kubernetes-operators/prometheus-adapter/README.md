@@ -3,7 +3,7 @@
 helm repo add prometheus-community "https://prometheus-community.github.io/helm-charts" && helm repo update
 ```
 ```bash
-helm upgrade --install prom-adapter "prometheus-community/prometheus-adapter" -f values.yml -n monitoring --version "4.9.0"
+helm upgrade --install prom-adapter "prometheus-community/prometheus-adapter" -f values.yml -n monitoring --version "4.9.1"
 ```
 
 #### Check updates:
@@ -18,7 +18,7 @@ helm show values "prometheus-community/prometheus-adapter" > default-values.yml
 
 #### Export manifests:
 ```bash
-helm template prom-adapter "prometheus-community/prometheus-adapter" -f values.yml -n monitoring --version "4.9.0" > manifests.yml
+helm template prom-adapter "prometheus-community/prometheus-adapter" -f values.yml -n monitoring --version "4.9.1" > manifests.yml
 ```
 
 #### Get available metrics:
