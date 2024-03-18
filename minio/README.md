@@ -3,7 +3,7 @@
 helm repo add bitnami "https://charts.bitnami.com/bitnami" && helm repo update
 ```
 ```bash
-helm upgrade --install s3 "bitnami/minio" -f values.yml -n testing --version "13.8.4"
+helm upgrade --install s3 "bitnami/minio" -f values.yml -n testing --version "14.0.0"
 ```
 
 #### Check updates:
@@ -18,7 +18,7 @@ helm show values "bitnami/minio" > default-values.yml
 
 #### Get manifests:
 ```bash
-helm template s3 "bitnami/minio" -f values.yml -n testing --version "13.8.4" > manifests.yml
+helm template s3 "bitnami/minio" -f values.yml -n testing --version "14.0.0" > manifests.yml
 ```
 
 #### URLs:
