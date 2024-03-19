@@ -40,6 +40,12 @@ curl -L "https://github.com/kubernetes-sigs/kustomize/releases/download/kustomiz
 tar -xzf kustomize.tgz kustomize && mv ./kustomize /usr/local/bin/ && rm -f kustomize.tgz
 ```
 
+#### Install nova
+```bash
+curl -L "https://github.com/FairwindsOps/nova/releases/download/v${version}/nova_${version}_linux_amd64.tar.gz" -o nova_linux.tgz && \
+tar -xzf nova_linux.tgz nova && mv ./nova /usr/local/bin/ && rm -f nova_linux.tgz
+```
+
 #### Install krew
 ```bash
 curl -LO "https://github.com/kubernetes-sigs/krew/releases/download/v${version}/krew-linux_amd64.tar.gz" && \
