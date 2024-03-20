@@ -84,6 +84,20 @@ grafana:
     accessModes: ["ReadWriteOnce"]
     storageClassName: "local-path"
 
+# Using default values from https://github.com/prometheus-community/helm-charts/blob/main/charts/kube-state-metrics/values.yaml
+kube-state-metrics:
+  image:
+    registry: "registry.k8s.io"
+    repository: "kube-state-metrics/kube-state-metrics"
+    tag: "v2.11.0"
+
+# Using default values from https://github.com/prometheus-community/helm-charts/blob/main/charts/prometheus-node-exporter/values.yaml
+prometheus-node-exporter:
+  image:
+    registry: "quay.io"
+    repository: "prometheus/node-exporter"
+    tag: "v1.7.0"
+
 defaultRules:
   create: true
   rules:
