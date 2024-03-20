@@ -21,6 +21,7 @@
 #### Tools:
 - [kali-tools](https://www.kali.org/tools/)
 - [blackarch-tools](https://blackarch.org/tools.html)
+- [WebHackersWeapons](https://github.com/hahwul/WebHackersWeapons)
 
 #### Notes:
 - [CloudHackTricks](https://cloud.hacktricks.xyz/welcome/readme)
