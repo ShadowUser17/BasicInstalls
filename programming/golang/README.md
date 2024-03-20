@@ -6,7 +6,10 @@
 - [Wiki](https://go.dev/wiki/)
 - [Awesome](https://awesome-go.com/)
 - [GoStyle](https://google.github.io/styleguide/go/)
+- [UberGoStyle](https://github.com/uber-go/guide/blob/master/style.md)
+- [LearnGoWithTests](https://quii.gitbook.io/learn-go-with-tests)
 - [GoByExample](https://gobyexample.com/)
+- [50ShadesOfGo](https://golang50shad.es/)
 
 #### Sub-repositories:
 - [sys](https://pkg.go.dev/golang.org/x/sys)
