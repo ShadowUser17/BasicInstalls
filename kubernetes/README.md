@@ -17,6 +17,7 @@
 - [crictl](https://github.com/kubernetes-sigs/cri-tools/releases)
 - [krew](https://krew.sigs.k8s.io/docs/)
 - [helm](https://helm.sh/docs/)
+- [nova](https://github.com/FairwindsOps/nova/blob/master/docs/quickstart.md)
 - [datree](https://hub.datree.io/)
 - [kubescape](https://github.com/kubescape/kubescape/blob/master/docs/getting-started.md)
 - [kube-bench](https://github.com/aquasecurity/kube-bench/blob/main/README.md)
