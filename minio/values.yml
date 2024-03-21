@@ -6,7 +6,8 @@ defaultBuckets: "backups"
 image:
   registry: "docker.io"
   repository: "bitnami/minio"
-  tag: "2024.3.15"
+  tag: "latest"
+  pullPolicy: "Always"
 
 auth:
   rootUser: "testing"
