@@ -11,7 +11,6 @@
 - [kafka_exporter](https://github.com/danielqsj/kafka_exporter/releases)
 - [vector](https://github.com/vectordotdev/vector/releases)
 - [snmp_exporter](https://github.com/prometheus/snmp_exporter/releases)
-- [helm_exporter](https://github.com/sstarcher/helm-exporter/releases)
 - [postgres_exporter](https://github.com/prometheus-community/postgres_exporter/releases)
 - [memcached_exporter](https://github.com/prometheus/memcached_exporter/releases)
 - [statsd_exporter](https://github.com/prometheus/statsd_exporter/releases)
