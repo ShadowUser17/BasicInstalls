@@ -11,12 +11,20 @@ export QEMU_TMP_DIR="$HOME/qemu/tmp"
 export QEMU_VMS_DIR="/nvme/qemu/vms"
 ```
 
-#### Create VMs:
+#### Create VM:
 ```bash
 create_qemu_vm.py 100 --iso debian-latest-amd64-DVD-1.iso --net virbr1 --cpu 2 --mem 8G --size 32G
 ```
 
-#### Configure access:
+#### Access to VM:
+```bash
+remmina -c "spice://127.0.0.1:10100"
+```
+```bash
+ncat -t 127.0.0.1 20100
+```
+
+#### Configure SSH:
 ```bash
 ssh-keygen -t rsa -b 2048 -f ~/.ssh/keys/qemu_ssh_key -P ''
 ```
