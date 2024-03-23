@@ -4,7 +4,9 @@ serviceMonitor:
     labels:
       release: "prom-operator"
 
-resources: {}
+resources:
+  requests:
+    memory: "64Mi"
 
 nodeSelector:
   kubernetes.io/os: "linux"
