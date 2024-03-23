@@ -15,6 +15,19 @@ export QEMU_VMS_DIR="/nvme/qemu/vms"
 ```bash
 create_qemu_vm.py 100 --iso debian-latest-amd64-DVD-1.iso --net virbr1 --cpu 2 --mem 8G --size 32G
 ```
+
+#### Configure access:
 ```bash
-create_qemu_vm.py 101 --iso debian-latest-amd64-DVD-1.iso --net virbr1 --cpu 4 --mem 16G --size 64G
+ssh-keygen -t rsa -b 2048 -f ~/.ssh/keys/qemu_ssh_key -P ''
+```
+```bash
+ssh-copy-id -i ~/.ssh/keys/qemu_ssh_key root@vm-100
+```
+```bash
+echo -n '
+Host vm-100
+HostName 192.168.56.10
+User root
+IdentityFile ~/.ssh/keys/qemu_ssh_key
+' >> ~/.ssh/config
 ```
