@@ -1,0 +1,14 @@
+serviceMonitor:
+  enabled: true
+  auth: ["public_v2"]
+  module: ["if_mib"]
+  params:
+    - name: "mikrotik"
+      target: "192.168.207.1"
+  selector:
+    release: "prom-operator"
+
+resources: {}
+
+nodeSelector:
+  kubernetes.io/os: "linux"
