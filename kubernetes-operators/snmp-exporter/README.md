@@ -30,3 +30,4 @@ helm template snmp "prometheus-community/prometheus-snmp-exporter" -f values.yml
 - [Docs](https://github.com/prometheus/snmp_exporter/blob/main/README.md)
 - [Chart](https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus-snmp-exporter)
 - [Releases](https://github.com/prometheus/snmp_exporter/releases)
+- [Dashboard](https://grafana.com/grafana/dashboards/11169-snmp-stats/)
