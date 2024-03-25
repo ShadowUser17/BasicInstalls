@@ -35,29 +35,6 @@ curl -LO "https://github.com/cert-manager/cert-manager/releases/download/v${vers
 tar -xzf cmctl-linux-amd64.tar.gz cmctl && mv ./cmctl /usr/local/bin/ && rm -f cmctl-linux-amd64.tar.gz
 ```
 
-#### Certificate example:
-```yaml
-apiVersion: "cert-manager.io/v1"
-kind: "Issuer"
-metadata:
-  name: "testing-issuer"
-  namespace: "testing"
-spec:
-  selfSigned: {}
-```
-```yaml
-apiVersion: "cert-manager.io/v1"
-kind: "Certificate"
-metadata:
-  name: "testing-ing-cert"
-  namespace: "testing"
-spec:
-  dnsNames: ["testing.k3s"]
-  secretName: "testing-ing-cert"
-  issuerRef:
-    name: "testing-issuer"
-```
-
 #### URLs:
 - [Docs](https://cert-manager.io/docs/)
 - [Chart](https://artifacthub.io/packages/helm/cert-manager/cert-manager)
