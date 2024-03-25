@@ -11,5 +11,3 @@
 #### Tools and Libs:
 - [hcl](https://github.com/hashicorp/hcl)
 - [tfsec](https://github.com/aquasecurity/tfsec)
-- [terratest](https://github.com/gruntwork-io/terratest)
-- [terragrunt](https://github.com/gruntwork-io/terragrunt)
