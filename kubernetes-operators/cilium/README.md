@@ -3,7 +3,7 @@
 helm repo add cilium "https://helm.cilium.io/" && helm repo update
 ```
 ```bash
-helm upgrade --install cilium "cilium/cilium" -f values.yml -n kube-system --version "1.15.2"
+helm upgrade --install cilium "cilium/cilium" -f values.yml -n kube-system --version "1.15.3"
 ```
 
 #### Check updates:
@@ -18,7 +18,7 @@ helm show values "cilium/cilium" > default-values.yml
 
 #### Export manifests:
 ```bash
-helm template cilium "cilium/cilium" -f values.yml -n kube-system --version "1.15.2" > manifests.yml
+helm template cilium "cilium/cilium" -f values.yml -n kube-system --version "1.15.3" > manifests.yml
 ```
 
 #### Get API resources:
