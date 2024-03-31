@@ -8,7 +8,7 @@ helm repo add open-telemetry "https://open-telemetry.github.io/opentelemetry-hel
 kubectl create namespace monitoring
 ```
 ```bash
-helm upgrade --install otlp-operator "open-telemetry/opentelemetry-operator" -f values.yml -n monitoring --version "0.52.2"
+helm upgrade --install otlp-operator "open-telemetry/opentelemetry-operator" -f values.yml -n monitoring --version "0.52.4"
 ```
 
 #### Check updates:
@@ -23,7 +23,7 @@ helm show values "open-telemetry/opentelemetry-operator" > default-values.yml
 
 #### Get manifests:
 ```bash
-helm template otlp-operator "open-telemetry/opentelemetry-operator" -f values.yml -n monitoring --version "0.52.2" > manifests.yml
+helm template otlp-operator "open-telemetry/opentelemetry-operator" -f values.yml -n monitoring --version "0.52.4" > manifests.yml
 ```
 
 #### Get API resources:
