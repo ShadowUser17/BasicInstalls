@@ -5,7 +5,7 @@ promtool check rules rules.yml
 
 #### Run unit tests:
 ```bash
-promtool test rules tests.yml
+promtool test rules --diff tests.yml
 ```
 
 #### Example rule file:
@@ -40,7 +40,7 @@ tests:
         values: "1x4 0x9 1x4"
     alert_rule_test:
       - alertname: "InstancesDown"
-        eval_time: "6m"
+        eval_time: "5m"
         exp_alerts: []
 ```
 
