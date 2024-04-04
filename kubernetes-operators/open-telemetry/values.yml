@@ -3,7 +3,6 @@ nodeSelector:
   kubernetes.io/os: "linux"
 
 manager:
-  podAnnotations: {}
   resources:
     requests:
       cpu: "100m"
@@ -29,7 +28,9 @@ kubeRBACProxy:
 admissionWebhooks:
   certManager:
     enabled: true
-    issuerRef: {}
+    issuerRef:
+      name: "k8s-cluster-issuer"
+      kind: "ClusterIssuer"
   autoGenerateCert:
     enabled: true
     recreate: true
