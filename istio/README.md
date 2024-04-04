@@ -27,18 +27,18 @@ kubectl label namespace default istio-injection=enabled --overwrite
 
 #### Enable monitoring:
 ```bash
-kubectl apply -f "https://raw.githubusercontent.com/ShadowUser17/BasicInstalls/master/kubernetes-istio/istio-prom-operator.yml"
+kubectl apply -f "https://raw.githubusercontent.com/ShadowUser17/BasicInstalls/master/istio/prom-operator.yml"
 ```
 
 #### Create IngressClass:
 ```bash
-kubectl apply -f "https://raw.githubusercontent.com/ShadowUser17/BasicInstalls/master/kubernetes-istio/istio-ingress-class.yml"
+kubectl apply -f "https://raw.githubusercontent.com/ShadowUser17/BasicInstalls/master/istio/ingress-class.yml"
 ```
 
 #### Create Issuer:
 - Warning! The `secret` for `ingress` must be in the `istio-system` namespace!
 ```bash
-kubectl apply -f "https://raw.githubusercontent.com/ShadowUser17/BasicInstalls/master/kubernetes-istio/istio-ingress-issuer.yml"
+kubectl apply -f "https://raw.githubusercontent.com/ShadowUser17/BasicInstalls/master/istio/ingress-issuer.yml"
 ```
 
 #### URLs:
