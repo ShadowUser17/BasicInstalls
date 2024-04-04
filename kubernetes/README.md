@@ -19,6 +19,7 @@
 - [helm](https://helm.sh/docs/)
 - [nova](https://github.com/FairwindsOps/nova/blob/master/docs/quickstart.md)
 - [datree](https://hub.datree.io/)
+- [kubeshark](https://docs.kubeshark.co/en/introduction)
 - [kubescape](https://github.com/kubescape/kubescape/blob/master/docs/getting-started.md)
 - [kube-bench](https://github.com/aquasecurity/kube-bench/blob/main/README.md)
 

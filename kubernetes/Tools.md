@@ -22,6 +22,12 @@ curl -L "https://github.com/datreeio/datree/releases/download/${version}/datree-
 unzip datree-cli.zip datree && mv ./datree /usr/local/bin/ && rm -f datree-cli.zip
 ```
 
+#### Install kubeshark
+```bash
+curl -L "https://github.com/kubeshark/kubeshark/releases/download/v${version}/kubeshark_linux_amd64" -o kubeshark && \
+chmod +x ./kubeshark && mv ./kubeshark /usr/local/bin/
+```
+
 #### Install kubescape
 ```bash
 curl -L "https://github.com/kubescape/kubescape/releases/download/v${version}/kubescape-ubuntu-latest" -o kubescape && \
