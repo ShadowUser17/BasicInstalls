@@ -1,8 +1,0 @@
-podAnnotations:
-  promtail.io/collect: "true"
-
-nodeSelector:
-  kubernetes.io/os: "linux"
-
-tolerations:
-  - operator: "Exists"
