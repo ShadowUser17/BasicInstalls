@@ -7,7 +7,7 @@ tetragonOperator:
     enabled: true
     serviceMonitor:
       enabled: true
-      scrapeInterval: "30s"
+      scrapeInterval: "1m"
       labelsOverride:
         release: "prom-operator"
 
@@ -22,7 +22,7 @@ tetragon:
     enabled: true
     serviceMonitor:
       enabled: true
-      scrapeInterval: "30s"
+      scrapeInterval: "1m"
       labelsOverride:
         release: "prom-operator"
 
