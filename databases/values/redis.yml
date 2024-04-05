@@ -40,6 +40,6 @@ metrics:
   enabled: true
   serviceMonitor:
     enabled: true
-    interval: "30s"
+    interval: "1m"
     additionalLabels:
       release: "prom-operator"
