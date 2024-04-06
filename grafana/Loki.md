@@ -32,7 +32,7 @@ helm upgrade --install promtail "grafana/promtail" -f ./values/promtail-values.y
 
 #### Install kubernetes-event-exporter:
 ```bash
-helm upgrade --install event-exporter "bitnami/kubernetes-event-exporter" -f ./values/event-exporter-values.yml -n monitoring --version "3.0.0"
+helm upgrade --install event-exporter "bitnami/kubernetes-event-exporter" -f ./values/event-exporter-values.yml -n monitoring --version "3.0.2"
 ```
 
 #### Check updates:
@@ -54,7 +54,7 @@ helm template loki "grafana/loki" -f ./values/loki-values.yml -n monitoring --ve
 helm template promtail "grafana/promtail" -f ./values/promtail-values.yml -n monitoring --version "6.15.5" > promtail-manifests.yml
 ```
 ```bash
-helm template event-exporter "bitnami/kubernetes-event-exporter" -f ./values/event-exporter-values.yml -n monitoring --version "3.0.0" > event-exporter-manifests.yml
+helm template event-exporter "bitnami/kubernetes-event-exporter" -f ./values/event-exporter-values.yml -n monitoring --version "3.0.2" > event-exporter-manifests.yml
 ```
 
 #### Enable log collection:
