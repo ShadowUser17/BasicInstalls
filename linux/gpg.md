@@ -1,6 +1,8 @@
 #### List existing keys:
 ```bash
-gpg --list-public-keys && \
+gpg --list-public-keys
+```
+```bash
 gpg --list-secret-keys
 ```
 
@@ -10,6 +12,11 @@ gpg --show-keys <keyring_file>
 ```
 
 #### Create new key:
+- If you use `2.1.17` or newest:
+```bash
+gpg --full-generate-key
+```
+- If you use the oldest version:
 ```bash
 gpg --default-new-key-algo rsa2048 --gen-key
 ```
@@ -21,8 +28,13 @@ gpg --import <keyring_file>
 
 #### Export key pair:
 ```bash
-gpg --export <pub_key_id> > public.gpg && \
-gpg --export-secret-keys <sec_key_id> > private.gpg
+export KEY_ID=''
+```
+```bash
+gpg --armor --export "${KEY_ID}" > "${KEY_ID}_public.gpg"
+```
+```bash
+gpg --armor --export-secret-keys "${KEY_ID}" > "${KEY_ID}_private.gpg"
 ```
 
 #### Encrypt file:
