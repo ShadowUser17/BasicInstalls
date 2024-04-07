@@ -1,9 +1,0 @@
-serviceMonitor:
-  enabled: false
-
-resources:
-  requests:
-    memory: "64Mi"
-
-nodeSelector:
-  kubernetes.io/os: "linux"
