@@ -1,7 +1,3 @@
-#### URLs:
-- [ssd](https://wiki.archlinux.org/title/Solid_state_drive)
-- [ext4](https://docs.kernel.org/admin-guide/ext4.html)
-
 #### SSD preparations:
 ```bash
 mke2fs -t ext4 /dev/nvme0n1p1
