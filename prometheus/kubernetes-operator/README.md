@@ -1,14 +1,3 @@
-#### Deploy to cluster:
-```bash
-kubectl create namespace monitoring
-```
-```bash
-helm repo add prometheus-community "https://prometheus-community.github.io/helm-charts" && helm repo update
-```
-```bash
-helm upgrade --install prom-operator "prometheus-community/kube-prometheus-stack" -f prom-operator-values.yml -n monitoring --version "58.0.0"
-```
-
 #### Get Grafana credentials:
 ```bash
 kubectl -n monitoring get secret prom-operator-grafana -o go-template='{{index .data "admin-user" | base64decode}}'
@@ -40,21 +29,6 @@ kubectl -n monitoring get prometheus prom-operator-kube-prometh-prometheus -o js
 ```
 ```bash
 kubectl -n monitoring get alertmanager prom-operator-kube-prometh-alertmanager -o jsonpath='{.spec.alertmanagerConfigSelector}'
-```
-
-#### Check updates:
-```bash
-helm search repo "prometheus-community/kube-prometheus-stack"
-```
-
-#### Get default values:
-```bash
-helm show values "prometheus-community/kube-prometheus-stack" > default-values.yml
-```
-
-#### Get manifests:
-```bash
-helm template prom-operator "prometheus-community/kube-prometheus-stack" -f prom-operator-values.yml -n monitoring --version "58.0.0" > manifests.yml
 ```
 
 #### Disable the next rules for EKS:
