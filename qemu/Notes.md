@@ -35,6 +35,11 @@ vgchange -an vg1
 qemu-nbd -d /dev/nbd0
 ```
 
+#### Enable SSE instructions:
+```
+-cpu "qemu64-v1,+ssse3,+sse4.1,+sse4.2"
+```
+
 #### Accelerations of QEMU:
 - Windows: hax (Hyper-V)
 - Linux: kvm
