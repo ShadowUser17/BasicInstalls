@@ -4,6 +4,11 @@
   # include_matches._UID = 0
   # include_matches._GID = 0
 
+#[sinks.debug]
+#type = "console"
+#encoding.codec = "json"
+#inputs = ["system_logs"]
+
 [sinks.send_to_loki]
   type = "loki"
   inputs = ["system_logs"]

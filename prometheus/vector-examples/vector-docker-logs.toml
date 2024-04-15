@@ -2,6 +2,11 @@
   type = "docker_logs"
   # include_containers = ["keycloak"]
 
+#[sinks.debug]
+#type = "console"
+#encoding.codec = "json"
+#inputs = ["docker_logs"]
+
 [sinks.send_to_loki]
   type = "loki"
   inputs = ["docker_logs"]

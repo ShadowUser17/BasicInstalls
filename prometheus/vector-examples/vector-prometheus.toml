@@ -5,6 +5,11 @@
   instance_tag = "instance"
   endpoints = ["http://localhost:8080/metrics"]
 
+#[sinks.debug]
+#type = "console"
+#encoding.codec = "json"
+#inputs = ["prometheus_scrape"]
+
 [sinks.write_to_prometheus]
   type = "prometheus_remote_write"
   inputs = ["prometheus_scrape"]
