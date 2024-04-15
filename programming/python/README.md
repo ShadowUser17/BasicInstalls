@@ -6,11 +6,11 @@
 - [Awesome](https://www.awesomepython.org/)
 
 #### Libraries:
-- [flask](https://github.com/pallets/flask/blob/main/README.rst)
+- [flask](https://github.com/pallets/flask/blob/main/README.md)
 - [jinja](https://github.com/pallets/jinja/blob/main/README.rst)
-- [pyyaml](https://github.com/yaml/pyyaml/blob/master/README.md)
+- [pyyaml](https://github.com/yaml/pyyaml/blob/main/README.md)
 - [redis](https://github.com/redis/redis-py/blob/master/README.md)
-- [pymysql](https://github.com/PyMySQL/PyMySQL/blob/main/README.rst)
+- [pymysql](https://github.com/PyMySQL/PyMySQL/blob/main/README.md)
 - [psycopg](https://github.com/psycopg/psycopg2/blob/master/README.rst)
 
 #### Tools:
