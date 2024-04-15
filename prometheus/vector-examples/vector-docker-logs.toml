@@ -11,7 +11,7 @@
   labels.service = "{{ container_name }}"
   compression = "none"
   encoding.codec = "json"
-  # healthcheck.enabled = true
   request.concurrency = 5
   request.retry_attempts = 5
   request.retry_backoff_secs = 15
+  # healthcheck.enabled = true

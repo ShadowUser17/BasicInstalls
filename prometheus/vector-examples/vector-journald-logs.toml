@@ -10,9 +10,10 @@
   endpoint = "http://grafana-loki.k3s"
   labels.env = "test"
   labels.host = "${HOSTNAME}"
+  labels.service = "{{ SYSLOG_IDENTIFIER }}"
   compression = "none"
   encoding.codec = "json"
-  # healthcheck.enabled = true
   request.concurrency = 5
   request.retry_attempts = 5
   request.retry_backoff_secs = 15
+  # healthcheck.enabled = true
