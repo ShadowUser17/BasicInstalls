@@ -37,7 +37,7 @@ chmod 755 ./kubescape && mv ./kubescape /usr/local/bin/
 #### Install kube-bench
 ```bash
 curl -L "https://github.com/aquasecurity/kube-bench/releases/download/v${version}/kube-bench_${version}_linux_amd64.tar.gz" -o kube-bench.tgz && \
-tar -xzf kube-bench.tgz kube-bench && ./kube-bench /usr/local/bin/ && rm -f kube-bench.tgz
+tar -xzf kube-bench.tgz kube-bench && mv ./kube-bench /usr/local/bin/ && rm -f kube-bench.tgz
 ```
 
 #### Install kustomize
