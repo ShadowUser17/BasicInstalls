@@ -18,10 +18,10 @@ echo -e "ncat -t ${VMSADDR} ${VMMPORT}"
 qemu-system-x86_64 -nodefaults \
 -boot "order=c,menu=on" -monitor "${VMMON}" \
 -smp "sockets=1,cores=1" -m 1G -vga qxl \
--cpu qemu64-v1 -machine "type=q35,accel=kvm" \
+-cpu "qemu64-v1,+ssse3,+sse4.1,+sse4.2" -machine "type=q35,accel=kvm" \
 -name "${VMID}" -pidfile "${VMPID}" -daemonize \
 -drive "if=ide,media=cdrom,file=${VMISO}" \
--drive "if=virtio,index=0,media=disk,file=${VMHDD}" \
+-drive "if=virtio,index=0,media=disk,cache=none,file=${VMHDD}" \
 -device "virtio-net,netdev=eth0,mac=${VMMAC}" \
 -netdev "bridge,id=eth0,br=${VMBRID}" \
 -spice "addr=${VMSADDR},port=${VMSPORT},disable-ticketing=on"

@@ -20,10 +20,10 @@ echo -e "ncat -t ${VMSADDR} ${VMMPORT}"
 qemu-system-x86_64 -nodefaults \
 -boot "order=c,menu=on" -monitor "${VMMON}" \
 -smp "sockets=1,cores=1" -m 64M -vga qxl \
--cpu qemu64-v1 -machine "type=q35,accel=kvm" \
+-cpu "qemu64-v1,+ssse3,+sse4.1,+sse4.2" -machine "type=q35,accel=kvm" \
 -name "${VMID}" -pidfile "${VMPID}" -daemonize \
 -drive "index=0,media=cdrom,file=${VMISO}" \
--drive "index=1,media=disk,file=${VMHDD}" \
+-drive "index=1,media=disk,cache=none,file=${VMHDD}" \
 -device "e1000,netdev=eth0,mac=${VMMAC0}" \
 -netdev "bridge,id=eth0,br=${VMBR0}" \
 -device "e1000,netdev=eth1,mac=${VMMAC1}" \
