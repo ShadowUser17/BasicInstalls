@@ -13,7 +13,7 @@ export QEMU_VMS_DIR="/nvme/qemu/vms"
 
 #### Create VM:
 ```bash
-create_qemu_vm.py 100 --iso debian-latest-amd64-DVD-1.iso --net virbr1 --cpu 2 --mem 8G --size 32G
+create_qemu_vm.py 100 --iso=debian-latest-amd64-DVD-1.iso --net=virbr1 --cpu=2 --mem=8G --size=32G
 ```
 
 #### Access to VM:
