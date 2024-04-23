@@ -16,12 +16,6 @@ curl -L "https://github.com/FairwindsOps/rbac-lookup/releases/download/v${versio
 tar -xzf rbac-lookup.tgz rbac-lookup && mv ./rbac-lookup /usr/local/bin/ && rm -f rbac-lookup.tgz
 ```
 
-#### Install datree
-```bash
-curl -L "https://github.com/datreeio/datree/releases/download/${version}/datree-cli_${version}_Linux_x86_64.zip" -o datree-cli.zip && \
-unzip datree-cli.zip datree && mv ./datree /usr/local/bin/ && rm -f datree-cli.zip
-```
-
 #### Install kubeshark
 ```bash
 curl -L "https://github.com/kubeshark/kubeshark/releases/download/v${version}/kubeshark_linux_amd64" -o kubeshark && \
