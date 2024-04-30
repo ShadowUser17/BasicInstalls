@@ -5,10 +5,10 @@
 - [c-language](https://en.cppreference.com/w/c/language)
 - [cpp-language](https://en.cppreference.com/w/cpp/language)
 
-#### GCC:
+#### GCC standards:
 - [C](https://gcc.gnu.org/c99status.html)
 - [C++](https://gcc.gnu.org/projects/cxx-status.html)
 
-#### Clang:
+#### Clang standards:
 - [C](https://clang.llvm.org/c_status.html)
 - [C++](https://clang.llvm.org/cxx_status.html)
