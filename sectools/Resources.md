@@ -24,6 +24,7 @@
 - [WebHackersWeapons](https://github.com/hahwul/WebHackersWeapons)
 
 #### Notes:
+- [CheatSheetSeries](https://cheatsheetseries.owasp.org/)
 - [CloudHackTricks](https://cloud.hacktricks.xyz/welcome/readme)
 - [BookHackTricks](https://book.hacktricks.xyz/welcome/readme)
 - [RedTeaming](https://www.ired.team/)
