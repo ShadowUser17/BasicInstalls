@@ -11,8 +11,8 @@ usermod -aG vboxusers <username>
 
 #### Install Extension Pack:
 ```bash
-curl -LO "https://download.virtualbox.org/virtualbox/7.0.14/Oracle_VM_VirtualBox_Extension_Pack-7.0.14.vbox-extpack" && \
-VBoxManage extpack install --replace ./Oracle_VM_VirtualBox_Extension_Pack-7.0.14.vbox-extpack
+curl -LO "https://download.virtualbox.org/virtualbox/7.0.18/Oracle_VM_VirtualBox_Extension_Pack-7.0.18.vbox-extpack" && \
+VBoxManage extpack install --replace ./Oracle_VM_VirtualBox_Extension_Pack-7.0.18.vbox-extpack
 ```
 
 #### Install Vagrant on Fedora:
