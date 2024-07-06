@@ -25,6 +25,19 @@ affinity:
               values: ["us-east-2a", "us-east-2b"]
 ```
 
+#### Schedule pods with podAffinity:
+- Add `affinity.podAffinity` to the pod template spec to schedule pods on node the already running another pod with selected labels.
+- The logic is similar to `nodeAffinity`.
+```yaml
+affinity:
+  podAffinity:
+    requiredDuringSchedulingIgnoredDuringExecution:
+      - topologyKey: "kubernetes.io/hostname"
+        labelSelector:
+          matchLabels:
+            app.kubernetes.io/name: "mysql"
+```
+
 #### Schedule pods with podAntiAffinity:
 - Add `affinity.podAntiAffinity` to the pod template spec to prevent running more than one copy per node.
 - The logic is similar to `nodeAffinity`.
