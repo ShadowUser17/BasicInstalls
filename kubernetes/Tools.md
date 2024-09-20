@@ -1,7 +1,6 @@
 #### Install kubectl
 ```bash
-curl -LO "https://storage.googleapis.com/kubernetes-release/release/v${version}/bin/linux/amd64/kubectl" && \
-chmod +x ./kubectl && mv ./kubectl /usr/local/bin/
+curl -LO "https://dl.k8s.io/release/v${version}/bin/linux/amd64/kubectl" && chmod +x ./kubectl && mv ./kubectl /usr/local/bin/
 ```
 
 #### Install helm
