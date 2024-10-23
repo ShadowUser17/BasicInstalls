@@ -38,7 +38,7 @@ kubectl -n monitoring get alertmanager prom-operator-kube-prometh-alertmanager -
 - `kubeProxy`
 
 #### URLs:
-- [API](https://prometheus-operator.dev/docs/operator/api/)
-- [Docs](https://prometheus-operator.dev/docs/prologue/introduction/)
+- [API](https://prometheus-operator.dev/docs/api-reference/api/)
+- [Docs](https://prometheus-operator.dev/docs/getting-started/introduction/)
 - [Chart](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack)
 - [Releases](https://github.com/prometheus-operator/prometheus-operator/releases)
