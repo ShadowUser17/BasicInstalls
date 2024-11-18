@@ -13,3 +13,14 @@ pg_dump -h <host> -d <db> -U <user> -W > backup.psql
 ```bash
 psql -h <host> -d <db> -U <user> -W -f backup.psql
 ```
+
+#### Prepare database:
+```
+CREATE DATABASE <db_name>;
+```
+```
+CREATE USER <user> WITH ENCRYPTED PASSWORD 'password';
+```
+```
+GRANT ALL PRIVILEGES ON DATABASE <db_name> TO <user>;
+```
