@@ -9,6 +9,17 @@
 pg_dump -h <host> -d <db> -U <user> -W > backup.psql
 ```
 
+#### Backup all databases:
+```bash
+export PGHOST="" PGUSER="" PGPASSWORD=""
+```
+```bash
+psql -h "${PGHOST}" -U "${PGUSER}" -c '\l' | awk '$1~/^[a-z]/{print $1}' > databases.txt
+```
+```bash
+for I in `cat databases.txt`; do pg_dump -h "$PGHOST" -d "$I" -U "$PGUSER" > "$I".psql; done
+```
+
 #### Restore database:
 ```bash
 psql -h <host> -d <db> -U <user> -W -f backup.psql
