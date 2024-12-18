@@ -35,3 +35,13 @@ CREATE USER <user> WITH ENCRYPTED PASSWORD 'password';
 ```
 GRANT ALL PRIVILEGES ON DATABASE <db_name> TO <user>;
 ```
+
+#### Get database size:
+```
+SELECT pg_size_pretty(pg_database_size('database_name')) AS database_size;
+```
+```
+SELECT
+    datname AS database_name, pg_size_pretty(pg_database_size(datname)) AS database_size
+FROM pg_database ORDER BY pg_database_size(datname) DESC;
+```
