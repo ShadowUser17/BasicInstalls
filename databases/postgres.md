@@ -38,6 +38,11 @@ CREATE USER <user> WITH ENCRYPTED PASSWORD 'password';
 GRANT ALL PRIVILEGES ON DATABASE <db_name> TO <user>;
 ```
 
+#### Get active connections:
+```
+SELECT * FROM pg_stat_activity WHERE datname = 'database_name';
+```
+
 #### Get database size:
 ```
 SELECT pg_size_pretty(pg_database_size('database_name')) AS database_size;
