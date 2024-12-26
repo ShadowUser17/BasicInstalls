@@ -38,6 +38,11 @@ CREATE USER <user> WITH ENCRYPTED PASSWORD 'password';
 GRANT ALL PRIVILEGES ON DATABASE <db_name> TO <user>;
 ```
 
+#### Create database copy:
+```
+CREATE DATABASE <db_dst> WITH TEMPLATE <db_src> OWNER <user>;
+```
+
 #### Get active connections:
 ```
 SELECT * FROM pg_stat_activity WHERE datname = 'database_name';
