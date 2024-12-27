@@ -24,3 +24,11 @@ update-ca-trust
 ```bash
 openssl req -x509 -sha256 -nodes -newkey rsa:2048 -keyout srv.key -out srv.crt -days 730
 ```
+
+#### Read local certificate:
+```bash
+openssl x509 -inform pem -noout -text -in root.pem
+```
+```bash
+openssl x509 -inform der -noout -text -in root.der
+```
