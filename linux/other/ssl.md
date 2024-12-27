@@ -27,8 +27,18 @@ openssl req -x509 -sha256 -nodes -newkey rsa:2048 -keyout srv.key -out srv.crt -
 
 #### Read local certificate:
 ```bash
-openssl x509 -inform pem -noout -text -in root.pem
+openssl x509 -inform pem -noout -text -in srv.pem
 ```
 ```bash
-openssl x509 -inform der -noout -text -in root.der
+openssl x509 -inform der -noout -text -in srv.der
+```
+
+#### Read remote certificate:
+```bash
+openssl s_client -showcerts -connect <host:port>
+```
+
+#### Verify certs chain:
+```bash
+openssl verify -untrusted <srv.srt> <root.pem>
 ```
