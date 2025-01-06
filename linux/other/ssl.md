@@ -20,6 +20,14 @@ cp /root/CustomRootCA.pem /etc/pki/ca-trust/source/anchors/
 update-ca-trust
 ```
 
+#### Add custom CA for Alpine:
+```bash
+cp /root/CustomRootCA.crt /etc/ssl/certs/
+```
+```bash
+update-ca-certificates
+```
+
 #### Generate Self-signed certificate:
 ```bash
 openssl req -x509 -sha256 -nodes -newkey rsa:2048 -keyout srv.key -out srv.crt -days 730
