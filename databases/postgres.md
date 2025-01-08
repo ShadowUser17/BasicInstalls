@@ -40,6 +40,9 @@ GRANT ALL PRIVILEGES ON DATABASE <db_name> TO <user>;
 
 #### Create database copy:
 ```
+GRANT <user> TO postgres;
+```
+```
 CREATE DATABASE <db_dst> WITH TEMPLATE <db_src> OWNER <user>;
 ```
 
