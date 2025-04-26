@@ -3,6 +3,16 @@
 auditctl -l
 ```
 
+#### Read rules from file:
+```bash
+auditctl -R <path_to_file>
+```
+
+#### Regenerate rules in /etc/audit/rules.d:
+```bash
+augenrules --load
+```
+
 #### Apply FS rules:
 - `path_to_file` is the file or directory that is audited.
 - `permissions` are the permissions that are logged (r/w/x/a).
