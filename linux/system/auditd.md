@@ -18,3 +18,8 @@ auditctl -w <path_to_file> -p <permissions> -k <key_name>
 ```bash
 auditctl -a <action,filter> -S <system_call> -F <field=value> -k <key_name>
 ```
+
+#### SysCall filters:
+- Action values: `always` or `never`.
+- Filter values: `task`, `exit`, `user`, and `exclude`.
+- The `-S` option allows you to group several rules.
