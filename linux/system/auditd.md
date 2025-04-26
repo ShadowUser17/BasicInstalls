@@ -33,3 +33,19 @@ auditctl -a <action,filter> -S <system_call> -F <field=value> -k <key_name>
 - Action values: `always` or `never`.
 - Filter values: `task`, `exit`, `user`, and `exclude`.
 - The `-S` option allows you to group several rules.
+
+#### Show user related events:
+```bash
+ausearch -ua <uid> -i
+```
+
+#### Show summary report:
+```bash
+aureport -x --summary
+```
+```bash
+aureport -u --failed --summary -i
+```
+
+#### URLs:
+- [auditd-wiki](https://github.com/linux-audit/audit-documentation/wiki)
