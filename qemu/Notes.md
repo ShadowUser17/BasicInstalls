@@ -14,6 +14,11 @@ qemu-img resize vm-100-001.qcow2 +5G
 qemu-img create -f qcow2 -b vm-100-001.qcow2 -F qcow2 vm-100-001-snapshot.qcow2
 ```
 
+#### Merge snapshot:
+```bash
+qemu-img commit vm-100-001-snapshot.qcow2
+```
+
 #### Create new base image:
 ```bash
 qemu-img convert -O qcow2 vm-100-001-snapshot.qcow2 vm-100-001-v2.qcow2
