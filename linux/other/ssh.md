@@ -1,3 +1,8 @@
+#### Disable password authentication:
+```
+AuthenticationMethods publickey
+```
+
 #### Local port forwarding:
 - Forward a port from the server to the local machine.
 ```bash
