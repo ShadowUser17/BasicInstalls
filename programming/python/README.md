@@ -13,6 +13,7 @@
 - [redis](https://github.com/redis/redis-py/blob/master/README.md)
 - [pymysql](https://github.com/PyMySQL/PyMySQL/blob/main/README.md)
 - [psycopg](https://github.com/psycopg/psycopg2/blob/master/README.rst)
+- [pymongo](https://github.com/mongodb/mongo-python-driver/blob/master/README.md)
 
 #### Tools:
 - [pip-audit](https://github.com/pypa/pip-audit/releases)

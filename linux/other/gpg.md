@@ -12,13 +12,8 @@ gpg --show-keys <keyring_file>
 ```
 
 #### Create new key:
-- If you use `2.1.17` or newest:
 ```bash
 gpg --full-generate-key
-```
-- If you use the oldest version:
-```bash
-gpg --default-new-key-algo rsa2048 --gen-key
 ```
 
 #### Import key pair:
