@@ -3,6 +3,11 @@
 AuthenticationMethods publickey
 ```
 
+#### Change Passphrase:
+```bash
+ssh-keygen -f <ssh_key_file> -p
+```
+
 #### Local port forwarding:
 - Forward a port from the server to the local machine.
 ```bash
