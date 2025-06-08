@@ -32,7 +32,7 @@ psql --host <host> --dbname <db> --username <user> --file backup.psql
 CREATE DATABASE <db_name>;
 ```
 ```
-CREATE USER <user> WITH ENCRYPTED PASSWORD 'password';
+CREATE USER <user> WITH PASSWORD 'password';
 ```
 ```
 GRANT ALL PRIVILEGES ON DATABASE <db_name> TO <user>;
@@ -44,6 +44,11 @@ GRANT <user> TO postgres;
 ```
 ```
 CREATE DATABASE <db_dst> WITH TEMPLATE <db_src> OWNER <user>;
+```
+
+#### Change user password:
+```
+ALTER USER <user> WITH PASSWORD 'password';
 ```
 
 #### Get active connections:
