@@ -53,7 +53,7 @@ ALTER USER <user> WITH PASSWORD 'password';
 
 #### Get active connections:
 ```
-SELECT * FROM pg_stat_activity WHERE datname = 'database_name';
+SELECT datname, usename, client_addr, client_port, state FROM pg_stat_activity;
 ```
 
 #### Get database size:
