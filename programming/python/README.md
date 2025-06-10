@@ -10,10 +10,6 @@
 - [jinja](https://github.com/pallets/jinja/blob/main/README.rst)
 - [pyyaml](https://github.com/yaml/pyyaml/blob/main/README.md)
 - [flask](https://github.com/pallets/flask/blob/main/README.md)
-- [redis](https://github.com/redis/redis-py/blob/master/README.md)
-- [pymysql](https://github.com/PyMySQL/PyMySQL/blob/main/README.md)
-- [psycopg](https://github.com/psycopg/psycopg2/blob/master/README.rst)
-- [pymongo](https://github.com/mongodb/mongo-python-driver/blob/master/README.md)
 
 #### Tools:
 - [pip-audit](https://github.com/pypa/pip-audit/releases)

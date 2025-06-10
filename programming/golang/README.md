@@ -20,7 +20,6 @@
 - [gin](https://github.com/gin-gonic/gin)
 - [mux](https://github.com/gorilla/mux)
 - [yaml](https://github.com/go-yaml/yaml)
-- [sqlx](https://github.com/jmoiron/sqlx)
 - [cobra](https://github.com/spf13/cobra)
 - [coraza](https://github.com/corazawaf/coraza)
 - [toxiproxy](https://github.com/Shopify/toxiproxy)
