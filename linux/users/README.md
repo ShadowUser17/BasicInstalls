@@ -31,3 +31,8 @@ getent shadow <username>
 ```bash
 groups <username>
 ```
+
+#### Delete user Home/SELinux:
+```bash
+userdel -r -Z <username>
+```

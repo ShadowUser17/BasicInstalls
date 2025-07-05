@@ -1,5 +1,8 @@
 #### Show status:
 ```bash
+getenforce
+```
+```bash
 sestatus
 ```
 
@@ -26,6 +29,19 @@ chcon -t <type> <path>
 #### Restore FS context:
 ```bash
 restorecon <path>
+```
+
+#### Show policy status:
+```bash
+getsebool -a
+```
+```bash
+getsebool <policy>
+```
+
+#### Change policy mode:
+```bash
+setsebool -P <policy=0|1>
 ```
 
 #### URLs:
