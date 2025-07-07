@@ -44,5 +44,10 @@ getsebool <policy>
 setsebool -P <policy=0|1>
 ```
 
+#### Show policy modules:
+```bash
+semodule -l
+```
+
 #### URLs:
 - [learning_selinux](https://docs.rockylinux.org/guides/security/learning_selinux/)
