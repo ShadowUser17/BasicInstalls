@@ -1,7 +1,13 @@
-#### Show all users:
+#### Show enabled users:
 ```bash
-ldapsearch -H 'ldap://localhost' -D "uid=admin,cn=users,cn=accounts,dc=testing,dc=local" \
--w '<passwd>' -b "dc=testing,dc=local" '(&(objectClass=person)(uid=*))' uid displayName memberof
+ldapsearch -H 'ldap://localhost' -D "uid=admin,cn=users,cn=accounts,dc=testing,dc=local" -w '<passwd>' \
+-b "dc=testing,dc=local" '(&(objectClass=person)(uid=*)(!(nsaccountlock=TRUE)))' uid cn nsaccountlock
+```
+
+#### Show group member users:
+```bash
+ldapsearch -H 'ldap://localhost' -D "uid=admin,cn=users,cn=accounts,dc=testing,dc=local" -w '<passwd>' \
+-b "dc=testing,dc=local" '(&(objectClass=person)(uid=*)(memberof=cn=*,cn=groups,cn=accounts,dc=*))' uid cn nsaccountlock
 ```
 
 #### Validate SSSD config:
