@@ -28,7 +28,25 @@ cp /root/CustomRootCA.crt /etc/ssl/certs/
 update-ca-certificates
 ```
 
-#### Generate Self-signed certificate:
+#### Generate Self-signed certificate with CA:
+```bash
+openssl genrsa -out ca.key 4096
+```
+```bash
+openssl req -x509 -new -nodes -key ca.key -sha256 -days 3650 -out ca.crt
+```
+```bash
+openssl genrsa -out server.key 2048
+```
+```bash
+openssl req -new -key server.key -out server.csr
+```
+```bash
+openssl x509 -req -in server.csr -CA ca.crt -CAkey ca.key -CAcreateserial \
+-out server.crt -days 825 -sha256 -extensions v3_req
+```
+
+#### Generate simple Self-signed certificate:
 ```bash
 openssl req -x509 -sha256 -nodes -newkey rsa:2048 -keyout srv.key -out srv.crt -days 730
 ```
