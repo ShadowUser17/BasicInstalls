@@ -30,7 +30,7 @@ update-ca-certificates
 
 #### Generate Self-signed certificate with CA:
 ```bash
-openssl genrsa -out ca.key 4096
+openssl genrsa -aes256 -out ca.key 4096
 ```
 ```bash
 openssl req -x509 -new -nodes -key ca.key -sha256 -days 3650 -out ca.crt
@@ -42,8 +42,7 @@ openssl genrsa -out server.key 2048
 openssl req -new -key server.key -out server.csr
 ```
 ```bash
-openssl x509 -req -in server.csr -CA ca.crt -CAkey ca.key -CAcreateserial \
--out server.crt -days 825 -sha256 -extensions v3_req
+openssl x509 -req -in server.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out server.crt -days 730 -sha256 -extfile server.ext
 ```
 
 #### Generate simple Self-signed certificate:
@@ -53,10 +52,10 @@ openssl req -x509 -sha256 -nodes -newkey rsa:2048 -keyout srv.key -out srv.crt -
 
 #### Read local certificate:
 ```bash
-openssl x509 -inform pem -noout -text -in srv.pem
+openssl x509 -inform pem -noout -text -in server.pem
 ```
 ```bash
-openssl x509 -inform der -noout -text -in srv.der
+openssl x509 -inform der -noout -text -in server.der
 ```
 
 #### Read remote certificate:
@@ -67,4 +66,7 @@ openssl s_client -showcerts -connect <host:port>
 #### Verify certs chain:
 ```bash
 openssl verify -untrusted <srv.srt> <root.pem>
+```
+```bash
+openssl verify -CAfile ca.crt server.crt
 ```
